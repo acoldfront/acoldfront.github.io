@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | Crazer自留地</title>
+<title>Hello World！你好，世界！ | Crazer自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1579694401916">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1579695252001">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -30,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1579694401916" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1579695252001" class="site-logo">
         <h1 class="site-title">Crazer自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -91,35 +97,32 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://acoldfront.github.io/post/hello-gridea">
-                  <h2 class="post-title">Hello World</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">Hello World！你好，世界！</h2>
+            <div class="post-date">2020-01-24</div>
+            
+              <div class="feature-container" style="background-image: url('https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1579704995827&amp;di=0a4c1d5e60092b14a71411543bb213a6&amp;imgtype=0&amp;src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F2209be24c1a5c0684a4b0771d04ce39b61e9db1a.jpg')">
               </div>
-              
-                <a class="right" href="https://acoldfront.github.io/post/hello-gridea">
-                  <div class="feature-container" style="background-image: url('https://acoldfront.github.io//post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
+            <div class="post-content">
+              <p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
+<p>Hello World！你好，世界！</p>
+<p>每当看到它的时候总是莫名亲切，一些记忆的碎片在脑海中若隐若现。</p>
+<p>遥想当年这串英文字符在我们十指与键盘的亲密接触中，首次输出到电脑屏幕上的时候，我们进入了一个以二进制为规则的世界。</p>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -141,6 +144,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '91b49922808a1fd87554',
+        clientSecret: '17de273c86b0e4131b14025e2959ee7ced12da1d',
+        repo: 'acoldfront.github.io',
+        owner: 'acoldfront',
+        admin: ['acoldfront'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
