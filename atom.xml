@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-01-23T10:59:10.925Z</updated>
+    <updated>2020-01-23T11:00:47.956Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -16,11 +16,9 @@
         <link href="https://acoldfront.github.io/post/hello-world">
         </link>
         <updated>2020-01-24T15:59:59.000Z</updated>
-        <summary type="html"><![CDATA[<!-- more -->
-<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
+        <summary type="html"><![CDATA[<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<!-- more -->
-<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
+        <content type="html"><![CDATA[<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
 <!-- more -->
 <p>Hello World！你好，世界！</p>
 <p>每当看到它的时候总是莫名亲切，一些记忆的碎片在脑海中若隐若现。</p>
