@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-01-23T10:56:39.093Z</updated>
+    <updated>2020-01-23T10:59:10.925Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://acoldfront.github.io/"/>
+    <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
     <subtitle>静坐长思己过，闲谈莫论人非</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://acoldfront.github.io/images/avatar.png</logo>
+    <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
         <title type="html"><![CDATA[Hello World！你好，世界！]]></title>
-        <id>http://localhost:4000/post/hello-world</id>
-        <link href="http://localhost:4000/post/hello-world">
+        <id>https://acoldfront.github.io/post/hello-world</id>
+        <link href="https://acoldfront.github.io/post/hello-world">
         </link>
         <updated>2020-01-24T15:59:59.000Z</updated>
+        <summary type="html"><![CDATA[<!-- more -->
+<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
+]]></summary>
         <content type="html"><![CDATA[<!-- more -->
 <p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
+<!-- more -->
 <p>Hello World！你好，世界！</p>
 <p>每当看到它的时候总是莫名亲切，一些记忆的碎片在脑海中若隐若现。</p>
 <p>遥想当年这串英文字符在我们十指与键盘的亲密接触中，首次输出到电脑屏幕上的时候，我们进入了一个以二进制为规则的世界。</p>
