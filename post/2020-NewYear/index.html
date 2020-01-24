@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | Crazer的自留地</title>
+<title>2020除夕 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -91,50 +97,43 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title">2020除夕</h2>
+            <div class="post-date">2020-01-25</div>
+            
+            <div class="post-content">
+              <figure data-type="image" tabindex="1"><img src="https://acoldfront.github.io//post-images/1579876893979.png" alt="" loading="lazy"></figure>
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2020</h2>
+              <div class="tag-container">
+                
+                  <a href="https://acoldfront.github.io/tag/oBzWkzlKv" class="tag">
+                    随笔
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://acoldfront.github.io/post/hello-world">
+                  <h3 class="post-title">
+                    Hello World！你好，世界！
+                  </h3>
+                </a>
+              </div>
+            
+
+            
               
-                
-                  <article class="post">
-                    <a href="https://acoldfront.github.io/post/xmind-zen-2020">
-                      <h2 class="post-title">
-                        全新的思维导图软件 XMind ZEN 2020 中文多语特别版
-                      </h2>
-                    </a>
-                  </article>
-                
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-                
-                  <article class="post">
-                    <a href="https://acoldfront.github.io/post/2020-NewYear">
-                      <h2 class="post-title">
-                        2020除夕
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-                  <article class="post">
-                    <a href="https://acoldfront.github.io/post/hello-world">
-                      <h2 class="post-title">
-                        Hello World！你好，世界！
-                      </h2>
-                    </a>
-                  </article>
-                
+
               
             
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
@@ -156,6 +155,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '91b49922808a1fd87554',
+        clientSecret: '17de273c86b0e4131b14025e2959ee7ced12da1d',
+        repo: 'acoldfront.github.io',
+        owner: 'acoldfront',
+        admin: ['acoldfront'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
