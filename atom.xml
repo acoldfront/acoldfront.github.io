@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-01-26T07:10:31.285Z</updated>
+    <updated>2020-01-26T11:03:23.336Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -51,7 +51,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[数据库管理工具 PremiumSoft Navicat Premium 15.0.9 中文特别版]]></title>
+        <title type="html"><![CDATA[数据库管理工具 PremiumSoft Navicat Premium v15.0.9 中文特别版]]></title>
         <id>https://acoldfront.github.io/post/navicat-premium</id>
         <link href="https://acoldfront.github.io/post/navicat-premium">
         </link>
@@ -140,7 +140,7 @@ Ubuntu 12.04、Ubuntu 14.04、CentOS 6.7、CentOS 7、Fedora 22、Fedora 23、Li
 <!-- 链接: https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg 提取码: 4vgd -->]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[全新的思维导图软件 XMind ZEN 2020 中文多语特别版]]></title>
+        <title type="html"><![CDATA[全新的思维导图软件 XMind ZEN 2020 v10.0.1 中文多语特别版]]></title>
         <id>https://acoldfront.github.io/post/xmind-zen-2020</id>
         <link href="https://acoldfront.github.io/post/xmind-zen-2020">
         </link>
