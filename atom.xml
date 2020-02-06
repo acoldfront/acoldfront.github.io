@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-01-27T03:08:47.578Z</updated>
+    <updated>2020-02-06T16:47:54.745Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[优秀代码编辑器 Sublime Text 3.2.2 V3211]]></title>
+        <id>https://acoldfront.github.io/post/you-xiu-dai-ma-bian-ji-qi-sublime-text-322-v3211</id>
+        <link href="https://acoldfront.github.io/post/you-xiu-dai-ma-bian-ji-qi-sublime-text-322-v3211">
+        </link>
+        <updated>2020-02-06T16:43:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
+<!-- more -->
+<p>Sublime Text 是一个轻量、简洁、高效、跨平台的编辑器，方便的配色以及兼容vim快捷键等各种优点博得了很多前端开发人员的喜爱!Sublime Text 这款程序员必备代码编辑器，几乎每位程序员提到Sublime Text 2都是赞不绝口！它体积小巧，无需安装，绿色便携；它可跨平台支持Windows/Mac/Linux；支持32与64位操作系统，它在支持语法高亮、代 码补全、代码片段（Snippet）、代码折叠、行号显示、自定义皮肤、配色方案等所有其它代码编辑器所拥有的功能的同时，又保证了其飞快的速度！还有着 自身独特的功能，比如代码地图、多种界面布局以及全屏免打扰模式等，这些优秀特性让Sublime Text 2成了所有程序员眼中的神！</p>
+<p>SublimeText支持但不限于 C, C++, C#, CSS, D, Erlang, HTML, Groovy, Haskell, HTML, Java, JavaScript, LaTeX, Lisp, Lua, Markdown, Matlab, OCaml, Perl, PHP, Python, R, Ruby, SQL, TCL, Textile and XML 等主流编程语言的语法高亮。ST 拥有优秀的代码自动完成功能 (自动补齐括号，大括号等配对符号；自动补全已经出现的单词；自动补全函数名)，非常智能；</p>
+<h3 id="修改说明">修改说明</h3>
+<hr>
+<p>基于最新版本绿色便携制作</p>
+<p>增强侧边栏</p>
+<p>集成破解补丁，集成汉化，允许切换语言</p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p>自己想想办法哟！你可以在本文找到！Good luck！😏</p>
+<!-- 链接: https://pan.baidu.com/s/1E6AldrfGJ23nSCxStkNUMg 提取码: 9ufm-->]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Navicat产品_补丁_注册机 使用教程]]></title>
         <id>https://acoldfront.github.io/post/navicat-keygen-patch</id>
