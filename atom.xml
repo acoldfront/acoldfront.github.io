@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-02-07T05:57:30.752Z</updated>
+    <updated>2020-02-07T05:58:59.387Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
         <title type="html"><![CDATA[优秀代码编辑器 Sublime Text 3.2.2 V3211]]></title>
-        <id>https://acoldfront.github.io/post/you-xiu-dai-ma-bian-ji-qi-sublime-text-322-v3211</id>
-        <link href="https://acoldfront.github.io/post/you-xiu-dai-ma-bian-ji-qi-sublime-text-322-v3211">
+        <id>https://acoldfront.github.io/post/sublime-v3211</id>
+        <link href="https://acoldfront.github.io/post/sublime-v3211">
         </link>
         <updated>2020-02-06T16:43:52.000Z</updated>
         <summary type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
