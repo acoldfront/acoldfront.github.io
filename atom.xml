@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-02-12T09:37:09.534Z</updated>
+    <updated>2020-02-19T16:14:21.940Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -11,9 +11,57 @@
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
+        <title type="html"><![CDATA[微信/QQ/TIM防撤回补丁]]></title>
+        <id>https://acoldfront.github.io/post/RevokeMsgPatcher/</id>
+        <link href="https://acoldfront.github.io/post/RevokeMsgPatcher/">
+        </link>
+        <updated>2020-02-19T15:56:42.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="微信qqtim防撤回补丁">👀微信/QQ/TIM防撤回补丁</h1>
+<p>适用于 Windows 下 PC 版微信/QQ/TIM的防撤回补丁。<strong>从 0.7 版本开始通杀所有新版本微信/QQ（含测试版）</strong></p>
+<img width="180px" src="https://raw.githubusercontent.com/huiyadanli/RevokeMsgPatcher/master/Images/revoke.jpg"/>
+<p>下载地址：<br>
+<strong><a href="https://github.com/huiyadanli/RevokeMsgPatcher/releases/download/0.8/RevokeMsgPatcher.v0.8.zip">⚡️点我下载最新版本</a></strong> |<br>
+<a href="https://www.lanzous.com/i8lhkyf">☁备用下载-蓝奏云</a> |<br>
+<a href="https://pan.baidu.com/s/11LY3pvNlOyZZGxILboVnxg">☁备用下载-百度云</a> 提取码：coco</p>
+<p>相关文档：<br>
+<strong><a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81">✔支持哪些版本</a></strong> |<br>
+<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">❓常见问题</a> |<br>
+<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki">📖查看完整文档</a></p>
+<p>原理与方法：<br>
+<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/%E5%BE%AE%E4%BF%A1%E9%98%B2%E6%92%A4%E5%9B%9E%E4%B8%8E%E5%A4%9A%E5%BC%80%E6%95%99%E7%A8%8B">📗微信</a> |<br>
+<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/QQ%E6%88%96TIM%E9%98%B2%E6%92%A4%E5%9B%9E%E6%95%99%E7%A8%8B">📕QQ</a> |<br>
+<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/QQ%E6%88%96TIM%E9%98%B2%E6%92%A4%E5%9B%9E%E6%95%99%E7%A8%8B">📘TIM</a></p>
+<p>附带产物：<a href="https://github.com/huiyadanli/RevokeMsgPatcher/tree/master/RevokeMsgPatcher.MultiInstance">一个通用的微信多开工具</a></p>
+<h2 id="截图">📷截图</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/huiyadanli/RevokeMsgPatcher/master/Images/screenshot.png" alt="Screenshot" loading="lazy"></figure>
+<h2 id="使用方法">🔨使用方法</h2>
+<ol>
+<li>
+<p>首先，你的系统需要满足以下条件：</p>
+<ul>
+<li>Windows 7 或更高版本，<strong>不支持XP</strong>。</li>
+<li><a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=30653">.NET Framework 4.5</a> 或更高版本。<strong>低于此版本在打开程序时可能无反应，或者直接报错</strong>。</li>
+</ul>
+</li>
+<li>
+<p>使用本程序前，先关闭微信/QQ/TIM。</p>
+</li>
+<li>
+<p><strong>以管理员身份运行本程序</strong>，等待右下角获取最新的补丁信息。</p>
+</li>
+<li>
+<p>选择微信/QQ/TIM的安装路径。如果你用的安装版的微信/QQ/TIM，正常情况下本程序会自动从注册表中获取安装路径，绿色版需要手动选择路径。</p>
+</li>
+<li>
+<p>点击防撤回。界面可能会出现一段时间的无响应，请耐心等待。<strong>由于修改了微信的 WeChatWin.dll 文件、QQ/TIM的 IM.dll 文件，杀毒软件可能会弹出警告，放行即可。</strong></p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[优秀代码编辑器 Sublime Text 3.2.2 V3211]]></title>
-        <id>https://acoldfront.github.io/post/sublime-v3211</id>
-        <link href="https://acoldfront.github.io/post/sublime-v3211">
+        <id>https://acoldfront.github.io/post/sublime-v3211/</id>
+        <link href="https://acoldfront.github.io/post/sublime-v3211/">
         </link>
         <updated>2020-02-06T16:43:52.000Z</updated>
         <summary type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
@@ -34,8 +82,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Navicat产品_补丁_注册机 使用教程]]></title>
-        <id>https://acoldfront.github.io/post/navicat-keygen-patch</id>
-        <link href="https://acoldfront.github.io/post/navicat-keygen-patch">
+        <id>https://acoldfront.github.io/post/navicat-keygen-patch/</id>
+        <link href="https://acoldfront.github.io/post/navicat-keygen-patch/">
         </link>
         <updated>2020-01-26T05:12:52.000Z</updated>
         <content type="html"><![CDATA[<p>首先运行navicat150_premium_cs_x64安装程序，安装navicat_premium<br>
@@ -74,8 +122,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[数据库管理工具 PremiumSoft Navicat Premium v15.0.9 中文特别版]]></title>
-        <id>https://acoldfront.github.io/post/navicat-premium</id>
-        <link href="https://acoldfront.github.io/post/navicat-premium">
+        <id>https://acoldfront.github.io/post/navicat-premium/</id>
+        <link href="https://acoldfront.github.io/post/navicat-premium/">
         </link>
         <updated>2020-01-26T04:55:18.000Z</updated>
         <summary type="html"><![CDATA[<p>Navicat premium是一款数据库管理工具。将此工具连接数据库，你可以从中看到各种数据库的详细信息。包括报错，等等。当然，你也可以通过他，登陆数据库，进行各种操作。Navicat Premium是一个可多重连线资料库的管理工具，它可以让你以单一程式同时连线到 MySQL、SQLite、Oracle 及 PostgreSQL 资料库，让管理不同类型的资料库更加的方便。</p>
@@ -163,8 +211,8 @@ Ubuntu 12.04、Ubuntu 14.04、CentOS 6.7、CentOS 7、Fedora 22、Fedora 23、Li
     </entry>
     <entry>
         <title type="html"><![CDATA[全新的思维导图软件 XMind ZEN 2020 v10.0.1 中文多语特别版]]></title>
-        <id>https://acoldfront.github.io/post/xmind-zen-2020</id>
-        <link href="https://acoldfront.github.io/post/xmind-zen-2020">
+        <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
+        <link href="https://acoldfront.github.io/post/xmind-zen-2020/">
         </link>
         <updated>2020-01-24T22:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
@@ -212,8 +260,8 @@ XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结
     </entry>
     <entry>
         <title type="html"><![CDATA[致2019除夕 - 2020新年]]></title>
-        <id>https://acoldfront.github.io/post/2020-NewYear</id>
-        <link href="https://acoldfront.github.io/post/2020-NewYear">
+        <id>https://acoldfront.github.io/post/2020-NewYear/</id>
+        <link href="https://acoldfront.github.io/post/2020-NewYear/">
         </link>
         <updated>2020-01-24T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://acoldfront.github.io//post-images/1579876893979.png" alt="" loading="lazy"></figure>
@@ -221,8 +269,8 @@ XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello World！你好，世界！]]></title>
-        <id>https://acoldfront.github.io/post/hello-world</id>
-        <link href="https://acoldfront.github.io/post/hello-world">
+        <id>https://acoldfront.github.io/post/hello-world/</id>
+        <link href="https://acoldfront.github.io/post/hello-world/">
         </link>
         <updated>2020-01-24T15:59:59.000Z</updated>
         <summary type="html"><![CDATA[<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
