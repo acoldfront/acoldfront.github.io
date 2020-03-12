@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-05T02:52:06.986Z</updated>
+    <updated>2020-03-12T02:37:59.707Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,93 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[记一次参与 JetBrains Quest 活动的经历]]></title>
+        <id>https://acoldfront.github.io/post/ji-yi-ci-can-yu-jetbrains-quest-huo-dong-de-jing-li/</id>
+        <link href="https://acoldfront.github.io/post/ji-yi-ci-can-yu-jetbrains-quest-huo-dong-de-jing-li/">
+        </link>
+        <updated>2020-03-12T02:15:52.000Z</updated>
+        <content type="html"><![CDATA[<p>JetBrains 公司是干啥的自然不用我多说，无意中得知 JetBrains Quest 活动的消息，就也手痒的参与了一把。题目不难，一步步探索、揭晓谜底的过程还是挺有趣的，在这里简单记录一下本次解谜的过程。</p>
+<p><strong>注：</strong> 最后到手的奖励是三个月的全产品订阅，不得不说 JetBrains 在优惠活动方面从来没让人失望过。</p>
+<h2 id="第一步读懂题目">第一步，读懂题目</h2>
+<p>先来看看 JetBrains 发布活动消息的这则推文：<img src="https://acoldfront.github.io//post-images/1583980379053.png" alt="JetBrains Quest活动消息的推文" loading="lazy"></p>
+<p>从中我们得到了如下的一串字符：</p>
+<p><code>48 61 76 65 20 79 6f 75 20 73 65 65 6e 20 74 68 65 20 73 6f 75 72 63 65 20 63 6f 64 65 20 6f 66 20 74 68 65 20 4a 65 74 42 72 61 69 6e 73 20 77 65 62 73 69 74 65 3f</code></p>
+<p>观察发现，字符串中同时包含数字和字母，但是字母最大只有 <code>f</code> （按 a 最小，z 最大排序），这是很明显的 16 进制字符串的特征。</p>
+<p>尝试一下把上面每个数字按 16 进制转成 10 进制，然后再根据 ASCII 码表取出对应的字符（肯定是写个脚本来自动转换啦），我们得到了如下的一句话：<code>Have you seen the source code of the JetBrains website?</code> 。嗯，让我们看看 JetBrains 网站的源码，那就来看看呗。</p>
+<h2 id="第二步源码中的信息">第二步，源码中的信息</h2>
+<p>打开 https://www.jetbrains.com/ ，右键查看网页源码，用鼠标拉动滑块快速的扫过去，很快发现在第400行附近有如下的一段注释：</p>
+<pre><code class="language-html">   O
+{o)xxx|===============-
+      O
+
+Welcome to the JetBrains Quest.
+
+What awaits ahead is a series of challenges. Each one will require a little initiative, a little thinking, and a whole lot of JetBrains to get to the end. Cheating is allowed and in some places encouraged. You have until the 15th of March at 12:00 CET to finish all the quests.
+Getting to the end of each quest will earn you a reward.
+Let the quest commence!
+
+JetBrains has a lot of products, but there is one that looks like a joke on our Products page, you should start there... (hint: use Chrome Incognito mode)
+It’s dangerous to go alone take this key: Good luck! == Jrrg#oxfn$
+
+                 O
+-===============|xxx(o}
+                 O
+</code></pre>
+<p>这里给出了活动截止时间等信息，还有一条下一步的提示 —— 产品页面有一个看起来像玩笑的应用，我们需要从那里开始（提示：使用 Chrome 隐身模式）。</p>
+<h2 id="第三步奇怪的应用">第三步，奇怪的应用</h2>
+<p>根据上一步的提示，我们来到产品页面：https://www.jetbrains.com/products.html</p>
+<p>凭着对 JetBrains 产品的印象和大胆猜测，很快锁定了那个看起来像开玩笑的应用：<br>
+<img src="https://acoldfront.github.io//post-images/1583980435076.jpg" alt="JetBrains Quest线索" loading="lazy"></p>
+<p>点击 <code>Learn more</code> ，页面上弹出了一个窗口，内容如下：</p>
+<pre><code class="language-html">You have discovered our JetBrains Quest! If you don’t know what this is, you should start from Twitter, Facebook or LinkedIn.
+
+
+To continue to the next challenge you need to go to the following link… But there is a problem, the last 3 digits are missing:
+
+
+https://jb.gg/###
+
+
+To get these digits you need to know how many prime numbers there are between 500 and 5000
+
+
+Good Luck!
+</code></pre>
+<p>很明显，我们找对了地方，并再次获得了下一步的提示 —— 一个残缺的链接，后面三位是 500 到 5000 内素数的个数。</p>
+<h2 id="第四步素数的个数">第四步，素数的个数</h2>
+<p>根据上一步的提示，我们随便撸一段脚本计算一下 500 到 5000 内素数的个数，发现结果是 574，于是我们访问链接 https://jb.gg/574 进入下一步。</p>
+<p>页面最终跳转到了 https://www.jetbrains.com/help/pycharm/getting-help.html#quest ，这次给了一张图片作为提示。注意到了图片上的如下部分：<img src="https://acoldfront.github.io//post-images/1583980459022.png" alt="JetBrains Quest线索" loading="lazy"></p>
+<p>那个“YT”的标志是 JetBrains 的产品 YouTrack，另外，对 JetBrains 稍微了解深入一点的人应该能意识到“MPS-31816”是一个 Issues 号。根据这些信息，配合搜索引擎，我们找到了如下页面：https://youtrack.jetbrains.com/issue/MPS-31816 。下面是页面上所给出的信息：</p>
+<pre><code>“The key is to think back to the beginning.” -- The JetBrains Quest team
+
+Qlfh$#Li#|rx#duh#uhdglqj#wklv#|rx#pxvw#kdyh#zrunhg#rxw#krz#wr#ghfu|sw#lw1#Wklv#lv#rxu#lvvxh#wudfnhu#ghvljqhg#iru#djloh#whdpv1#Lw#lv#iuhh#iru#xs#wr#6#xvhuv#lq#Forxg#dqg#iru#43#xvhuv#lq#Vwdqgdorqh/#vr#li#|rx#zdqw#wr#jlyh#lw#d#jr#lq#|rxu#whdp#wkhq#zh#wrwdoo|#uhfrpphqg#lw1#|rx#kdyh#ilqlvkhg#wkh#iluvw#Txhvw/#qrz#lw“v#wlph#wr#uhghhp#|rxu#iluvw#sul}h1#Wkh#frgh#iru#wkh#iluvw#txhvw#lv#‟WkhGulyhWrGhyhors†1#Jr#wr#wkh#Txhvw#Sdjh#dqg#xvh#wkh#frgh#wr#fodlp#|rxu#sul}h1#kwwsv=22zzz1mhweudlqv1frp2surpr2txhvw2
+</code></pre>
+<p>至此，我们得到了一长串的奇怪字符串外加一句话 —— 关键是要回过头去思考。</p>
+<h2 id="第五步早已给出的提示">第五步，早已给出的提示</h2>
+<p>有没有觉得上面那些字符排列的方式有点眼熟？没错，还记得我们在第二步拿到的线索吗？还有一句话没用上。</p>
+<pre><code>It’s dangerous to go alone take this key: Good luck! == Jrrg#oxfn$
+</code></pre>
+<p>最后这个 <code>Jrrg#oxfn$</code> 跟上面的字符串是不是有点同出一辙的感觉，再结合提示信息“回过头去思考”，我们这不就是回头来寻找线索吗？基本能够确定这一句话就是关键。</p>
+<p>我们来简单分析一下，最先注意到的就是 <code>==</code> ，这是编程语言中的“等于”，提醒我们 <code>Good luck!</code> 和 <code>Jrrg#oxfn$</code> 相等；数一下两者字符的个数，发现都是 10 个（包括空格）；再注意到相同字符变换后对应的字符不变（前者两个连续的 <code>o</code> 在后者中就对应两个连续的 <code>r</code> ）。</p>
+<p>基于上面这些分析，大胆猜测这是某种基于单个字符的加密方式，再配合一点直觉和实际的操作尝试，嗯，很典型的凯撒密码。简单来说，这里所用的加密操作就是将每个字符在 ASCII 码表中的值 +3，再取出新的值对应的字符。</p>
+<p>知道了这一点之后再去解密上面的长字符串就很简单了，反过来将每个字符的 ASCII 值减 3 ，然后取出对应的字符，下面是最终解密出来的信息：</p>
+<pre><code>Nice! If you are reading this you must have worked out how to decrypt it. This is our issue tracker designed for agile teams. It is free for up to 3 users in Cloud and for 10 users in Standalone, so if you want to give it a go in your team then we totally recommend it. you have finished the first Quest, now it’s time to redeem your first prize. The code for the first quest is “TheDriveToDevelop”. Go to the Quest Page and use the code to claim your prize. https://www.jetbrains.com/promo/quest/
+</code></pre>
+<p>根据该信息，我们已经成功完成了本次 <code>JetBrains Quest</code> 的所有流程（这只是第一个 Quest ，后续还有其他挑战）。</p>
+<h2 id="第六步兑奖">第六步，兑奖</h2>
+<p>接下来就就可以去领取奖励啦：打开 https://www.jetbrains.com/promo/quest/ ，输入你的邮箱和解密信息中的 Code：<code>TheDriveToDevelop</code> ，<br>
+<img src="https://acoldfront.github.io//post-images/1583980484262.png" alt="JetBrains Quest奖励发放邮件" loading="lazy"><br>
+稍等一会儿就会收到一封包含 3 个月全产品订阅兑换码的邮件，下面是我收到邮件的部分截图：<img src="https://acoldfront.github.io//post-images/1583980500131.jpg" alt="JetBrains Quest奖励发放邮件" loading="lazy"><br>
+点击蓝色的 <strong>HOW TO REDEEM THE CODE</strong><img src="https://acoldfront.github.io//post-images/1583980661028.png" alt="JetBrains Quest奖励发放邮件" loading="lazy"><br>
+输入上面的密钥，你的名字，姓氏，邮箱，国家/地区。然后点提交。<br>
+然后再等2分钟左右，又收到一封邮件<br>
+让你点击其中的链接激活账号<img src="https://acoldfront.github.io//post-images/1583980567631.png" alt="JetBrains Quest奖励发放邮件" loading="lazy"><br>
+让你输入名字，姓氏，用户名，密码。点击提交。<img src="https://acoldfront.github.io//post-images/1583980580622.jpg" alt="JetBrains Quest奖励发放邮件" loading="lazy"><br>
+打开IDEA验证，输入刚刚注册的账号密码。延长到了6月11日。<br>
+<img src="https://acoldfront.github.io//post-images/1583980591767.jpg" alt="验证" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[MobaXterm 20.0 汉化专业版]]></title>
         <id>https://acoldfront.github.io/post/mobaxterm/</id>
