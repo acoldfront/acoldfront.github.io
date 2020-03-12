@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-12T02:43:04.861Z</updated>
+    <updated>2020-03-12T02:46:40.774Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -24,10 +24,8 @@
 <p>This is our 20th year as a company,<br>
 we have shared numbers in our JetBrains<br>
 Annual report, sharing the section with<br>
-18,650 numbers will progress your quest.<br>
-后面还不知道Annual report在哪<br>
-第 1 条附言  ·  12 小时 28 分钟前<br>
-打开20周年年报页面 https://www.jetbrains.com/company/annualreport/2019/，找到7th Annual Hackathon 部分，那些数字加起来就是 PDF 上面写的 18,650。点击分享可以看到信息：</p>
+18,650 numbers will progress your quest.</p>
+<p>打开20周年年报页面 https://www.jetbrains.com/company/annualreport/2019/，找到7th Annual Hackathon 部分，那些数字加起来就是 PDF 上面写的 18,650。点击分享可以看到信息：</p>
 <p>I have found the JetBrains Quest! Sometimes you just need to look closely at the Haskell language,</p>
 <p>Hello,World! in the hackathon lego brainstorms project</p>
 <p>https://blog.jetbrains.com/blog/2019/11/22/jetbrains-7th-annual-hackathon/</p>
@@ -43,6 +41,7 @@ Annual report, sharing the section with<br>
 <p>. To check out what we have for game developers. . Be geeky enough to remember how you used to cheat at Konami games. . Try cheating on the page.</p>
 <p>根据提示打开 https://www.jetbrains.com/gamedev/</p>
 <p>在页面上输入科乐美秘技就是 ↑↑↓↓←→←→BA 就会打开一个游戏，打碎砖块就可以看到终点了。</p>
+<!-- 兑换码：GamesAreFun-->
 ]]></content>
     </entry>
     <entry>
