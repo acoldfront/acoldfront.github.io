@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-12T02:37:59.707Z</updated>
+    <updated>2020-03-12T02:39:24.928Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
         <title type="html"><![CDATA[记一次参与 JetBrains Quest 活动的经历]]></title>
-        <id>https://acoldfront.github.io/post/ji-yi-ci-can-yu-jetbrains-quest-huo-dong-de-jing-li/</id>
-        <link href="https://acoldfront.github.io/post/ji-yi-ci-can-yu-jetbrains-quest-huo-dong-de-jing-li/">
+        <id>https://acoldfront.github.io/post/jetbrains-quest1/</id>
+        <link href="https://acoldfront.github.io/post/jetbrains-quest1/">
         </link>
         <updated>2020-03-12T02:15:52.000Z</updated>
         <content type="html"><![CDATA[<p>JetBrains 公司是干啥的自然不用我多说，无意中得知 JetBrains Quest 活动的消息，就也手痒的参与了一把。题目不难，一步步探索、揭晓谜底的过程还是挺有趣的，在这里简单记录一下本次解谜的过程。</p>
