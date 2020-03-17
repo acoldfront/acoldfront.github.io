@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-12T05:39:24.543Z</updated>
+    <updated>2020-03-17T09:46:34.231Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,36 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[特殊极限lim(x→∞)(1+1/x)^x的证明]]></title>
+        <id>https://acoldfront.github.io/post/teshujixian/</id>
+        <link href="https://acoldfront.github.io/post/teshujixian/">
+        </link>
+        <updated>2020-03-17T09:44:51.000Z</updated>
+        <content type="html"><![CDATA[<p>同济版《高等数学第七版》对该极限有如下证明：<br>
+<img src="https://acoldfront.github.io//post-images/1584438325548.png" alt="" loading="lazy"><br>
+而夹逼定理为下面的两个准则：<br>
+<img src="https://acoldfront.github.io//post-images/1584438336590.png" alt="" loading="lazy"><br>
+<img src="https://acoldfront.github.io//post-images/1584438357871.png" alt="" loading="lazy"><br>
+根据以上两个准则对照书中的证明不难发现，书中证明中的夹逼定理运用情况并不与上面的两个准则十分相符，在证明中，更像是两个数列夹着一个函数，而准则中并没有指出两个数列夹着一个函数有所谓夹逼定理。那么这里究竟是如何运用夹逼定理的呢？</p>
+<p>事实上，“设n&lt;=x&lt;n+1”就已经说明了证明中的看似数列的部分并非数列，而是特殊的函数，也就是说，这个n与自变量x相关，这使得不等式左右两边看似为数列的两个式子并不是完全是我们平时所理解的数列。这个n是[x]，也就是对x取整后的值，是实数x的函数而不是平时我们定义数列时所认为的正整数(虽然它们的取值都一样)。</p>
+<p>所以或许用下面的表达方式更容易理解为什么这里能够运用夹逼定理：</p>
+<p>设n=[x]，则n&lt;=x&lt;n+1，故[1+1/(n+1)]<sup>n&lt;(1+1/x)</sup>x&lt;(1+1/n)<sup>(n+1)，即[1+1/([x]+1)]</sup>[x]&lt;(1+1/x)<sup>x&lt;[1+1/[x]]</sup>([x]+1)，</p>
+<p>设函数g(x)=[1+1/([x]+1)]<sup>[x]，函数h(x)=[1+1/[x]]</sup>([x]+1)，则</p>
+<p>lim(x→∞)g(x)=lim(x→∞)[1+1/([x]+1)]<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，因n=[x]，则当x→∞，n→∞，故运用复合函数的极限运算法则知，</p>
+<p>lim(x→∞)g(x)=lim(x→∞)[1+1/([x]+1)]<sup>[x]=lim(n→∞)[1+1/(n+1)]</sup>n=e，</p>
+<p>同理有</p>
+<p>lim(x→∞)h(x)=lim(x→∞)[1+1/[x]]<sup>([x]+1)=lim(n→∞)(1+1/n)</sup>(n+1)=e，</p>
+<p>故由准则I`知，lim(x→∞)(1+1/x)^x=e.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>x <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JetBrains Quest 第二波活动的经历]]></title>
         <id>https://acoldfront.github.io/post/jetbrains-quest2/</id>
@@ -401,21 +431,6 @@ XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结
         </link>
         <updated>2020-01-24T16:00:00.000Z</updated>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://acoldfront.github.io//post-images/1579876893979.png" alt="" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello World！你好，世界！]]></title>
-        <id>https://acoldfront.github.io/post/hello-world/</id>
-        <link href="https://acoldfront.github.io/post/hello-world/">
-        </link>
-        <updated>2020-01-24T15:59:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
-<!-- more -->
-<p>Hello World！你好，世界！</p>
-<p>每当看到它的时候总是莫名亲切，一些记忆的碎片在脑海中若隐若现。</p>
-<p>遥想当年这串英文字符在我们十指与键盘的亲密接触中，首次输出到电脑屏幕上的时候，我们进入了一个以二进制为规则的世界。</p>
 ]]></content>
     </entry>
 </feed>
