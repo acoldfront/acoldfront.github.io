@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-18T05:51:05.974Z</updated>
+    <updated>2020-03-18T06:02:28.392Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -11,9 +11,53 @@
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
-        <title type="html"><![CDATA[汉诺塔的图解递归算法]]></title>
-        <id>https://acoldfront.github.io/post/TowersOfHanoi/</id>
-        <link href="https://acoldfront.github.io/post/TowersOfHanoi/">
+        <title type="html"><![CDATA[汉诺塔的图解递归算法 - C语言版]]></title>
+        <id>https://acoldfront.github.io/post/TowersOfHanoiC/</id>
+        <link href="https://acoldfront.github.io/post/TowersOfHanoiC/">
+        </link>
+        <updated>2020-03-18T05:53:42.000Z</updated>
+        <content type="html"><![CDATA[<p>三个盘子的汉诺塔<br>
+<img src="https://acoldfront.github.io//post-images/1584511104143.gif" alt="" loading="lazy"><br>
+然后你移完发现左边柱子下面又蹦出来一个盘子<br>
+<img src="https://acoldfront.github.io//post-images/1584511163698.gif" alt="" loading="lazy"><br>
+好吧, 那就把中间的柱子看成目标柱<br>
+<img src="https://acoldfront.github.io//post-images/1584511216776.gif" alt="" loading="lazy"></p>
+<p>所以说一共就三步：<br>
+把 n-1 号盘子移动到缓冲区<br>
+把1号从起点移到终点<br>
+然后把缓冲区的n-1号盘子也移到终点</p>
+<p>写成C语言代码：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+void f(char a, char b) {
+    printf(&quot;从%c柱上往%c柱上挪动一个圆盘\n&quot;, a, b);
+}
+
+void g(int i, char a, char b, char c) {
+    if (i == 2) {
+        f(a, b);
+        f(a, c);
+        f(b, c);
+    } else if (i &gt; 2) {
+        g(i - 1, a, c, b);
+        f(a, c);
+        g(i - 1, b, a, c);
+    }
+}
+
+int main(void) {
+    g(3, 'A', 'B', 'C');
+    return 0;
+}
+</code></pre>
+<p>运行结果：<br>
+<img src="https://acoldfront.github.io//post-images/1584511340054.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[汉诺塔的图解递归算法 - Java版]]></title>
+        <id>https://acoldfront.github.io/post/TowersOfHanoiJava/</id>
+        <link href="https://acoldfront.github.io/post/TowersOfHanoiJava/">
         </link>
         <updated>2020-03-18T05:24:03.000Z</updated>
         <content type="html"><![CDATA[<p>一．起源：<br>
@@ -58,7 +102,7 @@ n个圆盘的次数 2的n次方减1
 　　　　（2）中间一步之上可以看成把A上n-1个盘子通过借助辅助塔（C塔）移到了B上，<br>
 　　　　（3）中间一步之下可以看成把B上n-1个盘子通过借助辅助塔（A塔）移到了C上；</p>
 <p>五，java源代码：</p>
-<pre><code>package demo;
+<pre><code class="language-java">package demo;
 /**
  * 目的：实现汉诺塔问题求解
  * 作者：Crazer
@@ -467,54 +511,5 @@ Ubuntu 12.04、Ubuntu 14.04、CentOS 6.7、CentOS 7、Fedora 22、Fedora 23、Li
 <hr>
 <p>在本文寻找！Good luck！😏</p>
 <!-- 链接: https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg 提取码: 4vgd -->]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[全新的思维导图软件 XMind ZEN 2020 v10.0.2 中文多语特别版]]></title>
-        <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
-        <link href="https://acoldfront.github.io/post/xmind-zen-2020/">
-        </link>
-        <updated>2020-01-24T22:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
-<!-- more -->
-<p>XMind 是一个全功能的思维导图和头脑风暴软件，为激发灵感和创意而生。作为一款有效提升工作和生活效率的生产力工具，受到全球百千万用户的青睐。</p>
-<p>这两年思维导图突然就火起来了，各种思维导图软件也是雨后春笋般冒出来了，自 Xmind 发布以来就受到全球多个国家的办公一族喜爱。而 XMind 开发团队成员也在不断的去改进产品以提供优秀的生产力工具和服务，帮助人们节省时间并提升效率为目标。<br>
-<img src="https://acoldfront.github.io//post-images/1579860380835.png" alt="" loading="lazy"></p>
-<p>全新内核，经典 XMind 体验。<br>
-我们努力了3年，100% 重写了思维导图引擎的每一个细节，XMind: ZEN 对 XMind 8 做到了完全兼容，让你有一种全新却不失经典的体验。</p>
-<p>无人可超越，只有超越自己。<br>
-对所有主题进行了重新设计，为您的每一张导图都注入新的活力。字体渲染也得到了极大的改进，让每一张思维导图既美观又专业。</p>
-<p>我们专注，为了让您更专注。<br>
-ZEN 模式，寓意为禅。让专注变成一种习惯。</p>
-<p>全新 Snowbrush 引擎<br>
-我们努力了3年，100% 重写了思维导图的引擎，着眼在未来的黑科技上，提升了思维导图的展示效果，丰富了绘图的元素。</p>
-<p>充满惊喜的主题<br>
-XMind: ZEN 对所有主题进行了重新设计，为您的每一张导图都注入新的活力，专业的同时又不失丰富元素，好看到让人羡慕。</p>
-<p>Font Rendering<br>
-由于极大地改进了字体的渲染技术，无论你用 Mac 还是 Windows 创建思维导图，所有文字都以同一样式清晰呈现。XMind: ZEN 精选多款优质字体，爱上编辑导图，从未如此简单。</p>
-<p>Markdown<br>
-我们相信 Markdown 会为你带来更好的使用体验，将做好的图导出为 Markdown 格式后，会让你更易于阅读。</p>
-<p>集专注于 ZEN 模式<br>
-ZEN 模式，寓意为禅，让专注变成一种习惯。进入 ZEN 模式，隐藏页面内多余的元素，帮助你全神贯注地绘制每一个主题，心无旁骛地完成工作。</p>
-<p>贴纸，原创的更好<br>
-设计师原创的贴纸，每一个都精心绘制，更准确地满足你的需求，精彩无处不在。</p>
-<p>100% 对 XMind 8 兼容<br>
-XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结构，在 XMind: ZEN 中都能完美展现。</p>
-<p>导出PDF和印象笔记<br>
-将思维导图导出为矢量的 PDF 文件，方便您将导图随意放大和清晰地打印。印象笔记的粉丝们还会惊喜地发现只需简单地点击，便可将导图分享到印象笔记中。</p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>基于官网最新版本破解</p>
-<p>破解授权，移除验证，去除试用提示</p>
-<p>能正常导出图片无水印，PDF无水印，导出word，粘贴图片等高级功能</p>
-<p>v2版本导出PNG缩放大小已修复</p>
-<h3 id="使用提示">使用提示</h3>
-<hr>
-<p>将app.asar放入XMind-ZEN安装目录的resources文件夹下替换</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p>在本文寻找！Good luck！😏</p>
-<!-- 链接: https://pan.baidu.com/s/1b98_4tWFcLzH9BRowqeHQg 提取码: wriu  -->]]></content>
     </entry>
 </feed>
