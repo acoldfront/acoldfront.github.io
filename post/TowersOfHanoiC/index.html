@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1584512258834">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1584512365774">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1584512258834" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1584512365774" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -125,8 +125,11 @@ void g(int i, char a, char b, char c) {
         f(a, c);    //把a柱子上 最下面（最大）的那一块   挪动到 c柱子上去 
         f(b, c);     //把b柱子上 那一块   挪动到 c柱子上去 
     } else if (i &gt; 2) { //分成a柱子上的圆盘 两部分： ①第i块 圆盘和②i-i块 圆盘
+        //i-i块 圆盘那一部分
         g(i - 1, a, c, b);  //把a柱子上的 i-1块 圆盘通过c柱子 挪动到 b柱子上去 
+        //第i块 圆盘那一部分
         f(a, c);              //把a柱子上的 第i块（最大的那一块）挪动到 c柱子上去 
+        //对于b柱子上的i-i块 圆盘那一部分进行再次递归 转移
         g(i - 1, b, a, c); //把b柱子上的 i-1块 圆盘通过a柱子 挪动到 c柱子上去 
     }
 }
