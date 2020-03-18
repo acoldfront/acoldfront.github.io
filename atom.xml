@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-18T05:42:32.300Z</updated>
+    <updated>2020-03-18T05:51:05.974Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
         <title type="html"><![CDATA[汉诺塔的图解递归算法]]></title>
-        <id>https://acoldfront.github.io/post/han-nuo-ta-de-tu-jie-di-gui-suan-fa/</id>
-        <link href="https://acoldfront.github.io/post/han-nuo-ta-de-tu-jie-di-gui-suan-fa/">
+        <id>https://acoldfront.github.io/post/TowersOfHanoi/</id>
+        <link href="https://acoldfront.github.io/post/TowersOfHanoi/">
         </link>
         <updated>2020-03-18T05:24:03.000Z</updated>
         <content type="html"><![CDATA[<p>一．起源：<br>
