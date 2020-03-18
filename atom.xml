@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-18T06:02:28.392Z</updated>
+    <updated>2020-03-18T06:12:47.264Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -38,10 +38,10 @@ void g(int i, char a, char b, char c) {
         f(a, b);
         f(a, c);
         f(b, c);
-    } else if (i &gt; 2) {
-        g(i - 1, a, c, b);
-        f(a, c);
-        g(i - 1, b, a, c);
+    } else if (i &gt; 2) { //分成a柱子上的圆盘 两部分： ①第i块 圆盘和②i-i块 圆盘
+        g(i - 1, a, c, b);  //把a柱子上的 i-1块 圆盘通过c柱子 挪动到 b柱子上去 
+        f(a, c);              //把a柱子上的 第i块（最大的那一块）挪动到 c柱子上去 
+        g(i - 1, b, a, c); //把b柱子上的 i-1块 圆盘通过a柱子 挪动到 c柱子上去 
     }
 }
 
