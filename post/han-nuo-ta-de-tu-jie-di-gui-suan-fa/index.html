@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>汉诺塔的图解递归算法 | Crazer的自留地</title>
+<meta name="description" content="静坐长思己过，闲谈莫论人非">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1584510149469">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://acoldfront.github.io/">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1584510149469" class="site-logo">
+        <h1 class="site-title">Crazer的自留地</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      静坐长思己过，闲谈莫论人非
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://acoldfront.github.io/" target="_blank">Crazer</a> | <a class="rss" href="https://acoldfront.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">汉诺塔的图解递归算法</h2>
+            <div class="post-date">2020-03-18</div>
+            
+            <div class="post-content">
+              <p>一．起源：<br>
+　　汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</p>
+<p>二．抽象为数学问题：<br>
+　　如下图所示，从左到右有A、B、C三根柱子，其中A柱子上面有从小叠到大的n个圆盘，现要求将A柱子上的圆盘移到C柱子上去，期间只有一个原则：一次只能移到一个盘子且大盘子不能在小盘子上面，求移动的步骤和移动的次数<br>
+<img src="https://acoldfront.github.io//post-images/1584509080986.jpg" alt="" loading="lazy"><br>
+解：</p>
+<pre><code>（1）n == 1
+                第1次  1号盘  A----&gt;C       sum = 1 次
+（2)  n == 2
+                第1次  1号盘  A----&gt;B
+                第2次  2号盘  A----&gt;C
+                第3次  1号盘  B----&gt;C        sum = 3 次
+（3）n == 3
+                第1次  1号盘  A----&gt;C
+                第2次  2号盘  A----&gt;B
+                第3次  1号盘  C----&gt;B
+                第4次  3号盘  A----&gt;C
+                第5次  1号盘  B----&gt;A
+                第6次  2号盘  B----&gt;C
+                第7次  1号盘  A----&gt;C        sum = 7 次
+</code></pre>
+<p>不难发现规律：</p>
+<pre><code>1个圆盘的次数 2的1次方减1
+2个圆盘的次数 2的2次方减1
+3个圆盘的次数 2的3次方减1
+。  。   。    。   。 
+n个圆盘的次数 2的n次方减1
+</code></pre>
+<p>故：移动次数为：2^n - 1</p>
+<p>三．调用方法的栈机制:（特点：先进后出）<br>
+从主线程开始调用方法（函数）进行不停的压栈和出栈操作，函数的调用就是将函数压如栈中，函数的结束就是函数出栈的过程，这样就保证了方法调用的顺序流，即当函数出现多层嵌套时，需要从外到内一层层把函数压入栈中，最后栈顶的函数先执行结束（最内层的函数先执行结束）后出栈，再倒数第二层的函数执行结束出栈，到最后，第一个进栈的函数调用结束后从栈中弹出回到主线程，并且结束。</p>
+<p>四．算法分析（递归算法）：<br>
+我们在利用计算机求汉诺塔问题时，必不可少的一步是对整个实现求解进行算法分析。到目前为止，求解汉诺塔问题最简单的算法还是同过递归来求，至于是什么是递归，递归实现的机制是什么，我们说的简单点就是自己是一个方法或者说是函数，但是在自己这个函数里有调用自己这个函数的语句，而这个调用怎么才能调用结束呢？，这里还必须有一个结束点，或者具体的说是在调用到某一次后函数能返回一个确定的值，接着倒数第二个就能返回一个确定的值，一直到第一次调用的这个函数能返回一个确定的值。</p>
+<p>实现这个算法可以简单分为三个步骤：<br>
+　　　　（1）把n-1个盘子由A 移到 B；<br>
+　　　　（2）把第n个盘子由 A移到 C；<br>
+　　　　（3）把n-1个盘子由B 移到 C；</p>
+<p>从这里入手，在加上上面数学问题解法的分析，我们不难发现，移到的步数必定为奇数步：<br>
+　　　　（1）中间的一步是把最大的一个盘子由A移到C上去；<br>
+　　　　（2）中间一步之上可以看成把A上n-1个盘子通过借助辅助塔（C塔）移到了B上，<br>
+　　　　（3）中间一步之下可以看成把B上n-1个盘子通过借助辅助塔（A塔）移到了C上；</p>
+<p>五，java源代码：</p>
+<pre><code>package demo;
+/**
+ * 目的：实现汉诺塔问题求解
+ * 作者：Crazer
+ */
+import java.util.Scanner;
+
+public class TowersOfHanoi {
+    static int m =0;//标记移动次数
+    //实现移动的函数
+    public static void move(int disks,char N,char M)
+    {
+        System.out.println(&quot;第&quot; + (++m) +&quot; 次移动 : &quot; +&quot; 把 &quot;+ disks+&quot; 号圆盘从 &quot; + N +&quot; -&gt;移到-&gt;  &quot; + M);
+    }
+    //递归实现汉诺塔的函数
+    public static void hanoi(int n,char A,char B,char C)
+    {
+        if(n == 1)//圆盘只有一个时，只需将其从A塔移到C塔
+            TowersOfHanoi.move(1, A, C);//将编b号为1的圆盘从A移到C
+        else
+        {//否则
+            hanoi(n - 1, A, C, B);//递归，把A塔上编号1~n-1的圆盘移到B上，以C为辅助塔
+            TowersOfHanoi.move(n, A, C);//把A塔上编号为n的圆盘移到C上
+            hanoi(n - 1, B, A, C);//递归，把B塔上编号1~n-1的圆盘移到C上，以A为辅助塔
+        }
+    }
+    public static void main(String[] args) {
+        Scanner imput = new Scanner(System.in);
+        char A = 'A';
+        char B = 'B';
+        char C = 'C';
+        System.out.println(&quot;******************************************************************************************&quot;);
+        System.out.println(&quot;这是汉诺塔问题（把A塔上编号从小号到大号的圆盘从A塔通过B辅助塔移动到C塔上去&quot;);
+        System.out.println(&quot;******************************************************************************************&quot;);
+        System.out.print(&quot;请输入圆盘的个数：&quot;);
+        int disks = imput.nextInt();
+        TowersOfHanoi.hanoi(disks, A, B, C);
+        System.out.println(&quot;&gt;&gt;移动了&quot; + m + &quot;次，把A上的圆盘都移动到了C上&quot;);
+        imput.close();
+    }
+
+}
+</code></pre>
+<p>六．图解程序运行流程：<br>
+（1）函数hanoi(int n,char A,char B,char C)的功能是把编号为n的圆盘借助B从A移动到 C上。<br>
+（2）函数move(int n ,char N ,char M)的功能是把1编号为n的圆盘从N 移到M上<br>
+<img src="https://acoldfront.github.io//post-images/1584509457983.png" alt="" loading="lazy"></p>
+<p>七．程序运行截图：<br>
+<img src="https://acoldfront.github.io//post-images/1584510142328.png" alt="" loading="lazy"></p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://acoldfront.github.io/post/teshujixian/">
+                  <h3 class="post-title">
+                    特殊极限lim(x→∞)(1+1/x)^x的证明
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '91b49922808a1fd87554',
+        clientSecret: '17de273c86b0e4131b14025e2959ee7ced12da1d',
+        repo: 'acoldfront.github.io',
+        owner: 'acoldfront',
+        admin: ['acoldfront'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
