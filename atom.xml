@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-19T05:21:00.562Z</updated>
+    <updated>2020-03-19T05:39:06.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -26,7 +26,7 @@
 ② 若c=0，则b即为两数的最大公约数<br>
 ③ 若c≠0，则a=b，b=c，再回去执行①</p>
 <p>例如求27和15的最大公约数过程为：<br>
-27÷15 余1215÷12余312÷3余0因此，3即为最大公约数</p>
+27÷15 余12，15÷12余3，12÷3余0，因此，3即为最大公约数</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 //辗转相除法求最大公约数
