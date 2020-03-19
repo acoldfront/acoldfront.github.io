@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-18T08:21:37.963Z</updated>
+    <updated>2020-03-19T03:53:30.369Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,174 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[C语言求最小公倍数和最大公约数三种算法(经典)]]></title>
+        <id>https://acoldfront.github.io/post/cdivisormultiple/</id>
+        <link href="https://acoldfront.github.io/post/cdivisormultiple/">
+        </link>
+        <updated>2020-03-19T03:28:46.000Z</updated>
+        <content type="html"><![CDATA[<p>最小公倍数：数论中的一种概念，两个整数公有的倍数成为他们的公倍数，其中一个最小的公倍数是他们的最小公倍数，同样地，若干个整数公有的倍数中最小的正整数称为它们的最小公倍数，维基百科：<a href="http://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8">定义点击打开链接</a><br>
+求最小公倍数算法：<br>
+最小公倍数=两整数的乘积÷最大公约数</p>
+<p>求最大公约数算法：<br>
+(1)辗转相除法：<br>
+有两整数a和b：<br>
+① a%b得余数c<br>
+② 若c=0，则b即为两数的最大公约数<br>
+③ 若c≠0，则a=b，b=c，再回去执行①</p>
+<p>例如求27和15的最大公约数过程为：<br>
+27÷15 余1215÷12余312÷3余0因此，3即为最大公约数</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//辗转相除法求最大公约数
+int main(void) {
+    int m, n;
+    int a, b, c;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    m = a;
+    n = b;
+    while (b != 0) {   //余数不为0，继续相除，直到余数为0
+        c = a % b;
+        a = b;
+        b = c;
+    }
+    printf(&quot;最大公约数：%d\n&quot;, a);
+    printf(&quot;最小公倍数：%d\n&quot;, m * n / a);
+    return 0;
+}
+</code></pre>
+<p>提供一种简写的方式：</p>
+<pre><code class="language-c">int gcd(int a,int b)
+{
+    return b==0?a:gcd(b,a%b);
+}
+</code></pre>
+<p>⑵ 相减法：<br>
+有两整数a和b：<br>
+① 若a&gt;b，则a=a-b<br>
+② 若a&lt;b，则b=b-a<br>
+③ 若a=b，则a（或b）即为两数的最大公约数<br>
+④ 若a≠b，则再回去执行①</p>
+<p>例如求27和15的最大公约数过程为：<br>
+27－15＝12( 15&gt;12 ) 15－12＝3( 12&gt;3 )<br>
+12－3＝9( 9&gt;3 ) 9－3＝6( 6&gt;3 )<br>
+6－3＝3( 3==3 )<br>
+因此，3即为最大公约数</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//相减法求最大公约数
+int main(void) {
+    int m, n;
+    int a, b, c;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    m = a;
+    n = b;
+    while (a != b) {   //a, b不相等，大数减小数，直到相等为止。
+        if (a &gt; b)
+            a = a - b;
+        else
+            b = b - a;
+    }
+    printf(&quot;最大公约数：%d\n&quot;, a);
+    printf(&quot;最小公倍数：%d\n&quot;, m * n / a);
+    return 0;
+}
+</code></pre>
+<p>⑶穷举法：<br>
+有两整数a和b：<br>
+① i=1<br>
+② 若a，b能同时被i整除，则t＝i<br>
+③ i++<br>
+④ 若 i &lt;= a(或b)，则再回去执行②<br>
+⑤ 若 i &gt; a(或b)，则t即为最大公约数，结束</p>
+<p>改进：<br>
+① i= a(或b)<br>
+② 若a，b能同时被i整除，则i即为最大公约数，<br>
+结束<br>
+③ i--，再回去执行②</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//穷举法求最大公约数
+int main(void) {
+    int m, n;
+    int a, b, i, t;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    m = a;
+    n = b;
+    for (i = 1; i &lt;= a; ++i) {
+        if (a % i == 0 &amp;&amp; b % i == 0)
+            t = i;
+    }
+    /*  改进后的
+    for (t= a; t&gt;0; t-- )
+        if ( a%t == 0 &amp;&amp; b%t ==0 )
+            break; 
+    */
+    printf(&quot;最大公约数：%d\n&quot;, t);
+    printf(&quot;最小公倍数：%d\n&quot;, m * n / t);
+    return 0;
+}
+</code></pre>
+<pre><code class="language-c"> //穷举法求最小公倍数
+for (i = a;; i++)
+    if (i % a == 0 &amp;&amp; i % b == 0) break;
+printf(&quot;最小公倍数：%d\n&quot;, i);
+
+//多个数的最大公约数和最小公倍数
+for (i = a; i &gt; 0; i--)
+    if (a % i == 0 &amp;&amp; b % i == 0 &amp;&amp; c % i == 0)
+        break;
+printf(&quot;最大公约数：%d\n&quot;, i);
+for (i = a;; i++)
+    if (i % a == 0 &amp;&amp; i % b == 0 &amp;&amp; i % c == 0)
+        break;
+printf(&quot;最小公倍数：%d\n&quot;, i);
+    ```
+⑷取模法：
+求最小公倍数：
+```c
+#include &lt;stdio.h&gt;
+
+//求最小公倍数
+int main(void) {
+    int x, y;
+    int lcm;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+    if (x &gt; y)
+        lcm = x;
+    else
+        lcm = y;
+    while (lcm % x || lcm % y)
+        lcm++;
+    printf(&quot;最小公倍数：%d\n&quot;, lcm);
+    return 0;
+}
+</code></pre>
+<p>求最大公约数：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//求最大公约数
+int main(void) {
+    int x, y;
+    int gcd;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+    if (x &gt; y)
+        gcd = y;
+    else
+        gcd = x;
+    while (x % gcd || y % gcd)
+        gcd--;
+    printf(&quot;最大公约数：%d\n&quot;, gcd);
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言指针详解]]></title>
         <id>https://acoldfront.github.io/post/czhizhen/</id>
@@ -809,45 +977,5 @@ Qlfh$#Li#|rx#duh#uhdglqj#wklv#|rx#pxvw#kdyh#zrunhg#rxw#krz#wr#ghfu|sw#lw1#Wklv#l
 <hr>
 <p>在本文寻找！Good luck！😏</p>
 <!-- 链接: https://pan.baidu.com/s/1E6AldrfGJ23nSCxStkNUMg 提取码: 9ufm-->]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Navicat产品_补丁_注册机 使用教程]]></title>
-        <id>https://acoldfront.github.io/post/navicat-keygen-patch/</id>
-        <link href="https://acoldfront.github.io/post/navicat-keygen-patch/">
-        </link>
-        <updated>2020-01-26T05:12:52.000Z</updated>
-        <content type="html"><![CDATA[<p>首先运行navicat150_premium_cs_x64安装程序，安装navicat_premium<br>
-<img src="https://acoldfront.github.io//post-images/1580015698686.jpg" alt="" loading="lazy"></p>
-<p>然后打开Navicat产品_补丁_注册机_v5.6软件（不要运行navicat_premium程序）<br>
-<img src="https://acoldfront.github.io//post-images/1580015849293.png" alt="" loading="lazy"></p>
-<p>选择产品和语言<br>
-<img src="https://acoldfront.github.io//post-images/1580016020754.png" alt="" loading="lazy"></p>
-<p>点击“补丁”按钮，如果你没有默认安装到C盘的话，会提示选择Navicat Premium目录的Navicat.exe文件<br>
-<img src="https://acoldfront.github.io//post-images/1580015925708.png" alt="" loading="lazy"></p>
-<p>然后提示破解成功<br>
-<img src="https://acoldfront.github.io//post-images/1580016037618.png" alt="" loading="lazy"></p>
-<p>运行navicat_premium点击注册，输入你的用户信息后，点击“生成”创建激活码，激活码会自动插入，若没有插入复制这个激活码到软件<br>
-<img src="https://acoldfront.github.io//post-images/1580016286854.png" alt="" loading="lazy"><br>
-<img src="https://acoldfront.github.io//post-images/1580016371169.png" alt="" loading="lazy"></p>
-<p>插入激活码后，点击“激活”<br>
-<img src="https://acoldfront.github.io//post-images/1580016496444.png" alt="" loading="lazy"></p>
-<p>会弹出提示，没有联网，因为我们最开始给他的联网激活功能破解了，这儿选择“手动激活”<br>
-<img src="https://acoldfront.github.io//post-images/1580016569463.png" alt="" loading="lazy"></p>
-<p>这时候会弹出一个手动激活的窗口<br>
-<img src="https://acoldfront.github.io//post-images/1580016718588.png" alt="" loading="lazy"></p>
-<p>复制“请求码”到 Navicat产品_补丁_注册机_v5.6软件<br>
-<img src="https://acoldfront.github.io//post-images/1580016806182.png" alt="" loading="lazy"></p>
-<p>点击“生成”<br>
-<img src="https://acoldfront.github.io//post-images/1580016861185.png" alt="" loading="lazy"></p>
-<p>复制“激活码”到 Navicat产品中<br>
-<img src="https://acoldfront.github.io//post-images/1580017523165.png" alt="" loading="lazy"></p>
-<p>点击“激活”<br>
-<img src="https://acoldfront.github.io//post-images/1580017609104.png" alt="" loading="lazy"></p>
-<p>提示激活成功<br>
-<img src="https://acoldfront.github.io//post-images/1580017620074.png" alt="" loading="lazy"></p>
-<p>查看 激活状态<br>
-<img src="https://acoldfront.github.io//post-images/1580017635671.png" alt="" loading="lazy"><br>
-<img src="https://acoldfront.github.io//post-images/1580017640828.png" alt="" loading="lazy"></p>
-]]></content>
     </entry>
 </feed>

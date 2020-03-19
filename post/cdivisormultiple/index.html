@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>C语言求最小公倍数和最大公约数三种算法(经典) | Crazer的自留地</title>
+<meta name="description" content="静坐长思己过，闲谈莫论人非">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1584590000751">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://acoldfront.github.io/">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1584590000751" class="site-logo">
+        <h1 class="site-title">Crazer的自留地</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      静坐长思己过，闲谈莫论人非
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://acoldfront.github.io/" target="_blank">Crazer</a> | <a class="rss" href="https://acoldfront.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">C语言求最小公倍数和最大公约数三种算法(经典)</h2>
+            <div class="post-date">2020-03-19</div>
+            
+            <div class="post-content">
+              <p>最小公倍数：数论中的一种概念，两个整数公有的倍数成为他们的公倍数，其中一个最小的公倍数是他们的最小公倍数，同样地，若干个整数公有的倍数中最小的正整数称为它们的最小公倍数，维基百科：<a href="http://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8">定义点击打开链接</a><br>
+求最小公倍数算法：<br>
+最小公倍数=两整数的乘积÷最大公约数</p>
+<p>求最大公约数算法：<br>
+(1)辗转相除法：<br>
+有两整数a和b：<br>
+① a%b得余数c<br>
+② 若c=0，则b即为两数的最大公约数<br>
+③ 若c≠0，则a=b，b=c，再回去执行①</p>
+<p>例如求27和15的最大公约数过程为：<br>
+27÷15 余1215÷12余312÷3余0因此，3即为最大公约数</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//辗转相除法求最大公约数
+int main(void) {
+    int m, n;
+    int a, b, c;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    m = a;
+    n = b;
+    while (b != 0) {   //余数不为0，继续相除，直到余数为0
+        c = a % b;
+        a = b;
+        b = c;
+    }
+    printf(&quot;最大公约数：%d\n&quot;, a);
+    printf(&quot;最小公倍数：%d\n&quot;, m * n / a);
+    return 0;
+}
+</code></pre>
+<p>提供一种简写的方式：</p>
+<pre><code class="language-c">int gcd(int a,int b)
+{
+    return b==0?a:gcd(b,a%b);
+}
+</code></pre>
+<p>⑵ 相减法：<br>
+有两整数a和b：<br>
+① 若a&gt;b，则a=a-b<br>
+② 若a&lt;b，则b=b-a<br>
+③ 若a=b，则a（或b）即为两数的最大公约数<br>
+④ 若a≠b，则再回去执行①</p>
+<p>例如求27和15的最大公约数过程为：<br>
+27－15＝12( 15&gt;12 ) 15－12＝3( 12&gt;3 )<br>
+12－3＝9( 9&gt;3 ) 9－3＝6( 6&gt;3 )<br>
+6－3＝3( 3==3 )<br>
+因此，3即为最大公约数</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//相减法求最大公约数
+int main(void) {
+    int m, n;
+    int a, b, c;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    m = a;
+    n = b;
+    while (a != b) {   //a, b不相等，大数减小数，直到相等为止。
+        if (a &gt; b)
+            a = a - b;
+        else
+            b = b - a;
+    }
+    printf(&quot;最大公约数：%d\n&quot;, a);
+    printf(&quot;最小公倍数：%d\n&quot;, m * n / a);
+    return 0;
+}
+</code></pre>
+<p>⑶穷举法：<br>
+有两整数a和b：<br>
+① i=1<br>
+② 若a，b能同时被i整除，则t＝i<br>
+③ i++<br>
+④ 若 i &lt;= a(或b)，则再回去执行②<br>
+⑤ 若 i &gt; a(或b)，则t即为最大公约数，结束</p>
+<p>改进：<br>
+① i= a(或b)<br>
+② 若a，b能同时被i整除，则i即为最大公约数，<br>
+结束<br>
+③ i--，再回去执行②</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//穷举法求最大公约数
+int main(void) {
+    int m, n;
+    int a, b, i, t;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
+    m = a;
+    n = b;
+    for (i = 1; i &lt;= a; ++i) {
+        if (a % i == 0 &amp;&amp; b % i == 0)
+            t = i;
+    }
+    /*  改进后的
+    for (t= a; t&gt;0; t-- )
+        if ( a%t == 0 &amp;&amp; b%t ==0 )
+            break; 
+    */
+    printf(&quot;最大公约数：%d\n&quot;, t);
+    printf(&quot;最小公倍数：%d\n&quot;, m * n / t);
+    return 0;
+}
+</code></pre>
+<pre><code class="language-c"> //穷举法求最小公倍数
+for (i = a;; i++)
+    if (i % a == 0 &amp;&amp; i % b == 0) break;
+printf(&quot;最小公倍数：%d\n&quot;, i);
+
+//多个数的最大公约数和最小公倍数
+for (i = a; i &gt; 0; i--)
+    if (a % i == 0 &amp;&amp; b % i == 0 &amp;&amp; c % i == 0)
+        break;
+printf(&quot;最大公约数：%d\n&quot;, i);
+for (i = a;; i++)
+    if (i % a == 0 &amp;&amp; i % b == 0 &amp;&amp; i % c == 0)
+        break;
+printf(&quot;最小公倍数：%d\n&quot;, i);
+    ```
+⑷取模法：
+求最小公倍数：
+```c
+#include &lt;stdio.h&gt;
+
+//求最小公倍数
+int main(void) {
+    int x, y;
+    int lcm;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+    if (x &gt; y)
+        lcm = x;
+    else
+        lcm = y;
+    while (lcm % x || lcm % y)
+        lcm++;
+    printf(&quot;最小公倍数：%d\n&quot;, lcm);
+    return 0;
+}
+</code></pre>
+<p>求最大公约数：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//求最大公约数
+int main(void) {
+    int x, y;
+    int gcd;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+    if (x &gt; y)
+        gcd = y;
+    else
+        gcd = x;
+    while (x % gcd || y % gcd)
+        gcd--;
+    printf(&quot;最大公约数：%d\n&quot;, gcd);
+    return 0;
+}
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
+                    编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://acoldfront.github.io/post/czhizhen/">
+                  <h3 class="post-title">
+                    C语言指针详解
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '91b49922808a1fd87554',
+        clientSecret: '17de273c86b0e4131b14025e2959ee7ced12da1d',
+        repo: 'acoldfront.github.io',
+        owner: 'acoldfront',
+        admin: ['acoldfront'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
