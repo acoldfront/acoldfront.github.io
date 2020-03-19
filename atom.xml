@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-19T03:53:30.369Z</updated>
+    <updated>2020-03-19T05:21:00.562Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
-        <title type="html"><![CDATA[C语言求最小公倍数和最大公约数三种算法(经典)]]></title>
+        <title type="html"><![CDATA[C语言求最小公倍数和最大公约数四种算法(经典)]]></title>
         <id>https://acoldfront.github.io/post/cdivisormultiple/</id>
         <link href="https://acoldfront.github.io/post/cdivisormultiple/">
         </link>
@@ -135,11 +135,10 @@ for (i = a;; i++)
     if (i % a == 0 &amp;&amp; i % b == 0 &amp;&amp; i % c == 0)
         break;
 printf(&quot;最小公倍数：%d\n&quot;, i);
-    ```
-⑷取模法：
-求最小公倍数：
-```c
-#include &lt;stdio.h&gt;
+</code></pre>
+<p>⑷取模法：<br>
+求最小公倍数：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
 
 //求最小公倍数
 int main(void) {
