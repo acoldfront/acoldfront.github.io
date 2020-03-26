@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-03-26T03:26:30.377Z</updated>
+    <updated>2020-03-26T03:31:02.698Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,154 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[全新的思维导图软件 XMind ZEN 2020 v10.1.0 中文多语特别版]]></title>
+        <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
+        <link href="https://acoldfront.github.io/post/xmind-zen-2020/">
+        </link>
+        <updated>2020-03-25T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
+<!-- more -->
+<p>XMind 是一个全功能的思维导图和头脑风暴软件，为激发灵感和创意而生。作为一款有效提升工作和生活效率的生产力工具，受到全球百千万用户的青睐。</p>
+<p>这两年思维导图突然就火起来了，各种思维导图软件也是雨后春笋般冒出来了，自 Xmind 发布以来就受到全球多个国家的办公一族喜爱。而 XMind 开发团队成员也在不断的去改进产品以提供优秀的生产力工具和服务，帮助人们节省时间并提升效率为目标。<br>
+<img src="https://acoldfront.github.io//post-images/1579860380835.png" alt="" loading="lazy"></p>
+<p>全新内核，经典 XMind 体验。<br>
+我们努力了3年，100% 重写了思维导图引擎的每一个细节，XMind: ZEN 对 XMind 8 做到了完全兼容，让你有一种全新却不失经典的体验。</p>
+<p>无人可超越，只有超越自己。<br>
+对所有主题进行了重新设计，为您的每一张导图都注入新的活力。字体渲染也得到了极大的改进，让每一张思维导图既美观又专业。</p>
+<p>我们专注，为了让您更专注。<br>
+ZEN 模式，寓意为禅。让专注变成一种习惯。</p>
+<p>全新 Snowbrush 引擎<br>
+我们努力了3年，100% 重写了思维导图的引擎，着眼在未来的黑科技上，提升了思维导图的展示效果，丰富了绘图的元素。</p>
+<p>充满惊喜的主题<br>
+XMind: ZEN 对所有主题进行了重新设计，为您的每一张导图都注入新的活力，专业的同时又不失丰富元素，好看到让人羡慕。</p>
+<p>Font Rendering<br>
+由于极大地改进了字体的渲染技术，无论你用 Mac 还是 Windows 创建思维导图，所有文字都以同一样式清晰呈现。XMind: ZEN 精选多款优质字体，爱上编辑导图，从未如此简单。</p>
+<p>Markdown<br>
+我们相信 Markdown 会为你带来更好的使用体验，将做好的图导出为 Markdown 格式后，会让你更易于阅读。</p>
+<p>集专注于 ZEN 模式<br>
+ZEN 模式，寓意为禅，让专注变成一种习惯。进入 ZEN 模式，隐藏页面内多余的元素，帮助你全神贯注地绘制每一个主题，心无旁骛地完成工作。</p>
+<p>贴纸，原创的更好<br>
+设计师原创的贴纸，每一个都精心绘制，更准确地满足你的需求，精彩无处不在。</p>
+<p>100% 对 XMind 8 兼容<br>
+XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结构，在 XMind: ZEN 中都能完美展现。</p>
+<p>导出PDF和印象笔记<br>
+将思维导图导出为矢量的 PDF 文件，方便您将导图随意放大和清晰地打印。印象笔记的粉丝们还会惊喜地发现只需简单地点击，便可将导图分享到印象笔记中。</p>
+<h2 id="更新日志">###更新日志</h2>
+<p>10.1.0</p>
+<p>LaTeX方程</p>
+<p>立即插入专业的方程，例如数学和化学方程。</p>
+<p>增强的ZEN模式</p>
+<p>ZEN模式现在支持查看快捷键、编辑样式、插入标记等操作。</p>
+<p>自定义快速样式</p>
+<p>用风格编辑器自定义快速样式，区分主题更加轻松便捷。</p>
+<p>Word导入</p>
+<p>从Word到XMind -整理点子和知识的全新开始。</p>
+<h3 id="修改说明">修改说明</h3>
+<hr>
+<p>基于官网最新版本破解</p>
+<p>破解授权，移除验证，去除试用提示</p>
+<p>能正常导出图片无水印，PDF无水印，导出word，粘贴图片等高级功能</p>
+<p>v2版本导出PNG缩放大小已修复</p>
+<h3 id="使用提示">使用提示</h3>
+<hr>
+<p>将app.asar放入XMind-ZEN安装目录的resources文件夹下替换</p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p>在本文寻找！Good luck！😏</p>
+<!-- 链接: https://pan.baidu.com/s/175dlcFsxq9RsiB_BGt0erw 提取码: 8kh4  -->]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[数据库管理工具 PremiumSoft Navicat Premium v15.0.12 中文特别版]]></title>
+        <id>https://acoldfront.github.io/post/navicat-premium/</id>
+        <link href="https://acoldfront.github.io/post/navicat-premium/">
+        </link>
+        <updated>2020-03-23T04:55:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>Navicat premium是一款数据库管理工具。将此工具连接数据库，你可以从中看到各种数据库的详细信息。包括报错，等等。当然，你也可以通过他，登陆数据库，进行各种操作。Navicat Premium是一个可多重连线资料库的管理工具，它可以让你以单一程式同时连线到 MySQL、SQLite、Oracle 及 PostgreSQL 资料库，让管理不同类型的资料库更加的方便。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Navicat premium是一款数据库管理工具。将此工具连接数据库，你可以从中看到各种数据库的详细信息。包括报错，等等。当然，你也可以通过他，登陆数据库，进行各种操作。Navicat Premium是一个可多重连线资料库的管理工具，它可以让你以单一程式同时连线到 MySQL、SQLite、Oracle 及 PostgreSQL 资料库，让管理不同类型的资料库更加的方便。</p>
+<!-- more -->
+<p>Navicat Premium结合了其他Navicat成员的功能。有了这种连线到不同资料库类型的能力，Navicat Premium支持在 MySQL、SQLite、Oracle 及 PostgreSQL 之间传输资料。它支持大部分的 MySQL、SQLite、Oracle 及 PostgreSQL 功能，包括预存程序、事件、触发器、函式、检视等。<br>
+Navicat Premium可以让你简单并快速的在多种资料库系统间传输资料，或传输一份以SQL格式及编码设计的纯文字档。<br>
+不同的资料库的批次处理任务也可以设定排程并在指定的时间执行。其他功能包括汇入/汇出精灵、查询建立工具、报表产生器、资料同步、备份、工作排程及更多。</p>
+<p>Navicat的的功能足以提供专业开发人员的所有需求，但是对资料库伺服器的新手来说又相当容易学习。<br>
+Navicat Premium [2] 有三种平台版本- Microsoft Windows、Mac OS X及Linux。它可以让使用者连接本地/远端伺服器、提供一些实用的工具如资料/结构同步、汇入/汇出、备份/回复及报表以协助管理资料的流程。</p>
+<p>Navicat Premium(导航猫数据库管理)是一个可多重连线资料库的管理工具，Navicat Premium(导航猫数据库管理)可以让你以单一程式同时连线到MySQL、SQLite、Oracle 及 PostgreSQL资料库，让管理不同类型的资料库更加的方便。 　Navicat Premium可以让你简单并快速的在多种资料库系统间传输资料，或传输一份以SQL格式及编码设计的纯文字档。</p>
+<p>不同的资料库的批次处理任务也可以设定排程并在指定的时间执行。其他功能包括汇入/汇出精灵、查询建立工具、报表产生器、资料同步、备份、工作排程及更多。</p>
+<p>Navicat的的功能足以提供专业开发人员的所有需求，但是对资料库伺服器的新手来说又相当容易学习。<br>
+<img src="https://acoldfront.github.io//post-images/1580014704119.png" alt="" loading="lazy"></p>
+<p>Navicat Cloud<br>
+Navicat 提供 Navicat Cloud 服务给用户。同步你的连接设置、模型、查询和虚拟组到云。这样你就能随时随地实时访问他们。有了 Navicat Cloud，你可以善用一天中的每分每秒，以最大限度提高你的工作效率。了解更多›</p>
+<p>安全连接<br>
+Navicat 可以让你通过 SSH 通道创建安全的 SSH 阶段作业，确保两台主机之间的连接受到强大验证和安全加密的保护。验证方式可使用密码或公钥和私钥对。Navicat 亦支持 HTTP 通道，让你灵活地绕过限制直接数据库服务器连接的互联网服务供应商。</p>
+<p>对象设计器<br>
+使用专业的对象设计器创建、修改和设计所有数据库对象，例如：表、视图、函数、过程、索引、触发器和序列。无需编写复杂的 SQL 来创建和编辑对象，你会知道你正使用什么选项。</p>
+<p>表查看器<br>
+网格或表单查看<br>
+使用网格查看添加、修改和删除记录。用类似数据表的功能浏览网格查看，例如排序和隐藏数据组，使用我们的助理编辑器：备注、十六进制、图像或更多</p>
+<p>你也可以用表单查看操作记录。清楚显示记录的字段名和其值，不必担心误解数据。</p>
+<p>外键数据选择<br>
+在你的数据库使用外键关系锚定参考的查找表，并自动建立下拉列表。无需持续对照参考主表，你可以简化你的工作流程和提升效率。<br>
+SQL 创建工具或编辑器</p>
+<p>SQL 创建工具<br>
+视觉化 SQL 创建工具让你创建和编辑查询或视图，而不必担心语法和正确命令的用法。选择你想在表中执行的操作，它会为你编写 SQL 语句。</p>
+<p>自动完成代码<br>
+使用我们的自动完成代码功能，能快速地在 SQL 编辑器中创建 SQL 语句。无论你想选择的是数据库对象的属性或 SQL关键字，你只需从下拉列表中选择。</p>
+<p>数据库设计器<br>
+逆向工程<br>
+使用 Navicat 的逆向工程，你可以从一个现有的数据库创建数据库模型，可视化地显现和编辑你的数据库结构或创建一个图形模型，并由模型生成一个数据库。</p>
+<p>正向工程和脚本生成<br>
+同步到数据库功能给你充分了解所有数据库的差异。生成必要的同步脚本来更新目标数据库，并使其与模型相同。</p>
+<p>导出 SQL 让你有机会全面控制最终的 SQL 脚本，生成参照完整性规则，生成模型的独立部份、注释、字符集等。它可以节省你的工作时间。</p>
+<p>PL/SQL 代码调试器<br>
+PL/SQLPL/PGSQL<br>
+PL/SQL 调试器提供的功能，如设置断点，步进通过程序，查看和修改变量值，及查看调用堆栈。你可以直接从 Navicat 的工作区中调试 PL/SQL 代码如过程和函数、对象方法和触发器。</p>
+<p>数据处理工具<br>
+导入或导出向导<br>
+从不同格式的文件导入数据到表，例如 Access、Excel、XML、TXT、CSV、JSON 及更多。而且，在设置数据源连接后，你可以从 ODBC 导入数据。只需简单地选择你要导入的表，或使用添加查询按钮指定查询。同样，你可以将数据导出到各种格式，如 Excel、TXT、CSV、DBF、XML 等。</p>
+<p>数据传输<br>
+在多个不同的数据库系统间轻松地传输数据 – MySQL、MariaDB、SQL Server、Oracle、PostgreSQL 和 SQLite 数据库。你可以选择以指定的 SQL 格式和编码导出数据为 SQL 文件。这个功能可大大的简化迁移数据的进程。</p>
+<p>数据或结构同步<br>
+从一个数据库中以详细的分析进程传输数据到另外一个数据库。同样，你可以比对并修改表的结构。在数据和结构同步中，目标数据库可以在源服务器，也可以在其他的服务器。</p>
+<p>备份或还原<br>
+定期备份数据库对用户是相当重要的。备份或还原全部表、记录、视图等。如果数据损坏，不用再重做，让你能高枕无忧。</p>
+<p>计划<br>
+不同数据库的设置文件可以创建在单一批处理作业，这样你就可以设置计划并在指定的时间运行。批处理作业可以创建的对象包括打印报表、数据库备份、查询、数据传输、数据同步、导入和导出。当任务完成后，Navicat 可自动传送电子邮件通知给你指定的收件人。此外，导出的文件或打印的报表可以添加到批处理作业作为电子邮件附件，让你可以轻易与其他人共享你的数据。<br>
+报表创建工具或查看器 *只限于 Windows 版本</p>
+<p>使用我们的用户友好 GUI 报表创建工具创建各种不同类型的报表。设计发票、统计、邮寄标签及更多其他报表。输出报表到多种格式 – text、PDF、Lotus、Excel、Graphic、Html 及更多。</p>
+<p>Navicat Report Viewer 可让你浏览由报表创建工具设计的报表。最酷的是你可以与计算机沒有安装 Navicat，但安装了 Navicat Report Viewer 的人共享报表。</p>
+<p>实用工具<br>
+ER 图表<br>
+ER 图表查看能通过以图形格式显示数据库结构来帮助你了解你的数据库，让你可以看到数据库中表之间的关联。</p>
+<p>连接颜色或虚拟组<br>
+连接颜色功能可以让你立刻知道你连接到哪个服务器。显示在子窗口工具栏的颜色指示，用于识别连接和它们的数据库对象。虚拟组功能分类对象到不用的组，令对象和连接有一个更好的组织。</p>
+<p>树或对象筛选<br>
+使用树或对象筛选功能收窄显示数据对象的列表。简单地需输入文本，然后只会显示符合指定字符串开始的数据库对象。</p>
+<p>收藏夹<br>
+Navicat 让你更容易地回到你常访问的数据库对象。通过添加路径到收藏夹列表，你只需一次点击就可以打开这些数据库对象。</p>
+<p>系统需求<br>
+Windows<br>
+Microsoft Windows XP SP3、Vista、Windows 7、Windows 8、Windows 8.1、Windows 10、Server 2003、Server 2008、Server 2012</p>
+<p>Mac<br>
+Mac OS X 10.7 或以上版本<br>
+Intel 处理器</p>
+<p>Linux<br>
+Ubuntu 12.04、Ubuntu 14.04、CentOS 6.7、CentOS 7、Fedora 22、Fedora 23、Linux Mint 13、Linux Mint 17.3、openSUSE 13.2、openSUSE 42.1</p>
+<h3 id="修改说明">修改说明</h3>
+<hr>
+<p>基于DeltaFox大神Navicat_Keygen_Patch_v5.6  Crazer汉化</p>
+<h3 id="使用提示">使用提示</h3>
+<hr>
+<p>使用前查看“使用说明&quot;文档<br>
+或者<br>
+<a href="https://acoldfront.github.io/post/navicat-keygen-patch/">查看Navicat产品_补丁_注册机 使用教程</a></p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p>在本文寻找！Good luck！😏</p>
+<!-- 链接: https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg 提取码: 4vgd -->]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言求最小公倍数和最大公约数四种算法(经典)]]></title>
         <id>https://acoldfront.github.io/post/cdivisormultiple/</id>
@@ -906,75 +1054,5 @@ Qlfh$#Li#|rx#duh#uhdglqj#wklv#|rx#pxvw#kdyh#zrunhg#rxw#krz#wr#ghfu|sw#lw1#Wklv#l
 <p>在本文寻找！Good luck！😏</p>
 <!-- 链接: https://pan.baidu.com/s/15pOMNeZhVx1pmklYLswPBg 提取码: qg3i-->
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[微信/QQ/TIM防撤回补丁]]></title>
-        <id>https://acoldfront.github.io/post/RevokeMsgPatcher/</id>
-        <link href="https://acoldfront.github.io/post/RevokeMsgPatcher/">
-        </link>
-        <updated>2020-02-19T15:56:42.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="微信qqtim防撤回补丁">👀微信/QQ/TIM防撤回补丁</h1>
-<p>适用于 Windows 下 PC 版微信/QQ/TIM的防撤回补丁。<strong>从 0.7 版本开始通杀所有新版本微信/QQ（含测试版）</strong></p>
-<img width="180px" src="https://raw.githubusercontent.com/huiyadanli/RevokeMsgPatcher/master/Images/revoke.jpg"/>
-<p>下载地址：<br>
-<strong><a href="https://github.com/huiyadanli/RevokeMsgPatcher/releases/download/0.8/RevokeMsgPatcher.v0.8.zip">⚡️点我下载最新版本</a></strong> |<br>
-<a href="https://www.lanzous.com/i8lhkyf">☁备用下载-蓝奏云</a> |<br>
-<a href="https://pan.baidu.com/s/11LY3pvNlOyZZGxILboVnxg">☁备用下载-百度云</a> 提取码：coco</p>
-<p>相关文档：<br>
-<strong><a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/%E7%89%88%E6%9C%AC%E6%94%AF%E6%8C%81">✔支持哪些版本</a></strong> |<br>
-<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">❓常见问题</a> |<br>
-<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki">📖查看完整文档</a></p>
-<p>原理与方法：<br>
-<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/%E5%BE%AE%E4%BF%A1%E9%98%B2%E6%92%A4%E5%9B%9E%E4%B8%8E%E5%A4%9A%E5%BC%80%E6%95%99%E7%A8%8B">📗微信</a> |<br>
-<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/QQ%E6%88%96TIM%E9%98%B2%E6%92%A4%E5%9B%9E%E6%95%99%E7%A8%8B">📕QQ</a> |<br>
-<a href="https://github.com/huiyadanli/RevokeMsgPatcher/wiki/QQ%E6%88%96TIM%E9%98%B2%E6%92%A4%E5%9B%9E%E6%95%99%E7%A8%8B">📘TIM</a></p>
-<p>附带产物：<a href="https://github.com/huiyadanli/RevokeMsgPatcher/tree/master/RevokeMsgPatcher.MultiInstance">一个通用的微信多开工具</a></p>
-<h2 id="截图">📷截图</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/huiyadanli/RevokeMsgPatcher/master/Images/screenshot.png" alt="Screenshot" loading="lazy"></figure>
-<h2 id="使用方法">🔨使用方法</h2>
-<ol>
-<li>
-<p>首先，你的系统需要满足以下条件：</p>
-<ul>
-<li>Windows 7 或更高版本，<strong>不支持XP</strong>。</li>
-<li><a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=30653">.NET Framework 4.5</a> 或更高版本。<strong>低于此版本在打开程序时可能无反应，或者直接报错</strong>。</li>
-</ul>
-</li>
-<li>
-<p>使用本程序前，先关闭微信/QQ/TIM。</p>
-</li>
-<li>
-<p><strong>以管理员身份运行本程序</strong>，等待右下角获取最新的补丁信息。</p>
-</li>
-<li>
-<p>选择微信/QQ/TIM的安装路径。如果你用的安装版的微信/QQ/TIM，正常情况下本程序会自动从注册表中获取安装路径，绿色版需要手动选择路径。</p>
-</li>
-<li>
-<p>点击防撤回。界面可能会出现一段时间的无响应，请耐心等待。<strong>由于修改了微信的 WeChatWin.dll 文件、QQ/TIM的 IM.dll 文件，杀毒软件可能会弹出警告，放行即可。</strong></p>
-</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[优秀代码编辑器 Sublime Text 3.2.2 V3211]]></title>
-        <id>https://acoldfront.github.io/post/sublime-v3211/</id>
-        <link href="https://acoldfront.github.io/post/sublime-v3211/">
-        </link>
-        <updated>2020-02-06T16:43:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
-<!-- more -->
-<p>Sublime Text 是一个轻量、简洁、高效、跨平台的编辑器，方便的配色以及兼容vim快捷键等各种优点博得了很多前端开发人员的喜爱!Sublime Text 这款程序员必备代码编辑器，几乎每位程序员提到Sublime Text 2都是赞不绝口！它体积小巧，无需安装，绿色便携；它可跨平台支持Windows/Mac/Linux；支持32与64位操作系统，它在支持语法高亮、代 码补全、代码片段（Snippet）、代码折叠、行号显示、自定义皮肤、配色方案等所有其它代码编辑器所拥有的功能的同时，又保证了其飞快的速度！还有着 自身独特的功能，比如代码地图、多种界面布局以及全屏免打扰模式等，这些优秀特性让Sublime Text 2成了所有程序员眼中的神！</p>
-<p>SublimeText支持但不限于 C, C++, C#, CSS, D, Erlang, HTML, Groovy, Haskell, HTML, Java, JavaScript, LaTeX, Lisp, Lua, Markdown, Matlab, OCaml, Perl, PHP, Python, R, Ruby, SQL, TCL, Textile and XML 等主流编程语言的语法高亮。ST 拥有优秀的代码自动完成功能 (自动补齐括号，大括号等配对符号；自动补全已经出现的单词；自动补全函数名)，非常智能；</p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>基于最新版本绿色便携制作</p>
-<p>增强侧边栏</p>
-<p>集成破解补丁，集成汉化，允许切换语言</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p>在本文寻找！Good luck！😏</p>
-<!-- 链接: https://pan.baidu.com/s/1E6AldrfGJ23nSCxStkNUMg 提取码: 9ufm-->]]></content>
     </entry>
 </feed>
