@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T03:22:26.727Z</updated>
+    <updated>2020-05-05T03:24:00.401Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -57,6 +57,8 @@ int main(void) {
 5,2,1
 三个数的顺序为：1,2,5
 </code></pre>
+<p>###脚下留神：<br>
+本实例使用 scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c); 从键盘中获得任意 3 个数。在输入数据时，在两个数据之间以一个或多个空格间隔，也可以用 Enter 健、Tab 键，不能用逗号作为两个数据间的分隔符。 如果用格式输入函数 scanf(&quot;％d,％d,%d&quot;,&amp;a,&amp;b,&amp;c) 输入数据，两个数据之间要用“,”做间隔。</p>
 ]]></content>
     </entry>
     <entry>
