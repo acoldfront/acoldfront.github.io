@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T13:12:49.274Z</updated>
+    <updated>2020-05-05T13:15:09.890Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -61,10 +61,15 @@
         <link href="https://acoldfront.github.io/post/c-example10/">
         </link>
         <updated>2020-05-05T13:10:54.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>用归并排序法对一组数据由小到大进行排序，数据分别为 695、458、362、789、12、 15、163、23、2、986。</p>
+</blockquote>
+]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>用归并排序法对一组数据由小到大进行排序，数据分别为 695、458、362、789、12、 15、163、23、2、986。</p>
 </blockquote>
-<!-- more -->]]></content>
+<!-- more -->
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：9、选择排序算法]]></title>
@@ -72,10 +77,15 @@
         <link href="https://acoldfront.github.io/post/c-example9/">
         </link>
         <updated>2020-05-05T13:10:21.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>用选择排序法对一组数据由小到大进行排序，数据分别为 526、36、2、369、56、45、78、92、125、52。</p>
+</blockquote>
+]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>用选择排序法对一组数据由小到大进行排序，数据分别为 526、36、2、369、56、45、78、92、125、52。</p>
 </blockquote>
-<!-- more -->]]></content>
+<!-- more -->
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：8、快速排序算法]]></title>
@@ -83,10 +93,15 @@
         <link href="https://acoldfront.github.io/post/c-example8/">
         </link>
         <updated>2020-05-05T13:09:45.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>用快速排序法对一组数据由小到大进行排序，数据分别为 99、45、12、36、69、22、62、 796、4、696。</p>
+</blockquote>
+]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>用快速排序法对一组数据由小到大进行排序，数据分别为 99、45、12、36、69、22、62、 796、4、696。</p>
 </blockquote>
-<!-- more -->]]></content>
+<!-- more -->
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：7、直接插入排序算法]]></title>
