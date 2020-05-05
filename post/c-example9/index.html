@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588693853137">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588694748266">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588693853137" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588694748266" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -106,6 +106,61 @@
 <p>用选择排序法对一组数据由小到大进行排序，数据分别为 526、36、2、369、56、45、78、92、125、52。</p>
 </blockquote>
 <!-- more -->
+<h3 id="算法表述">算法表述：</h3>
+<p>选择排序的基本原理是以序列首元素位置为基准位置，每次将该基准位置的元素和后面元素逐个进行比较，挑选最大或者最小的那个数放在基准位置上，一趟比较结束后，然后将基准位置设置为该位置的下一位置，重复上述操作，直到基准被安排在序列的最后有一个位置时，此时序列已经排列完成。</p>
+<h3 id="算法执行过程分析">算法执行过程分析：</h3>
+<p>例如：88、5、15、56、32、18、69<br>
+说明：按照从小到大的顺序进行排序，其中每条彩色线条为两数之间的比较,其条数为比较次数.图示为比较结果,过程较为简单,请读者自行分析.<br>
+(1)第一躺比较：<br>
+<img src="https://acoldfront.github.io//post-images/1588694020653.png" alt="" loading="lazy"><br>
+此时最小数5已经放在最开始的位置。<br>
+(2)第二趟比较：<br>
+<img src="https://acoldfront.github.io//post-images/1588694033043.png" alt="" loading="lazy"><br>
+此时将第二小的数字放在当前序列的开头<br>
+(3)第三趟排序：<br>
+<img src="https://acoldfront.github.io//post-images/1588694046856.png" alt="" loading="lazy"><br>
+此时将第三小的数字放在当前序列的开头<br>
+以此类推，可得到最终结果为：5、15、18、32、56、69、88</p>
+<p><strong>实现过程：</strong><br>
+(1) 程序中用到T两个 for 循环语句。第一个 for 循环是确定位置的，该位置是存放每次从待排序数列中经选择和交换后所选出的最小数。第二个 for 循环是实现将确定位置上的数与后面待排序区间中的数进行比较的。</p>
+<p>(2) 程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+void Selset_Sort(int s[], int n) {
+    int i, j, temp;
+    for (i = 0; i &lt; n; ++i) {
+        for (j = i + 1; j &lt; n; ++j) {
+            if (s[i] &gt; s[j]) {  //如果前一个数比后一个数大，则利用中间变量t实现两值互换
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+}
+
+int main(void) {
+    int b[10], j;
+    printf(&quot;请输入10个数：\n&quot;);
+    for (j = 0; j &lt; 10; j++)
+        scanf(&quot;%d&quot;, &amp;b[j]);
+    Selset_Sort(b, 10);         //调用快速排序函数
+    printf(&quot;排序后的顺序是：\n&quot;);
+    for (j = 0; j &lt; 10; j++)
+        printf(&quot;%-4d&quot;, b[j]);
+    printf(&quot;\n&quot;);
+
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入10个数：
+526 36 2 369 56 45 78 92 125 52
+排序后的顺序是：
+2   36  45  52  56  78  92  125 369 526
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>选择排序的基本算法是从待排序的区间中经过选择和交换后选出最小的数值存放到 a[0] 中，再从剩余的未排序区间中经过选择和交换后选出最小的数值存放到 a[1] 中，a[1] 中的数字仅大于 a[0]，依此类推，即可实现排序。</p>
 
             </div>
             
