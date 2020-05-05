@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T03:32:37.170Z</updated>
+    <updated>2020-05-05T03:32:52.840Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
-        <title type="html"><![CDATA[C语言编程实例：2、C语言猴子吃桃问题]]></title>
+        <title type="html"><![CDATA[C语言编程实例：2、猴子吃桃问题]]></title>
         <id>https://acoldfront.github.io/post/c-example2/</id>
         <link href="https://acoldfront.github.io/post/c-example2/">
         </link>
