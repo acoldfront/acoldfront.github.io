@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Crazer的自留地</title>
+<title>C语言编程实例：6、冒泡排序算法 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,27 +98,68 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">C语言编程实例：6、冒泡排序算法</h2>
+            <div class="post-date">2020-05-05</div>
             
             <div class="post-content">
               <blockquote>
-<p>欢迎来到我的小站，世界那么大，很高兴遇见你！🤝</p>
+<p>用冒泡排序法对任意输入的 10 个数按照从小到大的顺序进行排序。</p>
 </blockquote>
-<h3 id="关于crazer">关于Crazer</h3>
-<hr>
-<p>茫茫人海中一个过客，普通码农一个，苟且于世间，没什么好说的。<br>
-<br><br></p>
-<h3 id="免责声明">免责声明</h3>
-<hr>
-<p>本网站遵循互联网分享协议（<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">非商业资源分享</a>），本站所提供的所有软件均来自于互联网。</p>
-<p>所有资源仅供学习交流，严禁用于商业用途，请于24小时内删除。<br>
-任何用于非法用途均与本人无关，本人予不承担任何相关责任！<br>
-若资金允许，请支持正版！谢谢合作！<br>
-侵权删除，请留言！</p>
+<!-- more -->
+<p><strong>实现过程：</strong><br>
+(1) 通过两个 for 循环实现冒泡排序的全过程，外层 for 循环决定冒泡排序的趟数，内层 for 循环决定每趟所进行两两比较的次数。</p>
+<p>(2) 程序代码如下：</p>
+<pre><code class="language-c">int main(void) {
+    int i, j, tmp, a[10];    //定义变量及数组为基本整型
+    printf(&quot;请输入10个数：\n&quot;);
+    for (int i = 0; i &lt; 10; ++i) {
+        scanf(&quot;%d&quot;, &amp;a[i]);//从键盘中输入10个数
+    }
+    for (i = 1; i &lt; 10; ++i) {  //变量i代表比较的趟数
+        for (j = 0; j &lt; 10 - i; ++j) {  //变最j代表每趟两两比较的次数
+            if (a[j] &gt; a[j + 1]) {
+                tmp = a[j]; //产利用中间变童实现两值互换
+                a[j] = a[j + 1];
+                a[j + 1] = tmp;
+            }
+        }
+    }
+
+    printf(&quot;排序后的顺序是：\n&quot;);
+    for (i = 0; i &lt; 10; i++)
+        printf(&quot;%5d&quot;, a[i]);    //将冒泡排序后的顺序输出
+    return 0;
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入10个数：
+1 20 5 6 4 80 30 15 201 90
+排序后的顺序是：
+    1    4    5    6   15   20   30   80   90  201
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>本实例要求用冒泡法对 10 个数由小到大进行排序，冒泡法的基本思路是，如果要对 n 个数进行冒泡排序，那么要进行 n-1 趟比较，在第 1 趟比较中要进行 n-j 次两两比较，在第 j 趟比较中要进行 n-j 次两两比较。从这个基本思路中就会发现，趟数决定了两两比较的次数，这样就很容易将两个 for 循环联系起来了。</p>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
+                    编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://acoldfront.github.io/post/c-example5/">
+                  <h3 class="post-title">
+                    C语言编程实例：5、希尔排序算法
+                  </h3>
+                </a>
+              </div>
             
 
             
