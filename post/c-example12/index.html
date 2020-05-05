@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588696960655">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588697233910">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588696960655" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588697233910" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -107,6 +107,67 @@
 </blockquote>
 <!-- more -->
 <p>査找特定关键字元素个数为 15，要求用户输入有序表各元素，程序输出査找成功与否，若成功，还显示元素在有序表中的位罝。</p>
+<p><strong>实现过程：</strong><br>
+(1)定义结构体 index，用于存储块的结构，并定义该结构体数组 index_table。</p>
+<p>(2)自定义函数 block_search()，实现分块查找。</p>
+<p>(3) main() 函数作为程序的入口函数。程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+struct index    //定义块的结构
+{
+    int key;    //块的关键字
+    int start;    //块的起始值
+    int end;    //块的结束值
+} index_table[4];    //定义结构体数组
+
+int block_search(int key, int a[])    //自定义实现分块查找
+{
+    int i, j;
+    i = 1;
+    while (i &lt;= 3 &amp;&amp; key &gt; index_table[i].key)    //确定在哪个块中
+        i++;
+    if (i &gt; 3)    //大于分得的块数，则返回0
+        return 0;
+    j = index_table[i].start;    //j等于块范围的起始值
+    while (j &lt;= index_table[i].end &amp;&amp; a[j] != key)    //在确定的块内进行顺序查找
+        j++;
+    if (j &gt; index_table[i].end)    //如果大于块范围的结束值，则说明没有要査找的数，j置0
+        j = 0;
+    return j;
+}
+
+int main() {
+    int i, j = 0, k, key, a[16];
+    printf(&quot;请输入15个数：\n&quot;);
+    for (i = 1; i &lt; 16; i++)
+        scanf(&quot;%d&quot;, &amp;a[i]);    //输入由小到大的15个数
+    for (i = 1; i &lt;= 3; i++) {
+        index_table[i].start = j + 1;    //确定每个块范围的起始值
+        j = j + 1;
+        index_table[i].end = j + 4;    //确定每个块范围的结束值
+        j = j + 4;
+        index_table[i].key = a[j];    //确定每个块范围中元素的最大值
+    }
+    printf(&quot;请输入你想査找的元素：\n&quot;);
+    scanf(&quot;%d&quot;, &amp;key);    //输入要查询的数值
+    k = block_search(key, a);    //调用函数进行杳找
+    if (k != 0)
+        printf(&quot;查找成功，其位置是：%d\n&quot;, k);    //如果找到该数，则输出其位置
+    else
+        printf(&quot;查找失败!&quot;);    //若未找到，则输出提示信息
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入15个数：
+11 12 18 28 39 56 69 89 96 122 135 146 156 256 298
+请输入你想査找的元素：
+96
+查找成功，其位置是：9
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>分块査找也称为索引顺序査找，要求将待查的元素均匀地分成块，块间按大小排序，块内不排序，所以要建立一个块的最大（或最小）关键字表，称为索引表。</p>
+<p>本实例中将给出的 15 个数按关键字大小分成了 3 块，这 15 个数的排列是一个有序序列，也可以给出无序序列，但必须满足分在第一块中的任意数都小于第二块中的所有数，第二块中的所有数都小于第三块中的所有数。当要査找关键字为 key 的元素时，先用顺序杳找在已建好的索引表中查出 key 所在的块中，再在对应的块中顺序查找 key，若 key 存在，则输出其相应位置，否则输出提示信息。</p>
 
             </div>
             
