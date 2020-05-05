@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588686585185">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588688708583">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588686585185" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588688708583" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -106,6 +106,22 @@
 <p>用冒泡排序法对任意输入的 10 个数按照从小到大的顺序进行排序。</p>
 </blockquote>
 <!-- more -->
+<h3 id="算法描述">算法描述：###</h3>
+<p>冒泡排序是一种较为简单的排序算法，其基本思想为从头开始依次比较相邻的两个元素大小，将较大（较小）的元素移至右端，最终使最大（最小）的元素移至序列最后，再次重复上述过程，直到最终序列完全有序为止。</p>
+<h3 id="算法执行过程分析">算法执行过程分析：###</h3>
+<p>例如：有一行数分别是26、10，83，56，28，66，7<br>
+说明：按照从小到大的顺序进行排序，方框数为比较的次数，以下图示为比较完交换的结果。</p>
+<p>(1)第一躺排序：<br>
+<img src="https://acoldfront.github.io//post-images/1588688650202.png" alt="" loading="lazy"><br>
+此时已将此行数中最大的那个数字放在末尾。<br>
+(2)第二躺排序：<br>
+<img src="https://acoldfront.github.io//post-images/1588688660796.png" alt="" loading="lazy"><br>
+此时将倒数第二大的数字放在后面。<br>
+(3)第三趟排序：<br>
+<img src="https://acoldfront.github.io//post-images/1588688685619.png" alt="" loading="lazy"><br>
+此时将倒数第三大的数字放在后面。<br>
+以此类推，可以得到最终结果为：7、10、26、28、56、66、83。<br>
+备注：n个数要比较n - 1趟，第一躺比较n - 1次，第 j 趟需要比较n - j 次。</p>
 <p><strong>实现过程：</strong><br>
 (1) 通过两个 for 循环实现冒泡排序的全过程，外层 for 循环决定冒泡排序的趟数，内层 for 循环决定每趟所进行两两比较的次数。</p>
 <p>(2) 程序代码如下：</p>
