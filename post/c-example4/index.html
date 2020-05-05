@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>优秀代码编辑器 Sublime Text 3.2.2 V3211 | Crazer的自留地</title>
+<title>C语言编程实例：4、渔夫打鱼晒网 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,32 +98,77 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">优秀代码编辑器 Sublime Text 3.2.2 V3211</h2>
-            <div class="post-date">2020-02-07</div>
-            
-              <div class="feature-container" style="background-image: url('https://acoldfront.github.io//post-images/sublime-v3211.png')">
-              </div>
+            <h2 class="post-title">C语言编程实例：4、渔夫打鱼晒网</h2>
+            <div class="post-date">2020-05-05</div>
             
             <div class="post-content">
-              <p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
+              <blockquote>
+<p>如果一个渔夫从 2011 年 1 月 1 日开始每三天打一次渔，两天晒一次网，编程实现当输入 2011 1 月 1 日以后的任意一天，输出该渔夫是在打渔还是在晒网。</p>
+</blockquote>
 <!-- more -->
-<p>Sublime Text 是一个轻量、简洁、高效、跨平台的编辑器，方便的配色以及兼容vim快捷键等各种优点博得了很多前端开发人员的喜爱!Sublime Text 这款程序员必备代码编辑器，几乎每位程序员提到Sublime Text 2都是赞不绝口！它体积小巧，无需安装，绿色便携；它可跨平台支持Windows/Mac/Linux；支持32与64位操作系统，它在支持语法高亮、代 码补全、代码片段（Snippet）、代码折叠、行号显示、自定义皮肤、配色方案等所有其它代码编辑器所拥有的功能的同时，又保证了其飞快的速度！还有着 自身独特的功能，比如代码地图、多种界面布局以及全屏免打扰模式等，这些优秀特性让Sublime Text 2成了所有程序员眼中的神！</p>
-<p>SublimeText支持但不限于 C, C++, C#, CSS, D, Erlang, HTML, Groovy, Haskell, HTML, Java, JavaScript, LaTeX, Lisp, Lua, Markdown, Matlab, OCaml, Perl, PHP, Python, R, Ruby, SQL, TCL, Textile and XML 等主流编程语言的语法高亮。ST 拥有优秀的代码自动完成功能 (自动补齐括号，大括号等配对符号；自动补全已经出现的单词；自动补全函数名)，非常智能；</p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>基于最新版本绿色便携制作</p>
-<p>增强侧边栏</p>
-<p>集成破解补丁，集成汉化，允许切换语言</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://pan.baidu.com/s/1E6AldrfGJ23nSCxStkNUMg">链接: https://pan.baidu.com/s/1E6AldrfGJ23nSCxStkNUMg  提取码: 9ufm</a></p>
+<p><strong>实现过程：</strong><br>
+(1) 自定义函数 leap()，用来判断输入的年份是否是闰年。</p>
+<p>(2) 自定义函数 number()，用来计算输入日期距 2011 年 1 月 1 日共有多少天。</p>
+<p>(3) main() 函数作为程序的入口函数，在 main() 函数中调用上面两个函数。程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int leap(int a) {   //自定义函数leap()用来指定输入的年份是否为闰年
+    if (a % 4 == 0 &amp;&amp; a % 100 != 0 || a % 400 == 0)    //闰年判定条件
+        return 1;   //是闰年返回1
+    else
+        return 0;   //不是闰年返回O
+}
+
+int number(int year, int month, int day) {    //自定义函数 number() 计算输入日期距2011年1月1日共有多少天
+    int sum = 0, i, j, k;
+    int a[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};    //数组a存放平年每月的天数
+    int b[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};    //数组b存放闰年每月的天数
+    if (leap(year) == 1) {    //判断是否为闰年
+        for (i = 0; i &lt; month - 1; ++i)
+            sum += b[i];    //是闰年，累加数组b前m-1个月份的天数
+    } else {
+        for (i = 0; i &lt; month - 1; ++i)
+            sum += a[i];    //不是闰年，累加数组a前m-1个月份的天数
+    }
+    for (j = 2011; j &lt; year; ++j) {
+        if (leap(j) == 1)
+            sum += 366;   //2011年到输入的年份是闰年的加366
+        else
+            sum += 365;   //2011年到输入的年份不是闰年的加365
+    }
+    sum += day;    //将前面累加的结果加上日期，求出总天数
+    return sum; //返回计算的天数
+}
+
+int main(void) {
+    int year, month, day, n;
+    printf(&quot;请输入年月日\n&quot;);
+    scanf(&quot;%d%d%d&quot;, &amp;year, &amp;month, &amp;day);    //输入年月日
+    n = number(year, month, day);
+    if ((n % 5) &lt; 4 &amp;&amp; (n % 5) &gt; 0)    //余数是1或2或3时说明在打渔，否则在晒网
+        printf(&quot;%d：%d：%d 打鱼\n&quot;, year, month, day);
+    else
+        printf(&quot;%d：%d：%d 晒网\n&quot;, year, month, day);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入年月日
+2011 1 4
+2011：1：4 晒网
+</code></pre>
+<h3 id="脚下留神">脚下留神：</h3>
+<p>本实例主要有以下两个技术要点：</p>
+<p>(1) 判断输入的年份（2011 年以后包括 2011 年）是否为闰年，这里自定义函数 leap() 来进行判断。该函数的核心内容就是闰年的判断条件即能被 4 整除但不能被 100 整除，或能被 400 整除。</p>
+<p>(2) 求输入日期距 2011 年 1 月 1 日有多少天。首先判断 2011 年距输入的年份有多少年，这其中有多少年是闰年就将 sum 加多少个 366，有多少年是平年便将 sum 加上多少个 365。</p>
+<p>其次要将 12 个月每月的天数存到数组中，因为闰年 2 月份的天数有别于平年，故采用两个数组 a 和 b 分别存储。若输入年份是平年，月份为 m 时就在前面累加日期的基础上继续累加存储着平年每月天数的数组的前 m-1 个元素，将累加结果加上输入的日期便求出了最终结果。闰年的算法类似。</p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://acoldfront.github.io/tag/fLoX3bKcV/" class="tag">
-                    软件
+                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
+                    编程
                   </a>
                 
               </div>
@@ -131,9 +176,9 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/navicat-keygen-patch/">
+                <a href="https://acoldfront.github.io/post/c-example3/">
                   <h3 class="post-title">
-                    Navicat产品_补丁_注册机 使用教程
+                    C语言编程实例：3、百元买鸡
                   </h3>
                 </a>
               </div>

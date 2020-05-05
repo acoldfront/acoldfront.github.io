@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T03:44:07.546Z</updated>
+    <updated>2020-05-05T04:01:32.549Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,78 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：4、渔夫打鱼晒网]]></title>
+        <id>https://acoldfront.github.io/post/c-example4/</id>
+        <link href="https://acoldfront.github.io/post/c-example4/">
+        </link>
+        <updated>2020-05-05T03:58:24.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>如果一个渔夫从 2011 年 1 月 1 日开始每三天打一次渔，两天晒一次网，编程实现当输入 2011 1 月 1 日以后的任意一天，输出该渔夫是在打渔还是在晒网。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>如果一个渔夫从 2011 年 1 月 1 日开始每三天打一次渔，两天晒一次网，编程实现当输入 2011 1 月 1 日以后的任意一天，输出该渔夫是在打渔还是在晒网。</p>
+</blockquote>
+<!-- more -->
+<p><strong>实现过程：</strong><br>
+(1) 自定义函数 leap()，用来判断输入的年份是否是闰年。</p>
+<p>(2) 自定义函数 number()，用来计算输入日期距 2011 年 1 月 1 日共有多少天。</p>
+<p>(3) main() 函数作为程序的入口函数，在 main() 函数中调用上面两个函数。程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int leap(int a) {   //自定义函数leap()用来指定输入的年份是否为闰年
+    if (a % 4 == 0 &amp;&amp; a % 100 != 0 || a % 400 == 0)    //闰年判定条件
+        return 1;   //是闰年返回1
+    else
+        return 0;   //不是闰年返回O
+}
+
+int number(int year, int month, int day) {    //自定义函数 number() 计算输入日期距2011年1月1日共有多少天
+    int sum = 0, i, j, k;
+    int a[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};    //数组a存放平年每月的天数
+    int b[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};    //数组b存放闰年每月的天数
+    if (leap(year) == 1) {    //判断是否为闰年
+        for (i = 0; i &lt; month - 1; ++i)
+            sum += b[i];    //是闰年，累加数组b前m-1个月份的天数
+    } else {
+        for (i = 0; i &lt; month - 1; ++i)
+            sum += a[i];    //不是闰年，累加数组a前m-1个月份的天数
+    }
+    for (j = 2011; j &lt; year; ++j) {
+        if (leap(j) == 1)
+            sum += 366;   //2011年到输入的年份是闰年的加366
+        else
+            sum += 365;   //2011年到输入的年份不是闰年的加365
+    }
+    sum += day;    //将前面累加的结果加上日期，求出总天数
+    return sum; //返回计算的天数
+}
+
+int main(void) {
+    int year, month, day, n;
+    printf(&quot;请输入年月日\n&quot;);
+    scanf(&quot;%d%d%d&quot;, &amp;year, &amp;month, &amp;day);    //输入年月日
+    n = number(year, month, day);
+    if ((n % 5) &lt; 4 &amp;&amp; (n % 5) &gt; 0)    //余数是1或2或3时说明在打渔，否则在晒网
+        printf(&quot;%d：%d：%d 打鱼\n&quot;, year, month, day);
+    else
+        printf(&quot;%d：%d：%d 晒网\n&quot;, year, month, day);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入年月日
+2011 1 4
+2011：1：4 晒网
+</code></pre>
+<h3 id="脚下留神">脚下留神：</h3>
+<p>本实例主要有以下两个技术要点：</p>
+<p>(1) 判断输入的年份（2011 年以后包括 2011 年）是否为闰年，这里自定义函数 leap() 来进行判断。该函数的核心内容就是闰年的判断条件即能被 4 整除但不能被 100 整除，或能被 400 整除。</p>
+<p>(2) 求输入日期距 2011 年 1 月 1 日有多少天。首先判断 2011 年距输入的年份有多少年，这其中有多少年是闰年就将 sum 加多少个 366，有多少年是平年便将 sum 加上多少个 365。</p>
+<p>其次要将 12 个月每月的天数存到数组中，因为闰年 2 月份的天数有别于平年，故采用两个数组 a 和 b 分别存储。若输入年份是平年，月份为 m 时就在前面累加日期的基础上继续累加存储着平年每月天数的数组的前 m-1 个元素，将累加结果加上输入的日期便求出了最终结果。闰年的算法类似。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：3、百元买鸡]]></title>
         <id>https://acoldfront.github.io/post/c-example3/</id>
@@ -494,173 +566,6 @@ Ubuntu 12.04、Ubuntu 14.04、CentOS 6.7、CentOS 7、Fedora 22、Fedora 23、Li
 <h3 id="下载地址">下载地址</h3>
 <hr>
 <p><a href="https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg">链接: https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg 提取码: 4vgd</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言求最小公倍数和最大公约数四种算法(经典)]]></title>
-        <id>https://acoldfront.github.io/post/cdivisormultiple/</id>
-        <link href="https://acoldfront.github.io/post/cdivisormultiple/">
-        </link>
-        <updated>2020-03-19T03:28:46.000Z</updated>
-        <content type="html"><![CDATA[<p>最小公倍数：数论中的一种概念，两个整数公有的倍数成为他们的公倍数，其中一个最小的公倍数是他们的最小公倍数，同样地，若干个整数公有的倍数中最小的正整数称为它们的最小公倍数，维基百科：<a href="http://zh.wikipedia.org/wiki/%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B8">定义点击打开链接</a><br>
-求最小公倍数算法：<br>
-最小公倍数=两整数的乘积÷最大公约数</p>
-<p>求最大公约数算法：<br>
-(1)辗转相除法：<br>
-有两整数a和b：<br>
-① a%b得余数c<br>
-② 若c=0，则b即为两数的最大公约数<br>
-③ 若c≠0，则a=b，b=c，再回去执行①</p>
-<p>例如求27和15的最大公约数过程为：<br>
-27÷15 余12，15÷12余3，12÷3余0，因此，3即为最大公约数</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//辗转相除法求最大公约数
-int main(void) {
-    int m, n;
-    int a, b, c;
-    printf(&quot;请输入两个数：&quot;);
-    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
-    m = a;
-    n = b;
-    while (b != 0) {   //余数不为0，继续相除，直到余数为0
-        c = a % b;
-        a = b;
-        b = c;
-    }
-    printf(&quot;最大公约数：%d\n&quot;, a);
-    printf(&quot;最小公倍数：%d\n&quot;, m * n / a);
-    return 0;
-}
-</code></pre>
-<p>提供一种简写的方式：</p>
-<pre><code class="language-c">int gcd(int a,int b)
-{
-    return b==0?a:gcd(b,a%b);
-}
-</code></pre>
-<p>⑵ 相减法：<br>
-有两整数a和b：<br>
-① 若a&gt;b，则a=a-b<br>
-② 若a&lt;b，则b=b-a<br>
-③ 若a=b，则a（或b）即为两数的最大公约数<br>
-④ 若a≠b，则再回去执行①</p>
-<p>例如求27和15的最大公约数过程为：<br>
-27－15＝12( 15&gt;12 ) 15－12＝3( 12&gt;3 )<br>
-12－3＝9( 9&gt;3 ) 9－3＝6( 6&gt;3 )<br>
-6－3＝3( 3==3 )<br>
-因此，3即为最大公约数</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//相减法求最大公约数
-int main(void) {
-    int m, n;
-    int a, b, c;
-    printf(&quot;请输入两个数：&quot;);
-    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
-    m = a;
-    n = b;
-    while (a != b) {   //a, b不相等，大数减小数，直到相等为止。
-        if (a &gt; b)
-            a = a - b;
-        else
-            b = b - a;
-    }
-    printf(&quot;最大公约数：%d\n&quot;, a);
-    printf(&quot;最小公倍数：%d\n&quot;, m * n / a);
-    return 0;
-}
-</code></pre>
-<p>⑶穷举法：<br>
-有两整数a和b：<br>
-① i=1<br>
-② 若a，b能同时被i整除，则t＝i<br>
-③ i++<br>
-④ 若 i &lt;= a(或b)，则再回去执行②<br>
-⑤ 若 i &gt; a(或b)，则t即为最大公约数，结束</p>
-<p>改进：<br>
-① i= a(或b)<br>
-② 若a，b能同时被i整除，则i即为最大公约数，<br>
-结束<br>
-③ i--，再回去执行②</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//穷举法求最大公约数
-int main(void) {
-    int m, n;
-    int a, b, i, t;
-    printf(&quot;请输入两个数：&quot;);
-    scanf(&quot;%d%d&quot;, &amp;a, &amp;b);
-    m = a;
-    n = b;
-    for (i = 1; i &lt;= a; ++i) {
-        if (a % i == 0 &amp;&amp; b % i == 0)
-            t = i;
-    }
-    /*  改进后的
-    for (t= a; t&gt;0; t-- )
-        if ( a%t == 0 &amp;&amp; b%t ==0 )
-            break; 
-    */
-    printf(&quot;最大公约数：%d\n&quot;, t);
-    printf(&quot;最小公倍数：%d\n&quot;, m * n / t);
-    return 0;
-}
-</code></pre>
-<pre><code class="language-c"> //穷举法求最小公倍数
-for (i = a;; i++)
-    if (i % a == 0 &amp;&amp; i % b == 0) break;
-printf(&quot;最小公倍数：%d\n&quot;, i);
-
-//多个数的最大公约数和最小公倍数
-for (i = a; i &gt; 0; i--)
-    if (a % i == 0 &amp;&amp; b % i == 0 &amp;&amp; c % i == 0)
-        break;
-printf(&quot;最大公约数：%d\n&quot;, i);
-for (i = a;; i++)
-    if (i % a == 0 &amp;&amp; i % b == 0 &amp;&amp; i % c == 0)
-        break;
-printf(&quot;最小公倍数：%d\n&quot;, i);
-</code></pre>
-<p>⑷取模法：<br>
-求最小公倍数：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//求最小公倍数
-int main(void) {
-    int x, y;
-    int lcm;
-    printf(&quot;请输入两个数：&quot;);
-    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
-    if (x &gt; y)
-        lcm = x;
-    else
-        lcm = y;
-    while (lcm % x || lcm % y)
-        lcm++;
-    printf(&quot;最小公倍数：%d\n&quot;, lcm);
-    return 0;
-}
-</code></pre>
-<p>求最大公约数：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//求最大公约数
-int main(void) {
-    int x, y;
-    int gcd;
-    printf(&quot;请输入两个数：&quot;);
-    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
-    if (x &gt; y)
-        gcd = y;
-    else
-        gcd = x;
-    while (x % gcd || y % gcd)
-        gcd--;
-    printf(&quot;最大公约数：%d\n&quot;, gcd);
-    return 0;
-}
-</code></pre>
 ]]></content>
     </entry>
 </feed>
