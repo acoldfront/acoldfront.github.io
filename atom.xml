@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T16:47:15.880Z</updated>
+    <updated>2020-05-05T16:50:16.482Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -371,6 +371,12 @@ int main(void) {
 
     return 0;
 }
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入10个数：
+695 458 362 789 12 15 163 23 2 986
+排序后的顺序是：
+    8   12   15   23  163  362  458  695  789  986
 </code></pre>
 <h3 id="技术要点">技术要点：</h3>
 <p>归并是将两个或多个存序记录序列合并成一个有序序列。归并方法有多种，一次对两个有序记录序列进行归并，称为路归并排序，也有三路归并排序及多路归并排序。本实例是二路归并排序，基本方法如下：</p>
