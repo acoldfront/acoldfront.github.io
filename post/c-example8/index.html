@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588693647046">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588693853137">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588693647046" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588693853137" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -127,6 +127,67 @@
 <p><strong>实现过程：</strong><br>
 (1) 自定义一个函数，实现直接插入排序，在本实例中，我们自定义该函数为 insort()。</p>
 <p>(2) main() 函数为程序的入口函数。程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int qusort(int s[], int start, int end) {    //自定义函数 qusort()
+    int i, j;    //定义变量为基本整型
+    i = start;    //将每组首个元素赋给i
+    j = end;    //将每组末尾元素赋给j
+    s[0] = s[start];    //设置基准值
+    while (i &lt; j) {
+        while (i &lt; j &amp;&amp; s[0] &lt; s[j])
+            j--;    //位置左移
+        if (i &lt; j) {
+            s[i] = s[j];    //将s[j]放到s[i]的位置上
+            i++;    //位置右移
+        }
+        while (i &lt; j &amp;&amp; s[i] &lt;= s[0])
+            i++;    //位置左移
+        if (i &lt; j) {
+            s[j] = s[i];    //将大于基准值的s[j]放到s[i]位置
+            j--;    //位置左移
+        }
+    }
+    s[i] = s[0];    //将基准值放入指定位置
+    if (start &lt; i)
+        qusort(s, start, j - 1);    //对分割出的部分递归调用qusort()函数
+    if (i &lt; end)
+        qusort(s, j + 1, end);
+    return 0;
+}
+
+int main(void) {
+       int a[10], i;
+    printf(&quot;请输入10个数：\n&quot;);
+    for (i = 0; i &lt; 10; ++i) {
+        scanf(&quot;%d&quot;, &amp;a[i]);//从键盘中输入10个数
+    }
+    QuickSort(a, 0, 9);    //调用qusort()函数进行排序
+    printf(&quot;排序后的顺序是：\n&quot;);
+    for (i = 0; i &lt; 10; ++i) {
+        printf(&quot;%5d&quot;, a[i]);    //将排序后的顺序输出
+    }
+
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入10个数：
+99 45 12 36 69 22 62 796 4 696
+排序后的顺序是：
+    4   12   22   36   45   62   69   99  696  796
+</code></pre>
+<hr>
+<h3 id="快速排序原理">快速排序原理：</h3>
+<p>从序列“2,3,5,7,9,6,4,1,0,8”两端开始<br>
+（1）首先将2作为基准数，应用2个变量i和j分别指向序列左端和右端；<br>
+（2）首先从j左往右寻找一个小于2的数，i从右往左寻找一个大于2的数；<br>
+（3）找到了0和3进行第一次交换，继续搜索；<br>
+（4）1和5进行第二次交换；<br>
+（5）当i和j都到1数值1时，表明第一轮交换结束，将基准数2和1进行交换，以基准数2为分界点，2的左边都小于等于2,2的右边都大于等于2；<br>
+（6）2的左边序列为“1,0”，2的右边序列为“7,9,6,4,5,3,8”；<br>
+（7）最后调用递归分别处理左边序列和右边序列即可。<br>
+<img src="https://acoldfront.github.io//post-images/1588693747080.png" alt="" loading="lazy"></p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 void QuickSort(int a[], int left, int right) {
