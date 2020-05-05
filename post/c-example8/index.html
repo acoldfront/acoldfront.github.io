@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588691018953">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588693647046">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588691018953" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588693647046" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -106,6 +106,83 @@
 <p>用快速排序法对一组数据由小到大进行排序，数据分别为 99、45、12、36、69、22、62、 796、4、696。</p>
 </blockquote>
 <!-- more -->
+<h3 id="算法描述">算法描述：</h3>
+<p>快速排序算法的基本原理为通过一次排序将要排序的数据分割成独立的两部分，将序列分为两部分的中间数作为基准(par)，基准左边的数都要比基准右边的数要小，然后再按此方法对这两部分数据分别进行快速排序，整个排序过程可以递归进行，以此达到整个数据变成有序序列。</p>
+<h3 id="算法执行过程分析">算法执行过程分析：</h3>
+<p>例如：8，15，26，18，7，66，44<br>
+分析：依靠基准将序列分割为两部分，那么基准如何找到呢？？？？？？<br>
+方法有三种：</p>
+<p>固定位置选取基准法              <br>
+随机选取基准法<br>
+三分取中法<br>
+具体步骤：<br>
+一次取基准(par)过程：设置一个临时变量temp，并以第一个数作为temp的值，设置两个指针low和high。low指向序列的起始位置，high指向序列的最后一个元素。首先我们用high指向的元素和temp进行比较，如果大于，指针回退，直到high指向的元素值小于temp，然后让low指向的值赋值为high的值。这时让low指向的元素和temp比较，如果low指向的元素小于temp，指针前进，直到low指向的元素值大于temp。这时让high指向的值赋值为low指向的值，接下来对high重复上述操作，直到high和low相遇。此时的位置就是基准的位置par，最后此位置赋值temp。（具体可依据下图进行分析）</p>
+<p>说明：</p>
+<ul>
+<li>下图每一步为指针的循环操作，直至不符合条件，并且进行赋值变换后的结果。</li>
+<li>上述一次取基准的过程采用了固定位置选取基准法。（另外两种方法后面将进行介绍）<br>
+<img src="https://acoldfront.github.io//post-images/1588691937722.png" alt="" loading="lazy"><br>
+然后对左右两部分子序列继续进行此步骤。（如果子序列为单个数时，说明自身有序，不进行此过程）</li>
+</ul>
+<p><strong>实现过程：</strong><br>
+(1) 自定义一个函数，实现直接插入排序，在本实例中，我们自定义该函数为 insort()。</p>
+<p>(2) main() 函数为程序的入口函数。程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+void QuickSort(int a[], int left, int right) {
+    int i, j, temp, tp;
+    temp = a[left];                 //暂存基准数
+    i = left;                       //最左位置
+    j = right;                      //最右位置
+
+    if (left &gt; right)                //递归结束条件
+        return;
+    while (i != j)                  //当i和j不重合时
+    {
+        while (a[j] &gt;= temp &amp;&amp; i &lt; j) //从右往左寻找小于基准数的值
+            j--;
+        while (a[i] &lt;= temp &amp;&amp; i &lt; j) //从左往右寻找大于基准数的值
+            i++;
+        //找到了且i&lt;j则交换数值
+        if (i &lt; j) {
+            tp = a[i];
+            a[i] = a[j];
+            a[j] = tp;
+        }
+    }
+
+    //将基准数和i、j的相遇数值进行交换
+    a[left] = a[i];
+    a[i] = temp;
+
+    //应用递归对此时基准数的左边进行快速排序
+    QuickSort(a, left, i - 1);
+    //应用递归对此时基准数的右边进行快速排序
+    QuickSort(a, i + 1, right);
+}
+
+int main(void) {
+    int b[10], j;
+    printf(&quot;请输入10个数：\n&quot;);
+    for (j = 0; j &lt; 10; j++)
+        scanf(&quot;%d&quot;, &amp;b[j]);
+    QuickSort(b, 0, 9);         //调用快速排序函数
+    printf(&quot;排序后的顺序是：\n&quot;);
+    for (j = 0; j &lt; 10; j++)
+        printf(&quot;%-4d&quot;,b[j]);
+    printf(&quot;\n&quot;);
+
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入10个数：
+99 45 12 36 69 22 62 796 4 696
+排序后的顺序是：
+    4   12   22   36   45   62   69   99  696  796
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>快速排序是冒泡排序的一种改进，主要的算法思想是在待排序的 n 个数据中取第一个数据作为基准值，将所有记录分为 3 组，使第一组中各数据值均小于或等于基准值，第二组做基准值的数琚，第三组中各数据值均大于或等于基准值。这便实现了第一趟分割，然后再对第二组和第兰组分别重复上述方法，依次类推，直到每组中只有一个记录为止。</p>
 
             </div>
             
