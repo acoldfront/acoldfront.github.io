@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T04:21:14.238Z</updated>
+    <updated>2020-05-05T13:12:49.274Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,95 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：12、猴分块查找算法，索引顺序查找算法]]></title>
+        <id>https://acoldfront.github.io/post/c-example12/</id>
+        <link href="https://acoldfront.github.io/post/c-example12/">
+        </link>
+        <updated>2020-05-05T13:12:13.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>例如，采用分块查找法在有序表 11、12、18、28、39、56、69、89、96、122、135、146、156、256、298 中查找关键字为 96 的元素。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>例如，采用分块查找法在有序表 11、12、18、28、39、56、69、89、96、122、135、146、156、256、298 中查找关键字为 96 的元素。</p>
+</blockquote>
+<!-- more -->
+<p>査找特定关键字元素个数为 15，要求用户输入有序表各元素，程序输出査找成功与否，若成功，还显示元素在有序表中的位罝。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：12、猴分块查找算法，索引顺序查找算法]]></title>
+        <id>https://acoldfront.github.io/post/c-yu-yan-bian-cheng-shi-li-12hou-fen-kuai-cha-zhao-suan-fa-suo-yin-shun-xu-cha-zhao-suan-fa/</id>
+        <link href="https://acoldfront.github.io/post/c-yu-yan-bian-cheng-shi-li-12hou-fen-kuai-cha-zhao-suan-fa-suo-yin-shun-xu-cha-zhao-suan-fa/">
+        </link>
+        <updated>2020-05-05T13:12:13.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>例如，采用分块查找法在有序表 11、12、18、28、39、56、69、89、96、122、135、146、156、256、298 中查找关键字为 96 的元素。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>例如，采用分块查找法在有序表 11、12、18、28、39、56、69、89、96、122、135、146、156、256、298 中查找关键字为 96 的元素。</p>
+</blockquote>
+<!-- more -->
+<p>査找特定关键字元素个数为 15，要求用户输入有序表各元素，程序输出査找成功与否，若成功，还显示元素在有序表中的位罝。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：11、二分查找算法，折半查找算法]]></title>
+        <id>https://acoldfront.github.io/post/c-example11/</id>
+        <link href="https://acoldfront.github.io/post/c-example11/">
+        </link>
+        <updated>2020-05-05T13:11:33.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>本实例采用二分查找法查找特定关键字的元素。要求用户输入数组长度，也就是有序表的数据长度，并输入数组元素和査找的关键字。程序输出查找成功与否，以及成功时关键字在数组中的位置。例如，在有序表 11、13、18、 28、39、56、69、89、98、122 中査找关键字为 89 的元素。</p>
+</blockquote>
+<!-- more -->]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：10、归并排序算法]]></title>
+        <id>https://acoldfront.github.io/post/c-example10/</id>
+        <link href="https://acoldfront.github.io/post/c-example10/">
+        </link>
+        <updated>2020-05-05T13:10:54.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>用归并排序法对一组数据由小到大进行排序，数据分别为 695、458、362、789、12、 15、163、23、2、986。</p>
+</blockquote>
+<!-- more -->]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：9、选择排序算法]]></title>
+        <id>https://acoldfront.github.io/post/c-example9/</id>
+        <link href="https://acoldfront.github.io/post/c-example9/">
+        </link>
+        <updated>2020-05-05T13:10:21.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>用选择排序法对一组数据由小到大进行排序，数据分别为 526、36、2、369、56、45、78、92、125、52。</p>
+</blockquote>
+<!-- more -->]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：8、快速排序算法]]></title>
+        <id>https://acoldfront.github.io/post/c-example8/</id>
+        <link href="https://acoldfront.github.io/post/c-example8/">
+        </link>
+        <updated>2020-05-05T13:09:45.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>用快速排序法对一组数据由小到大进行排序，数据分别为 99、45、12、36、69、22、62、 796、4、696。</p>
+</blockquote>
+<!-- more -->]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：7、直接插入排序算法]]></title>
+        <id>https://acoldfront.github.io/post/c-example7/</id>
+        <link href="https://acoldfront.github.io/post/c-example7/">
+        </link>
+        <updated>2020-05-05T13:09:08.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。插入排序中较简单的种方法是直接插入排序，其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左依次比较其关键字值的大小。本实例要求使用直接插入排序法将数字由小到大进行排序。</p>
+</blockquote>
+<!-- more -->]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：6、冒泡排序算法]]></title>
         <id>https://acoldfront.github.io/post/c-example6/</id>
@@ -146,337 +235,6 @@ int main(void) {
 <p>(1) 判断输入的年份（2011 年以后包括 2011 年）是否为闰年，这里自定义函数 leap() 来进行判断。该函数的核心内容就是闰年的判断条件即能被 4 整除但不能被 100 整除，或能被 400 整除。</p>
 <p>(2) 求输入日期距 2011 年 1 月 1 日有多少天。首先判断 2011 年距输入的年份有多少年，这其中有多少年是闰年就将 sum 加多少个 366，有多少年是平年便将 sum 加上多少个 365。</p>
 <p>其次要将 12 个月每月的天数存到数组中，因为闰年 2 月份的天数有别于平年，故采用两个数组 a 和 b 分别存储。若输入年份是平年，月份为 m 时就在前面累加日期的基础上继续累加存储着平年每月天数的数组的前 m-1 个元素，将累加结果加上输入的日期便求出了最终结果。闰年的算法类似。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：3、百元买鸡]]></title>
-        <id>https://acoldfront.github.io/post/c-example3/</id>
-        <link href="https://acoldfront.github.io/post/c-example3/">
-        </link>
-        <updated>2020-05-05T03:39:52.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>中国古代数学家张丘建在他的《算经》中提出了一个著名的“百钱买百鸡问题”，鸡翁一，值钱五，鸡母一，值钱三，鸡雏三，值钱一，百钱买百鸡，问翁、母、雏各几何？</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>中国古代数学家张丘建在他的《算经》中提出了一个著名的“百钱买百鸡问题”，鸡翁一，值钱五，鸡母一，值钱三，鸡雏三，值钱一，百钱买百鸡，问翁、母、雏各几何？</p>
-</blockquote>
-<!-- more -->
-<p><strong>实现过程：</strong><br>
-(1)使用 for 语句对 3 种鸡的数嫌在事先确定好的范围内进行穷举并判断，对满足条件的 3 种鸡的数量按指定格式输出，否则进行下次循环。</p>
-<p>(2) 程序的代码如下：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-   int cook, hen, chick;   //定义变童为基本整型
-
-    for (cook = 0; cook &lt;= 100; ++cook) {
-        for (hen = 0; hen &lt;= 100; ++hen) {
-            for (chick = 0; chick &lt;= 100; ++chick) {
-                if ((5 * cook + 3 * hen + chick / 3) == 100 &amp;&amp; chick % 3 == 0 &amp;&amp; cook+hen+chick==100)
-                    //(5 * cook + 3 * hen + chick / 3) == 100   判断钱数是否等于 100
-                    //chick % 3 == 0    判断小鸡数是否能被 3 整除
-                    //cook+hen+chick==100  判断购买的鸡数是否等于 100
-                    printf(&quot;公鸡 %2d 只，母鸡 %2d 只，小鸡 %2d 只\n&quot;, cook, hen, chick);
-            }
-        }
-    }
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>公鸡  0 只，母鸡 25 只，小鸡 75 只
-公鸡  4 只，母鸡 18 只，小鸡 78 只
-公鸡  8 只，母鸡 11 只，小鸡 81 只
-公鸡 12 只，母鸡  4 只，小鸡 84 只
-</code></pre>
-<p>###技术要点： ###<br>
-根据题意设公鸡、母鸡和雏鸡分别为 cock、hen 和 chick，如果 100 元全买公鸡，那么最多能买 20 只，所以 cock 的范围是大于等于 0 且小于等于 20；如果全买母鸡，那么最多能买 33 只，所以 hen 的范围是大于等于 0 且小于等于 33；如果 100 元钱全买小鸡，那么最多能买 99 只（根据题意小鸡的数量应小于 100 且是 3 的倍数）。</p>
-<p>在确定了各种鸡的范围后进行穷举并判断，判断的条件有以下 3 点：<br>
-(1) 所买的 3 种鸡的钱数总和为 100。<br>
-(2) 所买的 3 种鸡的数量之和为 100。<br>
-(3) 所买的小鸡数必须是 3 的倍数。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：2、猴子吃桃问题]]></title>
-        <id>https://acoldfront.github.io/post/c-example2/</id>
-        <link href="https://acoldfront.github.io/post/c-example2/">
-        </link>
-        <updated>2020-05-05T03:29:51.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。第二天早上又将第一天剩下的桃子吃掉一半，有多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第 10 天早上想再吃时，发现只剩下一个桃子了。编写程序求猴子第一天摘了多少个桃子。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。第二天早上又将第一天剩下的桃子吃掉一半，有多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第 10 天早上想再吃时，发现只剩下一个桃子了。编写程序求猴子第一天摘了多少个桃子。</p>
-</blockquote>
-<!-- more -->
-<p><strong>实现过程：</strong><br>
-(1) 定义 day、x1、x2 为基本整型，并为 day 和 x2 赋初值 9 和 1。</p>
-<p>(2) 使用 while 语句由后向前推出第一天摘的桃子数。</p>
-<p>(3) 输出结果。</p>
-<p>(4) 程序代码如下：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int day, x1, x2;    //定义 day、x1、x2 3 个变董为基本整型
-    day = 9;
-    x2 = 1;
-    while (day &gt; 0) {
-        x1 = (x2 + 1) * 2;    //第一天的桃子数是第二天桃子数加1后的2倍
-        x2 = x1;
-        day--;      //因为从后向前推所以天数递减
-    }
-    printf(&quot;一共是%d个桃子&quot;, x1);  //输出桃子的总数
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>一共是1534个桃子
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>本实例的思路基本上是先找出变量间的关系，也就是要明确第一天桃数和第二天桃子数之间的关系，即第二天桃子数加 1 的 2 倍等于第一天的桃子数。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：1、三个数从小到大排序输出]]></title>
-        <id>https://acoldfront.github.io/post/c-example1/</id>
-        <link href="https://acoldfront.github.io/post/c-example1/">
-        </link>
-        <updated>2020-05-05T03:16:28.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>任意输入 3 个整数，编程实现对这 3 个整数由小到大进行排序。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>任意输入 3 个整数，编程实现对这 3 个整数由小到大进行排序。</p>
-</blockquote>
-<!-- more -->
-<p><strong>实现过程：</strong><br>
-(1)定义数据类型，本实例中 a、b、c、t 均为基本整型。</p>
-<p>(2) 使用输入函数获得任意 3 个值赋给 a、b、c。</p>
-<p>(3) 使用 if 语句进行条件判断，如果 a 大于 b，则借助于中间变量 t 互换 a 与 b 值， 依此类推比较 a 与 c、b 与 c，最终结果即为 a、b、c 的升序排列。</p>
-<p>(4) 使用输出函数将 a、b、c 的值依次输出。</p>
-<p>(5) 程序的代码如下：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int a, b, c, t;    //定义4个基本整型变量a、b、c、t
-    printf(&quot;请输入a,b,c:\n&quot;);    //双引号内的普通字符原样输出并换行
-    scanf(&quot;%d,%d,%d&quot;, &amp;a, &amp;b, &amp;c);      //输入任意3个数
-
-    if (a &gt; b) {    //如果a大于b,借助中间变量t实现a与b值的互换
-        t = a;
-        a = b;
-        b = t;
-    }
-    if (a &gt; c) {    //如果a大于c,借助中间变量t实现a与c值的互换
-        t = a;
-        a = c;
-        c = t;
-    }
-    if (b &gt; c) {    //如果b大于c,借助中间变量t实现b与c值的互换
-        t = b;
-        b = c;
-        c = t;
-    }
-
-    printf(&quot;三个数的顺序为：%d,%d,%d&quot;, a, b, c);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入a,b,c:
-5,2,1
-三个数的顺序为：1,2,5
-</code></pre>
-<h3 id="脚下留神">脚下留神：</h3>
-<p>本实例使用 scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c); 从键盘中获得任意 3 个数。在输入数据时，在两个数据之间以一个或多个空格间隔，也可以用 Enter 健、Tab 键，不能用逗号作为两个数据间的分隔符。 如果用格式输入函数 scanf(&quot;％d,％d,%d&quot;,&amp;a,&amp;b,&amp;c) 输入数据，两个数据之间要用“,”做间隔。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bandizip(跨平台解压缩软件) v7.04 企业激活版]]></title>
-        <id>https://acoldfront.github.io/post/bandizip/</id>
-        <link href="https://acoldfront.github.io/post/bandizip/">
-        </link>
-        <updated>2020-04-21T08:53:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>虽然 7-Zip 是开源免费压缩工具中的佼佼者，但用得不是很顺手，今天试了下推荐的 Bandizip 却出人意料的好用！Bandizip 是一款来自韩国的免费优秀的文件压缩/解压缩软件，支持 Win 与 Mac，操作方式与 WinRAR 相似，支持压缩和解压 rar、zip、7z 等众多主流格式…</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>虽然 7-Zip 是开源免费压缩工具中的佼佼者，但用得不是很顺手，今天试了下推荐的 Bandizip 却出人意料的好用！Bandizip 是一款来自韩国的免费优秀的文件压缩/解压缩软件，支持 Win 与 Mac，操作方式与 WinRAR 相似，支持压缩和解压 rar、zip、7z 等众多主流格式…</p>
-<!-- more -->
-<h3 id="主要功能">主要功能</h3>
-<hr>
-<p>支持操作系统: Windows Vista/7/8/10 (x86/x64/ARM64)<br>
-许可类型：免费软件(EULA)<br>
-全能的压缩/解压/浏览/编辑软件<br>
-可提取30多种格式，包括RAR/RAR5/7Z/ZIP等<br>
-包含密码压缩和分卷压缩功能<br>
-支持多核高速压缩</p>
-<h3 id="压缩">压缩</h3>
-<hr>
-<p>支持的格式: ZIP, 7Z(lzma2), ZIPX(xz), EXE(sfx), TAR, TGZ, LZH(lh7), ISO(joliet), GZ, XZ<br>
-ZIP文件修改（添加/删除/重命名）<br>
-支持多核并行，压缩速度可提升至多达6倍<br>
-加密压缩<br>
-支持AES256加密算法<br>
-支持4GB 以上大小的文件压缩<br>
-对ZIP格式支持Unicode或MBCS文件名<br>
-对ZIP/7z格式可进行分卷压缩</p>
-<h3 id="解压">解压</h3>
-<hr>
-<p>支持的格式: 7Z, ACE, AES, ALZ, ARJ, BH, BIN, BZ, BZ2, CAB, Compound(MSI), EGG, GZ, IMG, ISO, ISZ, LHA, LZ, LZH, LZMA, PMA, RAR, RAR5, SFX(EXE), TAR, TBZ, TBZ2, TGZ, TLZ, TXZ, UDF, WIM, XPI, XZ, Z, ZIP, ZIPX, ZPAQ<br>
-轻松查看压缩包内文件<br>
-可只解压选定文件，支持拖拽解压<br>
-可对ZIP和RAR格式添加注释<br>
-一步解压TGZ/TBZ格式的文件</p>
-<h3 id="功能多样">功能多样</h3>
-<hr>
-<p>测试文件完整性以确定压缩包是否损坏<br>
-支持修改代码页改<br>
-可集成至资源管理器右键菜单<br>
-<img src="https://acoldfront.github.io//post-images/1587459441655.png" alt="" loading="lazy"></p>
-<h3 id="更新日志">更新日志</h3>
-<hr>
-<p><a href="https://www.bandisoft.com/bandizip/history/">https://www.bandisoft.com/bandizip/history/</a></p>
-<h3 id="破解教程">破解教程</h3>
-<hr>
-<p>去密钥检测，去联网验证、无需断网激活，不反弹！<br>
-此企业版离线激活密钥来源PYG TEAM的成员分享<br>
-7系列版本，安装后，下载破解补丁，破解后，使用激活码：<br>
-00000000-ENT000000-0000000000-16210000<br>
-邮箱地址：可任意填写，即随意填个假冒邮箱格式</p>
-<p>如何使用？<br>
-去验证补丁放安装目录运行，然后启动软件注册；<br>
-邮箱地址：可任意填写，激活密钥使用上面这个。</p>
-<p><a href="https://pan.baidu.com/s/11b-QgNy7bSagcZAbaL1Ggg">链接: https://pan.baidu.com/s/11b-QgNy7bSagcZAbaL1Ggg 提取码: jpfu</a></p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p>Bandizip各版本功能比较（自v7.0开始分为标准版/专业版/企业版）<br>
-<a href="https://www.bandisoft.com/bandizip/help/edition-comparison">https://www.bandisoft.com/bandizip/help/edition-comparison</a></p>
-<p>官网下载<br>
-6系列版本：【原生无广告】<br>
-<a href="https://dl.bandisoft.com/bandizip/BANDIZIP-SETUP.EXE">安装版：https://dl.bandisoft.com/bandizip/BANDIZIP-SETUP.EXE</a></p>
-<p><a href="https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-32BIT.ZIP">32位便携版：https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-32BIT.ZIP</a></p>
-<p><a href="https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-64BIT.ZIP">64位便携版：https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-64BIT.ZIP</a></p>
-<p>7系列版本：<br>
-<a href="http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE">安装版：http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE</a></p>
-<p><a href="http://dl.bandisoft.com/bandizip.std/BANDIZIP-PORTABLE.ZIP">便携版：http://dl.bandisoft.com/bandizip.std/BANDIZIP-PORTABLE.ZIP</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[思维导图软件 XMind ZEN 2020 v10.1.2 全平台 完美破解版]]></title>
-        <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
-        <link href="https://acoldfront.github.io/post/xmind-zen-2020/">
-        </link>
-        <updated>2020-04-07T22:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
-<!-- more -->
-<p>XMind 是一个全功能的思维导图和头脑风暴软件，为激发灵感和创意而生。作为一款有效提升工作和生活效率的生产力工具，受到全球百千万用户的青睐。</p>
-<p>这两年思维导图突然就火起来了，各种思维导图软件也是雨后春笋般冒出来了，自 Xmind 发布以来就受到全球多个国家的办公一族喜爱。而 XMind 开发团队成员也在不断的去改进产品以提供优秀的生产力工具和服务，帮助人们节省时间并提升效率为目标。<br>
-<img src="https://acoldfront.github.io//post-images/1579860380835.png" alt="" loading="lazy"></p>
-<p>全新内核，经典 XMind 体验。<br>
-我们努力了3年，100% 重写了思维导图引擎的每一个细节，XMind: ZEN 对 XMind 8 做到了完全兼容，让你有一种全新却不失经典的体验。</p>
-<p>无人可超越，只有超越自己。<br>
-对所有主题进行了重新设计，为您的每一张导图都注入新的活力。字体渲染也得到了极大的改进，让每一张思维导图既美观又专业。</p>
-<p>我们专注，为了让您更专注。<br>
-ZEN 模式，寓意为禅。让专注变成一种习惯。</p>
-<p>全新 Snowbrush 引擎<br>
-我们努力了3年，100% 重写了思维导图的引擎，着眼在未来的黑科技上，提升了思维导图的展示效果，丰富了绘图的元素。</p>
-<p>充满惊喜的主题<br>
-XMind: ZEN 对所有主题进行了重新设计，为您的每一张导图都注入新的活力，专业的同时又不失丰富元素，好看到让人羡慕。</p>
-<p>Font Rendering<br>
-由于极大地改进了字体的渲染技术，无论你用 Mac 还是 Windows 创建思维导图，所有文字都以同一样式清晰呈现。XMind: ZEN 精选多款优质字体，爱上编辑导图，从未如此简单。</p>
-<p>Markdown<br>
-我们相信 Markdown 会为你带来更好的使用体验，将做好的图导出为 Markdown 格式后，会让你更易于阅读。</p>
-<p>集专注于 ZEN 模式<br>
-ZEN 模式，寓意为禅，让专注变成一种习惯。进入 ZEN 模式，隐藏页面内多余的元素，帮助你全神贯注地绘制每一个主题，心无旁骛地完成工作。</p>
-<p>贴纸，原创的更好<br>
-设计师原创的贴纸，每一个都精心绘制，更准确地满足你的需求，精彩无处不在。</p>
-<p>100% 对 XMind 8 兼容<br>
-XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结构，在 XMind: ZEN 中都能完美展现。</p>
-<p>导出PDF和印象笔记<br>
-将思维导图导出为矢量的 PDF 文件，方便您将导图随意放大和清晰地打印。印象笔记的粉丝们还会惊喜地发现只需简单地点击，便可将导图分享到印象笔记中。</p>
-<h2 id="更新日志">###更新日志</h2>
-<p>10.1.1</p>
-<p>Xmind ZEN更名为Xmind 2020</p>
-<ol>
-<li>修复了旧版本升级后，启动时可能报错的问题；</li>
-<li>修复了 Windows 下可能无法检测到部分字体的问题；</li>
-<li>修复了改变字体大小时，可能影响到其他主题的问题；</li>
-<li>修复了编辑方程后，画布可能卡住的问题；</li>
-<li>修复了输入空方程时会报错的问题；</li>
-<li>修复了部分其他已知问题。</li>
-</ol>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>基于官网最新版本破解</p>
-<p>破解授权，移除验证，去除试用提示</p>
-<p>能正常导出图片无水印，PDF无水印，导出word，粘贴图片等高级功能</p>
-<p>v2版本导出PNG缩放大小已修复</p>
-<h3 id="使用提示">使用提示</h3>
-<hr>
-<p>将app.asar放入XMind-ZEN安装目录的resources文件夹下替换</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://pan.baidu.com/s/175dlcFsxq9RsiB_BGt0erw">链接: https://pan.baidu.com/s/175dlcFsxq9RsiB_BGt0erw 提取码: 8kh4</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Android VSCO v158 破解版]]></title>
-        <id>https://acoldfront.github.io/post/vsco/</id>
-        <link href="https://acoldfront.github.io/post/vsco/">
-        </link>
-        <updated>2020-04-06T10:17:57.000Z</updated>
-        <summary type="html"><![CDATA[<p>VSCO是时下一款非常流行的摄影App。VSCO支持的功能包括摄影App，语音通讯、相机拍照、照片编辑和照片分享等功能。但是其核心还是滤镜非常强大！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>VSCO是时下一款非常流行的摄影App。VSCO支持的功能包括摄影App，语音通讯、相机拍照、照片编辑和照片分享等功能。但是其核心还是滤镜非常强大！</p>
-<!-- more -->
-<p>随着版本的不断升级，VSCO 逐渐成了一款功能强大的摄影App，包含了相机拍照、照片编辑和照片分享三大功能。虽如此，但VSCO依然保持了简单的使用方式(对于已上手用户而言使用非常简单)，可以利用VSCO内置包含了强大手动控制功能的相机进行拍摄，也可以利用VSCO内数量众多的胶片滤镜、照片基础调整工具对照片进行处理，创造出令人着迷、胶片味道十足的手机摄影作品。</p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>破解会员，解锁全部滤镜</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://pan.baidu.com/s/1jQyZyfgmDLCubXhswtD77g">链接: https://pan.baidu.com/s/1jQyZyfgmDLCubXhswtD77g 提取码: r7sg </a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[WinSnap v5.2.3 便携破解版]]></title>
-        <id>https://acoldfront.github.io/post/winsnap/</id>
-        <link href="https://acoldfront.github.io/post/winsnap/">
-        </link>
-        <updated>2020-04-05T03:17:37.000Z</updated>
-        <summary type="html"><![CDATA[<p>WinSnap是一款屏幕捕获软件，能够让您得心应手地捕获到需要的屏幕截图。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>WinSnap是一款屏幕捕获软件，能够让您得心应手地捕获到需要的屏幕截图。</p>
-<!-- more -->
-<p>捕捉图像方式灵活，主要可以捕捉整个屏幕、活动窗口、选定区域等，图像输出方式多样，主要包括文件、剪贴板、和邮件。软件具有设置捕捉前延时、自定义捕捉热键、图像文件自动按时间或模板命名、捕捉成功声音提示、预览捕捉图片、图像打印、图像水印、图像反色、图像翻转、图像旋转等功能。<br>
-WinSnap轻巧、快速、简单、友好提供截图和图像编辑功能。和其它截图软件相比其最大亮点在于WinSnap可以捕获或去除Winodws 7的 Aero玻璃效果。WinSnap内置了阴影，反射，旋转，水印等效果，支持各种图像格式，并支持自动保存。</p>
-<p><strong>WinSnap 主要特点：</strong><br>
-[+]灵活的屏幕捕捉功能<br>
-[+]内置图像编辑器：箭头，矩形，文本注释<br>
-[+]设计用于捕获 Windows Aero 的干净背景<br>
-[+]支持透明度的 PNG 和 TIFF 图像格式<br>
-[+]高级自动保存和自动复制选项<br>
-[+]常规键盘和鼠标控制（打印屏幕更换）<br>
-[+]可配置工具菜单中打开外部图像编辑器<br>
-[+]小和快速的图像编辑器，比画图更小<br>
-[+]多语言用户界面（基于Unicode）<br>
-<img src="https://acoldfront.github.io//post-images/1586056964047.png" alt="" loading="lazy"></p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>便携版制作</p>
-<p>强制破解免授权，无需许可证密钥，截图保存无水印</p>
-<h3 id="使用提示">使用提示</h3>
-<hr>
-<p>若出现：从服务器返回了一个参照<br>
-对着程序，右键，属性，兼容性，勾选以管理员身份运行。</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://pan.baidu.com/s/1AVppD7OUoGqk3n5sOl9cDA">链接: https://pan.baidu.com/s/1AVppD7OUoGqk3n5sOl9cDA 提取码: 241q</a></p>
 ]]></content>
     </entry>
 </feed>
