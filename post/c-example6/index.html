@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588689477141">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588690683968">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588689477141" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588690683968" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -125,7 +125,9 @@
 <p><strong>实现过程：</strong><br>
 (1) 通过两个 for 循环实现冒泡排序的全过程，外层 for 循环决定冒泡排序的趟数，内层 for 循环决定每趟所进行两两比较的次数。</p>
 <p>(2) 程序代码如下：</p>
-<pre><code class="language-c">int main(void) {
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
     int i, j, tmp, a[10];    //定义变量及数组为基本整型
     printf(&quot;请输入10个数：\n&quot;);
     for (int i = 0; i &lt; 10; ++i) {
@@ -146,7 +148,6 @@
         printf(&quot;%5d&quot;, a[i]);    //将冒泡排序后的顺序输出
     return 0;
 }
-
 </code></pre>
 <p>输出结果：</p>
 <pre><code>请输入10个数：

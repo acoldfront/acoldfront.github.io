@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T14:37:59.076Z</updated>
+    <updated>2020-05-05T14:58:05.757Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -105,6 +105,68 @@
 <p>插入排序是把一个记录插入到已排序的有序序列中，使整个序列在插入该记录后仍然有序。插入排序中较简单的种方法是直接插入排序，其插入位置的确定方法是将待插入的记录与有序区中的各记录自右向左依次比较其关键字值的大小。本实例要求使用直接插入排序法将数字由小到大进行排序。</p>
 </blockquote>
 <!-- more -->
+<h3 id="算法描述">算法描述：</h3>
+<p>直接插入排序的基本原理就如同打扑克牌一样，起初在摸牌的时候，第一张牌对于自身而言是有序的，假如摸到4，当第二次摸到6时，会将6放在4的后面，第三次摸到3时，会将3放在4的前面，这个过程就是直接插入排序。那么对于6和3而言，如何知道是大还是小呢？过程很简单，每摸到一张牌就和前面已有序数列作比较比较，然后交换顺序即可。</p>
+<h3 id="算法执行过程分析">算法执行过程分析：</h3>
+<p>例如:8、45、18、33、15、99、3<br>
+说明：按照从小到大的顺序进行排序。</p>
+<p>具体实现步骤如下：设置一个临时变量temp，其值为当前所摸牌的值，然后和它的前一张牌（即已有序列的最后一张牌）开始比较，如果temp小于前一张牌的值，就把前一张牌放在当前位置，结果比较有序序列的倒数第二位置，如果再小，重复上述步骤，如果大于，由于比较的是有序序列，故此是为有序状态，最后把temp的值放在和有序序列中最后一个比较的值的下一位置当有序之后，退出循环。具体可根据下述图进行自行分析。<br>
+备注：</p>
+<ul>
+<li>其中i表示当前所摸的牌，j表示已有序数列的最后一张牌，从后往前比较。</li>
+<li>其中蓝色空格为temp的值,不代表方框中的值,彩色线条为两数之间的比较。</li>
+<li>以下每一步均为比较完变化后的结果。<br>
+(1)第一趟排序：<br>
+<img src="https://acoldfront.github.io//post-images/1588689732582.png" alt="" loading="lazy"><br>
+(2)第二趟排序：<br>
+<img src="https://acoldfront.github.io//post-images/1588690023139.png" alt="" loading="lazy"><br>
+以此类推...<br>
+(3)第六趟排序：<br>
+<img src="https://acoldfront.github.io//post-images/1588689972515.png" alt="" loading="lazy"><br>
+此时待排序列已全部有序。<br>
+拓展：n个数排序需要n - 1躺。</li>
+</ul>
+<p><strong>实现过程：</strong><br>
+(1) 自定义一个函数，实现直接插入排序，在本实例中，我们自定义该函数为 insort()。</p>
+<p>(2) main() 函数为程序的入口函数。程序代码如下：</p>
+<pre><code class="language-c">int insort(int s[], int n) {    //自定义函数 insort()
+    int i, j, temp;
+    for (i = 1; i &lt; n; ++i) {   //由于temp的初值为第二个数，故i为1
+        temp = s[i];
+        for (j = i - 1; j &gt;= 0; j--) {
+            if (s[j] &gt; temp) {
+                s[j + 1] = s[j];
+            } else {
+                break;
+            }
+        }
+        s[j + 1] = temp;
+    }
+    return 0;
+}
+
+int main(void) {
+    int a[10], i;
+    printf(&quot;请输入10个数：\n&quot;);
+    for (i = 0; i &lt; 10; ++i) {
+        scanf(&quot;%d&quot;, &amp;a[i]);//从键盘中输入10个数
+    }
+    insort(a, 10);
+    printf(&quot;排序后的顺序是：\n&quot;);
+    for (i = 0; i &lt; 10; ++i) {
+        printf(&quot;%5d&quot;, a[i]);    //将排序后的顺序输出
+    }
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入10个数：
+25 12 36 45 2 9 39 22 98 37
+排序后的顺序是：
+    2    9   12   22   25   36   37   39   45   98
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>直接插入排序是将一个数与一组已排号顺序的序列中的最后一个数进行比较。直接插入排序是一种稳定的排序算法。</p>
 ]]></content>
     </entry>
     <entry>
@@ -140,7 +202,9 @@
 <p><strong>实现过程：</strong><br>
 (1) 通过两个 for 循环实现冒泡排序的全过程，外层 for 循环决定冒泡排序的趟数，内层 for 循环决定每趟所进行两两比较的次数。</p>
 <p>(2) 程序代码如下：</p>
-<pre><code class="language-c">int main(void) {
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
     int i, j, tmp, a[10];    //定义变量及数组为基本整型
     printf(&quot;请输入10个数：\n&quot;);
     for (int i = 0; i &lt; 10; ++i) {
@@ -161,7 +225,6 @@
         printf(&quot;%5d&quot;, a[i]);    //将冒泡排序后的顺序输出
     return 0;
 }
-
 </code></pre>
 <p>输出结果：</p>
 <pre><code>请输入10个数：
