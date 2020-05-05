@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T14:58:05.757Z</updated>
+    <updated>2020-05-05T15:03:40.551Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -129,7 +129,9 @@
 <p><strong>实现过程：</strong><br>
 (1) 自定义一个函数，实现直接插入排序，在本实例中，我们自定义该函数为 insort()。</p>
 <p>(2) main() 函数为程序的入口函数。程序代码如下：</p>
-<pre><code class="language-c">int insort(int s[], int n) {    //自定义函数 insort()
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int insort(int s[], int n) {    //自定义函数 insort()
     int i, j, temp;
     for (i = 1; i &lt; n; ++i) {   //由于temp的初值为第二个数，故i为1
         temp = s[i];
