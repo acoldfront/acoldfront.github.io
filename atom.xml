@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-05T03:43:29.995Z</updated>
+    <updated>2020-05-05T03:44:07.546Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -66,9 +66,14 @@ int main(void) {
         <link href="https://acoldfront.github.io/post/c-example2/">
         </link>
         <updated>2020-05-05T03:29:51.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。第二天早上又将第一天剩下的桃子吃掉一半，有多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第 10 天早上想再吃时，发现只剩下一个桃子了。编写程序求猴子第一天摘了多少个桃子。</p>
+</blockquote>
+]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。第二天早上又将第一天剩下的桃子吃掉一半，有多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第 10 天早上想再吃时，发现只剩下一个桃子了。编写程序求猴子第一天摘了多少个桃子。</p>
 </blockquote>
+<!-- more -->
 <p><strong>实现过程：</strong><br>
 (1) 定义 day、x1、x2 为基本整型，并为 day 和 x2 赋初值 9 和 1。</p>
 <p>(2) 使用 while 语句由后向前推出第一天摘的桃子数。</p>
@@ -102,9 +107,14 @@ int main(void) {
         <link href="https://acoldfront.github.io/post/c-example1/">
         </link>
         <updated>2020-05-05T03:16:28.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>任意输入 3 个整数，编程实现对这 3 个整数由小到大进行排序。</p>
+</blockquote>
+]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p>任意输入 3 个整数，编程实现对这 3 个整数由小到大进行排序。</p>
 </blockquote>
+<!-- more -->
 <p><strong>实现过程：</strong><br>
 (1)定义数据类型，本实例中 a、b、c、t 均为基本整型。</p>
 <p>(2) 使用输入函数获得任意 3 个值赋给 a、b、c。</p>
