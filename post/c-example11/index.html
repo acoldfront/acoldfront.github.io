@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588695722074">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588696960655">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588695722074" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588696960655" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -106,6 +106,113 @@
 <p>本实例采用二分查找法查找特定关键字的元素。要求用户输入数组长度，也就是有序表的数据长度，并输入数组元素和査找的关键字。程序输出查找成功与否，以及成功时关键字在数组中的位置。例如，在有序表 11、13、18、 28、39、56、69、89、98、122 中査找关键字为 89 的元素。</p>
 </blockquote>
 <!-- more -->
+<h3 id="算法表述">算法表述：</h3>
+<p>折半查找法也叫做二分查找，顾名思义，就是把数据分成两半，再判断所查找的key在哪一半中，再重复上述步骤知道找到目标key;<br>
+<strong>注意：（咳咳，敲黑板）折半查找法仅适用于对已有顺序的数组、数据进行操作！！！</strong></p>
+<p>折半查找只能在有序数列中进行，将待查找的数据与有序数列（递增）中间的元素进行比较，如果相等，则找到；如果待查找的数据大于中间的元素的值，那么再从数组的后一半元素中进行查找，否则，从前一半元素中进行查找；若折半后都找不到，则输出“没找着”等提示信息。</p>
+<h3 id="算法执行过程分析">算法执行过程分析：</h3>
+<p>例如：要在数组arr[]={8,7,9,6,4,1,2,5,3,10,11};中查找key=7的位置；首先，我们要先将数组arr中的数据成员进行排序。arr[]={1,2,3,4,5,6,7,8,9,10,11};<br>
+<img src="https://acoldfront.github.io//post-images/1588696496749.png" alt="" loading="lazy"><br>
+如图所示：将该组数据小端记作low，大端记作high,中间值记作mid;<br>
+二分法查找时，将所查找的key与mid比较，例如key=7，即可缩小查找范围在mid和high之间；<br>
+<img src="https://acoldfront.github.io//post-images/1588696476328.png" alt="" loading="lazy"><br>
+如图所示即可找到key=low=7;<br>
+<strong>注意：（敲黑板）如果中间数mid不是整数，需要进行取整。</strong></p>
+<p><strong>实现过程：</strong><br>
+(1) 自定义函数 binary_search()，实现二分査找。</p>
+<p>(2) main() 函数作为程序的入口函数。程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int binary_search(int key, int a[], int n) { //自定义函数binary_search()
+
+    int low, high, mid, count = 0, count1 = 0;
+    low = 0;
+    high = n - 1;
+    while (low &lt; high)    //査找范围不为0时执行循环体语句
+    {
+        count++;    //count记录査找次数
+        mid = (low + high) / 2;    //求中间位置
+        if (key &lt; a[mid])    //key小于中间值时
+            high = mid - 1;    //确定左子表范围
+        else if (key &gt; a[mid])    //key 大于中间值时
+            low = mid + 1;    //确定右子表范围
+        else if (key == a[mid])    //当key等于中间值时，证明查找成功
+        {
+            printf(&quot;查找成功!\n 查找 %d 次!a[%d]=%d&quot;, count, mid, key);    //输出査找次数及所査找元素在数组中的位置
+            count1++;    //count1记录查找成功次数
+            break;
+        }
+    }
+    if (count1 == 0)    //判断是否查找失敗
+        printf(&quot;查找失敗!&quot;);    //査找失敗输出no found
+    return 0;
+}
+
+int main() {
+    int i, key, a[100], n;
+    printf(&quot;请输入数组的长度：\n&quot;);
+    scanf(&quot;%d&quot;, &amp;n);    //输入数组元素个数
+    printf(&quot;请输入数组元素：\n&quot;);
+    for (i = 0; i &lt; n; i++)
+        scanf(&quot;%d&quot;, &amp;a[i]);    //输入有序数列到数组a中
+    printf(&quot;请输入你想查找的元素：\n&quot;);
+    scanf(&quot;%d&quot;, &amp;key);    //输入要^找的关键字
+    binary_search(key, a, n);    //调用自定义函数
+    printf(&quot;\n&quot;);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入数组的长度：
+10
+请输入数组元素：
+2   3   5   6   8   10  12  13  15  18
+请输入你想查找的元素：
+8
+查找成功!
+ 查找 1 次!a[4]=8
+</code></pre>
+<hr>
+<p><strong>方法二：</strong></p>
+<pre><code class="language-c">int BinSearch(int arr[], int len, int key) {                         //折半查找法（二分法）
+    int low = 0;                         //定义初始最小
+    int high = len - 1;                 //定义初始最大
+    int mid;                            //定义中间值
+    while (low &lt;= high) {
+        mid = (low + high) / 2;              //找中间值
+        if (key == arr[mid])               //判断min与key是否相等
+            return mid;
+        else if (key &gt; arr[mid])             //如果key&gt;mid  则新区间为[mid+1,high]
+            low = mid + 1;
+        else                                       //如果key&lt;mid  则新区间为[low,mid-1]
+            high = mid - 1;
+    }
+    return -1;                             //如果数组中无目标值key，则返回 -1 ；
+}
+
+void main() {
+    int a[] = {2, 3, 5, 6, 8, 10, 12, 13, 15, 18};//二分搜索是已排好序
+    int i, n, addr;
+    printf(&quot;the array is:\n&quot;);
+    for (i = 0; i &lt; sizeof(a) / sizeof(int); i++)
+        printf(&quot;%-4d&quot;, a[i]);
+    printf(&quot;\nsearch number is:&quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    addr = BinSearch(a, sizeof(a) / sizeof(int), n);
+    if (-1 == addr)
+        printf(&quot;can't find!\n&quot;);
+    else
+        printf(&quot;the %d is %dth at the array.\n&quot;, n, addr);
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>the array is:
+2   3   5   6   8   10  12  13  15  18
+search number is:8
+the 8 is 4th at the array.
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>·二分査找就是折半查找，其基本思想是：首先选取表中间位置的记录，将其关键字与给定关键字 key 进行比较，若相等，则査找成功；若 key 值比该关键字值大，则要找的元素一定在右子表中，则继续对右子表进行折半查找：若 key 值比该关键宇值小，则要找的元素一定在左子表中，继续对左子表进行折半査找。如此递推，直到査找成功或査找失败（或査找范围为 0）。</p>
 
             </div>
             
