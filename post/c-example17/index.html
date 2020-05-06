@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>随笔 | Crazer的自留地</title>
+<title>C语言编程实例：17、求自然底数e | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -91,49 +97,72 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 随笔</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://acoldfront.github.io/post/2020-NewYear/">
-                  <h2 class="post-title">致2019除夕 - 2020新年</h2>
-                </a>
-                <div class="post-date">
-                  2020-01-25
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://acoldfront.github.io/post/hello-world/">
-                  <h2 class="post-title">Hello World！你好，世界！</h2>
-                </a>
-                <div class="post-date">
-                  2020-01-24
-                </div>
-                <div class="post-abstract">
-                  <p>现在是公元二零一九年的最后一天，即公元二零二零年的春节，在Crazer自留地开始我的第一次随笔。</p>
+          <div class="post-detail">
+            <h2 class="post-title">C语言编程实例：17、求自然底数e</h2>
+            <div class="post-date">2020-05-06</div>
+            
+            <div class="post-content">
+              <blockquote>
+<p>自然底数 e=2.718281828…，e 的计算公式如下：<br>
+e=1+1/1!+1/2!+1/3!+…<br>
+要求当最后一项的值小于 10-10 时结束。</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+使用循环实现累加求和，并在求和后计算下一项所对应的阶乘。</p>
+<p>① 用循环语句 while 进行循环控制。判断条件为 1/n&gt;10-10；条件成立则执行 ②，条件不成立执行 ⑤；<br>
+② 计算求和 e+=1/n；<br>
+③ i 自增 1；<br>
+④ 计算下一项所对应的阶乘：n=i*n；<br>
+⑤ 结束循环，打印输出结果。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
 
-                </div>
-              </div>
-              
-                <a class="right" href="https://acoldfront.github.io/post/hello-world/">
-                  <div class="feature-container" style="background-image: url('https://acoldfront.github.io//post-images/hello-world.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
+int main(void) {
+    float e = 1.0, n = 1.0;
+    int i = 1;
+    while (1 / n &gt; 1e-10) {
+        e += 1 / n;
+        i++;
+        n = i * n;
+    }
+    printf(&quot;e的值是：%f\n&quot;,e);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>e的值是：2.718282
+</code></pre>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
+                    编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://acoldfront.github.io/post/c-example16/">
+                  <h3 class="post-title">
+                    C语言编程实例：16、最大公约数和最小公倍数
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -155,6 +184,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '91b49922808a1fd87554',
+        clientSecret: '17de273c86b0e4131b14025e2959ee7ced12da1d',
+        repo: 'acoldfront.github.io',
+        owner: 'acoldfront',
+        admin: ['acoldfront'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
