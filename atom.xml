@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-06T03:26:55.061Z</updated>
+    <updated>2020-05-06T03:28:01.847Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -51,78 +51,7 @@ int main(void) {
 5!=120.00
 </code></pre>
 <hr>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//使用递归
-double f(int n) {
-    if (n == 1)
-        return 1;
-    else
-        return n * f(n - 1);
-}
-int main(void) {
-    int i, n;
-    double sum = 1;
-    printf(&quot;请输入数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    //方法二：
-    sum = f(n);//使用递归
-    printf(&quot;%d!=%.2lf&quot;, n, sum);
-    printf(&quot;\n&quot;);
-
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入数：5
-5!=120.00
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>① 由于阶乘一般较大，会超出整型甚至是长整型所能表示的范围，因此定义变量时就不能定义为整型，而应该考虑双精度数。</p>
-<p>② 实训中定义了一个双精度型的变量，用来存放结果。因此在输出时应注意双精度数的输出格式。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：13、求n的阶乘（n!）]]></title>
-        <id>https://acoldfront.github.io/post/c-yu-yan-bian-cheng-shi-li-13qiu-n-de-jie-cheng-n/</id>
-        <link href="https://acoldfront.github.io/post/c-yu-yan-bian-cheng-shi-li-13qiu-n-de-jie-cheng-n/">
-        </link>
-        <updated>2020-05-06T03:20:40.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>从键盘输入一个数，求出这个数的阶乘，即 n!。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>从键盘输入一个数，求出这个数的阶乘，即 n!。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想</strong><br>
-首先要清楚阶乘定义，所谓 n 的阶乘，就是从 1 开始乘以比前一个数大 1 的数，一直乘到 n，用公式表示就是：1×2×3×4×…×(n-2)×(n-1)×n=n!</p>
-<p>具体的操作:利用循环解决问题，设循环变量为 i，初值为 1，i 从 1 变化到 n；依次让 i 与 sum 相乘，并将乘积赋给 sum。<br>
-① 定义变量 sum，并赋初值 1。<br>
-② i 自增 1。<br>
-③ 直到 i 超过 n。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int i, n;
-    double sum = 1,sum1=1;
-    printf(&quot;请输入数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    //方法一；
-    for (i = 1; i &lt;= n; ++i) {
-        sum *= i;
-    }
-    printf(&quot;%d!=%.2lf&quot;, n, sum);
-    printf(&quot;\n&quot;);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入数：5
-5!=120.00
-</code></pre>
-<hr>
+<h3 id="方法二">方法二：</h3>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 //使用递归
@@ -1045,6 +974,78 @@ int main(void) {
 <h3 id="技术要点">技术要点：</h3>
 <p>希尔排序是在直接插入排序的基础上做的改进，也就是将寒排序的序列按固定增量分成若干组，等距者在同二组中，然后再在组内进行直接插入排序。这里面的固定增量从 n/2 开始，以后每次缩小到原来的一半。<br>
 <a href="https://blog.csdn.net/weixin_37818081/article/details/79202115">不懂希尔排序原理可以看</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：4、渔夫打鱼晒网]]></title>
+        <id>https://acoldfront.github.io/post/c-example4/</id>
+        <link href="https://acoldfront.github.io/post/c-example4/">
+        </link>
+        <updated>2020-05-05T03:58:24.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>如果一个渔夫从 2011 年 1 月 1 日开始每三天打一次渔，两天晒一次网，编程实现当输入 2011 1 月 1 日以后的任意一天，输出该渔夫是在打渔还是在晒网。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>如果一个渔夫从 2011 年 1 月 1 日开始每三天打一次渔，两天晒一次网，编程实现当输入 2011 1 月 1 日以后的任意一天，输出该渔夫是在打渔还是在晒网。</p>
+</blockquote>
+<!-- more -->
+<p><strong>实现过程：</strong><br>
+(1) 自定义函数 leap()，用来判断输入的年份是否是闰年。</p>
+<p>(2) 自定义函数 number()，用来计算输入日期距 2011 年 1 月 1 日共有多少天。</p>
+<p>(3) main() 函数作为程序的入口函数，在 main() 函数中调用上面两个函数。程序代码如下：</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int leap(int a) {   //自定义函数leap()用来指定输入的年份是否为闰年
+    if (a % 4 == 0 &amp;&amp; a % 100 != 0 || a % 400 == 0)    //闰年判定条件
+        return 1;   //是闰年返回1
+    else
+        return 0;   //不是闰年返回O
+}
+
+int number(int year, int month, int day) {    //自定义函数 number() 计算输入日期距2011年1月1日共有多少天
+    int sum = 0, i, j, k;
+    int a[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};    //数组a存放平年每月的天数
+    int b[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};    //数组b存放闰年每月的天数
+    if (leap(year) == 1) {    //判断是否为闰年
+        for (i = 0; i &lt; month - 1; ++i)
+            sum += b[i];    //是闰年，累加数组b前m-1个月份的天数
+    } else {
+        for (i = 0; i &lt; month - 1; ++i)
+            sum += a[i];    //不是闰年，累加数组a前m-1个月份的天数
+    }
+    for (j = 2011; j &lt; year; ++j) {
+        if (leap(j) == 1)
+            sum += 366;   //2011年到输入的年份是闰年的加366
+        else
+            sum += 365;   //2011年到输入的年份不是闰年的加365
+    }
+    sum += day;    //将前面累加的结果加上日期，求出总天数
+    return sum; //返回计算的天数
+}
+
+int main(void) {
+    int year, month, day, n;
+    printf(&quot;请输入年月日\n&quot;);
+    scanf(&quot;%d%d%d&quot;, &amp;year, &amp;month, &amp;day);    //输入年月日
+    n = number(year, month, day);
+    if ((n % 5) &lt; 4 &amp;&amp; (n % 5) &gt; 0)    //余数是1或2或3时说明在打渔，否则在晒网
+        printf(&quot;%d：%d：%d 打鱼\n&quot;, year, month, day);
+    else
+        printf(&quot;%d：%d：%d 晒网\n&quot;, year, month, day);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入年月日
+2011 1 4
+2011：1：4 晒网
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>本实例主要有以下两个技术要点：</p>
+<p>(1) 判断输入的年份（2011 年以后包括 2011 年）是否为闰年，这里自定义函数 leap() 来进行判断。该函数的核心内容就是闰年的判断条件即能被 4 整除但不能被 100 整除，或能被 400 整除。</p>
+<p>(2) 求输入日期距 2011 年 1 月 1 日有多少天。首先判断 2011 年距输入的年份有多少年，这其中有多少年是闰年就将 sum 加多少个 366，有多少年是平年便将 sum 加上多少个 365。</p>
+<p>其次要将 12 个月每月的天数存到数组中，因为闰年 2 月份的天数有别于平年，故采用两个数组 a 和 b 分别存储。若输入年份是平年，月份为 m 时就在前面累加日期的基础上继续累加存储着平年每月天数的数组的前 m-1 个元素，将累加结果加上输入的日期便求出了最终结果。闰年的算法类似。</p>
 ]]></content>
     </entry>
 </feed>
