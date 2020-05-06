@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：1、三个数从小到大排序输出 | Crazer的自留地</title>
+<title>C语言编程实例：19、求回文数、回文素数 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,54 +98,108 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：1、三个数从小到大排序输出</h2>
-            <div class="post-date">2020-05-05</div>
+            <h2 class="post-title">C语言编程实例：19、求回文数、回文素数</h2>
+            <div class="post-date">2020-05-06</div>
             
             <div class="post-content">
               <blockquote>
-<p>任意输入 3 个整数，编程实现对这 3 个整数由小到大进行排序。</p>
+<p>任意的整数，当从左向右读与从右向左读是相同的，且为素数时，称为回文素数。<br>
+输入一个整数判断是否是回文数</p>
 </blockquote>
 <!-- more -->
-<p><strong>实现过程：</strong><br>
-(1)定义数据类型，本实例中 a、b、c、t 均为基本整型。</p>
-<p>(2) 使用输入函数获得任意 3 个值赋给 a、b、c。</p>
-<p>(3) 使用 if 语句进行条件判断，如果 a 大于 b，则借助于中间变量 t 互换 a 与 b 值， 依此类推比较 a 与 c、b 与 c，最终结果即为 a、b、c 的升序排列。</p>
-<p>(4) 使用输出函数将 a、b、c 的值依次输出。</p>
-<p>(5) 程序的代码如下：</p>
+<p><strong>算法思想：</strong><br>
+① 获取一个数，例如123<br>
+② 求出321与123相比<br>
+③ 求123中的个位数：3 -&gt; 123%10/1<br>
+十位数：2 -&gt; 123%100/10<br>
+百位数：1 -&gt; 123%1000/100<br>
+通式：num  %(10*i)/i<br>
+④将321 = 3 * 100 +2  * 10 + 1<br>
+⑤定义一个snum用来存储倒置的数，即3snum = 21，snum = num % (10 * i) / i + 10 * snum;<br>
+第一次循环：s = 3 + 0<br>
+第二次循环：s = 2 + 30<br>
+第三次循环：s = 1 + 320<br>
+⑥对比num 和 snum的值。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main(void) {
-    int a, b, c, t;    //定义4个基本整型变量a、b、c、t
-    printf(&quot;请输入a,b,c:\n&quot;);    //双引号内的普通字符原样输出并换行
-    scanf(&quot;%d,%d,%d&quot;, &amp;a, &amp;b, &amp;c);      //输入任意3个数
-
-    if (a &gt; b) {    //如果a大于b,借助中间变量t实现a与b值的互换
-        t = a;
-        a = b;
-        b = t;
+    int i, num;
+    int snum = 0;   //用来存放倒置的数
+    intf(&quot;请输入一个整数：&quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    for (i = 1; i &lt; num; i *= 10) {   //i每次增加10倍，实现个位，十位，百位。。。的转化换
+        snum = num % (10 * i) / i + 10*snum;
+        //s = 3 + 0
+        //s = 2 + 30
+        //s = 1 + 320
     }
-    if (a &gt; c) {    //如果a大于c,借助中间变量t实现a与c值的互换
-        t = a;
-        a = c;
-        c = t;
-    }
-    if (b &gt; c) {    //如果b大于c,借助中间变量t实现b与c值的互换
-        t = b;
-        b = c;
-        c = t;
-    }
-
-    printf(&quot;三个数的顺序为：%d,%d,%d&quot;, a, b, c);
+    if (num == snum)
+        printf(&quot;这个数是一个回文数\n&quot;);
+    else
+        printf(&quot;这个数不是一个回文数\n&quot;);if (num == snum)
+        printf(&quot;这个数是一个回文数\n&quot;);
+    else
+        printf(&quot;这个数不是一个回文数\n&quot;);
     return 0;
 }
 </code></pre>
 <p>输出结果：</p>
-<pre><code>请输入a,b,c:
-5,2,1
-三个数的顺序为：1,2,5
+<pre><code>请输入一个整数：121
+这个数是一个回文数
 </code></pre>
-<h3 id="脚下留神">脚下留神：</h3>
-<p>本实例使用 scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c); 从键盘中获得任意 3 个数。在输入数据时，在两个数据之间以一个或多个空格间隔，也可以用 Enter 健、Tab 键，不能用逗号作为两个数据间的分隔符。 如果用格式输入函数 scanf(&quot;％d,％d,%d&quot;,&amp;a,&amp;b,&amp;c) 输入数据，两个数据之间要用“,”做间隔。</p>
+<hr>
+<blockquote>
+<p>求 1000 以内的所有回文素数。</p>
+</blockquote>
+<p><strong>算法思想：</strong><br>
+实例的重点是判断一个数是否是回文素数。要输出 1000 以内的所有回文素数，首先应判断这个数是否是素数；如果是，再进一步判断这个数是两位数还是三位数，若是两位数，则需判断个位数和十位数是否相同；若是三位数，则需判断个位数和百位数是否相同。若相同，则判断为回文素数，否则继续下次判断。</p>
+<p>① 定义一个函数 sushu，其作用是判断一个数是否是素数。<br>
+② 对判断为素数的数，再判断其是否是两位数。<br>
+若是两位数，再判断其个位数和十位数是否相同，若相同则打印输出；若不相同，则执行④；若不是两位数，则执行③。<br>
+③ 若是三位数，则判断其个位数和百位数是否相同。若相同，则打印输出；若不相同，则执行 ④。<br>
+④ 循环控制变量 i 自增 1。<br>
+⑤ 直到 i 自增至 1000 结束。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+#include &lt;stdio.h&gt;
+
+/*判断参数n是否为素数*/
+int fun(int n) {
+    int i;
+    for (i = 2; i &lt; (n - 1) / 2; ++i) {
+        if (n % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+int main(void) {
+    int i;
+    for (i = 10; i &lt; 1000; ++i) {   //10以内没有回文素数
+        if (fun(i) == 1) {      //素数
+            if (i / 100 == 0) {     //100以内的
+                if (i / 10 == i % 10)   //对比十位和个位
+                    printf(&quot;%5d&quot;, i);
+                if (i % 5 == 0)
+                    printf(&quot;\n&quot;);
+            } else {
+                if (i / 100 == i % 10)  //对比百位和个位
+                    printf(&quot;%5d&quot;, i);
+                if (i % 5 == 0)
+                    printf(&quot;\n&quot;);
+
+            }
+        }
+    }
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>   11  101  131  151  181  191  313  353  373  383  727  757  787  797  919  929
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>① 程序由 main() 函数和 sushu() 函数组成，main() 函数调用 sushu() 函数，整型变量 i 为函数参数。当 sushu () 执行完后，返回到主函数中继续执行被调函数后面的语句。</p>
+<p>② 函数调用语句由函数名、实际参数加上分号“;”组成。其一般形式为“函数名(实际参数表);”。执行函数语句就是调用函数体并把实际参数赋予函数定义中的形式参数，然后执行被调函数体中的语句，求取函数值。</p>
 
             </div>
             
@@ -160,9 +214,9 @@ int main(void) {
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/bandizip/">
+                <a href="https://acoldfront.github.io/post/c-example18/">
                   <h3 class="post-title">
-                    Bandizip(跨平台解压缩软件) v7.04 企业激活版
+                    C语言编程实例：18、小写字母转换成大写字母
                   </h3>
                 </a>
               </div>

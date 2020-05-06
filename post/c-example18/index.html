@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：1、三个数从小到大排序输出 | Crazer的自留地</title>
+<title>C语言编程实例：18、小写字母转换成大写字母 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,54 +98,44 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：1、三个数从小到大排序输出</h2>
-            <div class="post-date">2020-05-05</div>
+            <h2 class="post-title">C语言编程实例：18、小写字母转换成大写字母</h2>
+            <div class="post-date">2020-05-06</div>
             
             <div class="post-content">
               <blockquote>
-<p>任意输入 3 个整数，编程实现对这 3 个整数由小到大进行排序。</p>
+<p>在 C 语言中区分字母的大小写，利用 ASCII 码中大写字母和小写字母之间的转换关系（差值为 32），可以将小写字母转换为大写字母。编写程序实现，从键盘上输入一个小写字母，按回车键，程序将该小写字母转换为大写字母，并输出其 ASCII 值。</p>
 </blockquote>
 <!-- more -->
-<p><strong>实现过程：</strong><br>
-(1)定义数据类型，本实例中 a、b、c、t 均为基本整型。</p>
-<p>(2) 使用输入函数获得任意 3 个值赋给 a、b、c。</p>
-<p>(3) 使用 if 语句进行条件判断，如果 a 大于 b，则借助于中间变量 t 互换 a 与 b 值， 依此类推比较 a 与 c、b 与 c，最终结果即为 a、b、c 的升序排列。</p>
-<p>(4) 使用输出函数将 a、b、c 的值依次输出。</p>
-<p>(5) 程序的代码如下：</p>
+<p><strong>算法思想：</strong><br>
+由于大写字母与小写字母之间的差值为 32，因此小写字母转换为大写字母的方法就是将小写字母的 ASCII 码值减去 32，便可得到与之对应的大写字母。</p>
+<p>利用 getchar 函数从键盘上输入一个小写字母，并将其赋给一个字符变量 a；然后将 a—32 的值赋给字符变量 b；最后进行输出，输出时先输出字母，再将字母以整数形式输出。其具体步骤如下：</p>
+<p>① 定义两个字符变量 a、b；<br>
+② a=get char()；<br>
+③ b=a—32；<br>
+④ 打印输出。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main(void) {
-    int a, b, c, t;    //定义4个基本整型变量a、b、c、t
-    printf(&quot;请输入a,b,c:\n&quot;);    //双引号内的普通字符原样输出并换行
-    scanf(&quot;%d,%d,%d&quot;, &amp;a, &amp;b, &amp;c);      //输入任意3个数
-
-    if (a &gt; b) {    //如果a大于b,借助中间变量t实现a与b值的互换
-        t = a;
-        a = b;
-        b = t;
-    }
-    if (a &gt; c) {    //如果a大于c,借助中间变量t实现a与c值的互换
-        t = a;
-        a = c;
-        c = t;
-    }
-    if (b &gt; c) {    //如果b大于c,借助中间变量t实现b与c值的互换
-        t = b;
-        b = c;
-        c = t;
-    }
-
-    printf(&quot;三个数的顺序为：%d,%d,%d&quot;, a, b, c);
+    char a, b;
+    printf(&quot;输入一个小写字母:\n&quot;);
+    a = getchar();
+    b = a - 32;
+    printf(&quot;转换后的字母为：%c，%d\n&quot;, b, b);
     return 0;
 }
+
 </code></pre>
 <p>输出结果：</p>
-<pre><code>请输入a,b,c:
-5,2,1
-三个数的顺序为：1,2,5
+<pre><code>输入一个小写字母:
+c
+转换后的字母为：C，67
 </code></pre>
-<h3 id="脚下留神">脚下留神：</h3>
-<p>本实例使用 scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c); 从键盘中获得任意 3 个数。在输入数据时，在两个数据之间以一个或多个空格间隔，也可以用 Enter 健、Tab 键，不能用逗号作为两个数据间的分隔符。 如果用格式输入函数 scanf(&quot;％d,％d,%d&quot;,&amp;a,&amp;b,&amp;c) 输入数据，两个数据之间要用“,”做间隔。</p>
+<h3 id="技术要点">技术要点：</h3>
+<p>① 实例内容要求对 ASCII 码有所了解。知道小写字母和大写字母之间的差值为 32。</p>
+<p>② getchar 函数的功能是从键盘上输入一个字符。其一般形式为“getchar()”。通常把输入的字符赋予一个字符变量，构成赋值语句，如：char c;或c=getchar();</p>
+<p>③ 使用 getchar 函数还应注意几个问题：<br>
+getchar 函数只能接收单个字符，输入数字也按字符处理。输入多于一个字符时，只接收第一个字符。<br>
+使用 getchar 函数前必须包含文件“stdio.h”。</p>
 
             </div>
             
@@ -160,9 +150,9 @@ int main(void) {
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/bandizip/">
+                <a href="https://acoldfront.github.io/post/c-example17/">
                   <h3 class="post-title">
-                    Bandizip(跨平台解压缩软件) v7.04 企业激活版
+                    C语言编程实例：17、求自然底数e
                   </h3>
                 </a>
               </div>
