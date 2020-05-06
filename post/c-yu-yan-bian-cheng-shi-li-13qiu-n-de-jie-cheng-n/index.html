@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：2、猴子吃桃问题 | Crazer的自留地</title>
+<title>C语言编程实例：13、求n的阶乘（n!） | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,56 +98,79 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：2、猴子吃桃问题</h2>
-            <div class="post-date">2020-05-05</div>
+            <h2 class="post-title">C语言编程实例：13、求n的阶乘（n!）</h2>
+            <div class="post-date">2020-05-06</div>
             
             <div class="post-content">
               <blockquote>
-<p>猴子吃桃问题：猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾，又多吃了一个。第二天早上又将第一天剩下的桃子吃掉一半，有多吃了一个。以后每天早上都吃了前一天剩下的一半零一个。到第 10 天早上想再吃时，发现只剩下一个桃子了。编写程序求猴子第一天摘了多少个桃子。</p>
+<p>从键盘输入一个数，求出这个数的阶乘，即 n!。</p>
 </blockquote>
 <!-- more -->
-<p><strong>实现过程：</strong><br>
-(1) 定义 day、x1、x2 为基本整型，并为 day 和 x2 赋初值 9 和 1。</p>
-<p>(2) 使用 while 语句由后向前推出第一天摘的桃子数。</p>
-<p>(3) 输出结果。</p>
-<p>(4) 程序代码如下：</p>
+<p><strong>算法思想</strong><br>
+首先要清楚阶乘定义，所谓 n 的阶乘，就是从 1 开始乘以比前一个数大 1 的数，一直乘到 n，用公式表示就是：1×2×3×4×…×(n-2)×(n-1)×n=n!</p>
+<p>具体的操作:利用循环解决问题，设循环变量为 i，初值为 1，i 从 1 变化到 n；依次让 i 与 sum 相乘，并将乘积赋给 sum。<br>
+① 定义变量 sum，并赋初值 1。<br>
+② i 自增 1。<br>
+③ 直到 i 超过 n。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main(void) {
-    int day, x1, x2;    //定义 day、x1、x2 3 个变董为基本整型
-    day = 9;
-    x2 = 1;
-    while (day &gt; 0) {
-        x1 = (x2 + 1) * 2;    //第一天的桃子数是第二天桃子数加1后的2倍
-        x2 = x1;
-        day--;      //因为从后向前推所以天数递减
+    int i, n;
+    double sum = 1,sum1=1;
+    printf(&quot;请输入数：&quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    //方法一；
+    for (i = 1; i &lt;= n; ++i) {
+        sum *= i;
     }
-    printf(&quot;一共是%d个桃子&quot;, x1);  //输出桃子的总数
+    printf(&quot;%d!=%.2lf&quot;, n, sum);
+    printf(&quot;\n&quot;);
     return 0;
 }
 </code></pre>
 <p>输出结果：</p>
-<pre><code>一共是1534个桃子
+<pre><code>请输入数：5
+5!=120.00
+</code></pre>
+<hr>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//使用递归
+double f(int n) {
+    if (n == 1)
+        return 1;
+    else
+        return n * f(n - 1);
+}
+int main(void) {
+    int i, n;
+    double sum = 1;
+    printf(&quot;请输入数：&quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+    //方法二：
+    sum = f(n);//使用递归
+    printf(&quot;%d!=%.2lf&quot;, n, sum);
+    printf(&quot;\n&quot;);
+
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入数：5
+5!=120.00
 </code></pre>
 <h3 id="技术要点">技术要点：</h3>
-<p>本实例的思路基本上是先找出变量间的关系，也就是要明确第一天桃数和第二天桃子数之间的关系，即第二天桃子数加 1 的 2 倍等于第一天的桃子数。</p>
+<p>① 由于阶乘一般较大，会超出整型甚至是长整型所能表示的范围，因此定义变量时就不能定义为整型，而应该考虑双精度数。</p>
+<p>② 实训中定义了一个双精度型的变量，用来存放结果。因此在输出时应注意双精度数的输出格式。</p>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
-                    编程
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/c-example1/">
+                <a href="https://acoldfront.github.io/post/c-example12/">
                   <h3 class="post-title">
-                    C语言编程实例：1、三个数从小到大排序输出
+                    C语言编程实例：12、猴分块查找算法，索引顺序查找算法
                   </h3>
                 </a>
               </div>
