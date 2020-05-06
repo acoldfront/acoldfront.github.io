@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：3、百元买鸡 | Crazer的自留地</title>
+<title>C语言编程实例：14、判断三角形的类型 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,48 +98,54 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：3、百元买鸡</h2>
-            <div class="post-date">2020-05-05</div>
+            <h2 class="post-title">C语言编程实例：14、判断三角形的类型</h2>
+            <div class="post-date">2020-05-06</div>
             
             <div class="post-content">
               <blockquote>
-<p>中国古代数学家张丘建在他的《算经》中提出了一个著名的“百钱买百鸡问题”，鸡翁一，值钱五，鸡母一，值钱三，鸡雏三，值钱一，百钱买百鸡，问翁、母、雏各几何？</p>
+<p>根据输入的三角形的三条边判断三角形的类型，并输出其面积和类型。</p>
 </blockquote>
 <!-- more -->
-<p><strong>实现过程：</strong><br>
-(1)使用 for 语句对 3 种鸡的数嫌在事先确定好的范围内进行穷举并判断，对满足条件的 3 种鸡的数量按指定格式输出，否则进行下次循环。</p>
-<p>(2) 程序的代码如下：</p>
+<p><strong>算法思想</strong><br>
+首先判断其两边之和是否大于第三边，若大于则判断可以构成三角形，再进一步判断该三角形是什么三角形，并计算这个三角形的面积；否则不能构成三角形。</p>
+<p>① 从键盘输入三角形的三条边。</p>
+<p>② 判断两边之和是否大于第三边。</p>
+<p>③ 若条件成立则判断可构成三角形，计算其面积，并判断其类型；否则判断其不能构成三角形。</p>
+<p>④ 在类型判断中首先判断其是否三边相等，条件成立则判断其为等边三角形；否则判断其是否有两边相等，条件成立则判断其为等腰三角形；否则判断其是否有两边的平方和等于第三边的平方，条件成立则判断其为直角三角形；否则判断其为普通三角形。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main(void) {
-   int cook, hen, chick;   //定义变童为基本整型
+    float a, b, c;
+    float s, area;
+    printf(&quot;请输入三角形的三条边:\n&quot;);
+    scanf(&quot;%f,%f,%f&quot;, &amp;a, &amp;b, &amp;c);
+    if (a + b &gt; c &amp;&amp; b + c &gt; a &amp;&amp; a + c &gt; b) {   //两边之和大于第三边
+        s = (a + b + c) / 2;
+        area = (float) sqrt(s * (s - a) * (s - b) * (s - c));   //（海伦公式）（p=(a+b+c)/2）
+        printf(&quot;三角形的面积是：%f\n&quot;, area);
+        if (a == b &amp;&amp; a == c) {
+            printf(&quot;三角形是等边三角形\n&quot;);
+        } else if (a == b || b == c || a == c) {
+            printf(&quot;三角形是等腰三角形\n&quot;);
+        } else if ((a * a + b * b == c * c) || (a * a + c * c == b * b) || (b * b + c * c == a * a))
+            printf(&quot;三角形是直角三角形\n&quot;);
+        else
+            printf(&quot;三角形是普通三角形\n&quot;);
+    } else
+        printf(&quot;不能构成三角形\n&quot;);
 
-    for (cook = 0; cook &lt;= 100; ++cook) {
-        for (hen = 0; hen &lt;= 100; ++hen) {
-            for (chick = 0; chick &lt;= 100; ++chick) {
-                if ((5 * cook + 3 * hen + chick / 3) == 100 &amp;&amp; chick % 3 == 0 &amp;&amp; cook+hen+chick==100)
-                    //(5 * cook + 3 * hen + chick / 3) == 100   判断钱数是否等于 100
-                    //chick % 3 == 0    判断小鸡数是否能被 3 整除
-                    //cook+hen+chick==100  判断购买的鸡数是否等于 100
-                    printf(&quot;公鸡 %2d 只，母鸡 %2d 只，小鸡 %2d 只\n&quot;, cook, hen, chick);
-            }
-        }
-    }
     return 0;
 }
 </code></pre>
 <p>输出结果：</p>
-<pre><code>公鸡  0 只，母鸡 25 只，小鸡 75 只
-公鸡  4 只，母鸡 18 只，小鸡 78 只
-公鸡  8 只，母鸡 11 只，小鸡 81 只
-公鸡 12 只，母鸡  4 只，小鸡 84 只
+<pre><code>请输入三角形的三条边:
+3,3,3
+三角形的面积是：3.897114
+三角形是等边三角形
 </code></pre>
-<p>###技术要点： ###<br>
-根据题意设公鸡、母鸡和雏鸡分别为 cock、hen 和 chick，如果 100 元全买公鸡，那么最多能买 20 只，所以 cock 的范围是大于等于 0 且小于等于 20；如果全买母鸡，那么最多能买 33 只，所以 hen 的范围是大于等于 0 且小于等于 33；如果 100 元钱全买小鸡，那么最多能买 99 只（根据题意小鸡的数量应小于 100 且是 3 的倍数）。</p>
-<p>在确定了各种鸡的范围后进行穷举并判断，判断的条件有以下 3 点：<br>
-(1) 所买的 3 种鸡的钱数总和为 100。<br>
-(2) 所买的 3 种鸡的数量之和为 100。<br>
-(3) 所买的小鸡数必须是 3 的倍数。</p>
+<h3 id="技术要点">技术要点：</h3>
+<p>① 在本实训之前必须知道三角形的相关知识，比如，怎么判断输入的三边是否能构成三角形、三角形的面积计算方法等。</p>
+<p>② 要注意逻辑运算符“&amp;&amp;”和“||”的使用，当需要同时满足多个条件时，使用“&amp;&amp;”运算符；而当只需满足多个条件中的一个时，使用“||”运算符。</p>
 
             </div>
             
@@ -154,9 +160,9 @@ int main(void) {
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/c-example2/">
+                <a href="https://acoldfront.github.io/post/c-example13/">
                   <h3 class="post-title">
-                    C语言编程实例：2、猴子吃桃问题
+                    C语言编程实例：13、求n的阶乘（n!）
                   </h3>
                 </a>
               </div>
