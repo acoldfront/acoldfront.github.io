@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>c语言：位运算小结（按位与、按位或、按位异或、取反、左移、右移） | Crazer的自留地</title>
+<meta name="description" content="静坐长思己过，闲谈莫论人非">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588840302536">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://acoldfront.github.io/">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588840302536" class="site-logo">
+        <h1 class="site-title">Crazer的自留地</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      静坐长思己过，闲谈莫论人非
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://acoldfront.github.io/" target="_blank">Crazer</a> | <a class="rss" href="https://acoldfront.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">c语言：位运算小结（按位与、按位或、按位异或、取反、左移、右移）</h2>
+            <div class="post-date">2020-05-04</div>
+            
+            <div class="post-content">
+              <p>位运算不管是在Java语言，还是在C语言中，或者其他语言，都是经常会用到的，所以本文也就不固定以某种语言来举例子了，原始点就从0、1开始。位运算主要包括按位与(&amp;)、按位或(|)、按位异或(^)、取反(<sub>)、左移(&lt;&lt;)、右移(&gt;&gt;)这几种，其中除了取反(</sub>)以外，其他的都是二目运算符，即要求运算符左右两侧均有一个运算量。</p>
+<!-- more -->
+<p>注意点:由于计算机是<strong>存储的补码</strong>，所以二进制转换为十进制的时候，<br>
+先要将补码转为原码再计算<br>
+即除符号位之外，其他位取反，末位再加1<br>
+原码转换为补码也是的<br>
+正数保持不变</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原码</td>
+<td>0000</td>
+<td>0000</td>
+<td>0000</td>
+<td>0001</td>
+</tr>
+<tr>
+<td>取反</td>
+<td>1111</td>
+<td>1111</td>
+<td>1111</td>
+<td>1110</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>原码</td>
+<td>1000</td>
+<td>0000</td>
+<td>0000</td>
+<td>0010</td>
+</tr>
+<tr>
+<td>反码</td>
+<td>1111</td>
+<td>1111</td>
+<td>1111</td>
+<td>1101</td>
+</tr>
+<tr>
+<td>补码</td>
+<td>1111</td>
+<td>1111</td>
+<td>1111</td>
+<td>1110</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+<td>----</td>
+</tr>
+<tr>
+<td>原码</td>
+<td>0000</td>
+<td>0000</td>
+<td>0000</td>
+<td>0101</td>
+</tr>
+<tr>
+<td>取反</td>
+<td>1111</td>
+<td>1111</td>
+<td>1111</td>
+<td>1010</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>-6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>原码</td>
+<td>1000</td>
+<td>0000</td>
+<td>0000</td>
+<td>0110</td>
+</tr>
+<tr>
+<td>反码</td>
+<td>1111</td>
+<td>1111</td>
+<td>1111</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>补码</td>
+<td>1111</td>
+<td>1111</td>
+<td>1111</td>
+<td>1010</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1、补码</strong></p>
+<p>在总结按位运算前，有必要先介绍下补码的知识，我们知道当将一个十进制正整数转换为二进制数的时候，只需要通过除2取余的方法即可，但是怎么将一个十进制的负整数转换为二进制数呢？其实，负数是以补码的形式表示，其转换方式，简单的一句话就是：先按正数转换，然后取反加1。</p>
+<pre><code>要将十进制的-10用二进制表示，先将10用二进制表示：
+0000 0000 0000 1010
+取反：
+1111 1111 1111 0101
+加1：
+1111 1111 1111 0110
+所以，-10的二进制表示就是：1111 1111 1111 0110
+</code></pre>
+<p><strong>2、按位与(&amp;)</strong></p>
+<p>参加运算的两个数，换算为二进制(0、1)后，进行与运算。只有当相应位上的数都是1时，该位才取1，否则该为为0。</p>
+<pre><code>将10与-10进行按位与(&amp;)运算：
+0000 0000 0000 1010
+1111 1111 1111 0110
+-----------------------
+0000 0000 0000 0010
+所以：10 &amp; -10 = 0000 0000 0000 0010 
+也即 10 &amp; -10 = 0000 0000 0000 0010 = 2
+</code></pre>
+<p><strong>3、按位或(|)</strong></p>
+<p>参加运算的两个数，换算为二进制(0、1)后，进行或运算。只要相应位上存在1，那么该位就取1，均不为1，即为0。</p>
+<pre><code>将10与-10进行按位或(|)运算：
+0000 0000 0000 1010
+1111 1111 1111 0110
+-----------------------
+1111 1111 1111 1110
+所以：10 | -10 = 1111 1111 1111 1110
+
+而1111 1111 1111 1110正好为 -2的补码 即10 | -10 = -2
+</code></pre>
+<p><strong>4、按位异或(^)</strong></p>
+<p>参加运算的两个数，换算为二进制(0、1)后，进行异或运算。只有当相应位上的数字不相同时，该为才取1，若相同，即为0。</p>
+<pre><code>将10与-10进行按位异或(^)运算：
+0000 0000 0000 1010
+1111 1111 1111 0110
+-----------------------
+1111 1111 1111 1100
+所以：10 ^ -10 = 1111 1111 1111 1100
+
+而1111 1111 1111 1100正好为 -4的补码 即10 ^ -10 = -4
+</code></pre>
+<p>可以看出，任何数与0异或，结果都是其本身。利用异或还可以实现一个很好的交换算法，用于交换两个数，算法如下：</p>
+<pre><code>a = a ^ b;
+b = b ^ a;
+a = a ^ b;
+</code></pre>
+<p><strong>5、取反(~)</strong></p>
+<p>参加运算的两个数，换算为二进制(0、1)后，进行取反运算。每个位上都取相反值，1变成0，0变成1。</p>
+<pre><code>对10进行取反(~)运算：
+0000 0000 0000 1010
+---------------------
+1111 1111 1111 0101
+所以：~10 = 1111 1111 1111 0101
+
+而1111 1111 1111 0101正好为 -11的补码 即~10  = -11
+</code></pre>
+<p><strong>简单记法：对所有整数取反=本身的相反数-1</strong><br>
+~9 = -10<br>
+~10 = -11</p>
+<p><strong>6、左移(&lt;&lt;)</strong></p>
+<p>参加运算的两个数，换算为二进制(0、1)后，进行左移运算，用来将一个数各二进制位全部向左移动若干位。</p>
+<pre><code>对10左移2位(就相当于在右边加2个0)：
+0000 0000 0000 1010
+--------------------
+0000 0000 0010 1000
+所以：10 &lt;&lt; 2 = 0000 0000 0010 1000 = 40
+</code></pre>
+<p>注意，观察可以发现，左移一位的结果就是原值乘2，左移两位的结果就是原值乘4。</p>
+<p><strong>7、右移(&gt;&gt;)</strong></p>
+<p>参加运算的两个数，换算为二进制(0、1)后，进行右移运算，用来将一个数各二进制位全部向右移动若干位。</p>
+<pre><code>对10右移2位(就相当于在左边加2个0)：
+0000 0000 0000 1010
+--------------------
+0000 0000 0000 0010
+所以：10 &gt;&gt; 2 = 0000 0000 0000 0010 = 2
+</code></pre>
+<p>注意，观察可以发现，右移一位的结果就是原值除2，左移两位的结果就是原值除4，注意哦，除了以后没有小数位的，都是取整。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
+                    编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://acoldfront.github.io/post/bandizip/">
+                  <h3 class="post-title">
+                    Bandizip(跨平台解压缩软件) v7.04 企业激活版
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '91b49922808a1fd87554',
+        clientSecret: '17de273c86b0e4131b14025e2959ee7ced12da1d',
+        repo: 'acoldfront.github.io',
+        owner: 'acoldfront',
+        admin: ['acoldfront'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
