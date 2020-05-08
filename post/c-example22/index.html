@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：19、求回文数、回文素数 | Crazer的自留地</title>
+<title>C语言编程实例：22、狼追兔子 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,108 +98,52 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：19、求回文数、回文素数</h2>
-            <div class="post-date">2020-05-06</div>
+            <h2 class="post-title">C语言编程实例：22、狼追兔子</h2>
+            <div class="post-date">2020-05-09</div>
             
             <div class="post-content">
               <blockquote>
-<p>任意的整数，当从左向右读与从右向左读是相同的，且为素数时，称为回文素数。<br>
-输入一个整数判断是否是回文数</p>
+<p>一只兔子躲进了 10 个环形分布的洞的某一个，狼在第一个洞没有找到兔子，就隔一个洞，到第三个洞去找，也没有找到，就隔两个洞，到第六个洞去找，以后每次多隔一个洞 去找兔子……这样下去，结果一直找不到兔子，请问：兔子可能躲在哪个洞中？</p>
 </blockquote>
 <!-- more -->
 <p><strong>算法思想：</strong><br>
-① 获取一个数，例如123<br>
-② 求出321与123相比<br>
-③ 求123中的个位数：3 -&gt; 123%10/1<br>
-十位数：2 -&gt; 123%100/10<br>
-百位数：1 -&gt; 123%1000/100<br>
-通式：num  %(10*i)/i<br>
-④将321 = 3 * 100 +2  * 10 + 1<br>
-⑤定义一个snum用来存储倒置的数，即：snum = 321，snum = num % (10 * i) / i + 10 * snum;<br>
-第一次循环：s = 3 + 0<br>
-第二次循环：s = 2 + 30<br>
-第三次循环：s = 1 + 320<br>
-⑥对比num 和 snum的值。</p>
+对于本实例中提到的问题，虽然是“兔子可能躲在哪个洞中”，但是在考虑算法时，需要知道的是狼会去哪个洞找兔子，狼第一次去的洞是第一个（表示为 pos1），第二次去的是第三个（pos3），把它去的洞的代码用数字表示出来，可以推导出狼去的洞的代码是： pos(i+1)=pos(i)+i+1。</p>
+<p>由题目可知，狼没有找到兔子，因此该算法会一直持续下去。除此之外，还需要注意的是，在 10 个洞之后，比如狼去找第十五个洞，但第十五个洞是不存在的，因此我们用 15 对 10 求余，得到的数字才是洞的标示。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main(void) {
-    int i, num;
-    int snum = 0;   //用来存放倒置的数
-    printf(&quot;请输入一个整数：&quot;);
-    scanf(&quot;%d&quot;, &amp;num);
-    for (i = 1; i &lt; num; i *= 10) {   //i每次增加10倍，实现个位，十位，百位。。。的转化换
-        snum = num % (10 * i) / i + 10*snum;
-        //s = 3 + 0
-        //s = 2 + 30
-        //s = 1 + 320
-    }
-    if (num == snum)
-        printf(&quot;这个数是一个回文数\n&quot;);
-    else
-        printf(&quot;这个数不是一个回文数\n&quot;);if (num == snum)
-        printf(&quot;这个数是一个回文数\n&quot;);
-    else
-        printf(&quot;这个数不是一个回文数\n&quot;);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入一个整数：121
-这个数是一个回文数
-</code></pre>
-<hr>
-<blockquote>
-<p>求 1000 以内的所有回文素数。</p>
-</blockquote>
-<p><strong>算法思想：</strong><br>
-实例的重点是判断一个数是否是回文素数。要输出 1000 以内的所有回文素数，首先应判断这个数是否是素数；如果是，再进一步判断这个数是两位数还是三位数，若是两位数，则需判断个位数和十位数是否相同；若是三位数，则需判断个位数和百位数是否相同。若相同，则判断为回文素数，否则继续下次判断。</p>
-<p>① 定义一个函数 sushu，其作用是判断一个数是否是素数。<br>
-② 对判断为素数的数，再判断其是否是两位数。<br>
-若是两位数，再判断其个位数和十位数是否相同，若相同则打印输出；若不相同，则执行④；若不是两位数，则执行③。<br>
-③ 若是三位数，则判断其个位数和百位数是否相同。若相同，则打印输出；若不相同，则执行 ④。<br>
-④ 循环控制变量 i 自增 1。<br>
-⑤ 直到 i 自增至 1000 结束。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-#include &lt;stdio.h&gt;
-
-/*判断参数n是否为素数*/
-int fun(int n) {
     int i;
-    for (i = 2; i &lt; (n - 1) / 2; ++i) {
-        if (n % i == 0)
-            return 0;
+    bool pos[10] = {0};
+    int lang = 0;
+    for (i = 0; i &lt; 100; ++i) {
+        pos[lang] = true;
+        lang++;
+        lang += i;
+        lang = lang % 10;
     }
-    return 1;
-}
-
-int main(void) {
-    int i;
-    for (i = 10; i &lt; 1000; ++i) {   //10以内没有回文素数
-        if (fun(i) == 1) {      //素数
-            if (i / 100 == 0) {     //100以内的
-                if (i / 10 == i % 10)   //对比十位和个位
-                    printf(&quot;%5d&quot;, i);
-                if (i % 5 == 0)
-                    printf(&quot;\n&quot;);
-            } else {
-                if (i / 100 == i % 10)  //对比百位和个位
-                    printf(&quot;%5d&quot;, i);
-                if (i % 5 == 0)
-                    printf(&quot;\n&quot;);
-
-            }
-        }
+    for (i = 0; i &lt; 10; ++i) {
+        if (!pos[i])
+            printf(&quot;兔子可能在第%d洞中\n&quot;, i + 1);
     }
     return 0;
 }
 </code></pre>
 <p>输出结果：</p>
-<pre><code>   11  101  131  151  181  191  313  353  373  383  727  757  787  797  919  929
+<pre><code>兔子可能在第3洞中
+兔子可能在第5洞中
+兔子可能在第8洞中
+兔子可能在第10洞中
 </code></pre>
 <h3 id="技术要点">技术要点：</h3>
-<p>① 程序由 main() 函数和 sushu() 函数组成，main() 函数调用 sushu() 函数，整型变量 i 为函数参数。当 sushu () 执行完后，返回到主函数中继续执行被调函数后面的语句。</p>
-<p>② 函数调用语句由函数名、实际参数加上分号“;”组成。其一般形式为“函数名(实际参数表);”。执行函数语句就是调用函数体并把实际参数赋予函数定义中的形式参数，然后执行被调函数体中的语句，求取函数值。</p>
+<p>(1) 一维数组定义时需要注意的规则：<br>
+① 数组名的命名规则遵守标识符的命名规则。<br>
+② 常量表达式指出数组的长度，当长度为 n 时，即数组为 n 个元素，数组元素下标范围只能是 0~（n—1），即数组中第一个元素的下标为 0，数组中最后一个元素的下标应该是（n—1）。<br>
+③ 常量表达式可以包含常量和符号常量，但是不能包含变量。<br>
+④ 在定义数组的说明中，可以有多个数组说明符，用逗号隔开即可。</p>
+<p>(2) 一维数组的引用说明：<br>
+① 数组下标可以是整型常量、整型变量或者整型表达式，初始值为 0。<br>
+② 一个数组元素引用的实质就是一个变量名的引用，每一个数组元素代表内存中的一个存储单元，具有与相同类型单个变量一样的属性，可以对它进行赋值且参与各种运算，一个数组占有一段连续的存储单元。<br>
+③ 在 C 语言中，数组不能作为一个整体参加数据运算，只能对单个元素进行计算。</p>
 
             </div>
             
@@ -214,9 +158,9 @@ int main(void) {
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/c-example18/">
+                <a href="https://acoldfront.github.io/post/c-example21/">
                   <h3 class="post-title">
-                    C语言编程实例：18、小写字母转换成大写字母
+                    C语言编程实例：21、斐波那契、兔子生兔子
                   </h3>
                 </a>
               </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：19、求回文数、回文素数 | Crazer的自留地</title>
+<title>C语言编程实例：23、谁家孩子跑得最慢 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,108 +98,63 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：19、求回文数、回文素数</h2>
-            <div class="post-date">2020-05-06</div>
+            <h2 class="post-title">C语言编程实例：23、谁家孩子跑得最慢</h2>
+            <div class="post-date">2020-05-09</div>
             
             <div class="post-content">
               <blockquote>
-<p>任意的整数，当从左向右读与从右向左读是相同的，且为素数时，称为回文素数。<br>
-输入一个整数判断是否是回文数</p>
+<p>张、王、李三家各有三个小孩。一天，三家的九个孩子在一起比赛短跑，规定不分年龄大小，跑第一得 9 分，跑第二得 8 分，依次类推。比赛结果显示各家的总分相同，且这些孩子没有同时到达终点的，也没有一家的两个或三个孩子获得相连的名次。已知获第一名的是李家的孩子，获第二名的是王家的孩子。获得最后一名的是谁家的孩子？</p>
 </blockquote>
 <!-- more -->
 <p><strong>算法思想：</strong><br>
-① 获取一个数，例如123<br>
-② 求出321与123相比<br>
-③ 求123中的个位数：3 -&gt; 123%10/1<br>
-十位数：2 -&gt; 123%100/10<br>
-百位数：1 -&gt; 123%1000/100<br>
-通式：num  %(10*i)/i<br>
-④将321 = 3 * 100 +2  * 10 + 1<br>
-⑤定义一个snum用来存储倒置的数，即：snum = 321，snum = num % (10 * i) / i + 10 * snum;<br>
-第一次循环：s = 3 + 0<br>
-第二次循环：s = 2 + 30<br>
-第三次循环：s = 1 + 320<br>
-⑥对比num 和 snum的值。</p>
+按题目的条件，共有 1+2+3+…+9=45 分，每家孩子的得分应为 15 分。根据题意可知，获第一名的是李家的孩子，获第二名的是王家的孩子，则可推出：获第三名的一定是张家的孩子。由“这些孩子没有同时到达终点的”可知：名次不能并列，由“没有一家的两个或三个孩子获得相连的名次”可知：第四名不能是张家的孩子。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
-int main(void) {
-    int i, num;
-    int snum = 0;   //用来存放倒置的数
-    printf(&quot;请输入一个整数：&quot;);
-    scanf(&quot;%d&quot;, &amp;num);
-    for (i = 1; i &lt; num; i *= 10) {   //i每次增加10倍，实现个位，十位，百位。。。的转化换
-        snum = num % (10 * i) / i + 10*snum;
-        //s = 3 + 0
-        //s = 2 + 30
-        //s = 1 + 320
-    }
-    if (num == snum)
-        printf(&quot;这个数是一个回文数\n&quot;);
-    else
-        printf(&quot;这个数不是一个回文数\n&quot;);if (num == snum)
-        printf(&quot;这个数是一个回文数\n&quot;);
-    else
-        printf(&quot;这个数不是一个回文数\n&quot;);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入一个整数：121
-这个数是一个回文数
-</code></pre>
-<hr>
-<blockquote>
-<p>求 1000 以内的所有回文素数。</p>
-</blockquote>
-<p><strong>算法思想：</strong><br>
-实例的重点是判断一个数是否是回文素数。要输出 1000 以内的所有回文素数，首先应判断这个数是否是素数；如果是，再进一步判断这个数是两位数还是三位数，若是两位数，则需判断个位数和十位数是否相同；若是三位数，则需判断个位数和百位数是否相同。若相同，则判断为回文素数，否则继续下次判断。</p>
-<p>① 定义一个函数 sushu，其作用是判断一个数是否是素数。<br>
-② 对判断为素数的数，再判断其是否是两位数。<br>
-若是两位数，再判断其个位数和十位数是否相同，若相同则打印输出；若不相同，则执行④；若不是两位数，则执行③。<br>
-③ 若是三位数，则判断其个位数和百位数是否相同。若相同，则打印输出；若不相同，则执行 ④。<br>
-④ 循环控制变量 i 自增 1。<br>
-⑤ 直到 i 自增至 1000 结束。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-#include &lt;stdio.h&gt;
-
-/*判断参数n是否为素数*/
-int fun(int n) {
-    int i;
-    for (i = 2; i &lt; (n - 1) / 2; ++i) {
-        if (n % i == 0)
-            return 0;
-    }
-    return 1;
-}
+int score[4][4];
 
 int main(void) {
-    int i;
-    for (i = 10; i &lt; 1000; ++i) {   //10以内没有回文素数
-        if (fun(i) == 1) {      //素数
-            if (i / 100 == 0) {     //100以内的
-                if (i / 10 == i % 10)   //对比十位和个位
-                    printf(&quot;%5d&quot;, i);
-                if (i % 5 == 0)
-                    printf(&quot;\n&quot;);
-            } else {
-                if (i / 100 == i % 10)  //对比百位和个位
-                    printf(&quot;%5d&quot;, i);
-                if (i % 5 == 0)
-                    printf(&quot;\n&quot;);
-
-            }
+    int i, j, k, who;
+    score[1][1] = 7;
+    score[2][1] = 8;
+    score[3][1] = 9;
+    for (i = 4; i &lt; 6; i++)
+        for (j = 4; j &lt; 7; j++)
+            for (k = 4; i != j &amp;&amp; k &lt; 7; k++)
+                if (k != i &amp;&amp; k != j &amp;&amp; 15 - i - score[1][1] != 15 - j - score[2][1]
+                    &amp;&amp; 15 - i - score[1][1] != 15 - k - score[3][1]
+                    &amp;&amp; 15 - j - score[2][1] != 15 - k - score[3][1]) {
+                    score[1][2] = i;
+                    score[1][3] = 15 - i - 7;
+                    score[2][2] = j;
+                    score[2][3] = 15 - j - 8;
+                    score[3][2] = k;
+                    score[3][3] = 15 - k - 9;
+                }
+    for (who = 0, i = 1; i &lt;= 3; i++, printf(&quot;\n&quot;))
+        for (j = 1; j &lt;= 3; j++) {
+            printf(&quot;%d&quot;, score[i][j]);
+            if (score[i][j] == 1)
+                who = i;
         }
-    }
+    if (who == 1)
+        printf(&quot;最后一名是张家孩子\n&quot;);
+    else if (who == 2)
+        printf(&quot;最后一名是王家孩子\n&quot;);
+    else
+        printf(&quot;最后一名是李家孩子\n&quot;);
     return 0;
 }
+
 </code></pre>
 <p>输出结果：</p>
-<pre><code>   11  101  131  151  181  191  313  353  373  383  727  757  787  797  919  929
+<pre><code>753
+861
+942
+最后一名是王家孩子
 </code></pre>
 <h3 id="技术要点">技术要点：</h3>
-<p>① 程序由 main() 函数和 sushu() 函数组成，main() 函数调用 sushu() 函数，整型变量 i 为函数参数。当 sushu () 执行完后，返回到主函数中继续执行被调函数后面的语句。</p>
-<p>② 函数调用语句由函数名、实际参数加上分号“;”组成。其一般形式为“函数名(实际参数表);”。执行函数语句就是调用函数体并把实际参数赋予函数定义中的形式参数，然后执行被调函数体中的语句，求取函数值。</p>
+<p>本实例主要运用了二维数组的引用和循环的嵌套。二维数组元素的引用形式为“数组名[下标1][下标2]”。例如“a[1][2]”其下标是可以大于或者等于 0 的整型常量、整型变量或者整型表达式。</p>
+<p>引用二维数组元素时，下标不要越界，也就是说下标值需要从 0 开始，但不要超过行、列的范围。</p>
 
             </div>
             
@@ -214,9 +169,9 @@ int main(void) {
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/c-example18/">
+                <a href="https://acoldfront.github.io/post/c-example22/">
                   <h3 class="post-title">
-                    C语言编程实例：18、小写字母转换成大写字母
+                    C语言编程实例：22、狼追兔子
                   </h3>
                 </a>
               </div>

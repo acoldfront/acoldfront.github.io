@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：19、求回文数、回文素数 | Crazer的自留地</title>
+<title>C语言编程实例：25、矩阵转置 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,108 +98,73 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：19、求回文数、回文素数</h2>
-            <div class="post-date">2020-05-06</div>
+            <h2 class="post-title">C语言编程实例：25、矩阵转置</h2>
+            <div class="post-date">2020-05-09</div>
             
             <div class="post-content">
               <blockquote>
-<p>任意的整数，当从左向右读与从右向左读是相同的，且为素数时，称为回文素数。<br>
-输入一个整数判断是否是回文数</p>
+<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
 </blockquote>
+<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
 <!-- more -->
-<p><strong>算法思想：</strong><br>
-① 获取一个数，例如123<br>
-② 求出321与123相比<br>
-③ 求123中的个位数：3 -&gt; 123%10/1<br>
-十位数：2 -&gt; 123%100/10<br>
-百位数：1 -&gt; 123%1000/100<br>
-通式：num  %(10*i)/i<br>
-④将321 = 3 * 100 +2  * 10 + 1<br>
-⑤定义一个snum用来存储倒置的数，即：snum = 321，snum = num % (10 * i) / i + 10 * snum;<br>
-第一次循环：s = 3 + 0<br>
-第二次循环：s = 2 + 30<br>
-第三次循环：s = 1 + 320<br>
-⑥对比num 和 snum的值。</p>
+<p><strong>算法思想：</strong></p>
+<p>由数学知识可知，将第一个矩阵的所有元素绕着一条从第一行第一列出发的右下角 45° 的射线做镜面反转，即可得到该矩阵的转置。</p>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main(void) {
-    int i, num;
-    int snum = 0;   //用来存放倒置的数
-    printf(&quot;请输入一个整数：&quot;);
-    scanf(&quot;%d&quot;, &amp;num);
-    for (i = 1; i &lt; num; i *= 10) {   //i每次增加10倍，实现个位，十位，百位。。。的转化换
-        snum = num % (10 * i) / i + 10*snum;
-        //s = 3 + 0
-        //s = 2 + 30
-        //s = 1 + 320
+    int i, j, i1, j1, a[101][101], b[101][101];
+    printf(&quot;please input the number of rows(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;i1);
+    printf(&quot;please input the number of columns(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;j1);
+    printf(&quot;please input the element\n&quot;);
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            scanf(&quot;%d&quot;, &amp;a[i][j]);
+    printf(&quot;array a：\n&quot;);
+    for (i = 0; i &lt; i1; i++) {
+        for (j = 0; j &lt; j1; j++)
+            printf(&quot;\t%d&quot;, a[i][j]);
+        printf(&quot;\n&quot;);
     }
-    if (num == snum)
-        printf(&quot;这个数是一个回文数\n&quot;);
-    else
-        printf(&quot;这个数不是一个回文数\n&quot;);if (num == snum)
-        printf(&quot;这个数是一个回文数\n&quot;);
-    else
-        printf(&quot;这个数不是一个回文数\n&quot;);
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            b[j][i] = a[i][j];
+    printf(&quot;array b：\n&quot;);
+    for (i = 0; i &lt; j1; i++) {
+        for (j = 0; j &lt; i1; j++)
+            printf(&quot;\t%d&quot;, b[i][j]);
+        printf(&quot;\n&quot;);
+    }
+
     return 0;
 }
+
 </code></pre>
 <p>输出结果：</p>
-<pre><code>请输入一个整数：121
-这个数是一个回文数
-</code></pre>
-<hr>
-<blockquote>
-<p>求 1000 以内的所有回文素数。</p>
-</blockquote>
-<p><strong>算法思想：</strong><br>
-实例的重点是判断一个数是否是回文素数。要输出 1000 以内的所有回文素数，首先应判断这个数是否是素数；如果是，再进一步判断这个数是两位数还是三位数，若是两位数，则需判断个位数和十位数是否相同；若是三位数，则需判断个位数和百位数是否相同。若相同，则判断为回文素数，否则继续下次判断。</p>
-<p>① 定义一个函数 sushu，其作用是判断一个数是否是素数。<br>
-② 对判断为素数的数，再判断其是否是两位数。<br>
-若是两位数，再判断其个位数和十位数是否相同，若相同则打印输出；若不相同，则执行④；若不是两位数，则执行③。<br>
-③ 若是三位数，则判断其个位数和百位数是否相同。若相同，则打印输出；若不相同，则执行 ④。<br>
-④ 循环控制变量 i 自增 1。<br>
-⑤ 直到 i 自增至 1000 结束。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
+<pre><code>please input the number of rows(&lt;=100)
+3
+please input the number of columns(&lt;=100)
+4
+please input the element
+1 2 3 4 5 6 7 8 9 10 11 12
+array a：
+        1       2       3       4
+        5       6       7       8
+        9       10      11      12
+array b：
+        1       5       9
+        2       6       10
+        3       7       11
+        4       8       12
 
-#include &lt;stdio.h&gt;
-
-/*判断参数n是否为素数*/
-int fun(int n) {
-    int i;
-    for (i = 2; i &lt; (n - 1) / 2; ++i) {
-        if (n % i == 0)
-            return 0;
-    }
-    return 1;
-}
-
-int main(void) {
-    int i;
-    for (i = 10; i &lt; 1000; ++i) {   //10以内没有回文素数
-        if (fun(i) == 1) {      //素数
-            if (i / 100 == 0) {     //100以内的
-                if (i / 10 == i % 10)   //对比十位和个位
-                    printf(&quot;%5d&quot;, i);
-                if (i % 5 == 0)
-                    printf(&quot;\n&quot;);
-            } else {
-                if (i / 100 == i % 10)  //对比百位和个位
-                    printf(&quot;%5d&quot;, i);
-                if (i % 5 == 0)
-                    printf(&quot;\n&quot;);
-
-            }
-        }
-    }
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>   11  101  131  151  181  191  313  353  373  383  727  757  787  797  919  929
 </code></pre>
 <h3 id="技术要点">技术要点：</h3>
-<p>① 程序由 main() 函数和 sushu() 函数组成，main() 函数调用 sushu() 函数，整型变量 i 为函数参数。当 sushu () 执行完后，返回到主函数中继续执行被调函数后面的语句。</p>
-<p>② 函数调用语句由函数名、实际参数加上分号“;”组成。其一般形式为“函数名(实际参数表);”。执行函数语句就是调用函数体并把实际参数赋予函数定义中的形式参数，然后执行被调函数体中的语句，求取函数值。</p>
+<p>在本实例中，主要运用了二维数组，二维数组的使用说明如下：</p>
+<p>① 二维数组的第一个下标表示行数，第二个下标表示列数，每个下标都是从 0 开始；</p>
+<p>② 类型说明符、数组名和常量表达式的意义与一维数组相同；</p>
+<p>③ 二维数组的元素在内存中是“按行存放”，即在内存中先顺序存放第一行的元素，再存放第二行的元素，以此类推；</p>
+<p>④ 可以把二维数组看作一种特殊的一维数组，其特殊之处在于它的每一个元素又是一维数组。</p>
 
             </div>
             
@@ -214,9 +179,9 @@ int main(void) {
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/c-example18/">
+                <a href="https://acoldfront.github.io/post/c-example24/">
                   <h3 class="post-title">
-                    C语言编程实例：18、小写字母转换成大写字母
+                    C语言编程实例：24、获取矩阵的最大值及其下标
                   </h3>
                 </a>
               </div>

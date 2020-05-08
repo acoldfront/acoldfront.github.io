@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-08T08:57:40.123Z</updated>
+    <updated>2020-05-08T16:54:57.398Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,252 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：25、矩阵转置]]></title>
+        <id>https://acoldfront.github.io/post/c-example25/</id>
+        <link href="https://acoldfront.github.io/post/c-example25/">
+        </link>
+        <updated>2020-05-08T16:51:24.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
+</blockquote>
+<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
+</blockquote>
+<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
+<!-- more -->
+<p><strong>算法思想：</strong></p>
+<p>由数学知识可知，将第一个矩阵的所有元素绕着一条从第一行第一列出发的右下角 45° 的射线做镜面反转，即可得到该矩阵的转置。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i, j, i1, j1, a[101][101], b[101][101];
+    printf(&quot;please input the number of rows(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;i1);
+    printf(&quot;please input the number of columns(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;j1);
+    printf(&quot;please input the element\n&quot;);
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            scanf(&quot;%d&quot;, &amp;a[i][j]);
+    printf(&quot;array a：\n&quot;);
+    for (i = 0; i &lt; i1; i++) {
+        for (j = 0; j &lt; j1; j++)
+            printf(&quot;\t%d&quot;, a[i][j]);
+        printf(&quot;\n&quot;);
+    }
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            b[j][i] = a[i][j];
+    printf(&quot;array b：\n&quot;);
+    for (i = 0; i &lt; j1; i++) {
+        for (j = 0; j &lt; i1; j++)
+            printf(&quot;\t%d&quot;, b[i][j]);
+        printf(&quot;\n&quot;);
+    }
+
+    return 0;
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>please input the number of rows(&lt;=100)
+3
+please input the number of columns(&lt;=100)
+4
+please input the element
+1 2 3 4 5 6 7 8 9 10 11 12
+array a：
+        1       2       3       4
+        5       6       7       8
+        9       10      11      12
+array b：
+        1       5       9
+        2       6       10
+        3       7       11
+        4       8       12
+
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>在本实例中，主要运用了二维数组，二维数组的使用说明如下：</p>
+<p>① 二维数组的第一个下标表示行数，第二个下标表示列数，每个下标都是从 0 开始；</p>
+<p>② 类型说明符、数组名和常量表达式的意义与一维数组相同；</p>
+<p>③ 二维数组的元素在内存中是“按行存放”，即在内存中先顺序存放第一行的元素，再存放第二行的元素，以此类推；</p>
+<p>④ 可以把二维数组看作一种特殊的一维数组，其特殊之处在于它的每一个元素又是一维数组。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：24、获取矩阵的最大值及其下标]]></title>
+        <id>https://acoldfront.github.io/post/c-example24/</id>
+        <link href="https://acoldfront.github.io/post/c-example24/">
+        </link>
+        <updated>2020-05-08T16:43:42.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>本实例要求使用二维数组将一个 3×4 的矩阵中所有元素的最大值及其下标获取，通过该程序，掌握二维数组的引用知识。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>本实例要求使用二维数组将一个 3×4 的矩阵中所有元素的最大值及其下标获取，通过该程序，掌握二维数组的引用知识。</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong></p>
+<p>针对本实例，有两个步骤需要编写程序完成：第一个步骤是求矩阵元素的最大值，可以通过相邻的元素大小比较，最终获取最大值；第二个步骤是针对获取到的元素最大值，求该元素的下标。</p>
+<p>二维数组元素的一般表示方法为：“数组名[下标][下标]”。对于二维数组，下标变量和数组说明在表示形式上是一样的，比如在本例中，有语句：int a[3][4]; a[3][4]=2/3;</p>
+<p>上述语句中“a[3][4]”是完全不同的两个概念，第一个语句中的“a[3][4]”用来定义一个数组，而第二个语句中的“a[3][4]”是一个双下标变量。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[3][4], i, j, max, max_i = 0, max_j = 0;
+    for (i = 0; i &lt; 3; ++i) {
+        for (j = 0; j &lt; 4; ++j) {
+            scanf(&quot;%d&quot;,&amp;a[i][j]);
+        }
+    }
+    max=a[0][0];
+    for (i = 0; i &lt; 3; ++i) {
+        for (j = 0; j &lt; 4; ++j) {
+            if(a[i][j]&gt;max){
+                max=a[i][j];
+                max_i=i;
+                max_j=j;
+            }
+        }
+    }
+    printf(&quot;max=a[%d][%d]=%d\n&quot;,max_i,max_j,max);
+
+    return 0;
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>1 2 3 4 5 6 7 99 9 10 11 12
+max=a[1][3]=99
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>本实训的程序主要完成了两个功能：一是通过一个二次循环输入该二维数组的所有元素；二是将输入元素按照相邻关系进行比较，最终得到最大值和这个最大值的下标。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：23、谁家孩子跑得最慢]]></title>
+        <id>https://acoldfront.github.io/post/c-example23/</id>
+        <link href="https://acoldfront.github.io/post/c-example23/">
+        </link>
+        <updated>2020-05-08T16:39:54.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>张、王、李三家各有三个小孩。一天，三家的九个孩子在一起比赛短跑，规定不分年龄大小，跑第一得 9 分，跑第二得 8 分，依次类推。比赛结果显示各家的总分相同，且这些孩子没有同时到达终点的，也没有一家的两个或三个孩子获得相连的名次。已知获第一名的是李家的孩子，获第二名的是王家的孩子。获得最后一名的是谁家的孩子？</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>张、王、李三家各有三个小孩。一天，三家的九个孩子在一起比赛短跑，规定不分年龄大小，跑第一得 9 分，跑第二得 8 分，依次类推。比赛结果显示各家的总分相同，且这些孩子没有同时到达终点的，也没有一家的两个或三个孩子获得相连的名次。已知获第一名的是李家的孩子，获第二名的是王家的孩子。获得最后一名的是谁家的孩子？</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+按题目的条件，共有 1+2+3+…+9=45 分，每家孩子的得分应为 15 分。根据题意可知，获第一名的是李家的孩子，获第二名的是王家的孩子，则可推出：获第三名的一定是张家的孩子。由“这些孩子没有同时到达终点的”可知：名次不能并列，由“没有一家的两个或三个孩子获得相连的名次”可知：第四名不能是张家的孩子。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int score[4][4];
+
+int main(void) {
+    int i, j, k, who;
+    score[1][1] = 7;
+    score[2][1] = 8;
+    score[3][1] = 9;
+    for (i = 4; i &lt; 6; i++)
+        for (j = 4; j &lt; 7; j++)
+            for (k = 4; i != j &amp;&amp; k &lt; 7; k++)
+                if (k != i &amp;&amp; k != j &amp;&amp; 15 - i - score[1][1] != 15 - j - score[2][1]
+                    &amp;&amp; 15 - i - score[1][1] != 15 - k - score[3][1]
+                    &amp;&amp; 15 - j - score[2][1] != 15 - k - score[3][1]) {
+                    score[1][2] = i;
+                    score[1][3] = 15 - i - 7;
+                    score[2][2] = j;
+                    score[2][3] = 15 - j - 8;
+                    score[3][2] = k;
+                    score[3][3] = 15 - k - 9;
+                }
+    for (who = 0, i = 1; i &lt;= 3; i++, printf(&quot;\n&quot;))
+        for (j = 1; j &lt;= 3; j++) {
+            printf(&quot;%d&quot;, score[i][j]);
+            if (score[i][j] == 1)
+                who = i;
+        }
+    if (who == 1)
+        printf(&quot;最后一名是张家孩子\n&quot;);
+    else if (who == 2)
+        printf(&quot;最后一名是王家孩子\n&quot;);
+    else
+        printf(&quot;最后一名是李家孩子\n&quot;);
+    return 0;
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>753
+861
+942
+最后一名是王家孩子
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>本实例主要运用了二维数组的引用和循环的嵌套。二维数组元素的引用形式为“数组名[下标1][下标2]”。例如“a[1][2]”其下标是可以大于或者等于 0 的整型常量、整型变量或者整型表达式。</p>
+<p>引用二维数组元素时，下标不要越界，也就是说下标值需要从 0 开始，但不要超过行、列的范围。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：22、狼追兔子]]></title>
+        <id>https://acoldfront.github.io/post/c-example22/</id>
+        <link href="https://acoldfront.github.io/post/c-example22/">
+        </link>
+        <updated>2020-05-08T16:37:13.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>一只兔子躲进了 10 个环形分布的洞的某一个，狼在第一个洞没有找到兔子，就隔一个洞，到第三个洞去找，也没有找到，就隔两个洞，到第六个洞去找，以后每次多隔一个洞 去找兔子……这样下去，结果一直找不到兔子，请问：兔子可能躲在哪个洞中？</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>一只兔子躲进了 10 个环形分布的洞的某一个，狼在第一个洞没有找到兔子，就隔一个洞，到第三个洞去找，也没有找到，就隔两个洞，到第六个洞去找，以后每次多隔一个洞 去找兔子……这样下去，结果一直找不到兔子，请问：兔子可能躲在哪个洞中？</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+对于本实例中提到的问题，虽然是“兔子可能躲在哪个洞中”，但是在考虑算法时，需要知道的是狼会去哪个洞找兔子，狼第一次去的洞是第一个（表示为 pos1），第二次去的是第三个（pos3），把它去的洞的代码用数字表示出来，可以推导出狼去的洞的代码是： pos(i+1)=pos(i)+i+1。</p>
+<p>由题目可知，狼没有找到兔子，因此该算法会一直持续下去。除此之外，还需要注意的是，在 10 个洞之后，比如狼去找第十五个洞，但第十五个洞是不存在的，因此我们用 15 对 10 求余，得到的数字才是洞的标示。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i;
+    bool pos[10] = {0};
+    int lang = 0;
+    for (i = 0; i &lt; 100; ++i) {
+        pos[lang] = true;
+        lang++;
+        lang += i;
+        lang = lang % 10;
+    }
+    for (i = 0; i &lt; 10; ++i) {
+        if (!pos[i])
+            printf(&quot;兔子可能在第%d洞中\n&quot;, i + 1);
+    }
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>兔子可能在第3洞中
+兔子可能在第5洞中
+兔子可能在第8洞中
+兔子可能在第10洞中
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>(1) 一维数组定义时需要注意的规则：<br>
+① 数组名的命名规则遵守标识符的命名规则。<br>
+② 常量表达式指出数组的长度，当长度为 n 时，即数组为 n 个元素，数组元素下标范围只能是 0~（n—1），即数组中第一个元素的下标为 0，数组中最后一个元素的下标应该是（n—1）。<br>
+③ 常量表达式可以包含常量和符号常量，但是不能包含变量。<br>
+④ 在定义数组的说明中，可以有多个数组说明符，用逗号隔开即可。</p>
+<p>(2) 一维数组的引用说明：<br>
+① 数组下标可以是整型常量、整型变量或者整型表达式，初始值为 0。<br>
+② 一个数组元素引用的实质就是一个变量名的引用，每一个数组元素代表内存中的一个存储单元，具有与相同类型单个变量一样的属性，可以对它进行赋值且参与各种运算，一个数组占有一段连续的存储单元。<br>
+③ 在 C 语言中，数组不能作为一个整体参加数据运算，只能对单个元素进行计算。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：21、斐波那契、兔子生兔子]]></title>
         <id>https://acoldfront.github.io/post/c-example21/</id>
@@ -363,264 +609,6 @@ int main(void) {
 </code></pre>
 <h3 id="技术要点">技术要点：</h3>
 <p>实例中用到了辗转相除法来求最大公约数。在求最小公倍数时要清楚最大公约数和最小公倍数的关系，即两数相乘的积除以这两个数的最大公约数就是最小公倍数。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：15、水仙花数，阿姆斯特朗数]]></title>
-        <id>https://acoldfront.github.io/post/c-example15/</id>
-        <link href="https://acoldfront.github.io/post/c-example15/">
-        </link>
-        <updated>2020-05-06T03:49:33.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>阿姆斯特朗数也就是俗称的水仙花数，是指一个三位数，其各位数字的立方和等于该数本身。例如：153=13+53+33，所以 153 就是一个水仙花数。求出所有的水仙花数。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>阿姆斯特朗数也就是俗称的水仙花数，是指一个三位数，其各位数字的立方和等于该数本身。例如：153=13+53+33，所以 153 就是一个水仙花数。求出所有的水仙花数。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想：</strong><br>
-对于阿姆斯特朗数问题，根据水仙花数的定义，需要分离出个位数、十位数和百位数。然后按其性质进行计算并判断，满足条件则打印输出，否则不打印输出。</p>
-<p>因此，阿姆斯特朗数问题可以利用循环语句解决。设循环变量为 i，初值为 100，i 从 100 变化到 1000；依次判断条件是否成立，如果成立则输出，否则不输出。</p>
-<p>算法思想具体如下：<br>
-① 分离出个位数，算术表达式为：j=i%10。<br>
-② 分离出十位数，算术表达式为：k=i/10%10。<br>
-③ 分离出百位数，算术表达式为：n=i/100。<br>
-④ 判断条件是否成立。若是，执行步骤 ⑤；若不是，执行步骤 ⑥。<br>
-⑤ 打印输出结果。<br>
-⑥ i 自增 1。<br>
-⑦ 转到 ① 执行，直到 i 等于 1000。</p>
-<p>其判断的条件为：j<em>j</em>j+k<em>k</em>k+n<em>n</em>n==i。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int i, j, k, n;
-    for (n = 100; n &lt; 1000; ++n) {
-        i = n / 100;  //分解出百位
-        j = n / 10 % 10;    //分解出十位
-        k = n % 10; //分解出个位
-        if (i*i*i+j*j*j+k*k*k == n)
-            printf(&quot;水仙花数是:%-5d\n&quot;,n);
-    }
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>水仙花数是:153
-水仙花数是:370
-水仙花数是:371
-水仙花数是:407
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>实训中需注意的是在分离个位数、十位数和百位数时，算术运算符的选择。要清楚每一种算术运算符的运算规则和结合性，再根据题意选择合适的算术运算符进行运算。在本实例中使用了除法运算符“/”和求余运算符（模运算符）“％”。</p>
-<p>在程序中由于循环体的语句不止一句，因此我们在使用时必须用“{}”括起来，组成复合语句进行使用。在程序中应把复合语句看成是单条语句而不是多条语句，复合语句内的各条语句都必须以分号“;”结尾；此外，在括号“}”外不能加分号。一般复合语句用于要执行某段特殊功能的程序如 for 语句、if 语句或 while 语句等。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：14、判断三角形的类型]]></title>
-        <id>https://acoldfront.github.io/post/c-example14/</id>
-        <link href="https://acoldfront.github.io/post/c-example14/">
-        </link>
-        <updated>2020-05-06T03:28:27.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>根据输入的三角形的三条边判断三角形的类型，并输出其面积和类型。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>根据输入的三角形的三条边判断三角形的类型，并输出其面积和类型。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想</strong><br>
-首先判断其两边之和是否大于第三边，若大于则判断可以构成三角形，再进一步判断该三角形是什么三角形，并计算这个三角形的面积；否则不能构成三角形。</p>
-<p>① 从键盘输入三角形的三条边。</p>
-<p>② 判断两边之和是否大于第三边。</p>
-<p>③ 若条件成立则判断可构成三角形，计算其面积，并判断其类型；否则判断其不能构成三角形。</p>
-<p>④ 在类型判断中首先判断其是否三边相等，条件成立则判断其为等边三角形；否则判断其是否有两边相等，条件成立则判断其为等腰三角形；否则判断其是否有两边的平方和等于第三边的平方，条件成立则判断其为直角三角形；否则判断其为普通三角形。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float a, b, c;
-    float s, area;
-    printf(&quot;请输入三角形的三条边:\n&quot;);
-    scanf(&quot;%f,%f,%f&quot;, &amp;a, &amp;b, &amp;c);
-    if (a + b &gt; c &amp;&amp; b + c &gt; a &amp;&amp; a + c &gt; b) {   //两边之和大于第三边
-        s = (a + b + c) / 2;
-        area = (float) sqrt(s * (s - a) * (s - b) * (s - c));   //（海伦公式）（p=(a+b+c)/2）
-        printf(&quot;三角形的面积是：%f\n&quot;, area);
-        if (a == b &amp;&amp; a == c) {
-            printf(&quot;三角形是等边三角形\n&quot;);
-        } else if (a == b || b == c || a == c) {
-            printf(&quot;三角形是等腰三角形\n&quot;);
-        } else if ((a * a + b * b == c * c) || (a * a + c * c == b * b) || (b * b + c * c == a * a))
-            printf(&quot;三角形是直角三角形\n&quot;);
-        else
-            printf(&quot;三角形是普通三角形\n&quot;);
-    } else
-        printf(&quot;不能构成三角形\n&quot;);
-
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入三角形的三条边:
-3,3,3
-三角形的面积是：3.897114
-三角形是等边三角形
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>① 在本实训之前必须知道三角形的相关知识，比如，怎么判断输入的三边是否能构成三角形、三角形的面积计算方法等。</p>
-<p>② 要注意逻辑运算符“&amp;&amp;”和“||”的使用，当需要同时满足多个条件时，使用“&amp;&amp;”运算符；而当只需满足多个条件中的一个时，使用“||”运算符。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：13、求n的阶乘（n!）]]></title>
-        <id>https://acoldfront.github.io/post/c-example13/</id>
-        <link href="https://acoldfront.github.io/post/c-example13/">
-        </link>
-        <updated>2020-05-06T03:20:40.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>从键盘输入一个数，求出这个数的阶乘，即 n!。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>从键盘输入一个数，求出这个数的阶乘，即 n!。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想</strong><br>
-首先要清楚阶乘定义，所谓 n 的阶乘，就是从 1 开始乘以比前一个数大 1 的数，一直乘到 n，用公式表示就是：1×2×3×4×…×(n-2)×(n-1)×n=n!</p>
-<p>具体的操作:利用循环解决问题，设循环变量为 i，初值为 1，i 从 1 变化到 n；依次让 i 与 sum 相乘，并将乘积赋给 sum。<br>
-① 定义变量 sum，并赋初值 1。<br>
-② i 自增 1。<br>
-③ 直到 i 超过 n。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int i, n;
-    double sum = 1,sum1=1;
-    printf(&quot;请输入数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    //方法一；
-    for (i = 1; i &lt;= n; ++i) {
-        sum *= i;
-    }
-    printf(&quot;%d!=%.2lf&quot;, n, sum);
-    printf(&quot;\n&quot;);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入数：5
-5!=120.00
-</code></pre>
-<hr>
-<h3 id="方法二">方法二：</h3>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//使用递归
-double f(int n) {
-    if (n == 1)
-        return 1;
-    else
-        return n * f(n - 1);
-}
-int main(void) {
-    int i, n;
-    double sum = 1;
-    printf(&quot;请输入数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    //方法二：
-    sum = f(n);//使用递归
-    printf(&quot;%d!=%.2lf&quot;, n, sum);
-    printf(&quot;\n&quot;);
-
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入数：5
-5!=120.00
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>① 由于阶乘一般较大，会超出整型甚至是长整型所能表示的范围，因此定义变量时就不能定义为整型，而应该考虑双精度数。</p>
-<p>② 实训中定义了一个双精度型的变量，用来存放结果。因此在输出时应注意双精度数的输出格式。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：12、猴分块查找算法，索引顺序查找算法]]></title>
-        <id>https://acoldfront.github.io/post/c-example12/</id>
-        <link href="https://acoldfront.github.io/post/c-example12/">
-        </link>
-        <updated>2020-05-05T13:12:13.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>例如，采用分块查找法在有序表 11、12、18、28、39、56、69、89、96、122、135、146、156、256、298 中查找关键字为 96 的元素。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>例如，采用分块查找法在有序表 11、12、18、28、39、56、69、89、96、122、135、146、156、256、298 中查找关键字为 96 的元素。</p>
-</blockquote>
-<!-- more -->
-<p>査找特定关键字元素个数为 15，要求用户输入有序表各元素，程序输出査找成功与否，若成功，还显示元素在有序表中的位罝。</p>
-<p><strong>实现过程：</strong><br>
-(1)定义结构体 index，用于存储块的结构，并定义该结构体数组 index_table。</p>
-<p>(2)自定义函数 block_search()，实现分块查找。</p>
-<p>(3) main() 函数作为程序的入口函数。程序代码如下：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-struct index    //定义块的结构
-{
-    int key;    //块的关键字
-    int start;    //块的起始值
-    int end;    //块的结束值
-} index_table[4];    //定义结构体数组
-
-int block_search(int key, int a[])    //自定义实现分块查找
-{
-    int i, j;
-    i = 1;
-    while (i &lt;= 3 &amp;&amp; key &gt; index_table[i].key)    //确定在哪个块中
-        i++;
-    if (i &gt; 3)    //大于分得的块数，则返回0
-        return 0;
-    j = index_table[i].start;    //j等于块范围的起始值
-    while (j &lt;= index_table[i].end &amp;&amp; a[j] != key)    //在确定的块内进行顺序查找
-        j++;
-    if (j &gt; index_table[i].end)    //如果大于块范围的结束值，则说明没有要査找的数，j置0
-        j = 0;
-    return j;
-}
-
-int main() {
-    int i, j = 0, k, key, a[16];
-    printf(&quot;请输入15个数：\n&quot;);
-    for (i = 1; i &lt; 16; i++)
-        scanf(&quot;%d&quot;, &amp;a[i]);    //输入由小到大的15个数
-    for (i = 1; i &lt;= 3; i++) {
-        index_table[i].start = j + 1;    //确定每个块范围的起始值
-        j = j + 1;
-        index_table[i].end = j + 4;    //确定每个块范围的结束值
-        j = j + 4;
-        index_table[i].key = a[j];    //确定每个块范围中元素的最大值
-    }
-    printf(&quot;请输入你想査找的元素：\n&quot;);
-    scanf(&quot;%d&quot;, &amp;key);    //输入要查询的数值
-    k = block_search(key, a);    //调用函数进行杳找
-    if (k != 0)
-        printf(&quot;查找成功，其位置是：%d\n&quot;, k);    //如果找到该数，则输出其位置
-    else
-        printf(&quot;查找失败!&quot;);    //若未找到，则输出提示信息
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入15个数：
-11 12 18 28 39 56 69 89 96 122 135 146 156 256 298
-请输入你想査找的元素：
-96
-查找成功，其位置是：9
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>分块査找也称为索引顺序査找，要求将待查的元素均匀地分成块，块间按大小排序，块内不排序，所以要建立一个块的最大（或最小）关键字表，称为索引表。</p>
-<p>本实例中将给出的 15 个数按关键字大小分成了 3 块，这 15 个数的排列是一个有序序列，也可以给出无序序列，但必须满足分在第一块中的任意数都小于第二块中的所有数，第二块中的所有数都小于第三块中的所有数。当要査找关键字为 key 的元素时，先用顺序杳找在已建好的索引表中查出 key 所在的块中，再在对应的块中顺序查找 key，若 key 存在，则输出其相应位置，否则输出提示信息。</p>
 ]]></content>
     </entry>
 </feed>
