@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588913270681">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1588928035587">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1588913270681" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1588928035587" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -125,7 +125,7 @@
 int main(void) {
     int i, num;
     int snum = 0;   //用来存放倒置的数
-    intf(&quot;请输入一个整数：&quot;);
+    printf(&quot;请输入一个整数：&quot;);
     scanf(&quot;%d&quot;, &amp;num);
     for (i = 1; i &lt; num; i *= 10) {   //i每次增加10倍，实现个位，十位，百位。。。的转化换
         snum = num % (10 * i) / i + 10*snum;

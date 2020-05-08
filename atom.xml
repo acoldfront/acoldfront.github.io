@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-08T04:47:52.898Z</updated>
+    <updated>2020-05-08T08:53:57.514Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -138,7 +138,7 @@ int main(void) {
 int main(void) {
     int i, num;
     int snum = 0;   //用来存放倒置的数
-    intf(&quot;请输入一个整数：&quot;);
+    printf(&quot;请输入一个整数：&quot;);
     scanf(&quot;%d&quot;, &amp;num);
     for (i = 1; i &lt; num; i *= 10) {   //i每次增加10倍，实现个位，十位，百位。。。的转化换
         snum = num % (10 * i) / i + 10*snum;
