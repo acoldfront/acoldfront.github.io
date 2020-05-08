@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-07T14:50:25.790Z</updated>
+    <updated>2020-05-08T04:47:52.898Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,59 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：21、斐波那契、兔子生兔子]]></title>
+        <id>https://acoldfront.github.io/post/c-example21/</id>
+        <link href="https://acoldfront.github.io/post/c-example21/">
+        </link>
+        <updated>2020-05-08T04:15:22.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。<br>
+假设一对兔子的成熟期是一个月，即一个月可长成成兔，那么，如果每对成兔每个月都生一对小兔，一对新生的小兔从第二个月起就开始生兔子，试问从一对兔子开始繁殖，以后每个月会有多少对兔子？</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。<br>
+假设一对兔子的成熟期是一个月，即一个月可长成成兔，那么，如果每对成兔每个月都生一对小兔，一对新生的小兔从第二个月起就开始生兔子，试问从一对兔子开始繁殖，以后每个月会有多少对兔子？</p>
+</blockquote>
+<!-- more -->
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。
+
+int main(void) {
+    int n = 0;
+    printf(&quot;请输入一个数：&quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+
+    //若要打印 斐波那契数列
+    int f1 = 1, f2 = 1, f3, i;
+    printf(&quot;%8d%8d&quot;, f1, f2);
+    for (i = 3; i &lt;= n; i++) {
+        f3 = f1 + f2;
+        printf(&quot;%8d&quot;, f3);
+        f1 = f2;
+        f2 = f3;
+    }
+    return 0;
+}
+
+
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入一个数：5
+       1       1       2       3       5
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>(1) 实例分析<br>
+循环的嵌套是指在一个循环体内又包含了另一个完整的循环。循环的嵌套执行过程是外循环执行一次，内循环执行一次，在内循环结束后，再执行下一次外循环，如此反复，直到外循环结束。</p>
+<p>(2) 循环的嵌套注意事项：<br>
+① 循环必须完全包含内循环，不能交叉；<br>
+② 在多重循环中，各层循环的循环控制变量不能同名；<br>
+③ 在多重循环中，并列循环的循环控制变量名可以相同，也可以不同。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：20、判断闰年，即判断年份是否为闰年]]></title>
         <id>https://acoldfront.github.io/post/c-example20/</id>
@@ -568,129 +621,6 @@ int main() {
 <h3 id="技术要点">技术要点：</h3>
 <p>分块査找也称为索引顺序査找，要求将待查的元素均匀地分成块，块间按大小排序，块内不排序，所以要建立一个块的最大（或最小）关键字表，称为索引表。</p>
 <p>本实例中将给出的 15 个数按关键字大小分成了 3 块，这 15 个数的排列是一个有序序列，也可以给出无序序列，但必须满足分在第一块中的任意数都小于第二块中的所有数，第二块中的所有数都小于第三块中的所有数。当要査找关键字为 key 的元素时，先用顺序杳找在已建好的索引表中查出 key 所在的块中，再在对应的块中顺序查找 key，若 key 存在，则输出其相应位置，否则输出提示信息。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：11、二分查找算法，折半查找算法]]></title>
-        <id>https://acoldfront.github.io/post/c-example11/</id>
-        <link href="https://acoldfront.github.io/post/c-example11/">
-        </link>
-        <updated>2020-05-05T13:11:33.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>本实例采用二分查找法查找特定关键字的元素。要求用户输入数组长度，也就是有序表的数据长度，并输入数组元素和査找的关键字。程序输出查找成功与否，以及成功时关键字在数组中的位置。例如，在有序表 11、13、18、 28、39、56、69、89、98、122 中査找关键字为 89 的元素。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>本实例采用二分查找法查找特定关键字的元素。要求用户输入数组长度，也就是有序表的数据长度，并输入数组元素和査找的关键字。程序输出查找成功与否，以及成功时关键字在数组中的位置。例如，在有序表 11、13、18、 28、39、56、69、89、98、122 中査找关键字为 89 的元素。</p>
-</blockquote>
-<!-- more -->
-<h3 id="算法表述">算法表述：</h3>
-<p>折半查找法也叫做二分查找，顾名思义，就是把数据分成两半，再判断所查找的key在哪一半中，再重复上述步骤知道找到目标key;<br>
-<strong>注意：（咳咳，敲黑板）折半查找法仅适用于对已有顺序的数组、数据进行操作！！！</strong></p>
-<p>折半查找只能在有序数列中进行，将待查找的数据与有序数列（递增）中间的元素进行比较，如果相等，则找到；如果待查找的数据大于中间的元素的值，那么再从数组的后一半元素中进行查找，否则，从前一半元素中进行查找；若折半后都找不到，则输出“没找着”等提示信息。</p>
-<h3 id="算法执行过程分析">算法执行过程分析：</h3>
-<p>例如：要在数组arr[]={8,7,9,6,4,1,2,5,3,10,11};中查找key=7的位置；首先，我们要先将数组arr中的数据成员进行排序。arr[]={1,2,3,4,5,6,7,8,9,10,11};<br>
-<img src="https://acoldfront.github.io//post-images/1588696496749.png" alt="" loading="lazy"><br>
-如图所示：将该组数据小端记作low，大端记作high,中间值记作mid;<br>
-二分法查找时，将所查找的key与mid比较，例如key=7，即可缩小查找范围在mid和high之间；<br>
-<img src="https://acoldfront.github.io//post-images/1588696476328.png" alt="" loading="lazy"><br>
-如图所示即可找到key=low=7;<br>
-<strong>注意：（敲黑板）如果中间数mid不是整数，需要进行取整。</strong></p>
-<p><strong>实现过程：</strong><br>
-(1) 自定义函数 binary_search()，实现二分査找。</p>
-<p>(2) main() 函数作为程序的入口函数。程序代码如下：</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int binary_search(int key, int a[], int n) { //自定义函数binary_search()
-
-    int low, high, mid, count = 0, count1 = 0;
-    low = 0;
-    high = n - 1;
-    while (low &lt; high)    //査找范围不为0时执行循环体语句
-    {
-        count++;    //count记录査找次数
-        mid = (low + high) / 2;    //求中间位置
-        if (key &lt; a[mid])    //key小于中间值时
-            high = mid - 1;    //确定左子表范围
-        else if (key &gt; a[mid])    //key 大于中间值时
-            low = mid + 1;    //确定右子表范围
-        else if (key == a[mid])    //当key等于中间值时，证明查找成功
-        {
-            printf(&quot;查找成功!\n 查找 %d 次!a[%d]=%d&quot;, count, mid, key);    //输出査找次数及所査找元素在数组中的位置
-            count1++;    //count1记录查找成功次数
-            break;
-        }
-    }
-    if (count1 == 0)    //判断是否查找失敗
-        printf(&quot;查找失敗!&quot;);    //査找失敗输出no found
-    return 0;
-}
-
-int main() {
-    int i, key, a[100], n;
-    printf(&quot;请输入数组的长度：\n&quot;);
-    scanf(&quot;%d&quot;, &amp;n);    //输入数组元素个数
-    printf(&quot;请输入数组元素：\n&quot;);
-    for (i = 0; i &lt; n; i++)
-        scanf(&quot;%d&quot;, &amp;a[i]);    //输入有序数列到数组a中
-    printf(&quot;请输入你想查找的元素：\n&quot;);
-    scanf(&quot;%d&quot;, &amp;key);    //输入要^找的关键字
-    binary_search(key, a, n);    //调用自定义函数
-    printf(&quot;\n&quot;);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入数组的长度：
-10
-请输入数组元素：
-2   3   5   6   8   10  12  13  15  18
-请输入你想查找的元素：
-8
-查找成功!
- 查找 1 次!a[4]=8
-</code></pre>
-<hr>
-<p><strong>方法二：</strong></p>
-<pre><code class="language-c">int BinSearch(int arr[], int len, int key) {                         //折半查找法（二分法）
-    int low = 0;                         //定义初始最小
-    int high = len - 1;                 //定义初始最大
-    int mid;                            //定义中间值
-    while (low &lt;= high) {
-        mid = (low + high) / 2;              //找中间值
-        if (key == arr[mid])               //判断min与key是否相等
-            return mid;
-        else if (key &gt; arr[mid])             //如果key&gt;mid  则新区间为[mid+1,high]
-            low = mid + 1;
-        else                                       //如果key&lt;mid  则新区间为[low,mid-1]
-            high = mid - 1;
-    }
-    return -1;                             //如果数组中无目标值key，则返回 -1 ；
-}
-
-void main() {
-    int a[] = {2, 3, 5, 6, 8, 10, 12, 13, 15, 18};//二分搜索是已排好序
-    int i, n, addr;
-    printf(&quot;the array is:\n&quot;);
-    for (i = 0; i &lt; sizeof(a) / sizeof(int); i++)
-        printf(&quot;%-4d&quot;, a[i]);
-    printf(&quot;\nsearch number is:&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    addr = BinSearch(a, sizeof(a) / sizeof(int), n);
-    if (-1 == addr)
-        printf(&quot;can't find!\n&quot;);
-    else
-        printf(&quot;the %d is %dth at the array.\n&quot;, n, addr);
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>the array is:
-2   3   5   6   8   10  12  13  15  18
-search number is:8
-the 8 is 4th at the array.
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>·二分査找就是折半查找，其基本思想是：首先选取表中间位置的记录，将其关键字与给定关键字 key 进行比较，若相等，则査找成功；若 key 值比该关键字值大，则要找的元素一定在右子表中，则继续对右子表进行折半查找：若 key 值比该关键宇值小，则要找的元素一定在左子表中，继续对左子表进行折半査找。如此递推，直到査找成功或査找失败（或査找范围为 0）。</p>
 ]]></content>
     </entry>
 </feed>

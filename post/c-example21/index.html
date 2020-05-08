@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Crazer的自留地</title>
+<title>C语言编程实例：21、斐波那契、兔子生兔子 | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,27 +98,70 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">C语言编程实例：21、斐波那契、兔子生兔子</h2>
+            <div class="post-date">2020-05-08</div>
             
             <div class="post-content">
               <blockquote>
-<p>欢迎来到我的小站，世界那么大，很高兴遇见你！🤝</p>
+<p>斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。<br>
+假设一对兔子的成熟期是一个月，即一个月可长成成兔，那么，如果每对成兔每个月都生一对小兔，一对新生的小兔从第二个月起就开始生兔子，试问从一对兔子开始繁殖，以后每个月会有多少对兔子？</p>
 </blockquote>
-<h3 id="关于crazer">关于Crazer</h3>
-<hr>
-<p>茫茫人海中一个过客，普通码农一个，苟且于世间，没什么好说的。<br>
-<br><br></p>
-<h3 id="免责声明">免责声明</h3>
-<hr>
-<p>本网站遵循互联网分享协议（<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">非商业资源分享</a>），本站所提供的所有软件均来自于互联网。</p>
-<p>所有资源仅供学习交流，严禁用于商业用途，请于24小时内删除。<br>
-任何用于非法用途均与本人无关，本人予不承担任何相关责任！<br>
-若资金允许，请支持正版！谢谢合作！<br>
-侵权删除，请留言！</p>
+<!-- more -->
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。
+
+int main(void) {
+    int n = 0;
+    printf(&quot;请输入一个数：&quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+
+    //若要打印 斐波那契数列
+    int f1 = 1, f2 = 1, f3, i;
+    printf(&quot;%8d%8d&quot;, f1, f2);
+    for (i = 3; i &lt;= n; i++) {
+        f3 = f1 + f2;
+        printf(&quot;%8d&quot;, f3);
+        f1 = f2;
+        f2 = f3;
+    }
+    return 0;
+}
+
+
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入一个数：5
+       1       1       2       3       5
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>(1) 实例分析<br>
+循环的嵌套是指在一个循环体内又包含了另一个完整的循环。循环的嵌套执行过程是外循环执行一次，内循环执行一次，在内循环结束后，再执行下一次外循环，如此反复，直到外循环结束。</p>
+<p>(2) 循环的嵌套注意事项：<br>
+① 循环必须完全包含内循环，不能交叉；<br>
+② 在多重循环中，各层循环的循环控制变量不能同名；<br>
+③ 在多重循环中，并列循环的循环控制变量名可以相同，也可以不同。</p>
 
             </div>
             
+              <div class="tag-container">
+                
+                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
+                    编程
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://acoldfront.github.io/post/c-example20/">
+                  <h3 class="post-title">
+                    C语言编程实例：20、判断闰年，即判断年份是否为闰年
+                  </h3>
+                </a>
+              </div>
             
 
             
