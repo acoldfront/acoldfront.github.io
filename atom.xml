@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-05-22T04:12:18.020Z</updated>
+    <updated>2020-08-01T14:27:16.588Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,89 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[思维导图软件 XMind ZEN 2020 v10.2.1 全平台 完美破解版]]></title>
+        <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
+        <link href="https://acoldfront.github.io/post/xmind-zen-2020/">
+        </link>
+        <updated>2020-07-31T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
+<!-- more -->
+<p>XMind 是一个全功能的思维导图和头脑风暴软件，为激发灵感和创意而生。作为一款有效提升工作和生活效率的生产力工具，受到全球百千万用户的青睐。</p>
+<p>这两年思维导图突然就火起来了，各种思维导图软件也是雨后春笋般冒出来了，自 Xmind 发布以来就受到全球多个国家的办公一族喜爱。而 XMind 开发团队成员也在不断的去改进产品以提供优秀的生产力工具和服务，帮助人们节省时间并提升效率为目标。<br>
+<img src="https://acoldfront.github.io//post-images/1579860380835.png" alt="" loading="lazy"></p>
+<p>全新内核，经典 XMind 体验。<br>
+我们努力了3年，100% 重写了思维导图引擎的每一个细节，XMind: ZEN 对 XMind 8 做到了完全兼容，让你有一种全新却不失经典的体验。</p>
+<p>无人可超越，只有超越自己。<br>
+对所有主题进行了重新设计，为您的每一张导图都注入新的活力。字体渲染也得到了极大的改进，让每一张思维导图既美观又专业。</p>
+<p>我们专注，为了让您更专注。<br>
+ZEN 模式，寓意为禅。让专注变成一种习惯。</p>
+<p>全新 Snowbrush 引擎<br>
+我们努力了3年，100% 重写了思维导图的引擎，着眼在未来的黑科技上，提升了思维导图的展示效果，丰富了绘图的元素。</p>
+<p>充满惊喜的主题<br>
+XMind: ZEN 对所有主题进行了重新设计，为您的每一张导图都注入新的活力，专业的同时又不失丰富元素，好看到让人羡慕。</p>
+<p>Font Rendering<br>
+由于极大地改进了字体的渲染技术，无论你用 Mac 还是 Windows 创建思维导图，所有文字都以同一样式清晰呈现。XMind: ZEN 精选多款优质字体，爱上编辑导图，从未如此简单。</p>
+<p>Markdown<br>
+我们相信 Markdown 会为你带来更好的使用体验，将做好的图导出为 Markdown 格式后，会让你更易于阅读。</p>
+<p>集专注于 ZEN 模式<br>
+ZEN 模式，寓意为禅，让专注变成一种习惯。进入 ZEN 模式，隐藏页面内多余的元素，帮助你全神贯注地绘制每一个主题，心无旁骛地完成工作。</p>
+<p>贴纸，原创的更好<br>
+设计师原创的贴纸，每一个都精心绘制，更准确地满足你的需求，精彩无处不在。</p>
+<p>100% 对 XMind 8 兼容<br>
+XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结构，在 XMind: ZEN 中都能完美展现。</p>
+<p>导出PDF和印象笔记<br>
+将思维导图导出为矢量的 PDF 文件，方便您将导图随意放大和清晰地打印。印象笔记的粉丝们还会惊喜地发现只需简单地点击，便可将导图分享到印象笔记中。</p>
+<h2 id="更新日志">###更新日志</h2>
+<p>10.2.1</p>
+<p>重大更新</p>
+<ol>
+<li>整体流畅度和打开大图的速度大幅提升；</li>
+<li>括号图——一种描述整体和局部关系的新结构；</li>
+<li>创建风格——直接基于当前导图的风格来创建自定义风格；</li>
+<li>快捷键增强——更丰富的快捷键设置，包括大纲模式的快捷键；</li>
+<li>合并 XMind 文件——将所有的点子聚合到一个文件里。<br>
+优化与提升</li>
+<li>新增了一批有趣实用的贴纸；</li>
+<li>工具栏新增“插入”按钮，插入元素更加直观便捷；</li>
+<li>支持在导出的 PDF/SVG 中点击插入的网页链接；</li>
+<li>增大了笔记的编辑框；</li>
+<li>笔记和链接的编辑框支持弹出右键菜单；</li>
+<li>新增了跳转到搜索结果时的高亮动画；</li>
+<li>全面优化了法语和繁体中文的文案；</li>
+<li>优化了非英语字体名称的显示效果；</li>
+<li>优化了快速样式列表的预览效果；</li>
+<li>优化了在画布空白处点击右键的菜单内容；</li>
+<li>优化了一些 UI 细节；</li>
+<li>修复了大纲模式下可能会将元素插入到错误的主题上的问题；</li>
+<li>修复了导出 PNG/SVG 时，联系线箭头方向可能错误的问题；</li>
+<li>修复了由于特殊字符，分享到 Evernote 失败的问题；</li>
+<li>修复了 Windows 下按 CAPS LOCK 可能会清空主题文字的问题；</li>
+<li>修复了在笔记里撤销后，内容可能会变成另一条笔记的问题；</li>
+<li>修复了点击联系和外框的搜索结果无法跳转到对应元素的问题；</li>
+<li>修复了大纲模式下会显示联系和外框的搜索结果的问题；</li>
+<li>修复了风格编辑器中调整外框的边框颜色失效的问题；</li>
+<li>修复了 ZEN 模式下重命名画布时，画布栏消失的问题；</li>
+<li>修复了树形图结构下，导出 PDF 的画面不完整的问题；</li>
+<li>修复了特殊情况下，导出 PNG 的画面不完整的问题；</li>
+<li>修复了部分其他已知问题。</li>
+</ol>
+<h3 id="修改说明">修改说明</h3>
+<hr>
+<p>基于官网最新版本破解</p>
+<p>破解授权，移除验证，去除试用提示</p>
+<p>能正常导出图片无水印，PDF无水印，导出word，粘贴图片等高级功能</p>
+<p>v2版本导出PNG缩放大小已修复</p>
+<h3 id="使用提示">使用提示</h3>
+<hr>
+<p>将app.asar放入XMind-ZEN安装目录的resources文件夹下替换</p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p><a href="https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w">链接: https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w 提取码: b4nd</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：25、矩阵转置]]></title>
         <id>https://acoldfront.github.io/post/c-example25/</id>
@@ -549,66 +632,6 @@ int main(void) {
 <p>输出结果：</p>
 <pre><code>e的值是：2.718282
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：16、最大公约数和最小公倍数]]></title>
-        <id>https://acoldfront.github.io/post/c-example16/</id>
-        <link href="https://acoldfront.github.io/post/c-example16/">
-        </link>
-        <updated>2020-05-06T03:57:09.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>从键盘输入两个正整数 a 和 b，求其最大公约数和最小公倍数。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>从键盘输入两个正整数 a 和 b，求其最大公约数和最小公倍数。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想：</strong><br>
-利用格式输入语句将输入的两个数分别赋给 a 和 b，然后判断 a 和 b 的关系，如果 a 小于 b，则利用中间变量 t 将其互换。再利用辗转相除法求出最大公约数，进而求出最小公倍数。最后用格式输出语句将其输出。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//求最小公倍数
-int _lcm(int a, int b) {
-    int lcm;
-    if (a &gt; b)
-        lcm = a;
-    else
-        lcm = b;
-    while (lcm % a || lcm % b)
-        lcm++;
-    return lcm;
-}
-
-//求最大公约数
-int _gcd(int a, int b) {
-    int gcd;
-    if (a &gt; b)
-        gcd = b;
-    else
-        gcd = a;
-    while (a % gcd || b % gcd)
-        gcd--;
-    return gcd;
-}
-
-int main(void) {
-    int x, y;
-    printf(&quot;请输入两个数：&quot;);
-    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
-    printf(&quot;最小公倍数：%d\n&quot;, _lcm(x, y));
-    printf(&quot;最大公约数：%d\n&quot;, _gcd(x, y));
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入两个数：16 72
-最小公倍数：144
-最大公约数：8
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>实例中用到了辗转相除法来求最大公约数。在求最小公倍数时要清楚最大公约数和最小公倍数的关系，即两数相乘的积除以这两个数的最大公约数就是最小公倍数。</p>
 ]]></content>
     </entry>
 </feed>
