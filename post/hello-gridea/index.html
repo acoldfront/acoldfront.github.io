@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>C语言编程实例：13、求n的阶乘（n!） | Crazer的自留地</title>
+<title>Hello Gridea | Crazer的自留地</title>
 <meta name="description" content="静坐长思己过，闲谈莫论人非">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,91 +98,45 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">C语言编程实例：13、求n的阶乘（n!）</h2>
-            <div class="post-date">2020-05-06</div>
+            <h2 class="post-title">Hello Gridea</h2>
+            <div class="post-date">2018-12-12</div>
+            
+              <div class="feature-container" style="background-image: url('https://acoldfront.github.io//post-images/hello-gridea.png')">
+              </div>
             
             <div class="post-content">
-              <blockquote>
-<p>从键盘输入一个数，求出这个数的阶乘，即 n!。</p>
-</blockquote>
+              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 <!-- more -->
-<p><strong>算法思想</strong><br>
-首先要清楚阶乘定义，所谓 n 的阶乘，就是从 1 开始乘以比前一个数大 1 的数，一直乘到 n，用公式表示就是：1×2×3×4×…×(n-2)×(n-1)×n=n!</p>
-<p>具体的操作:利用循环解决问题，设循环变量为 i，初值为 1，i 从 1 变化到 n；依次让 i 与 sum 相乘，并将乘积赋给 sum。<br>
-① 定义变量 sum，并赋初值 1。<br>
-② i 自增 1。<br>
-③ 直到 i 超过 n。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int i, n;
-    double sum = 1,sum1=1;
-    printf(&quot;请输入数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    //方法一；
-    for (i = 1; i &lt;= n; ++i) {
-        sum *= i;
-    }
-    printf(&quot;%d!=%.2lf&quot;, n, sum);
-    printf(&quot;\n&quot;);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入数：5
-5!=120.00
-</code></pre>
-<hr>
-<h3 id="方法二">方法二：</h3>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//使用递归
-double f(int n) {
-    if (n == 1)
-        return 1;
-    else
-        return n * f(n - 1);
-}
-int main(void) {
-    int i, n;
-    double sum = 1;
-    printf(&quot;请输入数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-    //方法二：
-    sum = f(n);//使用递归
-    printf(&quot;%d!=%.2lf&quot;, n, sum);
-    printf(&quot;\n&quot;);
-
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入数：5
-5!=120.00
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>① 由于阶乘一般较大，会超出整型甚至是长整型所能表示的范围，因此定义变量时就不能定义为整型，而应该考虑双精度数。</p>
-<p>② 实训中定义了一个双精度型的变量，用来存放结果。因此在输出时应注意双精度数的输出格式。</p>
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://acoldfront.github.io/tag/XT7fmsSiN/" class="tag">
-                    编程
+                  <a href="https://acoldfront.github.io/tag/ps2CJ7DyC/" class="tag">
+                    Gridea
                   </a>
                 
               </div>
             
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://acoldfront.github.io/post/c-example12/">
-                  <h3 class="post-title">
-                    C语言编程实例：12、猴分块查找算法，索引顺序查找算法
-                  </h3>
-                </a>
-              </div>
             
 
             

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-08-01T14:39:37.437Z</updated>
+    <updated>2020-09-08T13:59:17.419Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,70 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[Bandizip(跨平台解压缩软件) v7.10 企业激活版]]></title>
+        <id>https://acoldfront.github.io/post/bandizip/</id>
+        <link href="https://acoldfront.github.io/post/bandizip/">
+        </link>
+        <updated>2020-09-08T08:53:47.000Z</updated>
+        <summary type="html"><![CDATA[<p>虽然 7-Zip 是开源免费压缩工具中的佼佼者，但用得不是很顺手，今天试了下推荐的 Bandizip 却出人意料的好用！Bandizip 是一款来自韩国的免费优秀的文件压缩/解压缩软件，支持 Win 与 Mac，操作方式与 WinRAR 相似，支持压缩和解压 rar、zip、7z 等众多主流格式…</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>虽然 7-Zip 是开源免费压缩工具中的佼佼者，但用得不是很顺手，今天试了下推荐的 Bandizip 却出人意料的好用！Bandizip 是一款来自韩国的免费优秀的文件压缩/解压缩软件，支持 Win 与 Mac，操作方式与 WinRAR 相似，支持压缩和解压 rar、zip、7z 等众多主流格式…</p>
+<!-- more -->
+<h3 id="主要功能">主要功能</h3>
+<hr>
+<p>支持操作系统: Windows Vista/7/8/10 (x86/x64/ARM64)<br>
+许可类型：免费软件(EULA)<br>
+全能的压缩/解压/浏览/编辑软件<br>
+可提取30多种格式，包括RAR/RAR5/7Z/ZIP等<br>
+包含密码压缩和分卷压缩功能<br>
+支持多核高速压缩</p>
+<h3 id="压缩">压缩</h3>
+<hr>
+<p>支持的格式: ZIP, 7Z(lzma2), ZIPX(xz), EXE(sfx), TAR, TGZ, LZH(lh7), ISO(joliet), GZ, XZ<br>
+ZIP文件修改（添加/删除/重命名）<br>
+支持多核并行，压缩速度可提升至多达6倍<br>
+加密压缩<br>
+支持AES256加密算法<br>
+支持4GB 以上大小的文件压缩<br>
+对ZIP格式支持Unicode或MBCS文件名<br>
+对ZIP/7z格式可进行分卷压缩</p>
+<h3 id="解压">解压</h3>
+<hr>
+<p>支持的格式: 7Z, ACE, AES, ALZ, ARJ, BH, BIN, BZ, BZ2, CAB, Compound(MSI), EGG, GZ, IMG, ISO, ISZ, LHA, LZ, LZH, LZMA, PMA, RAR, RAR5, SFX(EXE), TAR, TBZ, TBZ2, TGZ, TLZ, TXZ, UDF, WIM, XPI, XZ, Z, ZIP, ZIPX, ZPAQ<br>
+轻松查看压缩包内文件<br>
+可只解压选定文件，支持拖拽解压<br>
+可对ZIP和RAR格式添加注释<br>
+一步解压TGZ/TBZ格式的文件</p>
+<h3 id="功能多样">功能多样</h3>
+<hr>
+<p>测试文件完整性以确定压缩包是否损坏<br>
+支持修改代码页改<br>
+可集成至资源管理器右键菜单<br>
+<img src="https://acoldfront.github.io//post-images/1587459441655.png" alt="" loading="lazy"></p>
+<h3 id="更新日志">更新日志</h3>
+<hr>
+<p><a href="https://www.bandisoft.com/bandizip/history/">https://www.bandisoft.com/bandizip/history/</a></p>
+<h3 id="破解教程">破解教程</h3>
+<hr>
+<p>7系列版本，安装后，下载破解补丁，破解后，使用激活码如下激活码</p>
+<p>20380808-ENT000002-0E34A52561-166371E0</p>
+<p>20380808-PRO0BFAEBFDAE23C425E-173E2DF1</p>
+<p>邮箱地址：可任意填写，即随意填个假冒邮箱格式</p>
+<p><a href="https://pan.baidu.com/s/11b-QgNy7bSagcZAbaL1Ggg">链接: https://pan.baidu.com/s/11b-QgNy7bSagcZAbaL1Ggg 提取码: jpfu</a></p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p>Bandizip各版本功能比较（自v7.0开始分为标准版/专业版/企业版）<br>
+<a href="https://www.bandisoft.com/bandizip/help/edition-comparison">https://www.bandisoft.com/bandizip/help/edition-comparison</a></p>
+<p>官网下载<br>
+6系列版本：【原生无广告】<br>
+<a href="https://dl.bandisoft.com/bandizip/BANDIZIP-SETUP.EXE">安装版：https://dl.bandisoft.com/bandizip/BANDIZIP-SETUP.EXE</a></p>
+<p><a href="https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-32BIT.ZIP">32位便携版：https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-32BIT.ZIP</a></p>
+<p><a href="https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-64BIT.ZIP">64位便携版：https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-64BIT.ZIP</a></p>
+<p>7系列版本：<br>
+<a href="http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE">安装版：http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[思维导图软件 XMind ZEN 2020 v10.2.1 全平台 完美破解版]]></title>
         <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
@@ -588,50 +652,6 @@ c
 <p>③ 使用 getchar 函数还应注意几个问题：<br>
 getchar 函数只能接收单个字符，输入数字也按字符处理。输入多于一个字符时，只接收第一个字符。<br>
 使用 getchar 函数前必须包含文件“stdio.h”。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：17、求自然底数e]]></title>
-        <id>https://acoldfront.github.io/post/c-example17/</id>
-        <link href="https://acoldfront.github.io/post/c-example17/">
-        </link>
-        <updated>2020-05-06T04:16:12.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>自然底数 e=2.718281828…，e 的计算公式如下：<br>
-e=1+1/1!+1/2!+1/3!+…<br>
-要求当最后一项的值小于 10-10 时结束。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>自然底数 e=2.718281828…，e 的计算公式如下：<br>
-e=1+1/1!+1/2!+1/3!+…<br>
-要求当最后一项的值小于 10-10 时结束。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想：</strong><br>
-使用循环实现累加求和，并在求和后计算下一项所对应的阶乘。</p>
-<p>① 用循环语句 while 进行循环控制。判断条件为 1/n&gt;10-10；条件成立则执行 ②，条件不成立执行 ⑤；<br>
-② 计算求和 e+=1/n；<br>
-③ i 自增 1；<br>
-④ 计算下一项所对应的阶乘：n=i*n；<br>
-⑤ 结束循环，打印输出结果。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float e = 1.0, n = 1.0;
-    int i = 1;
-    while (1 / n &gt; 1e-10) {
-        e += 1 / n;
-        i++;
-        n = i * n;
-    }
-    printf(&quot;e的值是：%f\n&quot;,e);
-    return 0;
-}
-</code></pre>
-<p>输出结果：</p>
-<pre><code>e的值是：2.718282
-</code></pre>
 ]]></content>
     </entry>
 </feed>
