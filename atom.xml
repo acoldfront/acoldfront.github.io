@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-09-08T14:00:50.172Z</updated>
+    <updated>2020-09-10T14:03:56.418Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[优秀代码编辑器 Sublime Text 4.0.4085]]></title>
+        <id>https://acoldfront.github.io/post/SublimeText/</id>
+        <link href="https://acoldfront.github.io/post/SublimeText/">
+        </link>
+        <updated>2020-09-09T16:43:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
+<!-- more -->
+<p>Sublime Text 是一个轻量、简洁、高效、跨平台的编辑器，方便的配色以及兼容vim快捷键等各种优点博得了很多前端开发人员的喜爱!Sublime Text 这款程序员必备代码编辑器，几乎每位程序员提到Sublime Text 2都是赞不绝口！它体积小巧，无需安装，绿色便携；它可跨平台支持Windows/Mac/Linux；支持32与64位操作系统，它在支持语法高亮、代 码补全、代码片段（Snippet）、代码折叠、行号显示、自定义皮肤、配色方案等所有其它代码编辑器所拥有的功能的同时，又保证了其飞快的速度！还有着 自身独特的功能，比如代码地图、多种界面布局以及全屏免打扰模式等，这些优秀特性让Sublime Text 2成了所有程序员眼中的神！</p>
+<p>SublimeText支持但不限于 C, C++, C#, CSS, D, Erlang, HTML, Groovy, Haskell, HTML, Java, JavaScript, LaTeX, Lisp, Lua, Markdown, Matlab, OCaml, Perl, PHP, Python, R, Ruby, SQL, TCL, Textile and XML 等主流编程语言的语法高亮。ST 拥有优秀的代码自动完成功能 (自动补齐括号，大括号等配对符号；自动补全已经出现的单词；自动补全函数名)，非常智能；</p>
+<h3 id="更新日志">更新日志</h3>
+<hr>
+<p>*定义悬停弹出式菜单显示有关符号的详细信息</p>
+<p>*“转到符号”显示有关符号的详细信息</p>
+<p>*现在可以将trim_training_white_space_on_save设置为“not_unu caret”</p>
+<p>*在鼠标选择的同时，改进了滚动上下文线的行为</p>
+<p>*修复了大型连字符号的呈现</p>
+<p>*minihtml：添加了对显示的支持：内联块和文本对齐</p>
+<p>*minihtml：添加了对标题属性工具提示的支持</p>
+<p>*API:已添加崇高符号区以及升华符号在视图和窗口上有相应的方法</p>
+<h3 id="修改说明">修改说明</h3>
+<hr>
+<p>基于最新版本绿色便携制作</p>
+<p>增强侧边栏</p>
+<p>集成破解补丁，集成汉化，允许切换语言</p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p><a href="https://www.lanzous.com/iiCkQgifqje">链接: https://www.lanzous.com/iiCkQgifqje</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Bandizip(跨平台解压缩软件) v7.10 企业激活版]]></title>
         <id>https://acoldfront.github.io/post/bandizip/</id>
@@ -606,52 +638,6 @@ int main(void) {
 <h3 id="技术要点">技术要点：</h3>
 <p>① 程序由 main() 函数和 sushu() 函数组成，main() 函数调用 sushu() 函数，整型变量 i 为函数参数。当 sushu () 执行完后，返回到主函数中继续执行被调函数后面的语句。</p>
 <p>② 函数调用语句由函数名、实际参数加上分号“;”组成。其一般形式为“函数名(实际参数表);”。执行函数语句就是调用函数体并把实际参数赋予函数定义中的形式参数，然后执行被调函数体中的语句，求取函数值。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：18、小写字母转换成大写字母]]></title>
-        <id>https://acoldfront.github.io/post/c-example18/</id>
-        <link href="https://acoldfront.github.io/post/c-example18/">
-        </link>
-        <updated>2020-05-06T08:56:37.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>在 C 语言中区分字母的大小写，利用 ASCII 码中大写字母和小写字母之间的转换关系（差值为 32），可以将小写字母转换为大写字母。编写程序实现，从键盘上输入一个小写字母，按回车键，程序将该小写字母转换为大写字母，并输出其 ASCII 值。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>在 C 语言中区分字母的大小写，利用 ASCII 码中大写字母和小写字母之间的转换关系（差值为 32），可以将小写字母转换为大写字母。编写程序实现，从键盘上输入一个小写字母，按回车键，程序将该小写字母转换为大写字母，并输出其 ASCII 值。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想：</strong><br>
-由于大写字母与小写字母之间的差值为 32，因此小写字母转换为大写字母的方法就是将小写字母的 ASCII 码值减去 32，便可得到与之对应的大写字母。</p>
-<p>利用 getchar 函数从键盘上输入一个小写字母，并将其赋给一个字符变量 a；然后将 a—32 的值赋给字符变量 b；最后进行输出，输出时先输出字母，再将字母以整数形式输出。其具体步骤如下：</p>
-<p>① 定义两个字符变量 a、b；<br>
-② a=get char()；<br>
-③ b=a—32；<br>
-④ 打印输出。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    char a, b;
-    printf(&quot;输入一个小写字母:\n&quot;);
-    a = getchar();
-    b = a - 32;
-    printf(&quot;转换后的字母为：%c，%d\n&quot;, b, b);
-    return 0;
-}
-
-</code></pre>
-<p>输出结果：</p>
-<pre><code>输入一个小写字母:
-c
-转换后的字母为：C，67
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>① 实例内容要求对 ASCII 码有所了解。知道小写字母和大写字母之间的差值为 32。</p>
-<p>② getchar 函数的功能是从键盘上输入一个字符。其一般形式为“getchar()”。通常把输入的字符赋予一个字符变量，构成赋值语句，如：char c;或c=getchar();</p>
-<p>③ 使用 getchar 函数还应注意几个问题：<br>
-getchar 函数只能接收单个字符，输入数字也按字符处理。输入多于一个字符时，只接收第一个字符。<br>
-使用 getchar 函数前必须包含文件“stdio.h”。</p>
 ]]></content>
     </entry>
 </feed>
