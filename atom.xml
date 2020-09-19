@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-09-19T10:35:27.267Z</updated>
+    <updated>2020-09-19T10:46:17.009Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,39 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[Win10数字许可激活工具 Windows 10 Digital Activation Program 1.3.6 Final 中文版]]></title>
+        <id>https://acoldfront.github.io/post/win10DigitalActivation/</id>
+        <link href="https://acoldfront.github.io/post/win10DigitalActivation/">
+        </link>
+        <updated>2020-09-19T10:36:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>Windows 10 数字许可证旗舰版是一款简单易用的 Windows 10 永久激活工具，可使用数字许可证永久激活 Windows 10，在尝试激活系统时不需要使用激活密钥。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Windows 10 数字许可证旗舰版是一款简单易用的 Windows 10 永久激活工具，可使用数字许可证永久激活 Windows 10，在尝试激活系统时不需要使用激活密钥。</p>
+<!-- more -->
+<p>W10 Digital Activation 是由俄国大佬 Ratiborus 开发的一款用于 Windows 10 系统的数字权利激活工具。Ratiborus 其实针对微软的产品开发了不少激活类工具，比如 KMSAuto Net，AAct，Helper XP，KMSAuto Helper 等等，可以激活 XP、7、8、10 以及 Office 等等。在我们最常见的激活工具中多以 KMS 激活居多，但是大多数都是半年（180 天）激活，到期后还要再执行激活。而今天分享的 W10 Digital Activation 数字激活权利工具解决了 KMS 180 天的激活周期。</p>
+<figure data-type="image" tabindex="1"><img src="https://acoldfront.github.io//post-images/1600512365016.png" alt="" loading="lazy"></figure>
+<h2 id="windows-10-数字权利激活和非数字权利激活的区别">Windows 10 数字权利激活和非数字权利激活的区别：</h2>
+<hr>
+<p>“数字权利激活”：在保证不更换硬件的情况下激活会一直有效。不要更换电脑主板等相关硬件信息。<br>
+“非数字权利激活”：密钥激活。这个密钥是放在你 Windows 系统里的是有次数限制，每天重新安装都是需要输入密钥的。只要换了系统就需要重新输入。</p>
+<p>根据获取 Windows 10 副本的方式，激活将使用“数字权利”或 25 个字符的产品密钥（即“非数字权利激活”）。<br>
+“数字权利”：在不更换硬件的情况下一直有效，无论安装的是“正式版”还是“预览版”。数字权利会记录您的设备硬件信息，在设备没有更换主要硬件（例如主板）的情况下会连接微软服务器自动激活，不再需要手动输入产品密钥。<br>
+“非数字权利激活”：即密钥激活。这个密钥是放在你 Window 系统里的是有次数限制，每天重新安装都是需要输入密钥的。</p>
+<p>区别在于：“密钥激活”只要换了系统就需要重新输入密钥。“数字激活”只要你的电脑配置没变。它就会自动识别。</p>
+<h2 id="kms-激活不是激活永久">KMS 激活不是激活永久</h2>
+<hr>
+<p>你可以使用以下方法查看：<br>
+1、同时按 Win+R 键打开“运行”，输入 slmgr.vbs -xpr 回车。<br>
+2、同时按 Win+R 键打开“运行”，输入 slmgr.vbs -dlv 回车，里面没有日期限止提示，就是永久激活。<br>
+3、同时按 Win+R 键打开“运行”，输入 winver 回车，里面没有日期限止提示，就是永久激活。<br>
+注意：第 1 和 2 方法的 vbs 和 – 之间有一个空格。</p>
+<h2 id="下载地址">下载地址</h2>
+<hr>
+<p>注意，本工具容易报毒<br>
+<a href="https://www.lanzous.com/iJYUTgrkfbe">https://www.lanzous.com/iJYUTgrkfbe</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[HEU KMS Activator(win+office激活) 19.6.3]]></title>
         <id>https://acoldfront.github.io/post/heu-kms/</id>
@@ -572,71 +605,6 @@ max=a[1][3]=99
 </code></pre>
 <h3 id="技术要点">技术要点：</h3>
 <p>本实训的程序主要完成了两个功能：一是通过一个二次循环输入该二维数组的所有元素；二是将输入元素按照相邻关系进行比较，最终得到最大值和这个最大值的下标。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：23、谁家孩子跑得最慢]]></title>
-        <id>https://acoldfront.github.io/post/c-example23/</id>
-        <link href="https://acoldfront.github.io/post/c-example23/">
-        </link>
-        <updated>2020-05-08T16:39:54.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>张、王、李三家各有三个小孩。一天，三家的九个孩子在一起比赛短跑，规定不分年龄大小，跑第一得 9 分，跑第二得 8 分，依次类推。比赛结果显示各家的总分相同，且这些孩子没有同时到达终点的，也没有一家的两个或三个孩子获得相连的名次。已知获第一名的是李家的孩子，获第二名的是王家的孩子。获得最后一名的是谁家的孩子？</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>张、王、李三家各有三个小孩。一天，三家的九个孩子在一起比赛短跑，规定不分年龄大小，跑第一得 9 分，跑第二得 8 分，依次类推。比赛结果显示各家的总分相同，且这些孩子没有同时到达终点的，也没有一家的两个或三个孩子获得相连的名次。已知获第一名的是李家的孩子，获第二名的是王家的孩子。获得最后一名的是谁家的孩子？</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想：</strong><br>
-按题目的条件，共有 1+2+3+…+9=45 分，每家孩子的得分应为 15 分。根据题意可知，获第一名的是李家的孩子，获第二名的是王家的孩子，则可推出：获第三名的一定是张家的孩子。由“这些孩子没有同时到达终点的”可知：名次不能并列，由“没有一家的两个或三个孩子获得相连的名次”可知：第四名不能是张家的孩子。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int score[4][4];
-
-int main(void) {
-    int i, j, k, who;
-    score[1][1] = 7;
-    score[2][1] = 8;
-    score[3][1] = 9;
-    for (i = 4; i &lt; 6; i++)
-        for (j = 4; j &lt; 7; j++)
-            for (k = 4; i != j &amp;&amp; k &lt; 7; k++)
-                if (k != i &amp;&amp; k != j &amp;&amp; 15 - i - score[1][1] != 15 - j - score[2][1]
-                    &amp;&amp; 15 - i - score[1][1] != 15 - k - score[3][1]
-                    &amp;&amp; 15 - j - score[2][1] != 15 - k - score[3][1]) {
-                    score[1][2] = i;
-                    score[1][3] = 15 - i - 7;
-                    score[2][2] = j;
-                    score[2][3] = 15 - j - 8;
-                    score[3][2] = k;
-                    score[3][3] = 15 - k - 9;
-                }
-    for (who = 0, i = 1; i &lt;= 3; i++, printf(&quot;\n&quot;))
-        for (j = 1; j &lt;= 3; j++) {
-            printf(&quot;%d&quot;, score[i][j]);
-            if (score[i][j] == 1)
-                who = i;
-        }
-    if (who == 1)
-        printf(&quot;最后一名是张家孩子\n&quot;);
-    else if (who == 2)
-        printf(&quot;最后一名是王家孩子\n&quot;);
-    else
-        printf(&quot;最后一名是李家孩子\n&quot;);
-    return 0;
-}
-
-</code></pre>
-<p>输出结果：</p>
-<pre><code>753
-861
-942
-最后一名是王家孩子
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>本实例主要运用了二维数组的引用和循环的嵌套。二维数组元素的引用形式为“数组名[下标1][下标2]”。例如“a[1][2]”其下标是可以大于或者等于 0 的整型常量、整型变量或者整型表达式。</p>
-<p>引用二维数组元素时，下标不要越界，也就是说下标值需要从 0 开始，但不要超过行、列的范围。</p>
 ]]></content>
     </entry>
 </feed>
