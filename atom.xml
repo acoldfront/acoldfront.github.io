@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-09-19T10:19:24.833Z</updated>
+    <updated>2020-09-19T10:27:31.480Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -11,21 +11,80 @@
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
     <entry>
+        <title type="html"><![CDATA[Windows 10 企业版2019 LTSC 2019 Build 17763.1457]]></title>
+        <id>https://acoldfront.github.io/post/windows-10Enterprise/</id>
+        <link href="https://acoldfront.github.io/post/windows-10Enterprise/">
+        </link>
+        <updated>2020-09-19T10:20:10.000Z</updated>
+        <summary type="html"><![CDATA[<p>Windows 10 企业版 2019 长期服务版于2018年11月初正式推出，系统版本为1809，OS内部版为17763。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Windows 10 企业版 2019 长期服务版于2018年11月初正式推出，系统版本为1809，OS内部版为17763。</p>
+<!-- more -->
+<p>Windows 10 Enterprise LTSC相对Windows 10企业版来说，不会获得功能更新和改善，只有安全更新，提供了升级控制选项。LTSC版本可以称为官方Win10精简版。如果你需要全新安装，或者想收藏分享，本页面采集刷选整理出了微软官方原版的下载链接，完全可靠。另外附上Win10 LTSC2019永久激活工具。</p>
+<h3 id="新版变化">新版变化</h3>
+<hr>
+<p>Windows 10 版本信息<br>
+docs.microsoft.com/zh-cn/windows/release-information</p>
+<p>Windows产品的更新策略，通常每月第二个周二为惯例发布产品更新。</p>
+<p>2020.09.08 Windows 10 LTSC, Version 1809 with Update 17763.1457<br>
+support.microsoft.com/zh-cn/help/4570333</p>
+<p>Windows 10 企业版 2019 LTSC 新增功能<br>
+docs.microsoft.com/zh-cn/windows/whats-new/ltsc/whats-new-windows-10-2019</p>
+<h3 id="版本介绍">版本介绍</h3>
+<hr>
+<p>Windows 10 Enterprise 2019 LTSC，提供长期支持至2029年01月09日，Win10企业版2019长期服务版，相当于就是官方Win10精简版，目前不支持数字权利激活。它没有应用商店、Edge浏览器、OneDriver、微软小娜，有更新控制选项，Windows 更新可选是否下载和安装补丁，其它版本相比长期服务版就没有。</p>
+<h3 id="关于激活">关于激活</h3>
+<hr>
+<p>Windows 10 Enterprise 2019 LTSC 在线永久激活密钥<br>
+Product Key :6NVRR-HFW8Y-R9YJV-QTFFD-PYWR2</p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<h2 id="更新补丁">更新补丁</h2>
+<p><strong>Windows 10 LTSC 1809 Update 17763.1457 官方累积更新补丁 [2020/09/08]</strong><br>
+Windows 10, Windows 10 LTSB Version 1809 版本的2020年9月累积更新<br>
+<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570333">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570333</a></p>
+<p>Windows 10, Windows 10 LTSB Version 1809 的2020年9月服务堆栈更新<br>
+<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570332">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570332</a></p>
+<p>Windows 10 Version 1809 的.NET Framework 3.5/4.8的20年9月累积更新<br>
+<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4576483">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4576483</a></p>
+<p>Adobe Flash Player for Windows 10 所有版本的2020年6月安全更新<br>
+<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4561600">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4561600</a></p>
+<h2 id="完整镜像">完整镜像</h2>
+<p><strong>Windows 10企业版2019长期服务版官方简体中文正式版ISO镜像 [2019/03/15]</strong><br>
+MVS (MSDN) Windows 10 Enterprise 2019 LTSC v1809 (OS build 17763.316)</p>
+<p>//世纪互联分流地址不限速高速下载（备用地址还可将链接中1改4或16）</p>
+<pre><code>https://pan.tangmn.cn/show/1/MSDN/cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso
+
+https://pan.tangmn.cn/show/1/MSDN/cn_windows_10_enterprise_ltsc_2019_x86_dvd_1814dbab.iso
+</code></pre>
+<h2 id="ed2k">ed2k</h2>
+<p>Windows 10 Enterprise 2019 LTSC (x64) – DVD (Chinese-Simplified)<br>
+文件名：cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso<br>
+SHA-1：24B59706D5EDED392423936C82BA5A83596B50CC<br>
+发布时间：2019-03-15  文件大小：4.17GB</p>
+<pre><code>ed2k://|file|cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso|4478906368|E7C526499308841A4A6D116C857DB669|/
+</code></pre>
+<p>Windows 10 Enterprise 2019 LTSC (x86) – DVD (Chinese-Simplified)<br>
+文件名：cn_windows_10_enterprise_ltsc_2019_x86_dvd_1814dbab.iso<br>
+SHA-1：BA2169EDD94F123211CD4AACA68352F1AB6195D9<br>
+发布时间：2019-03-15  文件大小：2.98GB</p>
+<pre><code>ed2k://|file|cn_windows_10_enterprise_ltsc_2019_x86_dvd_1814dbab.iso|3196803072|2D39C54A2E99BAC308191C74A15B3237|/
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Windows10 20H1(v2004 Build19041.508) MSDN原版ISO镜像+累计更新]]></title>
         <id>https://acoldfront.github.io/post/windows10-20h1v2004/</id>
         <link href="https://acoldfront.github.io/post/windows10-20h1v2004/">
         </link>
         <updated>2020-09-19T10:10:13.000Z</updated>
         <summary type="html"><![CDATA[<p>5月12日，Windows 10今年的首个正式版v2004（五月更新）抵达MSDN，供开发者率先体验。</p>
-<p>经查，国内网友熟悉的MSDNITELLYOU也同步公开了四大原版ISO镜像文件（简体中文版）的下载，如果你有纯净安装的需求或者迫不及待想要尝鲜，可下载使用。</p>
-<p>对于新老系统，个人比较推荐的是WinPE安装，维护较为方便，工具可选微PE、优启通等制作U启工具。直接制作启动盘、校验SHA等，可参考快科技之前的文章。</p>
-<p>据悉，Windows 10 v2004带来了新的全局/资源管理器搜索、蓝牙设备智能配对、新的Cortana、新的虚拟桌面、基于Chromium的Edge浏览器、任务管理器支持查看GPU温度、新的设置页面等。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>5月12日，Windows 10今年的首个正式版v2004（五月更新）抵达MSDN，供开发者率先体验。</p>
+<!-- more -->
 <p>经查，国内网友熟悉的MSDNITELLYOU也同步公开了四大原版ISO镜像文件（简体中文版）的下载，如果你有纯净安装的需求或者迫不及待想要尝鲜，可下载使用。</p>
 <p>对于新老系统，个人比较推荐的是WinPE安装，维护较为方便，工具可选微PE、优启通等制作U启工具。直接制作启动盘、校验SHA等，可参考快科技之前的文章。</p>
 <p>据悉，Windows 10 v2004带来了新的全局/资源管理器搜索、蓝牙设备智能配对、新的Cortana、新的虚拟桌面、基于Chromium的Edge浏览器、任务管理器支持查看GPU温度、新的设置页面等。</p>
-<!-- more -->
 <h3 id="累计更新">累计更新</h3>
 <hr>
 <p>Windows 10 v2004 Update 19041.508 官方累积更新补丁 [2020/09/08]<br>
@@ -608,59 +667,6 @@ int main(void) {
 ① 数组下标可以是整型常量、整型变量或者整型表达式，初始值为 0。<br>
 ② 一个数组元素引用的实质就是一个变量名的引用，每一个数组元素代表内存中的一个存储单元，具有与相同类型单个变量一样的属性，可以对它进行赋值且参与各种运算，一个数组占有一段连续的存储单元。<br>
 ③ 在 C 语言中，数组不能作为一个整体参加数据运算，只能对单个元素进行计算。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：21、斐波那契、兔子生兔子]]></title>
-        <id>https://acoldfront.github.io/post/c-example21/</id>
-        <link href="https://acoldfront.github.io/post/c-example21/">
-        </link>
-        <updated>2020-05-08T04:15:22.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。<br>
-假设一对兔子的成熟期是一个月，即一个月可长成成兔，那么，如果每对成兔每个月都生一对小兔，一对新生的小兔从第二个月起就开始生兔子，试问从一对兔子开始繁殖，以后每个月会有多少对兔子？</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。<br>
-假设一对兔子的成熟期是一个月，即一个月可长成成兔，那么，如果每对成兔每个月都生一对小兔，一对新生的小兔从第二个月起就开始生兔子，试问从一对兔子开始繁殖，以后每个月会有多少对兔子？</p>
-</blockquote>
-<!-- more -->
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-//斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。
-
-int main(void) {
-    int n = 0;
-    printf(&quot;请输入一个数：&quot;);
-    scanf(&quot;%d&quot;, &amp;n);
-
-    //若要打印 斐波那契数列
-    int f1 = 1, f2 = 1, f3, i;
-    printf(&quot;%8d%8d&quot;, f1, f2);
-    for (i = 3; i &lt;= n; i++) {
-        f3 = f1 + f2;
-        printf(&quot;%8d&quot;, f3);
-        f1 = f2;
-        f2 = f3;
-    }
-    return 0;
-}
-
-
-
-</code></pre>
-<p>输出结果：</p>
-<pre><code>请输入一个数：5
-       1       1       2       3       5
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>(1) 实例分析<br>
-循环的嵌套是指在一个循环体内又包含了另一个完整的循环。循环的嵌套执行过程是外循环执行一次，内循环执行一次，在内循环结束后，再执行下一次外循环，如此反复，直到外循环结束。</p>
-<p>(2) 循环的嵌套注意事项：<br>
-① 循环必须完全包含内循环，不能交叉；<br>
-② 在多重循环中，各层循环的循环控制变量不能同名；<br>
-③ 在多重循环中，并列循环的循环控制变量名可以相同，也可以不同。</p>
 ]]></content>
     </entry>
 </feed>
