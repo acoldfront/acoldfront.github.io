@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-09-25T01:01:00.931Z</updated>
+    <updated>2020-10-07T04:52:21.217Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,6 +10,30 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[BatteryInfoView v1.23 汉化版]]></title>
+        <id>https://acoldfront.github.io/post/batteryinfoview/</id>
+        <link href="https://acoldfront.github.io/post/batteryinfoview/">
+        </link>
+        <updated>2020-10-07T04:44:33.000Z</updated>
+        <summary type="html"><![CDATA[<p>BatteryInfoView 是一种小型实用程序，用于笔记本电脑和上网本计算机，可显示电池的当前状态和信息。显示的电池信息包括电池名称、制造名称、序列号、制造日期、电源状态（充电/放电）、当前电池容量、满电容量、电压、充电/放电速率等...<br>
+BatteryInfoView 还提供一个日志窗口，该窗口每 30 秒或您选择的任何其他时间间隔添加一条包含电池状态的新日志行。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>BatteryInfoView 是一种小型实用程序，用于笔记本电脑和上网本计算机，可显示电池的当前状态和信息。显示的电池信息包括电池名称、制造名称、序列号、制造日期、电源状态（充电/放电）、当前电池容量、满电容量、电压、充电/放电速率等...<br>
+BatteryInfoView 还提供一个日志窗口，该窗口每 30 秒或您选择的任何其他时间间隔添加一条包含电池状态的新日志行。</p>
+<!-- more -->
+<p>系统要求和限制<br>
+此实用程序适用于任何版本的 Windows，从 windows 2000 开始，一至 Windows 10。<br>
+某些信息（如序列号和制造日期）仅在电池提供此信息时才显示。<br>
+<img src="https://acoldfront.github.io//post-images/1602046152348.png" alt="" loading="lazy"></p>
+<h3 id="修改说明">修改说明</h3>
+<hr>
+<p>Crazer汉化</p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p><a href="https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg">链接: https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg 提取码: 4vgd</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Win10数字许可激活工具 Windows 10 Digital Activation Program 1.3.7 Final 中文版]]></title>
         <id>https://acoldfront.github.io/post/win10DigitalActivation/</id>
@@ -555,57 +579,6 @@ array b：
 <p>② 类型说明符、数组名和常量表达式的意义与一维数组相同；</p>
 <p>③ 二维数组的元素在内存中是“按行存放”，即在内存中先顺序存放第一行的元素，再存放第二行的元素，以此类推；</p>
 <p>④ 可以把二维数组看作一种特殊的一维数组，其特殊之处在于它的每一个元素又是一维数组。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：24、获取矩阵的最大值及其下标]]></title>
-        <id>https://acoldfront.github.io/post/c-example24/</id>
-        <link href="https://acoldfront.github.io/post/c-example24/">
-        </link>
-        <updated>2020-05-08T16:43:42.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>本实例要求使用二维数组将一个 3×4 的矩阵中所有元素的最大值及其下标获取，通过该程序，掌握二维数组的引用知识。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>本实例要求使用二维数组将一个 3×4 的矩阵中所有元素的最大值及其下标获取，通过该程序，掌握二维数组的引用知识。</p>
-</blockquote>
-<!-- more -->
-<p><strong>算法思想：</strong></p>
-<p>针对本实例，有两个步骤需要编写程序完成：第一个步骤是求矩阵元素的最大值，可以通过相邻的元素大小比较，最终获取最大值；第二个步骤是针对获取到的元素最大值，求该元素的下标。</p>
-<p>二维数组元素的一般表示方法为：“数组名[下标][下标]”。对于二维数组，下标变量和数组说明在表示形式上是一样的，比如在本例中，有语句：int a[3][4]; a[3][4]=2/3;</p>
-<p>上述语句中“a[3][4]”是完全不同的两个概念，第一个语句中的“a[3][4]”用来定义一个数组，而第二个语句中的“a[3][4]”是一个双下标变量。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int a[3][4], i, j, max, max_i = 0, max_j = 0;
-    for (i = 0; i &lt; 3; ++i) {
-        for (j = 0; j &lt; 4; ++j) {
-            scanf(&quot;%d&quot;,&amp;a[i][j]);
-        }
-    }
-    max=a[0][0];
-    for (i = 0; i &lt; 3; ++i) {
-        for (j = 0; j &lt; 4; ++j) {
-            if(a[i][j]&gt;max){
-                max=a[i][j];
-                max_i=i;
-                max_j=j;
-            }
-        }
-    }
-    printf(&quot;max=a[%d][%d]=%d\n&quot;,max_i,max_j,max);
-
-    return 0;
-}
-
-</code></pre>
-<p>输出结果：</p>
-<pre><code>1 2 3 4 5 6 7 99 9 10 11 12
-max=a[1][3]=99
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>本实训的程序主要完成了两个功能：一是通过一个二次循环输入该二维数组的所有元素；二是将输入元素按照相邻关系进行比较，最终得到最大值和这个最大值的下标。</p>
 ]]></content>
     </entry>
 </feed>
