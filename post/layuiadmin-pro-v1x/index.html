@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1604033560662">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1604033698545">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1604033560662" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1604033698545" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -292,6 +292,15 @@ path: ['user','set']<br>
 </ul>
 </blockquote>
 <p>通过<code>layui.router()</code> 得到路由对象后，你就可以对页面进行个性化操作、异步参数传值等等。如：</p>
+<pre><code class="language-javascript">//在 JS 中获取路由参数
+var router = layui.router();
+admin.req({
+  url: 'xxx'
+  ,data: {
+    uid: router.search.uid
+  }
+});
+</code></pre>
 
             </div>
             
