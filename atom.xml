@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:05:38.311Z</updated>
+    <updated>2020-10-30T05:08:19.671Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -220,6 +220,104 @@ admin.req({
 });
 </code></pre>
 <p>这里是代码</p>
+<h3 id="路由跳转"><strong>路由跳转</strong></h3>
+<p>通过上文的路由规则，你已经大致清楚了 layuiAdmin 路由的基本原理和解析方法。那么如何完成路由的跳转呢？</p>
+<ol>
+<li>在视图文件的 HTML 代码中，通过对任意元素设定<code>lay-href=&quot;/user/set/uid=123/type=1&quot;</code>，好处是：任意元素都可以触发跳转。缺点是：只能在浏览器当前选项卡完成跳转（注意：不是 layuiAdmin 的选项卡）</li>
+<li>直接对 a 标签设定 href，如： <code>&lt;a href=&quot;#/user/set&quot;&gt;text&lt;/a&gt;</code> 。好处是：你可以通过设定<code>target=&quot;_blank&quot;</code>来打开一个浏览器新选项卡。缺点是：只能设置 a 标签，且前面必须加 /#/</li>
+<li>在 JS 代码中，还可通过 <code>location.hash = '/user/set'</code>; 来跳转。前面无需加 #，它会自动追加。</li>
+</ol>
+<h3 id="路由结尾"><strong>路由结尾</strong></h3>
+<p>在路由结尾部分出现的 / 与不出现，是两个完全不同的路由。比如下面这个：</p>
+<ol>
+<li>user/set<br>
+读取的视图文件是：.views/user/set.html</li>
+<li>user/set/<br>
+读取的视图文件是：./views/user/set/index.html （TIPS：这里的 index.html 即是目录下的默认主视图，下文会有讲解）</li>
+</ol>
+<p>因此一定要注意结尾处的 /，避免视图读取错误。</p>
+<h1 id="视图">视图</h1>
+<hr>
+<p>这或许是你应用 layuiAdmin 时的主要焦点，在开发过程中，你的大部分精力都可能会聚焦在这里。它取代了服务端 MVC 架构中的 view 层，使得应用开发变得更具扩展性。因此如果你采用 layuiAdmin 的 SPA（单页应用）模式，请务必要抛弃服务端渲染视图的思想，让页面的控制权限重新回归到前端吧！</p>
+<blockquote>
+<p><strong>views</strong>目录存放的正是视图文件，你可以在该目录添加任意的新目录和新文件，通过对应的路由即可访问。</p>
+</blockquote>
+<p>注意：如果是单页面模式，视图文件通常是一段 HTML 碎片，而不能是一个完整的 html 代码结构。</p>
+<h3 id="视图与路由的关系"><strong>视图与路由的关系</strong></h3>
+<p>每一个视图文件，都对应一个路由。其中<code>index.html</code>是默认文件（你也可以通过 <code>config.js</code> 去重新定义）。视图文件的所在目录决定了路由的访问地址，如：</p>
+<table>
+<thead>
+<tr>
+<th>视图路径</th>
+<th>对应的路由地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>./views/user/index.html</td>
+<td>/user/</td>
+</tr>
+<tr>
+<td>./views/user.html</td>
+<td>/user</td>
+</tr>
+<tr>
+<td>./views/user/set/index.html</td>
+<td>/user/set/</td>
+</tr>
+<tr>
+<td>./views/user/set.html</td>
+<td>/user/set</td>
+</tr>
+<tr>
+<td>./views/user/set/base.html</td>
+<td>/user/set/base</td>
+</tr>
+</tbody>
+</table>
+<p>通过上述的表格列举的对应关系，可以总结出：</p>
+<ul>
+<li>当视图文件是 index.html，那么路由地址就是它的上级目录（相对 views），以 <code>/</code> 结尾</li>
+<li>当视图文件不是 index.html，那么路由地址就是它的上级目录+视图文件名，不以 <code>/</code> 结尾</li>
+</ul>
+<blockquote>
+<p>值得注意的是：路由路径并非最多只能三级，它可以无限极。但对应的视图也必须存放在相应的层级目录下</p>
+</blockquote>
+<h3 id="视图中加载-js-模块"><strong>视图中加载 JS 模块</strong></h3>
+<p>在视图文件中，除了写 HTML，也可以写 JavaScript 代码。如：</p>
+<pre><code class="language-html">&lt;div id=“LAY-demo-hello”&gt;Hello layuiAdmin&lt;/div&gt;
+
+&lt;script&gt;
+layui.use('admin', function(){
+  var $ = layui.jquery;
+  admin.popup({
+    content: $('#LAY-demo-hello').html()
+  });
+});
+&lt;/script&gt;
+</code></pre>
+<p>如果该视图对应的 JS 代码量太大，我们更推荐你在 <code>controller</code>目录下新增一个业务模块，并在视图中直接 <code>layui.use</code> 去加载该模块。下面以控制台主页 <code>index.html</code>为例：</p>
+<pre><code class="language-html">&lt;div&gt;html区域&lt;div&gt;
+
+&lt;script&gt;
+//加载 controller 目录下的对应模块
+/*
+  小贴士：
+    这里 console 模块对应 的 console.js 并不会重复加载，
+    然而该页面的视图可能会重新插入到容器，那如何保证脚本能重新控制视图呢？有两种方式：
+      1): 借助 layui.factory 方法获取 console 模块的工厂（回调函数）给 layui.use
+      2): 直接在 layui.use 方法的回调中书写业务代码，即:
+          layui.use('console', function(){ 
+            //同 console.js 中的 layui.define 回调中的代码 
+          });
+          
+  这里我们采用的是方式1。其它很多视图中采用的其实都是方式2，因为更简单些，也减少了一个请求数。
+  
+*/
+layui.use('console', layui.factory('console'));
+&lt;/script&gt;
+</code></pre>
+<p>当视图被渲染后，layui.factory 返回的函数也会被执行，从而保证在不重复加载 JS 模块文件的前提下，保证脚本能重复执行。</p>
 ]]></content>
     </entry>
     <entry>
