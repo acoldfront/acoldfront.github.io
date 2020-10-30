@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1604022549339">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1604023166832">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1604022549339" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1604023166832" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -221,7 +221,7 @@
 <li>如果你需要动态加载菜单，你需要将 views/layout.html 中的对应地址改成你的真实接口地址</li>
 </ul>
 <p>侧边菜单最多可支持到三级。无论你采用静态的菜单还是动态的，菜单的数据格式都必须是一段合法的 JSON，且必须符合以下规范：</p>
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
   &quot;code&quot;: 0 //状态码，key 名可以通过 config.js 去重新配置
   ,&quot;msg&quot;: &quot;&quot; //提示信息
   ,&quot;data&quot;: [{ //菜单数据，key名可以通过 config.js 去重新配置
@@ -306,7 +306,7 @@ admin.req({
   }
 });
 </code></pre>
-<pre><code class="language-javascript">&lt;!--  在动态模板中获取路由参数 --&gt;
+<pre><code class="language-html">&lt;!--  在动态模板中获取路由参数 --&gt;
 &lt;script type=&quot;text/html&quot; template lay-url=&quot;./xxx/?uid={{ layui.router().search.uid }}&quot;&gt;
   …
 &lt;/script&gt;
@@ -381,7 +381,7 @@ admin.req({
 </blockquote>
 <h3 id="视图中加载-js-模块"><strong>视图中加载 JS 模块</strong></h3>
 <p>在视图文件中，除了写 HTML，也可以写 JavaScript 代码。如：</p>
-<pre><code class="language-javascript">&lt;div id=“LAY-demo-hello”&gt;Hello layuiAdmin&lt;/div&gt;
+<pre><code class="language-html">&lt;div id=“LAY-demo-hello”&gt;Hello layuiAdmin&lt;/div&gt;
 
 &lt;script&gt;
 layui.use('admin', function(){
@@ -393,7 +393,7 @@ layui.use('admin', function(){
 &lt;/script&gt;
 </code></pre>
 <p>如果该视图对应的 JS 代码量太大，我们更推荐你在 <code>controller</code>目录下新增一个业务模块，并在视图中直接 <code>layui.use</code> 去加载该模块。下面以控制台主页 <code>index.html</code>为例：</p>
-<pre><code class="language-javascript">&lt;div&gt;html区域&lt;div&gt;
+<pre><code class="language-html">&lt;div&gt;html区域&lt;div&gt;
 
 &lt;script&gt;
 //加载 controller 目录下的对应模块
@@ -419,19 +419,18 @@ layui.use('console', layui.factory('console'));
 <p>layuiAdmin 的视图是一个“动静结合”的载体，除了常规的静态模板，你当然还可以在视图中存放动态模板，因此它可谓是焦点中的焦点。</p>
 <h3 id="定义模板"><strong>定义模板</strong></h3>
 <p>在视图文件中，通过下述规则定义模板：</p>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
   &lt;!-- 动态模板碎片 --&gt;
 &lt;/script&gt;
 </code></pre>
 <p>下面是一个简单的例子：</p>
-<p>复制代码</p>
-<pre><code>&lt;script type=&quot;text/html&quot; template&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
   当前 layuiAdmin 的版本是：{{ layui.admin.v }}
   路由地址：{{ layui.router().href }}
 &lt;/script&gt;
 </code></pre>
 <p>在不对动态模板设定数据接口地址的情况下，它能读取到全局对象。但更多时候，一个动态模板应该是对应一个接口地址，如下所示：</p>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot;&gt;
     我叫：{{ d.data.username }}
     {{# if(d.data.sex === '男'){ }}
         公的
@@ -441,7 +440,7 @@ layui.use('console', layui.factory('console'));
 &lt;/script&gt;
 </code></pre>
 <p>模板中的 <code>d</code> 对应的是你接口返回的 json 转化后的一维对象，如：</p>
-<pre><code class="language-javascript">{
+<pre><code class="language-json">{
   &quot;code&quot;: 0
   ,&quot;data&quot;: {
     &quot;username&quot;: &quot;贤心&quot;
@@ -459,7 +458,7 @@ layui.use('console', layui.factory('console'));
 <li>lay-url<br>
 用于绑定模板的数据接口地址，支持动态模板解析，如：</li>
 </ul>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;https://api.xxx.com?id={{ layui.router().search.id }}&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;https://api.xxx.com?id={{ layui.router().search.id }}&quot;&gt;
   &lt;!-- 动态模板碎片 --&gt;
 &lt;/script&gt;
 </code></pre>
@@ -467,7 +466,7 @@ layui.use('console', layui.factory('console'));
 <li>lay-type<br>
 用于设定模板的接口请求类型（默认：get），如：</li>
 </ul>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-type=&quot;post&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-type=&quot;post&quot;&gt;
   &lt;!-- 动态模板碎片 --&gt;
 &lt;/script&gt;
 </code></pre>
@@ -475,7 +474,7 @@ layui.use('console', layui.factory('console'));
 <li>lay-data<br>
 用于定义接口请求的参数，其值是一个 JavaScript object 对象，同样支持动态模板解析，如：</li>
 </ul>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-data=&quot;{id: '{{ layui.router().search.id }}', type: 1}&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-data=&quot;{id: '{{ layui.router().search.id }}', type: 1}&quot;&gt;
   &lt;!-- 动态模板碎片 --&gt;
 &lt;/script&gt;
 </code></pre>
@@ -485,12 +484,12 @@ layui.use('console', layui.factory('console'));
 <li>lay-done<br>
 接口请求完毕并完成视图渲染的回调脚本，里面支持写任意的 JavaScript 语句。事实上它是一个封闭的函数作用域，通过给 Function 实例返回的函数传递一个参数 d，用于得到接口返回的数据：</li>
 </ul>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-done=&quot;console.log(d);&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-done=&quot;console.log(d);&quot;&gt;
   &lt;!-- 动态模板碎片 --&gt;
 &lt;/script&gt;
 </code></pre>
 <p>很多时候，你在动态模板中可能会放入一些类似于 layui 的 form 元素，而有些控件需要执行 <code>form.render()</code> 才会显示，这时，你可以对 lay-done 赋值一个全局函数，如：</p>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-done=&quot;layui.data.done(d);&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-done=&quot;layui.data.done(d);&quot;&gt;
    &lt;div class=&quot;layui-form&quot; lay-filter=&quot;LAY-filter-demo-form&quot;&gt;
      &lt;input type=&quot;checkbox&quot; title=&quot;复选框&quot;&gt;
   &lt;/div&gt;
@@ -648,7 +647,7 @@ view('id').send(tpl, data);
 });
 </code></pre>
 <p>那么，在视图文件中，你可以在动态模板中通过 {{ <a href="http://d.params.xxx/">d.params.xxx</a> }} 得到传入的参数，如：</p>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;http://api.com?id={{ d.params.id }}&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;http://api.com?id={{ d.params.id }}&quot;&gt;
   配置了接口的动态模板，且接口动态获取了 render 传入的参数：{{ d.params.id }}
 &lt;/script&gt;
 
@@ -657,12 +656,12 @@ view('id').send(tpl, data);
 &lt;/script&gt;
 </code></pre>
 <p><strong>而如果是在 JS 语句中去获取模板传递过来的变量，可以借助动态模板的 lay-done 属性去实现，如:</strong></p>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-done=&quot;layui.data.sendParams(d.params)&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-done=&quot;layui.data.sendParams(d.params)&quot;&gt;
   
 &lt;/script&gt;
 </code></pre>
 <p>然后在 JS 语句中通过执行动态模板 lay-done 中对应的方法得到对应的参数值：</p>
-<pre><code class="language-javascript">&lt;script&gt;
+<pre><code class="language-html">&lt;script&gt;
 //定义一个 lay-done 对应的全局方法，以供动态模板执行
 layui.data.sendParams = function(params){
   console.log(params.id) //得到传递过来的 id 参数（或其他参数）值
@@ -692,13 +691,13 @@ layui.data.sendParams = function(params){
 <p>LAY-路由-任意名</p>
 </blockquote>
 <p>以消息中心页面为例，假设它的路由为：<code>/app/message/</code>，那么 ID 应该命名为：</p>
-<pre><code class="language-javascript"> &lt;button class=&quot;layui-btn&quot; id=&quot;LAY-app-message-del&quot;&gt;删除&lt;/button&gt;
+<pre><code class="language-html"> &lt;button class=&quot;layui-btn&quot; id=&quot;LAY-app-message-del&quot;&gt;删除&lt;/button&gt;
 </code></pre>
 <h1 id="实用组件"><strong>实用组件</strong></h1>
 <hr>
 <h3 id="hover-提示层"><strong>Hover 提示层</strong></h3>
 <p>通过对元素设置 lay-tips=&quot;提示内容&quot; 来开启一个 hover 提示，如：</p>
-<pre><code class="language-javascript">&lt;i class=&quot;layui-icon layui-icon-tips&quot; lay-tips=&quot;要支持的噢&quot; lay-offset=&quot;5&quot;&gt;&lt;/i&gt;
+<pre><code class="language-html">&lt;i class=&quot;layui-icon layui-icon-tips&quot; lay-tips=&quot;要支持的噢&quot; lay-offset=&quot;5&quot;&gt;&lt;/i&gt;
 </code></pre>
 <p>其中<code>lay-offset</code>用于定于水平偏移距离（单位px），以调整箭头让其对准元素</p>
 <h1 id="事件监听"><strong>事件监听</strong></h1>
@@ -725,7 +724,7 @@ admin.on('side(xxx)', function(obj){
 <hr>
 <p>layuiAdmin 使用到了 layui 的栅格系统，而栅格则是基于浏览器的媒体查询。ie8、9不支持。<br>
 所以要在宿主页面（如 start/index.html ）加上下面这段保证兼容：</p>
-<pre><code class="language-javascript">&lt;!-- 让IE8/9支持媒体查询，从而兼容栅格 --&gt;
+<pre><code class="language-html">&lt;!-- 让IE8/9支持媒体查询，从而兼容栅格 --&gt;
 &lt;!--[if lt IE 9]&gt;
   &lt;script src=&quot;https://cdn.staticfile.org/html5shiv/r29/html5.min.js&quot;&gt;&lt;/script&gt;
   &lt;script src=&quot;https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
