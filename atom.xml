@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:26:47.669Z</updated>
+    <updated>2020-10-30T05:28:10.384Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,623 +10,6 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Crazer的自留地</rights>
-    <entry>
-        <title type="html"><![CDATA[layuiAdmin pro v1.x 【单页版】开发者文档]]></title>
-        <id>https://acoldfront.github.io/post/layuiadmin-pro-v1x/</id>
-        <link href="https://acoldfront.github.io/post/layuiadmin-pro-v1x/">
-        </link>
-        <updated>2020-10-30T03:34:43.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>layuiAdmin pro 是完全基于 layui 架构而成的后台管理模板系统，可以更轻松地实现前后端分离，它是mvc 的简化版，全面接管  视图 和  页面路由 ，并可自主完成数据渲染，服务端通常只负责数据接口，而前端只需专注视图和事件交互，所有的页面动作都是在一个宿主页面中完成，因此这赋予了layuiAdmin 单页面应用开发的能力。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>layuiAdmin pro 是完全基于 layui 架构而成的后台管理模板系统，可以更轻松地实现前后端分离，它是mvc 的简化版，全面接管  视图 和  页面路由 ，并可自主完成数据渲染，服务端通常只负责数据接口，而前端只需专注视图和事件交互，所有的页面动作都是在一个宿主页面中完成，因此这赋予了layuiAdmin 单页面应用开发的能力。</p>
-</blockquote>
-<!-- more -->
-<h1 id="题外"><strong>题外</strong></h1>
-<hr>
-<ul>
-<li>该文档适用于 layuiAdmin 专业版（单页面），阅读之前请务必确认是否与你使用的版本对应。</li>
-<li>熟练掌握 layuiAdmin 的前提是熟练掌握 layui，因此除了本篇文档， <a href="http://www.layui.com/doc/">layui 的文档</a> 也是必不可少的存在。</li>
-</ul>
-<h1 id="快速上手"><strong>快速上手</strong></h1>
-<hr>
-<h3 id="部署"><strong>部署</strong></h3>
-<ol>
-<li>解压文件后，将 layuiAdmin 完整放置在任意目录</li>
-<li>通过本地 web 服务器去访问 ./start/index.html 即可运行 Demo</li>
-</ol>
-<blockquote>
-<p>由于 layuiAdmin 可采用前后端分离开发模式，因此你无需将其放置在你的服务端 MVC 框架中，你只需要给 layuiAdmin 主入口页面（我们也称之为：宿主页面）进行访问解析，它即可全权完成自身路由的跳转和视图的呈现，而数据层则完全通过服务端提供的异步接口来完成。</p>
-</blockquote>
-<h3 id="目录说明"><strong>目录说明</strong></h3>
-<ul>
-<li>
-<p>src/</p>
-<p>layuiAdmin 源代码，通常用于开发环境（如本地），推荐你在本地开发时，将 ./start/index.html 中的 layui.css 和 layui.js 的引入路径由 dist 改为 src 目录。</p>
-<ul>
-<li>src/controller/：存放 JS 业务模块，即对视图进行事件等交互性处理</li>
-<li>src/lib/：layuiAdmin 的核心模块，一般不推荐修改</li>
-<li>src/style/：存放样式，其中 admin.css是核心样式</li>
-<li>src/views/：存放视图文件。其中 layout.html 是整个框架结构的承载，一般不推荐做大量改动。</li>
-<li>src/config.js：layuiAdmin 的全局配置文件，可随意修改。</li>
-<li>src/index.js：layuiAdmin 的入口模块，一般不推荐修改</li>
-</ul>
-</li>
-<li>
-<p>dist/<br>
-通过 gulp 将 layuiAdmin src 目录的源代码进行构建后生成的目录（即：将 JS 和 CSS 文件进行了压缩等处理），通常用于线上环境。关于 gulp 的使用，下文也有介绍。</p>
-</li>
-<li>
-<p>start/<br>
-存放 layuiAdmin 的入口页面、模拟接口数据、layui</p>
-</li>
-</ul>
-<h3 id="宿主页面"><strong>宿主页面</strong></h3>
-<p>你所看到的 start/index.html 是我们提供好的宿主页面，它是整个单页面的承载，所有的界面都是在这一个页面中完成跳转和渲染的。事实上，宿主页面可以放在任何地方，但是要注意修改里面的<code>&lt;link&gt; &lt;script&gt;</code>的 src 和 layui.config 中 base 的路径。</p>
-<h3 id="全局配置"><strong>全局配置</strong></h3>
-<p>当你已经顺利在本地预览了 layuiAdmin 后，你一定迫不及待关注更深层的结构。打开 src 目录，你将看到 config.js，里面存储着所有的默认配置。你可以按照实际需求选择性修改，下面是 layuiAdmin 默认提供的配置：</p>
-<pre><code class="language-javascript">layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
-  exports('setter', {
-    container: 'LAY_app' //容器ID
-    ,base: layui.cache.base //记录layuiAdmin文件夹所在路径
-    ,views: layui.cache.base + 'views/' //视图所在目录
-    ,entry: 'index' //默认视图文件名
-    ,engine: '.html' //视图文件后缀名
-    ,pageTabs: false //是否开启页面选项卡功能。单页版不推荐开启
-    
-    ,name: 'layuiAdmin Pro'
-    ,tableName: 'layuiAdmin' //本地存储表名
-    ,MOD_NAME: 'admin' //模块事件名
-    
-    ,debug: true //是否开启调试模式。如开启，接口异常时会抛出异常 URL 等信息
-    
-    ,interceptor: false //是否开启未登入拦截
-    
-    //自定义请求字段
-    ,request: {
-      tokenName: 'access_token' //自动携带 token 的字段名。可设置 false 不携带。
-    }
-    
-    //自定义响应字段
-    ,response: {
-      statusName: 'code' //数据状态的字段名称
-      ,statusCode: {
-        ok: 0 //数据状态一切正常的状态码
-        ,logout: 1001 //登录状态失效的状态码
-      }
-      ,msgName: 'msg' //状态信息的字段名称
-      ,dataName: 'data' //数据详情的字段名称
-    }
-    
-    //独立页面路由，可随意添加（无需写参数）
-    ,indPage: [
-      '/user/login' //登入页
-      ,'/user/reg' //注册页
-      ,'/user/forget' //找回密码
-      ,'/template/tips/test' //独立页的一个测试 demo
-    ]
-    
-    //扩展的第三方模块
-    ,extend: [
-      'echarts', //echarts 核心包
-      'echartsTheme' //echarts 主题
-    ]
-    
-    //主题配置
-    ,theme: {
-      //配色方案，如果用户未设置主题，第一个将作为默认
-      color: [{
-        main: '#20222A' //主题色
-        ,selected: '#009688' //选中色
-        ,logo: '' //logo区域背景色
-        ,header: '' //头部区域背景色
-        ,alias: 'default' //默认别名
-      }] //为了减少篇幅，更多主题此处不做列举，可直接参考 config.js
-
-      //初始的颜色索引，对应上面的配色方案数组索引
-      //如果本地已经有主题色记录，则以本地记录为优先，除非清除 localStorage（步骤：F12呼出调试工具→Aplication→Local Storage→选中页面地址→layuiAdmin→再点上面的X）
-      // 1.0 正式版开始新增
-      ,initColorIndex: 0
-    }
-  });
-});
-</code></pre>
-<h3 id="侧边菜单"><strong>侧边菜单</strong></h3>
-<ul>
-<li>在 start/json/menu.js 文件中，我们放置了默认的侧边菜单数据，你可以去随意改动它。</li>
-<li>如果你需要动态加载菜单，你需要将 views/layout.html 中的对应地址改成你的真实接口地址</li>
-</ul>
-<p>侧边菜单最多可支持到三级。无论你采用静态的菜单还是动态的，菜单的数据格式都必须是一段合法的 JSON，且必须符合以下规范：</p>
-<pre><code class="language-json">{
-  &quot;code&quot;: 0 //状态码，key 名可以通过 config.js 去重新配置
-  ,&quot;msg&quot;: &quot;&quot; //提示信息
-  ,&quot;data&quot;: [{ //菜单数据，key名可以通过 config.js 去重新配置
-    &quot;name&quot;: &quot;component&quot; //一级菜单名称（与视图的文件夹名称和路由路径对应）
-    ,&quot;title&quot;: &quot;组件&quot; //一级菜单标题
-    ,&quot;icon&quot;: &quot;layui-icon-component&quot; //一级菜单图标样式
-    ,&quot;jump&quot;: '' //自定义一级菜单路由地址，默认按照 name 解析。一旦设置，将优先按照 jump 设定的路由跳转
-    ,&quot;spread&quot;: true //是否默认展子菜单（1.0.0-beta9 新增）
-    ,&quot;list&quot;: [{ //二级菜单
-      &quot;name&quot;: &quot;grid&quot; //二级菜单名称（与视图的文件夹名称和路由路径对应）
-      ,&quot;title&quot;: &quot;栅格&quot; //二级菜单标题
-      ,&quot;jump&quot;: ''  //自定义二级菜单路由地址
-      ,&quot;spread&quot;: true //是否默认展子菜单（1.0.0-beta9 新增）
-      ,&quot;list&quot;: [{ //三级菜单
-        &quot;name&quot;: &quot;list&quot; //三级菜单名（与视图中最终的文件名和路由对应），如：component/grid/list
-        ,&quot;title&quot;: &quot;等比例列表排列&quot; //三级菜单标题
-      },{
-        &quot;name&quot;: &quot;mobile&quot;
-        ,&quot;title&quot;: &quot;按移动端排列&quot;
-      }
-    }]
-}
-</code></pre>
-<blockquote>
-<p>TIPS：实际运用时，切勿出现上述中的注释，否则将不是合法的 JSON ，会出现解析错误。</p>
-</blockquote>
-<p>需要注意的是以下几点：</p>
-<ol>
-<li>
-<p>当任意级菜单有子菜单，点击该菜单都只是收缩和展开操作，而并不会跳转，只有没有子菜单的菜单才被允许跳转。</p>
-</li>
-<li>
-<p>菜单的路由地址默认是按照菜单层级的 name 来设定的。</p>
-<p>我们假设一级菜单的 name 是：a，二级菜单的是：b，三级菜单的 name 是 c，那么：</p>
-<ul>
-<li>三级菜单最终的路由地址就是：<code>/a/b/c</code></li>
-<li>如果二级菜单没有三级菜单，那么二级菜单就是最终路由，地址就是：<code>/a/b/</code></li>
-<li>如果一级菜单没有二级菜单，那么一级菜单就是最终路由，地址就是：<code>/a/</code></li>
-</ul>
-</li>
-<li>
-<p>但如果你设置了 参数 jump，那么就会优先读取 jump 设定的路由地址，如：<code>&quot;jump&quot;: &quot;/user/set&quot;</code></p>
-</li>
-</ol>
-<h1 id="路由">路由</h1>
-<hr>
-<p>layuiAdmin 的路由是采用 <code>location.hash</code> 的机制，即路由地址是放在 <code>./#/</code> 后面，并通过 layui 自带的方法：<code>layui.router()</code> 来进行解析。每一个路由都对应一个真实存在的视图文件，且路由地址和视图文件的路径是一致的（相对 <code>views</code>目录）。因此，你不再需要通过配置服务端的路由去访问一个页面，也无需在 layuiAdmin 内部代码中去定义路由，而是直接通过 layuiAdmin 的前端路由去访问，即可匹配相应目录的视图，从而呈现出页面结果。</p>
-<h3 id="路由规则"><strong>路由规则</strong></h3>
-<blockquote>
-<p>./#/path1/path2/path3/key1=value1/key2=value2…</p>
-</blockquote>
-<p>一个实际的示例：</p>
-<blockquote>
-<p>./#/user/set<br>
-./#/user/set/uid=123/type=1#xxx（下面将以这个为例继续讲解）</p>
-</blockquote>
-<p>当你需要对路由结构进行解析时，你只需要通过 layui 内置的方法 <code>layui.router()</code> 即可完成。如上面的路由解析出来的结果是：</p>
-<blockquote>
-<p>{<br>
-path: ['user','set']<br>
-,search: {uid: 123, type: 1}<br>
-,href: 'user/set/uid=123/type=1'<br>
-,hash: 'xxx'<br>
-}</p>
-</blockquote>
-<p>可以看到，不同的结构会自动归纳到相应的参数中，其中：</p>
-<blockquote>
-<ul>
-<li>path：存储的是路由的目录结构</li>
-<li>search：存储的是路由的参数部分</li>
-<li>href：存储的是 layuiAdmin 的完整路由地址</li>
-<li>hash：存储的是 layuiAdmin 自身的锚记，跟系统自带的 location.hash 有点类似</li>
-</ul>
-</blockquote>
-<p>通过<code>layui.router()</code> 得到路由对象后，你就可以对页面进行个性化操作、异步参数传值等等。如：</p>
-<pre><code class="language-javascript">//在 JS 中获取路由参数
-var router = layui.router();
-admin.req({
-  url: 'xxx'
-  ,data: {
-    uid: router.search.uid
-  }
-});
-</code></pre>
-<pre><code class="language-html">&lt;!--  在动态模板中获取路由参数 --&gt;
-&lt;script type=&quot;text/html&quot; template lay-url=&quot;./xxx/?uid={{ layui.router().search.uid }}&quot;&gt;
-  …
-&lt;/script&gt;
-
-&lt;!-- 或 --&gt;
-&lt;script type=&quot;text/html&quot; template lay-url=&quot;./xxx/&quot; lay-data=&quot;{uid:'{{ layui.router().search.uid }}'}&quot;&gt;
-  …
-&lt;/script&gt;
-</code></pre>
-<h3 id="路由跳转"><strong>路由跳转</strong></h3>
-<p>通过上文的路由规则，你已经大致清楚了 layuiAdmin 路由的基本原理和解析方法。那么如何完成路由的跳转呢？</p>
-<ol>
-<li>在视图文件的 HTML 代码中，通过对任意元素设定<code>lay-href=&quot;/user/set/uid=123/type=1&quot;</code>，好处是：任意元素都可以触发跳转。缺点是：只能在浏览器当前选项卡完成跳转（注意：不是 layuiAdmin 的选项卡）</li>
-<li>直接对 a 标签设定 href，如： <code>&lt;a href=&quot;#/user/set&quot;&gt;text&lt;/a&gt;</code> 。好处是：你可以通过设定<code>target=&quot;_blank&quot;</code>来打开一个浏览器新选项卡。缺点是：只能设置 a 标签，且前面必须加 /#/</li>
-<li>在 JS 代码中，还可通过 <code>location.hash = '/user/set'</code>; 来跳转。前面无需加 #，它会自动追加。</li>
-</ol>
-<h3 id="路由结尾"><strong>路由结尾</strong></h3>
-<p>在路由结尾部分出现的 / 与不出现，是两个完全不同的路由。比如下面这个：</p>
-<ol>
-<li>user/set<br>
-读取的视图文件是：.views/user/set.html</li>
-<li>user/set/<br>
-读取的视图文件是：./views/user/set/index.html （TIPS：这里的 index.html 即是目录下的默认主视图，下文会有讲解）</li>
-</ol>
-<p>因此一定要注意结尾处的 /，避免视图读取错误。</p>
-<h1 id="视图">视图</h1>
-<hr>
-<p>这或许是你应用 layuiAdmin 时的主要焦点，在开发过程中，你的大部分精力都可能会聚焦在这里。它取代了服务端 MVC 架构中的 view 层，使得应用开发变得更具扩展性。因此如果你采用 layuiAdmin 的 SPA（单页应用）模式，请务必要抛弃服务端渲染视图的思想，让页面的控制权限重新回归到前端吧！</p>
-<blockquote>
-<p><strong>views</strong>目录存放的正是视图文件，你可以在该目录添加任意的新目录和新文件，通过对应的路由即可访问。</p>
-</blockquote>
-<p>注意：如果是单页面模式，视图文件通常是一段 HTML 碎片，而不能是一个完整的 html 代码结构。</p>
-<h3 id="视图与路由的关系"><strong>视图与路由的关系</strong></h3>
-<p>每一个视图文件，都对应一个路由。其中<code>index.html</code>是默认文件（你也可以通过 <code>config.js</code> 去重新定义）。视图文件的所在目录决定了路由的访问地址，如：</p>
-<table>
-<thead>
-<tr>
-<th>视图路径</th>
-<th>对应的路由地址</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>./views/user/index.html</td>
-<td>/user/</td>
-</tr>
-<tr>
-<td>./views/user.html</td>
-<td>/user</td>
-</tr>
-<tr>
-<td>./views/user/set/index.html</td>
-<td>/user/set/</td>
-</tr>
-<tr>
-<td>./views/user/set.html</td>
-<td>/user/set</td>
-</tr>
-<tr>
-<td>./views/user/set/base.html</td>
-<td>/user/set/base</td>
-</tr>
-</tbody>
-</table>
-<p>通过上述的表格列举的对应关系，可以总结出：</p>
-<ul>
-<li>当视图文件是 index.html，那么路由地址就是它的上级目录（相对 views），以 <code>/</code> 结尾</li>
-<li>当视图文件不是 index.html，那么路由地址就是它的上级目录+视图文件名，不以 <code>/</code> 结尾</li>
-</ul>
-<blockquote>
-<p>值得注意的是：路由路径并非最多只能三级，它可以无限极。但对应的视图也必须存放在相应的层级目录下</p>
-</blockquote>
-<h3 id="视图中加载-js-模块"><strong>视图中加载 JS 模块</strong></h3>
-<p>在视图文件中，除了写 HTML，也可以写 JavaScript 代码。如：</p>
-<pre><code class="language-html">&lt;div id=“LAY-demo-hello”&gt;Hello layuiAdmin&lt;/div&gt;
-
-&lt;script&gt;
-layui.use('admin', function(){
-  var $ = layui.jquery;
-  admin.popup({
-    content: $('#LAY-demo-hello').html()
-  });
-});
-&lt;/script&gt;
-</code></pre>
-<p>如果该视图对应的 JS 代码量太大，我们更推荐你在 <code>controller</code>目录下新增一个业务模块，并在视图中直接 <code>layui.use</code> 去加载该模块。下面以控制台主页 <code>index.html</code>为例：</p>
-<pre><code class="language-html">&lt;div&gt;html区域&lt;div&gt;
-
-&lt;script&gt;
-//加载 controller 目录下的对应模块
-/*
-  小贴士：
-    这里 console 模块对应 的 console.js 并不会重复加载，
-    然而该页面的视图可能会重新插入到容器，那如何保证脚本能重新控制视图呢？有两种方式：
-      1): 借助 layui.factory 方法获取 console 模块的工厂（回调函数）给 layui.use
-      2): 直接在 layui.use 方法的回调中书写业务代码，即:
-          layui.use('console', function(){ 
-            //同 console.js 中的 layui.define 回调中的代码 
-          });
-          
-  这里我们采用的是方式1。其它很多视图中采用的其实都是方式2，因为更简单些，也减少了一个请求数。
-  
-*/
-layui.use('console', layui.factory('console'));
-&lt;/script&gt;
-</code></pre>
-<p>当视图被渲染后，layui.factory 返回的函数也会被执行，从而保证在不重复加载 JS 模块文件的前提下，保证脚本能重复执行。</p>
-<h1 id="动态模板"><strong>动态模板</strong></h1>
-<hr>
-<p>layuiAdmin 的视图是一个“动静结合”的载体，除了常规的静态模板，你当然还可以在视图中存放动态模板，因此它可谓是焦点中的焦点。</p>
-<h3 id="定义模板"><strong>定义模板</strong></h3>
-<p>在视图文件中，通过下述规则定义模板：</p>
-<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
-  &lt;!-- 动态模板碎片 --&gt;
-&lt;/script&gt;
-</code></pre>
-<p>下面是一个简单的例子：</p>
-<script type="text/html" template>
-  当前 layuiAdmin 的版本是：{{ layui.admin.v }}
-  路由地址：{{ layui.router().href }}
-</script>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[layuiAdmin std v1.x 【iframe版】开发者文档]]></title>
-        <id>https://acoldfront.github.io/post/layuiadmin-std-v1x/</id>
-        <link href="https://acoldfront.github.io/post/layuiadmin-std-v1x/">
-        </link>
-        <updated>2020-10-29T15:52:38.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>layuiAdmin.std（iframe 版） 是完全基于 layui 架构而成的通用型后台管理模板系统，采用传统的 iframe 多页面开发模式，可更快速直接地开发网页后台应用程序，无需过多地学习成本，简单高效，撸起袖子直接干。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>layuiAdmin.std（iframe 版） 是完全基于 layui 架构而成的通用型后台管理模板系统，采用传统的 iframe 多页面开发模式，可更快速直接地开发网页后台应用程序，无需过多地学习成本，简单高效，撸起袖子直接干。</p>
-</blockquote>
-<!-- more -->
-<h2 id="题外">题外</h2>
-<hr>
-<ul>
-<li>该文档适用于 layuiAdmin.std 常规版（iframe），阅读之前请务必确认是否与你使用的版本对应。</li>
-<li>熟练掌握 layuiAdmin 的前提是熟练掌握 layui，因此除了本篇文档， <a href="https://www.layui.com/doc/">layui 的文档</a> 也是必不可少的存在。</li>
-</ul>
-<h2 id="快速上手">快速上手</h2>
-<hr>
-<h3 id="目录说明">目录说明</h3>
-<p>解压文件后，你将看到以下目录：</p>
-<ul>
-<li>
-<p><strong>src/</strong></p>
-<p>layuiAdmin 源代码，通常用于开发环境（如本地）。</p>
-<ul>
-<li><strong>src/layuiadmin/：</strong> layuiAdmin 的静态资源（JS、CSS、模块碎片等）
-<ul>
-<li>src/layuiadmin/json/：模拟接口返回的 JSON 相应信息，实际应用时可无视。</li>
-<li>src/layuiadmin/layui/：layui 基础框架，功能一般领先于官网提供下载的版本。</li>
-<li>src/layuiadmin/lib/：layuiAdmin 的核心模块，通常不建议修改。</li>
-<li>src/layuiadmin/modules/：layuiAdmin 的业务模块</li>
-<li>src/layuiadmin/style/：layuiAdmin 的样式文件</li>
-<li>src/layuiadmin/tpl/：layuiAdmin 部分区块可能用到的模版碎片</li>
-<li>src/layuiadmin/config.js：全局配置文件</li>
-</ul>
-</li>
-<li><strong>src/views/：</strong> layuiAdmin 提供的视图文件，你可以将其移动到你服务端工程的 view 层中，注意修改 JS/CSS 的路径即可。</li>
-</ul>
-</li>
-<li>
-<p><strong>dist/</strong></p>
-<p>通过 gulp 将 资源包的 src 目录的源代码进行构建后生成的目录（即：将 JS 和 CSS 文件进行了压缩等处理），通常用于线上环境。关于 gulp 的使用，下文也有介绍。</p>
-</li>
-</ul>
-<h3 id="部署到服务端">部署到服务端</h3>
-<ol>
-<li>将 src 目录中的 views 文件夹整个复制到你 服务端工程 的 view 层中，通过本地 web 服务器访问（Tomcat / IIS / Apache / Nginx 等）</li>
-<li>确保可以访问后，修改好 HTML 文件中的 JS/CSS 路径，即可正常运行页面。</li>
-</ol>
-<blockquote>
-<p><em><strong>iframe 常规版</strong></em> 相比于 <em><strong>单页面模式的专业版</strong></em> ，无论是在目录结构还是开发模式上都要简单很多。因为单页版是接管了服务端 MVC 的视图层，而 iframe 版则将视图交给了服务端来控制和输出，可以避免鉴权的复杂程度，直接可衔接好新老项目（因为你们的大部分老项目都是采用 iframe 模式）。</p>
-</blockquote>
-<h3 id="全局配置">全局配置</h3>
-<p>当你已经顺利在本地预览了 layuiAdmin 后，你一定迫不及待关注更深层的结构。假设你页面引入的是 src 目录 的 JS，你还需要关注的是 src/layuiadmin/<br>
-目录中的 config.js，它里面存储着所有的默认配置。你可以按照实际需求选择性修改：</p>
-<pre><code class="language-javascript">layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
-  exports('setter', {
-    container: 'LAY_app' //容器ID
-    ,base: layui.cache.base //记录静态资源所在路径
-    ,views: layui.cache.base + 'tpl/' //动态模板所在目录
-    ,entry: 'index' //默认视图文件名
-    ,engine: '.html' //视图文件后缀名
-    ,pageTabs: true //是否开启页面选项卡功能。iframe 版推荐开启
-    
-    ,name: 'layuiAdmin'
-    ,tableName: 'layuiAdmin' //本地存储表名
-    ,MOD_NAME: 'admin' //模块事件名
-    
-    ,debug: true //是否开启调试模式。如开启，接口异常时会抛出异常 URL 等信息
-
-    //自定义请求字段
-    ,request: {
-      tokenName: false //自动携带 token 的字段名（如：access_token）。可设置 false 不携带。
-    }
-    
-    //自定义响应字段
-    ,response: {
-      statusName: 'code' //数据状态的字段名称
-      ,statusCode: {
-        ok: 0 //数据状态一切正常的状态码
-        ,logout: 1001 //登录状态失效的状态码
-      }
-      ,msgName: 'msg' //状态信息的字段名称
-      ,dataName: 'data' //数据详情的字段名称
-    }
-    
-    //扩展的第三方模块
-    ,extend: [
-      'echarts', //echarts 核心包
-      'echartsTheme' //echarts 主题
-    ]
-    
-    //主题配置
-    ,theme: {
-      //配色方案，如果用户未设置主题，第一个将作为默认
-      color: [{
-        main: '#20222A' //主题色
-        ,selected: '#009688' //选中色
-        ,logo: '' //logo区域背景色
-        ,header: '' //头部区域背景色
-        ,alias: 'default' //默认别名
-      }] //为了减少篇幅，更多主题此处不做列举，可直接参考 config.js
-
-      //初始的颜色索引，对应上面的配色方案数组索引
-      //如果本地已经有主题色记录，则以本地记录为优先，除非清除 LocalStorage（步骤：F12呼出调试工具→Aplication→Local Storage→选中页面地址→layuiAdmin→再点上面的X）
-      // 1.0 正式版开始新增
-      ,initColorIndex: 0
-    }
-  });
-});
-</code></pre>
-<h2 id="基础方法">基础方法</h2>
-<hr>
-<ul>
-<li>config 模块</li>
-</ul>
-<p>​    你可以在任何地方通过 layui.setter 得到 config.js 中的配置信息。如：</p>
-<pre><code>layui.setter.base
-</code></pre>
-<ul>
-<li>admin 模块</li>
-</ul>
-<pre><code>var admin = layui.admin;
-</code></pre>
-<ul>
-<li>admin.req(options)</li>
-</ul>
-<p>​    Ajax 请求，用法同 $.ajax(options)，只是该方法会进行错误处理</p>
-<ul>
-<li>admin.screen()</li>
-</ul>
-<p>​    获取屏幕类型，根据当前屏幕大小，返回 0 - 3 的值</p>
-<pre><code>0: 低于768px的屏幕
-1：768px到992px之间的屏幕
-2：992px到1200px之间的屏幕
-3：高于1200px的屏幕
-</code></pre>
-<ul>
-<li>admin.sideFlexible(status)</li>
-</ul>
-<p>​    侧边伸缩。</p>
-<p>​    status 为 null：收缩；</p>
-<p>​    status为 “spread”：展开</p>
-<ul>
-<li>admin.on(eventName, callback)</li>
-</ul>
-<p>​    事件监听，下文会有讲解</p>
-<ul>
-<li>admin.popup(options)</li>
-</ul>
-<p>​    弹出一个 layuiAdmin 主题风格的 layer 层，参数 options 跟 layer.open(options) 完全相同</p>
-<ul>
-<li>admin.popupRight(options)</li>
-</ul>
-<p>​    在屏幕右侧呼出一个面板层。options 同上。</p>
-<pre><code class="language-javascript">admin.popupRight({
-  id: 'LAY-popup-right-new1' //定义唯一ID，防止重复弹出
-  ,success: function(){
-    //将 views 目录下的某视图文件内容渲染给该面板
-    layui.view(this.id).render('视图文件所在路径');
-  }
-});
-</code></pre>
-<ul>
-<li>admin.resize(callback)</li>
-</ul>
-<p>​    窗口 resize 事件处理，我们推荐你使用该方法取代 jQuery 的 resize 事件，以避免多页面标签下可能存在的冲突。</p>
-<ul>
-<li>admin.fullScreen()</li>
-</ul>
-<p>​    全屏</p>
-<ul>
-<li>admin.exitScreen()</li>
-</ul>
-<p>​    退出全屏</p>
-<ul>
-<li>
-<p>admin.events</p>
-<ul>
-<li>admin.events.refresh()</li>
-</ul>
-<p>​       刷新当前右侧区域</p>
-<ul>
-<li>admin.events.closeThisTabs()</li>
-</ul>
-</li>
-</ul>
-<p>​       关闭当前标签页<br>
-注意：如果是在 iframe 页面中执行关闭，需要如下写法：</p>
-<pre><code>parent.layui.admin.events.closeThisTabs();
-</code></pre>
-<ul>
-<li>admin.events.closeOtherTabs()</li>
-</ul>
-<p>​       关闭其它标签页</p>
-<ul>
-<li>admin.events.closeAllTabs()</li>
-</ul>
-<p>​       关闭全部标签页</p>
-<ul>
-<li>view 模块</li>
-</ul>
-<p>​    用法同 专业版：<a href="http://fly.layui.com/docs/5/#base-view">http://fly.layui.com/docs/5/#base-view</a></p>
-<h2 id="在-iframe-页面内部打开新标签">在 iframe 页面内部打开新标签</h2>
-<hr>
-<blockquote>
-<p>通常你会涉及一些在右侧 iframe 页面内部去打开一个新标签的需求，目前有以下方式可以实现</p>
-</blockquote>
-<h3 id="方法一">方法一：</h3>
-<p>直接在 a 标签上加上相关属性</p>
-<pre><code class="language-html">&lt;a lay-href=&quot;url&quot;&gt;文本&lt;/a&gt;
-</code></pre>
-<h3 id="方法二">方法二：</h3>
-<p>调用 index 模块的相关方法</p>
-<pre><code class="language-javascript">parent.layui.index.openTabsPage(href, text); //这里要注意的是 parent 的层级关系
-</code></pre>
-<h2 id="自定义标签栏标题">自定义标签栏标题</h2>
-<hr>
-<p>每当你打开一个标签页，头部都会出现标题。它默认读取的是所点元素的文本，但是你也可以自定义标题。</p>
-<pre><code class="language-html">&lt;a lay-href=&quot;url&quot; lay-text=&quot;自定义标题文本&quot;&gt;默认读取的文本&lt;/a&gt;
-</code></pre>
-<ul>
-<li>值得说明的是，只要你配置了上述的 lay-href 属性，就会打开一个新的标签，如果要在当前标签跳转，直接配置 href=&quot;&quot; 属性即可。</li>
-</ul>
-<h2 id="实用组件">实用组件</h2>
-<hr>
-<h3 id="hover-提示层">Hover 提示层</h3>
-<p>通过对元素设置 lay-tips=&quot;提示内容&quot; 来开启一个 hover 提示，如：</p>
-<pre><code class="language-html">&lt;i class=&quot;layui-icon layui-icon-tips&quot; lay-tips=&quot;要支持的噢&quot; lay-offset=&quot;5&quot;&gt;&lt;/i&gt;
-</code></pre>
-<p>其中 lay-offset 用于定于水平偏移距离（单位px），以调整箭头让其对准元素</p>
-<h2 id="兼容性">兼容性</h2>
-<hr>
-<p>layuiAdmin 使用到了 layui 的栅格系统，而栅格则是基于浏览器的媒体查询。ie8、9不支持。<br>
-所以要在宿主页面（如 start/index.html ）加上下面这段保证兼容：</p>
-<pre><code class="language-html">&lt;!-- 让IE8/9支持媒体查询，从而兼容栅格 --&gt;
-&lt;!--[if lt IE 9]&gt;
-  &lt;script src=&quot;https://cdn.staticfile.org/html5shiv/r29/html5.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;
-&lt;![endif]--&gt;  
-</code></pre>
-<h2 id="升级事项">升级事项</h2>
-<hr>
-<p>从官网更新资源包后，以 src 目录为例（dist 由于是 src 构建后生成的目录，所以本质是和 src 一样的）<br>
-src 目录下可以直接覆盖的有：</p>
-<blockquote>
-<p>src/json/<br>
-src/layui/<br>
-src/lib/<br>
-src/style/</p>
-</blockquote>
-<p>需要灵活调配的有：</p>
-<blockquote>
-<p>src/modules/<br>
-src/tpl/<br>
-src/config.js</p>
-</blockquote>
-<p>如果没有改动默认配置，事实上 config.js 也可以覆盖升级</p>
-<h2 id="源码构建">源码构建</h2>
-<hr>
-<p>当你在 src 目录完成开发后，你可通过 gulp 对 src 源码进行自动化构建，以生成用于线上环境的 dist 目录。并在 HTML 源代码中引入该目录的 JS/CSS。</p>
-<p>在资源包中根目录下看到的 gulpfile.js 是 layuiAdmin 写好的任务脚本，package.json 是任务配置文件，你只需按照以下步骤：</p>
-<ul>
-<li>step1：确保你的电脑已经安装好了 <a href="https://nodejs.org/en/">Node.js</a>，如果未安装，可去官网下载安装</li>
-<li>step2: 命令行安装 gulp：npm install gulp -g</li>
-<li>step3：切换到 layuiAdmin 项目根目录（即 gulpfile.js 所在目录），命令行安装任务所依赖的包：npm install</li>
-</ul>
-<p><strong>安装完成后，后续只需直接执行命令：gulp 即可完成 src 到 dist 目录的构建</strong></p>
-<h1 id="关于版权"><strong>关于版权</strong></h1>
-<hr>
-<blockquote>
-<p>layuiAdmin 受国家计算机软件著作权保护，未经官网正规渠道授权擅自公开产品源文件、以及直接对产品二次出售的，我们将追究相应的法律责任。</p>
-</blockquote>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[BatteryInfoView v1.23 汉化版]]></title>
         <id>https://acoldfront.github.io/post/batteryinfoview/</id>
@@ -1036,6 +419,166 @@ ZIP文件修改（添加/删除/重命名）<br>
 <a href="http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE">安装版：http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE</a></p>
 <p>下载链接：<br>
 <a href="https://wws.lanzous.com/ilEJagifxvi">链接: https://wws.lanzous.com/ilEJagifxvi</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[思维导图软件 XMind ZEN 2020 v10.2.1 全平台 完美破解版]]></title>
+        <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
+        <link href="https://acoldfront.github.io/post/xmind-zen-2020/">
+        </link>
+        <updated>2020-07-31T22:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
+<!-- more -->
+<p>XMind 是一个全功能的思维导图和头脑风暴软件，为激发灵感和创意而生。作为一款有效提升工作和生活效率的生产力工具，受到全球百千万用户的青睐。</p>
+<p>这两年思维导图突然就火起来了，各种思维导图软件也是雨后春笋般冒出来了，自 Xmind 发布以来就受到全球多个国家的办公一族喜爱。而 XMind 开发团队成员也在不断的去改进产品以提供优秀的生产力工具和服务，帮助人们节省时间并提升效率为目标。<br>
+<img src="https://acoldfront.github.io//post-images/1579860380835.png" alt="" loading="lazy"></p>
+<p>全新内核，经典 XMind 体验。<br>
+我们努力了3年，100% 重写了思维导图引擎的每一个细节，XMind: ZEN 对 XMind 8 做到了完全兼容，让你有一种全新却不失经典的体验。</p>
+<p>无人可超越，只有超越自己。<br>
+对所有主题进行了重新设计，为您的每一张导图都注入新的活力。字体渲染也得到了极大的改进，让每一张思维导图既美观又专业。</p>
+<p>我们专注，为了让您更专注。<br>
+ZEN 模式，寓意为禅。让专注变成一种习惯。</p>
+<p>全新 Snowbrush 引擎<br>
+我们努力了3年，100% 重写了思维导图的引擎，着眼在未来的黑科技上，提升了思维导图的展示效果，丰富了绘图的元素。</p>
+<p>充满惊喜的主题<br>
+XMind: ZEN 对所有主题进行了重新设计，为您的每一张导图都注入新的活力，专业的同时又不失丰富元素，好看到让人羡慕。</p>
+<p>Font Rendering<br>
+由于极大地改进了字体的渲染技术，无论你用 Mac 还是 Windows 创建思维导图，所有文字都以同一样式清晰呈现。XMind: ZEN 精选多款优质字体，爱上编辑导图，从未如此简单。</p>
+<p>Markdown<br>
+我们相信 Markdown 会为你带来更好的使用体验，将做好的图导出为 Markdown 格式后，会让你更易于阅读。</p>
+<p>集专注于 ZEN 模式<br>
+ZEN 模式，寓意为禅，让专注变成一种习惯。进入 ZEN 模式，隐藏页面内多余的元素，帮助你全神贯注地绘制每一个主题，心无旁骛地完成工作。</p>
+<p>贴纸，原创的更好<br>
+设计师原创的贴纸，每一个都精心绘制，更准确地满足你的需求，精彩无处不在。</p>
+<p>100% 对 XMind 8 兼容<br>
+XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结构，在 XMind: ZEN 中都能完美展现。</p>
+<p>导出PDF和印象笔记<br>
+将思维导图导出为矢量的 PDF 文件，方便您将导图随意放大和清晰地打印。印象笔记的粉丝们还会惊喜地发现只需简单地点击，便可将导图分享到印象笔记中。</p>
+<h3 id="更新日志">更新日志</h3>
+<hr>
+<p>10.2.1</p>
+<p>重大更新</p>
+<ol>
+<li>整体流畅度和打开大图的速度大幅提升；</li>
+<li>括号图——一种描述整体和局部关系的新结构；</li>
+<li>创建风格——直接基于当前导图的风格来创建自定义风格；</li>
+<li>快捷键增强——更丰富的快捷键设置，包括大纲模式的快捷键；</li>
+<li>合并 XMind 文件——将所有的点子聚合到一个文件里。<br>
+优化与提升</li>
+<li>新增了一批有趣实用的贴纸；</li>
+<li>工具栏新增“插入”按钮，插入元素更加直观便捷；</li>
+<li>支持在导出的 PDF/SVG 中点击插入的网页链接；</li>
+<li>增大了笔记的编辑框；</li>
+<li>笔记和链接的编辑框支持弹出右键菜单；</li>
+<li>新增了跳转到搜索结果时的高亮动画；</li>
+<li>全面优化了法语和繁体中文的文案；</li>
+<li>优化了非英语字体名称的显示效果；</li>
+<li>优化了快速样式列表的预览效果；</li>
+<li>优化了在画布空白处点击右键的菜单内容；</li>
+<li>优化了一些 UI 细节；</li>
+<li>修复了大纲模式下可能会将元素插入到错误的主题上的问题；</li>
+<li>修复了导出 PNG/SVG 时，联系线箭头方向可能错误的问题；</li>
+<li>修复了由于特殊字符，分享到 Evernote 失败的问题；</li>
+<li>修复了 Windows 下按 CAPS LOCK 可能会清空主题文字的问题；</li>
+<li>修复了在笔记里撤销后，内容可能会变成另一条笔记的问题；</li>
+<li>修复了点击联系和外框的搜索结果无法跳转到对应元素的问题；</li>
+<li>修复了大纲模式下会显示联系和外框的搜索结果的问题；</li>
+<li>修复了风格编辑器中调整外框的边框颜色失效的问题；</li>
+<li>修复了 ZEN 模式下重命名画布时，画布栏消失的问题；</li>
+<li>修复了树形图结构下，导出 PDF 的画面不完整的问题；</li>
+<li>修复了特殊情况下，导出 PNG 的画面不完整的问题；</li>
+<li>修复了部分其他已知问题。</li>
+</ol>
+<h3 id="修改说明">修改说明</h3>
+<hr>
+<p>基于官网最新版本破解</p>
+<p>破解授权，移除验证，去除试用提示</p>
+<p>能正常导出图片无水印，PDF无水印，导出word，粘贴图片等高级功能</p>
+<p>v2版本导出PNG缩放大小已修复</p>
+<h3 id="使用提示">使用提示</h3>
+<hr>
+<p>将app.asar放入XMind-ZEN安装目录的resources文件夹下替换</p>
+<h3 id="下载地址">下载地址</h3>
+<hr>
+<p><a href="https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w">链接: https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w 提取码: b4nd</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：25、矩阵转置]]></title>
+        <id>https://acoldfront.github.io/post/c-example25/</id>
+        <link href="https://acoldfront.github.io/post/c-example25/">
+        </link>
+        <updated>2020-05-08T16:51:24.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
+</blockquote>
+<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
+</blockquote>
+<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
+<!-- more -->
+<p><strong>算法思想：</strong></p>
+<p>由数学知识可知，将第一个矩阵的所有元素绕着一条从第一行第一列出发的右下角 45° 的射线做镜面反转，即可得到该矩阵的转置。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i, j, i1, j1, a[101][101], b[101][101];
+    printf(&quot;please input the number of rows(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;i1);
+    printf(&quot;please input the number of columns(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;j1);
+    printf(&quot;please input the element\n&quot;);
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            scanf(&quot;%d&quot;, &amp;a[i][j]);
+    printf(&quot;array a：\n&quot;);
+    for (i = 0; i &lt; i1; i++) {
+        for (j = 0; j &lt; j1; j++)
+            printf(&quot;\t%d&quot;, a[i][j]);
+        printf(&quot;\n&quot;);
+    }
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            b[j][i] = a[i][j];
+    printf(&quot;array b：\n&quot;);
+    for (i = 0; i &lt; j1; i++) {
+        for (j = 0; j &lt; i1; j++)
+            printf(&quot;\t%d&quot;, b[i][j]);
+        printf(&quot;\n&quot;);
+    }
+
+    return 0;
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>please input the number of rows(&lt;=100)
+3
+please input the number of columns(&lt;=100)
+4
+please input the element
+1 2 3 4 5 6 7 8 9 10 11 12
+array a：
+        1       2       3       4
+        5       6       7       8
+        9       10      11      12
+array b：
+        1       5       9
+        2       6       10
+        3       7       11
+        4       8       12
+
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>在本实例中，主要运用了二维数组，二维数组的使用说明如下：</p>
+<p>① 二维数组的第一个下标表示行数，第二个下标表示列数，每个下标都是从 0 开始；</p>
+<p>② 类型说明符、数组名和常量表达式的意义与一维数组相同；</p>
+<p>③ 二维数组的元素在内存中是“按行存放”，即在内存中先顺序存放第一行的元素，再存放第二行的元素，以此类推；</p>
+<p>④ 可以把二维数组看作一种特殊的一维数组，其特殊之处在于它的每一个元素又是一维数组。</p>
 ]]></content>
     </entry>
 </feed>
