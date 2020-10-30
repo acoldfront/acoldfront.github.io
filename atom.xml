@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:15:57.428Z</updated>
+    <updated>2020-10-30T05:18:31.966Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -327,6 +327,83 @@ layui.use('console', layui.factory('console'));
     &lt;!-- 动态模板碎片 --&gt;
     &lt;/script&gt;
 </code></pre>
+<p>模板中的 <code>d</code> 对应的是你接口返回的 json 转化后的一维对象，如：</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: 0
+  ,&quot;data&quot;: {
+    &quot;username&quot;: &quot;贤心&quot;
+    ,&quot;sex&quot;: &quot;男&quot;
+  }
+}
+</code></pre>
+<p>那么，上述动态模板最终输出的结果就是：</p>
+<pre><code>我叫：贤心
+公的
+</code></pre>
+<h3 id="模板基础属性"><strong>模板基础属性</strong></h3>
+<p>动态模板支持以下基础属性</p>
+<ul>
+<li>lay-url<br>
+用于绑定模板的数据接口地址，支持动态模板解析，如：</li>
+</ul>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;https://api.xxx.com?id={{ layui.router().search.id }}&quot;&gt;
+  &lt;!-- 动态模板碎片 --&gt;
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>lay-type<br>
+用于设定模板的接口请求类型（默认：get），如：</li>
+</ul>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-type=&quot;post&quot;&gt;
+  &lt;!-- 动态模板碎片 --&gt;
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>lay-data<br>
+用于定义接口请求的参数，其值是一个 JavaScript object 对象，同样支持动态模板解析，如：</li>
+</ul>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-data=&quot;{id: '{{ layui.router().search.id }}', type: 1}&quot;&gt;
+  &lt;!-- 动态模板碎片 --&gt;
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li>lay-headers<br>
+用户定义接口请求的 Request Headers 参数，用法与 lay-data 的完全类似，支持动态模板解析。</li>
+<li>lay-done<br>
+接口请求完毕并完成视图渲染的回调脚本，里面支持写任意的 JavaScript 语句。事实上它是一个封闭的函数作用域，通过给 Function 实例返回的函数传递一个参数 d，用于得到接口返回的数据：</li>
+</ul>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-done=&quot;console.log(d);&quot;&gt;
+  &lt;!-- 动态模板碎片 --&gt;
+&lt;/script&gt;
+</code></pre>
+<p>很多时候，你在动态模板中可能会放入一些类似于 layui 的 form 元素，而有些控件需要执行 <code>form.render()</code> 才会显示，这时，你可以对 lay-done 赋值一个全局函数，如：</p>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot; lay-done=&quot;layui.data.done(d);&quot;&gt;
+   &lt;div class=&quot;layui-form&quot; lay-filter=&quot;LAY-filter-demo-form&quot;&gt;
+     &lt;input type=&quot;checkbox&quot; title=&quot;复选框&quot;&gt;
+  &lt;/div&gt;
+&lt;/script&gt;
+
+&lt;!--  注意：别看眼花了，下面可不是动态模板，而是 JS 脚本区域 --&gt;
+&lt;script&gt;
+layui.data.done = function(d){
+  layui.use(['form'], function(){
+    var form = layui.form;
+     form.render(null, 'LAY-filter-demo-form'); //渲染该模板下的动态表单
+  });
+};
+&lt;/script&gt;
+</code></pre>
+<p>TIPS：</p>
+<blockquote>
+<p>如果模板渲染完毕需要处理过多的交互，我们强烈推荐你采用上述的方式定义一个全局函数赋值给 lay-done，会极大地减少维护成本。<br>
+无需担心该全局函数的冲突问题，该函数是一次性的。其它页面即便声明了一个同样的函数，也只是用于新的视图，丝毫不会对之前的视图造成任何影响。<br>
+layui.data.done 中的 done 可以随意命名，但需与 lay-done 的赋值对应上。</p>
+</blockquote>
+<p>模板语法</p>
+<blockquote>
+<p>动态模板基于 layui 的 laytpl 模块，详细语法可见：<br>
+<a href="http://www.layui.com/doc/modules/laytpl.html#syntax">http://www.layui.com/doc/modules/laytpl.html#syntax</a></p>
+</blockquote>
 ]]></content>
     </entry>
     <entry>
