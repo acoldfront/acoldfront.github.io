@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1604032831177">
+<link rel="shortcut icon" href="https://acoldfront.github.io//favicon.ico?v=1604033029031">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://acoldfront.github.io//styles/main.css">
 
@@ -36,7 +36,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://acoldfront.github.io/">
-        <img src="https://acoldfront.github.io//images/avatar.png?v=1604032831177" class="site-logo">
+        <img src="https://acoldfront.github.io//images/avatar.png?v=1604033029031" class="site-logo">
         <h1 class="site-title">Crazer的自留地</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -147,6 +147,125 @@
 </ul>
 <h3 id="宿主页面"><strong>宿主页面</strong></h3>
 <p>你所看到的 start/index.html 是我们提供好的宿主页面，它是整个单页面的承载，所有的界面都是在这一个页面中完成跳转和渲染的。事实上，宿主页面可以放在任何地方，但是要注意修改里面的<code>&lt;link&gt; &lt;script&gt;</code>的 src 和 layui.config 中 base 的路径。</p>
+<h3 id="全局配置"><strong>全局配置</strong></h3>
+<p>当你已经顺利在本地预览了 layuiAdmin 后，你一定迫不及待关注更深层的结构。打开 src 目录，你将看到 config.js，里面存储着所有的默认配置。你可以按照实际需求选择性修改，下面是 layuiAdmin 默认提供的配置：</p>
+<pre><code class="language-javascript">layui.define(['laytpl', 'layer', 'element', 'util'], function(exports){
+  exports('setter', {
+    container: 'LAY_app' //容器ID
+    ,base: layui.cache.base //记录layuiAdmin文件夹所在路径
+    ,views: layui.cache.base + 'views/' //视图所在目录
+    ,entry: 'index' //默认视图文件名
+    ,engine: '.html' //视图文件后缀名
+    ,pageTabs: false //是否开启页面选项卡功能。单页版不推荐开启
+    
+    ,name: 'layuiAdmin Pro'
+    ,tableName: 'layuiAdmin' //本地存储表名
+    ,MOD_NAME: 'admin' //模块事件名
+    
+    ,debug: true //是否开启调试模式。如开启，接口异常时会抛出异常 URL 等信息
+    
+    ,interceptor: false //是否开启未登入拦截
+    
+    //自定义请求字段
+    ,request: {
+      tokenName: 'access_token' //自动携带 token 的字段名。可设置 false 不携带。
+    }
+    
+    //自定义响应字段
+    ,response: {
+      statusName: 'code' //数据状态的字段名称
+      ,statusCode: {
+        ok: 0 //数据状态一切正常的状态码
+        ,logout: 1001 //登录状态失效的状态码
+      }
+      ,msgName: 'msg' //状态信息的字段名称
+      ,dataName: 'data' //数据详情的字段名称
+    }
+    
+    //独立页面路由，可随意添加（无需写参数）
+    ,indPage: [
+      '/user/login' //登入页
+      ,'/user/reg' //注册页
+      ,'/user/forget' //找回密码
+      ,'/template/tips/test' //独立页的一个测试 demo
+    ]
+    
+    //扩展的第三方模块
+    ,extend: [
+      'echarts', //echarts 核心包
+      'echartsTheme' //echarts 主题
+    ]
+    
+    //主题配置
+    ,theme: {
+      //配色方案，如果用户未设置主题，第一个将作为默认
+      color: [{
+        main: '#20222A' //主题色
+        ,selected: '#009688' //选中色
+        ,logo: '' //logo区域背景色
+        ,header: '' //头部区域背景色
+        ,alias: 'default' //默认别名
+      }] //为了减少篇幅，更多主题此处不做列举，可直接参考 config.js
+
+      //初始的颜色索引，对应上面的配色方案数组索引
+      //如果本地已经有主题色记录，则以本地记录为优先，除非清除 localStorage（步骤：F12呼出调试工具→Aplication→Local Storage→选中页面地址→layuiAdmin→再点上面的X）
+      // 1.0 正式版开始新增
+      ,initColorIndex: 0
+    }
+  });
+});
+</code></pre>
+<h3 id="侧边菜单"><strong>侧边菜单</strong></h3>
+<ul>
+<li>在 start/json/menu.js 文件中，我们放置了默认的侧边菜单数据，你可以去随意改动它。</li>
+<li>如果你需要动态加载菜单，你需要将 views/layout.html 中的对应地址改成你的真实接口地址</li>
+</ul>
+<p>侧边菜单最多可支持到三级。无论你采用静态的菜单还是动态的，菜单的数据格式都必须是一段合法的 JSON，且必须符合以下规范：</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: 0 //状态码，key 名可以通过 config.js 去重新配置
+  ,&quot;msg&quot;: &quot;&quot; //提示信息
+  ,&quot;data&quot;: [{ //菜单数据，key名可以通过 config.js 去重新配置
+    &quot;name&quot;: &quot;component&quot; //一级菜单名称（与视图的文件夹名称和路由路径对应）
+    ,&quot;title&quot;: &quot;组件&quot; //一级菜单标题
+    ,&quot;icon&quot;: &quot;layui-icon-component&quot; //一级菜单图标样式
+    ,&quot;jump&quot;: '' //自定义一级菜单路由地址，默认按照 name 解析。一旦设置，将优先按照 jump 设定的路由跳转
+    ,&quot;spread&quot;: true //是否默认展子菜单（1.0.0-beta9 新增）
+    ,&quot;list&quot;: [{ //二级菜单
+      &quot;name&quot;: &quot;grid&quot; //二级菜单名称（与视图的文件夹名称和路由路径对应）
+      ,&quot;title&quot;: &quot;栅格&quot; //二级菜单标题
+      ,&quot;jump&quot;: ''  //自定义二级菜单路由地址
+      ,&quot;spread&quot;: true //是否默认展子菜单（1.0.0-beta9 新增）
+      ,&quot;list&quot;: [{ //三级菜单
+        &quot;name&quot;: &quot;list&quot; //三级菜单名（与视图中最终的文件名和路由对应），如：component/grid/list
+        ,&quot;title&quot;: &quot;等比例列表排列&quot; //三级菜单标题
+      },{
+        &quot;name&quot;: &quot;mobile&quot;
+        ,&quot;title&quot;: &quot;按移动端排列&quot;
+      }
+    }]
+}
+</code></pre>
+<blockquote>
+<p>TIPS：实际运用时，切勿出现上述中的注释，否则将不是合法的 JSON ，会出现解析错误。</p>
+</blockquote>
+<p>需要注意的是以下几点：</p>
+<ol>
+<li>
+<p>当任意级菜单有子菜单，点击该菜单都只是收缩和展开操作，而并不会跳转，只有没有子菜单的菜单才被允许跳转。</p>
+</li>
+<li>
+<p>菜单的路由地址默认是按照菜单层级的 name 来设定的。</p>
+<p>我们假设一级菜单的 name 是：a，二级菜单的是：b，三级菜单的 name 是 c，那么：</p>
+<ul>
+<li>三级菜单最终的路由地址就是：<code>/a/b/c</code></li>
+<li>如果二级菜单没有三级菜单，那么二级菜单就是最终路由，地址就是：<code>/a/b/</code></li>
+<li>如果一级菜单没有二级菜单，那么一级菜单就是最终路由，地址就是：<code>/a/</code></li>
+</ul>
+</li>
+<li>
+<p>但如果你设置了 参数 jump，那么就会优先读取 jump 设定的路由地址，如：<code>&quot;jump&quot;: &quot;/user/set&quot;</code></p>
+</li>
+</ol>
 
             </div>
             
