@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:12:02.872Z</updated>
+    <updated>2020-10-30T05:14:41.985Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -323,15 +323,15 @@ layui.use('console', layui.factory('console'));
 <p>layuiAdmin 的视图是一个“动静结合”的载体，除了常规的静态模板，你当然还可以在视图中存放动态模板，因此它可谓是焦点中的焦点。</p>
 <h3 id="定义模板"><strong>定义模板</strong></h3>
 <p>在视图文件中，通过下述规则定义模板：</p>
-<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
-  &lt;!-- 动态模板碎片 --&gt;
-&lt;/script&gt;
+<pre><code class="language-html">    &lt;script type=&quot;text/html&quot; template&gt;
+    &lt;!-- 动态模板碎片 --&gt;
+    &lt;/script&gt;
 </code></pre>
 <p>下面是一个简单的例子：</p>
-<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
-  当前 layuiAdmin 的版本是：{{ layui.admin.v }}
-  路由地址：{{ layui.router().href }}
-&lt;/script&gt;
+<pre><code class="language-html">    &lt;script type=&quot;text/html&quot; template&gt;
+    当前 layuiAdmin 的版本是：{{ layui.admin.v }}
+    路由地址：{{ layui.router().href }}
+    &lt;/script&gt;
 </code></pre>
 <p>在不对动态模板设定数据接口地址的情况下，它能读取到全局对象。但更多时候，一个动态模板应该是对应一个接口地址，如下所示：</p>
 <p>模板中的 <code>d</code> 对应的是你接口返回的 json 转化后的一维对象，如：</p>
