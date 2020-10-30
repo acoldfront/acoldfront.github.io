@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:02:29.747Z</updated>
+    <updated>2020-10-30T05:05:38.311Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -219,15 +219,7 @@ admin.req({
   }
 });
 </code></pre>
-<pre><code class="language-javascript">&lt;!--  在动态模板中获取路由参数 --&gt;
-&lt;script type=&quot;text/html&quot; template lay-url=&quot;./xxx/?uid={{ layui.router().search.uid }}&quot;&gt;
-  …
-&lt;/script&gt;
-&lt;!-- 或 --&gt;
-&lt;script type=&quot;text/html&quot; template lay-url=&quot;./xxx/&quot; lay-data=&quot;{uid:'{{ layui.router().search.uid }}'}&quot;&gt;
-  …
-&lt;/script&gt;
-</code></pre>
+<p>这里是代码</p>
 ]]></content>
     </entry>
     <entry>
