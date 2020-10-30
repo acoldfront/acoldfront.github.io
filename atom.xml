@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:19:37.768Z</updated>
+    <updated>2020-10-30T05:22:52.550Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -168,16 +168,21 @@
 </blockquote>
 <p>需要注意的是以下几点：</p>
 <ol>
-<li>当任意级菜单有子菜单，点击该菜单都只是收缩和展开操作，而并不会跳转，只有没有子菜单的菜单才被允许跳转。</li>
-<li>菜单的路由地址默认是按照菜单层级的 name 来设定的。<br>
-我们假设一级菜单的 name 是：a，二级菜单的是：b，三级菜单的 name 是 c，那么：
+<li>
+<p>当任意级菜单有子菜单，点击该菜单都只是收缩和展开操作，而并不会跳转，只有没有子菜单的菜单才被允许跳转。</p>
+</li>
+<li>
+<p>菜单的路由地址默认是按照菜单层级的 name 来设定的。</p>
+<p>我们假设一级菜单的 name 是：a，二级菜单的是：b，三级菜单的 name 是 c，那么：</p>
 <ul>
 <li>三级菜单最终的路由地址就是：<code>/a/b/c</code></li>
 <li>如果二级菜单没有三级菜单，那么二级菜单就是最终路由，地址就是：<code>/a/b/</code></li>
 <li>如果一级菜单没有二级菜单，那么一级菜单就是最终路由，地址就是：<code>/a/</code></li>
 </ul>
 </li>
-<li>但如果你设置了 参数 jump，那么就会优先读取 jump 设定的路由地址，如：<code>&quot;jump&quot;: &quot;/user/set&quot;</code></li>
+<li>
+<p>但如果你设置了 参数 jump，那么就会优先读取 jump 设定的路由地址，如：<code>&quot;jump&quot;: &quot;/user/set&quot;</code></p>
+</li>
 </ol>
 <h1 id="路由">路由</h1>
 <hr>
@@ -219,7 +224,16 @@ admin.req({
   }
 });
 </code></pre>
-<p>这里是代码</p>
+<pre><code class="language-html">&lt;!--  在动态模板中获取路由参数 --&gt;
+&lt;script type=&quot;text/html&quot; template lay-url=&quot;./xxx/?uid={{ layui.router().search.uid }}&quot;&gt;
+  …
+&lt;/script&gt;
+
+&lt;!-- 或 --&gt;
+&lt;script type=&quot;text/html&quot; template lay-url=&quot;./xxx/&quot; lay-data=&quot;{uid:'{{ layui.router().search.uid }}'}&quot;&gt;
+  …
+&lt;/script&gt;
+</code></pre>
 <h3 id="路由跳转"><strong>路由跳转</strong></h3>
 <p>通过上文的路由规则，你已经大致清楚了 layuiAdmin 路由的基本原理和解析方法。那么如何完成路由的跳转呢？</p>
 <ol>
@@ -323,9 +337,25 @@ layui.use('console', layui.factory('console'));
 <p>layuiAdmin 的视图是一个“动静结合”的载体，除了常规的静态模板，你当然还可以在视图中存放动态模板，因此它可谓是焦点中的焦点。</p>
 <h3 id="定义模板"><strong>定义模板</strong></h3>
 <p>在视图文件中，通过下述规则定义模板：</p>
-<pre><code class="language-html">    &lt;script type=&quot;text/html&quot; template&gt;
-    &lt;!-- 动态模板碎片 --&gt;
-    &lt;/script&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
+  &lt;!-- 动态模板碎片 --&gt;
+&lt;/script&gt;
+</code></pre>
+<p>下面是一个简单的例子：</p>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
+  当前 layuiAdmin 的版本是：{{ layui.admin.v }}
+  路由地址：{{ layui.router().href }}
+&lt;/script&gt;
+</code></pre>
+<p>在不对动态模板设定数据接口地址的情况下，它能读取到全局对象。但更多时候，一个动态模板应该是对应一个接口地址，如下所示：</p>
+<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot;&gt;
+    我叫：{{ d.data.username }}
+    {{# if(d.data.sex === '男'){ }}
+        公的
+    {{# } else { }}
+        母的
+    {{# } }}
+&lt;/script&gt;
 </code></pre>
 <p>模板中的 <code>d</code> 对应的是你接口返回的 json 转化后的一维对象，如：</p>
 <pre><code class="language-json">{
