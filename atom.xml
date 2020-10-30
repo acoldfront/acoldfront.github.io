@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:08:19.671Z</updated>
+    <updated>2020-10-30T05:10:04.197Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -318,6 +318,44 @@ layui.use('console', layui.factory('console'));
 &lt;/script&gt;
 </code></pre>
 <p>当视图被渲染后，layui.factory 返回的函数也会被执行，从而保证在不重复加载 JS 模块文件的前提下，保证脚本能重复执行。</p>
+<h1 id="动态模板"><strong>动态模板</strong></h1>
+<hr>
+<p>layuiAdmin 的视图是一个“动静结合”的载体，除了常规的静态模板，你当然还可以在视图中存放动态模板，因此它可谓是焦点中的焦点。</p>
+<h3 id="定义模板"><strong>定义模板</strong></h3>
+<p>在视图文件中，通过下述规则定义模板：</p>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
+  &lt;!-- 动态模板碎片 --&gt;
+&lt;/script&gt;
+</code></pre>
+<p>下面是一个简单的例子：</p>
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template&gt;
+  当前 layuiAdmin 的版本是：{{ layui.admin.v }}
+  路由地址：{{ layui.router().href }}
+&lt;/script&gt;
+</code></pre>
+<p>在不对动态模板设定数据接口地址的情况下，它能读取到全局对象。但更多时候，一个动态模板应该是对应一个接口地址，如下所示：</p>
+<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot;&gt;
+    我叫：{{ d.data.username }}
+    {{# if(d.data.sex === '男'){ }}
+        公的
+    {{# } else { }}
+        母的
+    {{# } }}
+&lt;/script&gt;
+</code></pre>
+<p>模板中的 <code>d</code> 对应的是你接口返回的 json 转化后的一维对象，如：</p>
+<pre><code class="language-json">{
+  &quot;code&quot;: 0
+  ,&quot;data&quot;: {
+    &quot;username&quot;: &quot;贤心&quot;
+    ,&quot;sex&quot;: &quot;男&quot;
+  }
+}
+</code></pre>
+<p>那么，上述动态模板最终输出的结果就是：</p>
+<pre><code>我叫：贤心
+公的
+</code></pre>
 ]]></content>
     </entry>
     <entry>
