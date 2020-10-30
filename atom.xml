@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T03:00:21.042Z</updated>
+    <updated>2020-10-30T03:09:56.279Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -627,7 +627,7 @@ layui.use('console', layui.factory('console'));
 &lt;/script&gt;
 </code></pre>
 <p>在不对动态模板设定数据接口地址的情况下，它能读取到全局对象。但更多时候，一个动态模板应该是对应一个接口地址，如下所示：</p>
-<pre><code class="language-javascript">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot;&gt;
+<pre><code class="language-html">&lt;script type=&quot;text/html&quot; template lay-url=&quot;接口地址&quot;&gt;
     我叫：{{ d.data.username }}
     {{# if(d.data.sex === '男'){ }}
         公的
