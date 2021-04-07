@@ -2,14 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2020-10-30T05:28:10.384Z</updated>
+    <updated>2021-04-07T06:44:20.389Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
     <subtitle>静坐长思己过，闲谈莫论人非</subtitle>
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Crazer的自留地</rights>
+    <rights>All rights reserved 2021, Crazer的自留地</rights>
+    <entry>
+        <title type="html"><![CDATA[2021随笔 CS]]></title>
+        <id>https://acoldfront.github.io/post/2021-sui-bi-cs/</id>
+        <link href="https://acoldfront.github.io/post/2021-sui-bi-cs/">
+        </link>
+        <updated>2021-04-07T05:53:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>4月小雨，午睡，初醒，欲与研友结伴图书馆，未果！兴来，写此。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>4月小雨，午睡，初醒，欲与研友结伴图书馆，未果！兴来，写此。</p>
+<!-- more -->
+<h2 id="引言">引言</h2>
+<blockquote>
+<p>不知不觉 ，2021已经进入4月份，距上次奋力一搏(专升本)已经过去253天。。。然而我仍需拼搏。。。</p>
+</blockquote>
+<h2 id="又遇小雨">又遇小雨</h2>
+<blockquote>
+<p>4月是一个多雨的季节，4月还是一个充满生机和希望的季节。那么四月到底是一个怎样的季节呢？</p>
+</blockquote>
+<p>正所谓不同高度看风景又不同境遇，彼时想着专升本，此时想着考研。或许人口中所谓的“高度”吧。四月恰是当初专升本转折时间点，而今又准备考研CS，又到了四月这个季节，似乎一入四月雨就来的多了一些，路上、图书馆到处都是踏雨结伴而行的人。。。<br>
+<img src="https://acoldfront.github.io//post-images/1617775842626.png" alt="" loading="lazy"></p>
+<h2 id="疫情与机遇">疫情与机遇</h2>
+<p>2019年12月疫情爆发，新冠肺炎席卷武汉，身为在武汉上学的我，因此被迫无法返校半年，这半年经历太多，疫情爆发---可控、专升本英语统考、线上实习。考2月初准备专升本，3月开始正式准备，7月专升本结束，8月出结果---录取，9月新学校开学，看似因为疫情缺少了半年的专科校园时光，又因引起扩招上岸专升本，一切似乎都是那么合情合理。现在看着窗外的小雨，我渐入沉思。。。</p>
+<p>2021年4月窗外小雨还在下，小雨滴滴答答地打在上课人的雨伞上、奔跑人的脸上。。。看完这场小雨、撸完小柒（室友的猫），要开始努力了。<br>
+换了新的学校，有了新的目标，买了新的书，就要迎接新的挑战了！<strong>高数、英语、数据结构/操作系统</strong></p>
+<h2 id="cs不只是一场挑战">CS不只是一场挑战</h2>
+<p>今年是考研内卷的一年，435分跨考复旦的大佬没有考上，380分材料哥科软无书可读，复试线399的浙大，388的科软。。。内卷年年有，今年高出新高度！只希望自己够努力吧！<br>
+<img src="https://acoldfront.github.io//post-images/1617777611740.png" alt="" loading="lazy"><br>
+这次随笔写到这里，该结束了，看雨、撸猫、该看书、做题了。</p>
+<blockquote>
+<p>四月，初雨，写此。</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[BatteryInfoView v1.23 汉化版]]></title>
         <id>https://acoldfront.github.io/post/batteryinfoview/</id>
@@ -503,82 +536,6 @@ XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结
 <h3 id="下载地址">下载地址</h3>
 <hr>
 <p><a href="https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w">链接: https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w 提取码: b4nd</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言编程实例：25、矩阵转置]]></title>
-        <id>https://acoldfront.github.io/post/c-example25/</id>
-        <link href="https://acoldfront.github.io/post/c-example25/">
-        </link>
-        <updated>2020-05-08T16:51:24.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
-</blockquote>
-<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
-</blockquote>
-<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
-<!-- more -->
-<p><strong>算法思想：</strong></p>
-<p>由数学知识可知，将第一个矩阵的所有元素绕着一条从第一行第一列出发的右下角 45° 的射线做镜面反转，即可得到该矩阵的转置。</p>
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int i, j, i1, j1, a[101][101], b[101][101];
-    printf(&quot;please input the number of rows(&lt;=100)\n&quot;);
-    scanf(&quot;%d&quot;, &amp;i1);
-    printf(&quot;please input the number of columns(&lt;=100)\n&quot;);
-    scanf(&quot;%d&quot;, &amp;j1);
-    printf(&quot;please input the element\n&quot;);
-    for (i = 0; i &lt; i1; i++)
-        for (j = 0; j &lt; j1; j++)
-            scanf(&quot;%d&quot;, &amp;a[i][j]);
-    printf(&quot;array a：\n&quot;);
-    for (i = 0; i &lt; i1; i++) {
-        for (j = 0; j &lt; j1; j++)
-            printf(&quot;\t%d&quot;, a[i][j]);
-        printf(&quot;\n&quot;);
-    }
-    for (i = 0; i &lt; i1; i++)
-        for (j = 0; j &lt; j1; j++)
-            b[j][i] = a[i][j];
-    printf(&quot;array b：\n&quot;);
-    for (i = 0; i &lt; j1; i++) {
-        for (j = 0; j &lt; i1; j++)
-            printf(&quot;\t%d&quot;, b[i][j]);
-        printf(&quot;\n&quot;);
-    }
-
-    return 0;
-}
-
-</code></pre>
-<p>输出结果：</p>
-<pre><code>please input the number of rows(&lt;=100)
-3
-please input the number of columns(&lt;=100)
-4
-please input the element
-1 2 3 4 5 6 7 8 9 10 11 12
-array a：
-        1       2       3       4
-        5       6       7       8
-        9       10      11      12
-array b：
-        1       5       9
-        2       6       10
-        3       7       11
-        4       8       12
-
-</code></pre>
-<h3 id="技术要点">技术要点：</h3>
-<p>在本实例中，主要运用了二维数组，二维数组的使用说明如下：</p>
-<p>① 二维数组的第一个下标表示行数，第二个下标表示列数，每个下标都是从 0 开始；</p>
-<p>② 类型说明符、数组名和常量表达式的意义与一维数组相同；</p>
-<p>③ 二维数组的元素在内存中是“按行存放”，即在内存中先顺序存放第一行的元素，再存放第二行的元素，以此类推；</p>
-<p>④ 可以把二维数组看作一种特殊的一维数组，其特殊之处在于它的每一个元素又是一维数组。</p>
 ]]></content>
     </entry>
 </feed>
