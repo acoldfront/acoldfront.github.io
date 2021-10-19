@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2021-04-07T06:53:43.272Z</updated>
+    <updated>2021-10-19T01:49:14.206Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -44,498 +44,544 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[BatteryInfoView v1.23 汉化版]]></title>
-        <id>https://acoldfront.github.io/post/batteryinfoview/</id>
-        <link href="https://acoldfront.github.io/post/batteryinfoview/">
+        <title type="html"><![CDATA[C语言编程实例：25、矩阵转置]]></title>
+        <id>https://acoldfront.github.io/post/c-example25/</id>
+        <link href="https://acoldfront.github.io/post/c-example25/">
         </link>
-        <updated>2020-10-07T04:44:33.000Z</updated>
-        <summary type="html"><![CDATA[<p>BatteryInfoView 是一种小型实用程序，用于笔记本电脑和上网本计算机，可显示电池的当前状态和信息。显示的电池信息包括电池名称、制造名称、序列号、制造日期、电源状态（充电/放电）、当前电池容量、满电容量、电压、充电/放电速率等...<br>
-BatteryInfoView 还提供一个日志窗口，该窗口每 30 秒或您选择的任何其他时间间隔添加一条包含电池状态的新日志行。</p>
+        <updated>2020-05-08T16:51:24.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
+</blockquote>
+<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>BatteryInfoView 是一种小型实用程序，用于笔记本电脑和上网本计算机，可显示电池的当前状态和信息。显示的电池信息包括电池名称、制造名称、序列号、制造日期、电源状态（充电/放电）、当前电池容量、满电容量、电压、充电/放电速率等...<br>
-BatteryInfoView 还提供一个日志窗口，该窗口每 30 秒或您选择的任何其他时间间隔添加一条包含电池状态的新日志行。</p>
+        <content type="html"><![CDATA[<blockquote>
+<p>本实例是利用数组解决线性代数中的矩阵转置问题。</p>
+</blockquote>
+<p>设有一矩阵为 m×n 阶（即 m 行 n 列），第 i 行 j 列的元素是 a(i,j)，需要将该矩阵转置为 n×m 阶的矩阵，使其中元素满足 b(j,i)=a(i,j)。</p>
 <!-- more -->
-<p>系统要求和限制<br>
-此实用程序适用于任何版本的 Windows，从 windows 2000 开始，一至 Windows 10。<br>
-某些信息（如序列号和制造日期）仅在电池提供此信息时才显示。<br>
-<img src="https://acoldfront.github.io//post-images/1602046152348.png" alt="" loading="lazy"></p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>Crazer汉化</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://wws.lanzous.com/i7ktEh8kplg">链接: https://wws.lanzous.com/i7ktEh8kplg</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Win10数字许可激活工具 Windows 10 Digital Activation Program 1.3.7 Final 中文版]]></title>
-        <id>https://acoldfront.github.io/post/win10DigitalActivation/</id>
-        <link href="https://acoldfront.github.io/post/win10DigitalActivation/">
-        </link>
-        <updated>2020-09-19T10:36:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>Windows 10 数字许可证旗舰版是一款简单易用的 Windows 10 永久激活工具，可使用数字许可证永久激活 Windows 10，在尝试激活系统时不需要使用激活密钥。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Windows 10 数字许可证旗舰版是一款简单易用的 Windows 10 永久激活工具，可使用数字许可证永久激活 Windows 10，在尝试激活系统时不需要使用激活密钥。</p>
-<!-- more -->
-<p>W10 Digital Activation 是由俄国大佬 Ratiborus 开发的一款用于 Windows 10 系统的数字权利激活工具。Ratiborus 其实针对微软的产品开发了不少激活类工具，比如 KMSAuto Net，AAct，Helper XP，KMSAuto Helper 等等，可以激活 XP、7、8、10 以及 Office 等等。在我们最常见的激活工具中多以 KMS 激活居多，但是大多数都是半年（180 天）激活，到期后还要再执行激活。而今天分享的 W10 Digital Activation 数字激活权利工具解决了 KMS 180 天的激活周期。</p>
-<figure data-type="image" tabindex="1"><img src="https://acoldfront.github.io//post-images/1600512365016.png" alt="" loading="lazy"></figure>
-<h2 id="windows-10-数字权利激活和非数字权利激活的区别">Windows 10 数字权利激活和非数字权利激活的区别：</h2>
-<hr>
-<p>“数字权利激活”：在保证不更换硬件的情况下激活会一直有效。不要更换电脑主板等相关硬件信息。<br>
-“非数字权利激活”：密钥激活。这个密钥是放在你 Windows 系统里的是有次数限制，每天重新安装都是需要输入密钥的。只要换了系统就需要重新输入。</p>
-<p>根据获取 Windows 10 副本的方式，激活将使用“数字权利”或 25 个字符的产品密钥（即“非数字权利激活”）。<br>
-“数字权利”：在不更换硬件的情况下一直有效，无论安装的是“正式版”还是“预览版”。数字权利会记录您的设备硬件信息，在设备没有更换主要硬件（例如主板）的情况下会连接微软服务器自动激活，不再需要手动输入产品密钥。<br>
-“非数字权利激活”：即密钥激活。这个密钥是放在你 Window 系统里的是有次数限制，每天重新安装都是需要输入密钥的。</p>
-<p>区别在于：“密钥激活”只要换了系统就需要重新输入密钥。“数字激活”只要你的电脑配置没变。它就会自动识别。</p>
-<h2 id="kms-激活不是激活永久">KMS 激活不是激活永久</h2>
-<hr>
-<p>你可以使用以下方法查看：<br>
-1、同时按 Win+R 键打开“运行”，输入 slmgr.vbs -xpr 回车。<br>
-2、同时按 Win+R 键打开“运行”，输入 slmgr.vbs -dlv 回车，里面没有日期限止提示，就是永久激活。<br>
-3、同时按 Win+R 键打开“运行”，输入 winver 回车，里面没有日期限止提示，就是永久激活。<br>
-注意：第 1 和 2 方法的 vbs 和 – 之间有一个空格。</p>
-<h2 id="下载地址">下载地址</h2>
-<hr>
-<p>注意，本工具容易报毒<br>
-<a href="https://wws.lanzous.com/isuvigrl2ab">链接：https://wws.lanzous.com/isuvigrl2ab</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[HEU KMS Activator(win+office激活) 19.6.3]]></title>
-        <id>https://acoldfront.github.io/post/heu-kms/</id>
-        <link href="https://acoldfront.github.io/post/heu-kms/">
-        </link>
-        <updated>2020-09-19T10:29:24.000Z</updated>
-        <summary type="html"><![CDATA[<p>HEU KMS Activator适用于 Windows、Office 及 VL 版本，无需联网即可一键激活，离线全自动激活软件。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>HEU KMS Activator适用于 Windows、Office 及 VL 版本，无需联网即可一键激活，离线全自动激活软件。</p>
-<!-- more -->
-<p>它是基于MDL论坛的KMS 服务端模拟环境“KMS Server Emulator”而制作的一款简洁高效的 KMS 激活工具。KMS服务是微软公司对 Windows 以及 Office 等的批量授权服务，大家可以利用KMS来激活局域网中的产品。并且这款工具是利用在系统内部搭建 KMS 服务器，因此无论是 Windows 还是 Office 都可轻易进行激活。想要无需花一分钱就能轻松地激活使用Windows和office嘛，用小编这款软件就对了，它是单一可执行的绿色工具，使用完毕后对系统无任何残留，可以直接删除。保持以往的风格，关键是软件不会夹带其他软件下载，非常的安全，值得注意的是本款软件可能会出现报毒情况，最好先关闭电脑安全保护再运行软件。</p>
-<figure data-type="image" tabindex="1"><img src="https://acoldfront.github.io//post-images/1600511650590.png" alt="" loading="lazy"></figure>
-<h2 id="校验信息">校验信息</h2>
-<hr>
-<p>文件大小：5059092 字节<br>
-MD5 ：606E3AF0BE7ECDEC1338877E2DF5FC3F<br>
-SHA1 ：4673C4BD6A48A15D89B0BDE42604459472B6170A<br>
-CRC32 ：88A89A26</p>
-<h2 id="下载地址">下载地址</h2>
-<hr>
-<p>注意，本工具容易报毒<br>
-<a href="https://wws.lanzous.com/iB9itgrkbed">链接：https://wws.lanzous.com/iB9itgrkbed</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Windows 10 企业版2019 LTSC 2019 Build 17763.1457]]></title>
-        <id>https://acoldfront.github.io/post/windows-10Enterprise/</id>
-        <link href="https://acoldfront.github.io/post/windows-10Enterprise/">
-        </link>
-        <updated>2020-09-19T10:20:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>Windows 10 企业版 2019 长期服务版于2018年11月初正式推出，系统版本为1809，OS内部版为17763。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Windows 10 企业版 2019 长期服务版于2018年11月初正式推出，系统版本为1809，OS内部版为17763。</p>
-<!-- more -->
-<p>Windows 10 Enterprise LTSC相对Windows 10企业版来说，不会获得功能更新和改善，只有安全更新，提供了升级控制选项。LTSC版本可以称为官方Win10精简版。如果你需要全新安装，或者想收藏分享，本页面采集刷选整理出了微软官方原版的下载链接，完全可靠。另外附上Win10 LTSC2019永久激活工具。</p>
-<h3 id="新版变化">新版变化</h3>
-<hr>
-<p>Windows 10 版本信息<br>
-docs.microsoft.com/zh-cn/windows/release-information</p>
-<p>Windows产品的更新策略，通常每月第二个周二为惯例发布产品更新。</p>
-<p>2020.09.08 Windows 10 LTSC, Version 1809 with Update 17763.1457<br>
-support.microsoft.com/zh-cn/help/4570333</p>
-<p>Windows 10 企业版 2019 LTSC 新增功能<br>
-docs.microsoft.com/zh-cn/windows/whats-new/ltsc/whats-new-windows-10-2019</p>
-<h3 id="版本介绍">版本介绍</h3>
-<hr>
-<p>Windows 10 Enterprise 2019 LTSC，提供长期支持至2029年01月09日，Win10企业版2019长期服务版，相当于就是官方Win10精简版，目前不支持数字权利激活。它没有应用商店、Edge浏览器、OneDriver、微软小娜，有更新控制选项，Windows 更新可选是否下载和安装补丁，其它版本相比长期服务版就没有。</p>
-<h3 id="关于激活">关于激活</h3>
-<hr>
-<p>Windows 10 Enterprise 2019 LTSC 在线永久激活密钥<br>
-Product Key :6NVRR-HFW8Y-R9YJV-QTFFD-PYWR2</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<h2 id="更新补丁">更新补丁</h2>
-<p><strong>Windows 10 LTSC 1809 Update 17763.1457 官方累积更新补丁 [2020/09/08]</strong><br>
-Windows 10, Windows 10 LTSB Version 1809 版本的2020年9月累积更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570333">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570333</a></p>
-<p>Windows 10, Windows 10 LTSB Version 1809 的2020年9月服务堆栈更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570332">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4570332</a></p>
-<p>Windows 10 Version 1809 的.NET Framework 3.5/4.8的20年9月累积更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4576483">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4576483</a></p>
-<p>Adobe Flash Player for Windows 10 所有版本的2020年6月安全更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4561600">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4561600</a></p>
-<h2 id="完整镜像">完整镜像</h2>
-<p><strong>Windows 10企业版2019长期服务版官方简体中文正式版ISO镜像 [2019/03/15]</strong><br>
-MVS (MSDN) Windows 10 Enterprise 2019 LTSC v1809 (OS build 17763.316)</p>
-<p>//世纪互联分流地址不限速高速下载（备用地址还可将链接中1改4或16）</p>
-<pre><code>https://pan.tangmn.cn/show/1/MSDN/cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso
+<p><strong>算法思想：</strong></p>
+<p>由数学知识可知，将第一个矩阵的所有元素绕着一条从第一行第一列出发的右下角 45° 的射线做镜面反转，即可得到该矩阵的转置。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
 
-https://pan.tangmn.cn/show/1/MSDN/cn_windows_10_enterprise_ltsc_2019_x86_dvd_1814dbab.iso
+int main(void) {
+    int i, j, i1, j1, a[101][101], b[101][101];
+    printf(&quot;please input the number of rows(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;i1);
+    printf(&quot;please input the number of columns(&lt;=100)\n&quot;);
+    scanf(&quot;%d&quot;, &amp;j1);
+    printf(&quot;please input the element\n&quot;);
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            scanf(&quot;%d&quot;, &amp;a[i][j]);
+    printf(&quot;array a：\n&quot;);
+    for (i = 0; i &lt; i1; i++) {
+        for (j = 0; j &lt; j1; j++)
+            printf(&quot;\t%d&quot;, a[i][j]);
+        printf(&quot;\n&quot;);
+    }
+    for (i = 0; i &lt; i1; i++)
+        for (j = 0; j &lt; j1; j++)
+            b[j][i] = a[i][j];
+    printf(&quot;array b：\n&quot;);
+    for (i = 0; i &lt; j1; i++) {
+        for (j = 0; j &lt; i1; j++)
+            printf(&quot;\t%d&quot;, b[i][j]);
+        printf(&quot;\n&quot;);
+    }
+
+    return 0;
+}
+
 </code></pre>
-<h2 id="ed2k">ed2k</h2>
-<p>Windows 10 Enterprise 2019 LTSC (x64) – DVD (Chinese-Simplified)<br>
-文件名：cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso<br>
-SHA-1：24B59706D5EDED392423936C82BA5A83596B50CC<br>
-发布时间：2019-03-15  文件大小：4.17GB</p>
-<pre><code>ed2k://|file|cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso|4478906368|E7C526499308841A4A6D116C857DB669|/
+<p>输出结果：</p>
+<pre><code>please input the number of rows(&lt;=100)
+3
+please input the number of columns(&lt;=100)
+4
+please input the element
+1 2 3 4 5 6 7 8 9 10 11 12
+array a：
+        1       2       3       4
+        5       6       7       8
+        9       10      11      12
+array b：
+        1       5       9
+        2       6       10
+        3       7       11
+        4       8       12
+
 </code></pre>
-<p>Windows 10 Enterprise 2019 LTSC (x86) – DVD (Chinese-Simplified)<br>
-文件名：cn_windows_10_enterprise_ltsc_2019_x86_dvd_1814dbab.iso<br>
-SHA-1：BA2169EDD94F123211CD4AACA68352F1AB6195D9<br>
-发布时间：2019-03-15  文件大小：2.98GB</p>
-<pre><code>ed2k://|file|cn_windows_10_enterprise_ltsc_2019_x86_dvd_1814dbab.iso|3196803072|2D39C54A2E99BAC308191C74A15B3237|/
+<h3 id="技术要点">技术要点：</h3>
+<p>在本实例中，主要运用了二维数组，二维数组的使用说明如下：</p>
+<p>① 二维数组的第一个下标表示行数，第二个下标表示列数，每个下标都是从 0 开始；</p>
+<p>② 类型说明符、数组名和常量表达式的意义与一维数组相同；</p>
+<p>③ 二维数组的元素在内存中是“按行存放”，即在内存中先顺序存放第一行的元素，再存放第二行的元素，以此类推；</p>
+<p>④ 可以把二维数组看作一种特殊的一维数组，其特殊之处在于它的每一个元素又是一维数组。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：24、获取矩阵的最大值及其下标]]></title>
+        <id>https://acoldfront.github.io/post/c-example24/</id>
+        <link href="https://acoldfront.github.io/post/c-example24/">
+        </link>
+        <updated>2020-05-08T16:43:42.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>本实例要求使用二维数组将一个 3×4 的矩阵中所有元素的最大值及其下标获取，通过该程序，掌握二维数组的引用知识。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>本实例要求使用二维数组将一个 3×4 的矩阵中所有元素的最大值及其下标获取，通过该程序，掌握二维数组的引用知识。</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong></p>
+<p>针对本实例，有两个步骤需要编写程序完成：第一个步骤是求矩阵元素的最大值，可以通过相邻的元素大小比较，最终获取最大值；第二个步骤是针对获取到的元素最大值，求该元素的下标。</p>
+<p>二维数组元素的一般表示方法为：“数组名[下标][下标]”。对于二维数组，下标变量和数组说明在表示形式上是一样的，比如在本例中，有语句：int a[3][4]; a[3][4]=2/3;</p>
+<p>上述语句中“a[3][4]”是完全不同的两个概念，第一个语句中的“a[3][4]”用来定义一个数组，而第二个语句中的“a[3][4]”是一个双下标变量。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int a[3][4], i, j, max, max_i = 0, max_j = 0;
+    for (i = 0; i &lt; 3; ++i) {
+        for (j = 0; j &lt; 4; ++j) {
+            scanf(&quot;%d&quot;,&amp;a[i][j]);
+        }
+    }
+    max=a[0][0];
+    for (i = 0; i &lt; 3; ++i) {
+        for (j = 0; j &lt; 4; ++j) {
+            if(a[i][j]&gt;max){
+                max=a[i][j];
+                max_i=i;
+                max_j=j;
+            }
+        }
+    }
+    printf(&quot;max=a[%d][%d]=%d\n&quot;,max_i,max_j,max);
+
+    return 0;
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>1 2 3 4 5 6 7 99 9 10 11 12
+max=a[1][3]=99
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>本实训的程序主要完成了两个功能：一是通过一个二次循环输入该二维数组的所有元素；二是将输入元素按照相邻关系进行比较，最终得到最大值和这个最大值的下标。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：23、谁家孩子跑得最慢]]></title>
+        <id>https://acoldfront.github.io/post/c-example23/</id>
+        <link href="https://acoldfront.github.io/post/c-example23/">
+        </link>
+        <updated>2020-05-08T16:39:54.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>张、王、李三家各有三个小孩。一天，三家的九个孩子在一起比赛短跑，规定不分年龄大小，跑第一得 9 分，跑第二得 8 分，依次类推。比赛结果显示各家的总分相同，且这些孩子没有同时到达终点的，也没有一家的两个或三个孩子获得相连的名次。已知获第一名的是李家的孩子，获第二名的是王家的孩子。获得最后一名的是谁家的孩子？</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>张、王、李三家各有三个小孩。一天，三家的九个孩子在一起比赛短跑，规定不分年龄大小，跑第一得 9 分，跑第二得 8 分，依次类推。比赛结果显示各家的总分相同，且这些孩子没有同时到达终点的，也没有一家的两个或三个孩子获得相连的名次。已知获第一名的是李家的孩子，获第二名的是王家的孩子。获得最后一名的是谁家的孩子？</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+按题目的条件，共有 1+2+3+…+9=45 分，每家孩子的得分应为 15 分。根据题意可知，获第一名的是李家的孩子，获第二名的是王家的孩子，则可推出：获第三名的一定是张家的孩子。由“这些孩子没有同时到达终点的”可知：名次不能并列，由“没有一家的两个或三个孩子获得相连的名次”可知：第四名不能是张家的孩子。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int score[4][4];
+
+int main(void) {
+    int i, j, k, who;
+    score[1][1] = 7;
+    score[2][1] = 8;
+    score[3][1] = 9;
+    for (i = 4; i &lt; 6; i++)
+        for (j = 4; j &lt; 7; j++)
+            for (k = 4; i != j &amp;&amp; k &lt; 7; k++)
+                if (k != i &amp;&amp; k != j &amp;&amp; 15 - i - score[1][1] != 15 - j - score[2][1]
+                    &amp;&amp; 15 - i - score[1][1] != 15 - k - score[3][1]
+                    &amp;&amp; 15 - j - score[2][1] != 15 - k - score[3][1]) {
+                    score[1][2] = i;
+                    score[1][3] = 15 - i - 7;
+                    score[2][2] = j;
+                    score[2][3] = 15 - j - 8;
+                    score[3][2] = k;
+                    score[3][3] = 15 - k - 9;
+                }
+    for (who = 0, i = 1; i &lt;= 3; i++, printf(&quot;\n&quot;))
+        for (j = 1; j &lt;= 3; j++) {
+            printf(&quot;%d&quot;, score[i][j]);
+            if (score[i][j] == 1)
+                who = i;
+        }
+    if (who == 1)
+        printf(&quot;最后一名是张家孩子\n&quot;);
+    else if (who == 2)
+        printf(&quot;最后一名是王家孩子\n&quot;);
+    else
+        printf(&quot;最后一名是李家孩子\n&quot;);
+    return 0;
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>753
+861
+942
+最后一名是王家孩子
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>本实例主要运用了二维数组的引用和循环的嵌套。二维数组元素的引用形式为“数组名[下标1][下标2]”。例如“a[1][2]”其下标是可以大于或者等于 0 的整型常量、整型变量或者整型表达式。</p>
+<p>引用二维数组元素时，下标不要越界，也就是说下标值需要从 0 开始，但不要超过行、列的范围。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：22、狼追兔子]]></title>
+        <id>https://acoldfront.github.io/post/c-example22/</id>
+        <link href="https://acoldfront.github.io/post/c-example22/">
+        </link>
+        <updated>2020-05-08T16:37:13.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>一只兔子躲进了 10 个环形分布的洞的某一个，狼在第一个洞没有找到兔子，就隔一个洞，到第三个洞去找，也没有找到，就隔两个洞，到第六个洞去找，以后每次多隔一个洞 去找兔子……这样下去，结果一直找不到兔子，请问：兔子可能躲在哪个洞中？</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>一只兔子躲进了 10 个环形分布的洞的某一个，狼在第一个洞没有找到兔子，就隔一个洞，到第三个洞去找，也没有找到，就隔两个洞，到第六个洞去找，以后每次多隔一个洞 去找兔子……这样下去，结果一直找不到兔子，请问：兔子可能躲在哪个洞中？</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+对于本实例中提到的问题，虽然是“兔子可能躲在哪个洞中”，但是在考虑算法时，需要知道的是狼会去哪个洞找兔子，狼第一次去的洞是第一个（表示为 pos1），第二次去的是第三个（pos3），把它去的洞的代码用数字表示出来，可以推导出狼去的洞的代码是： pos(i+1)=pos(i)+i+1。</p>
+<p>由题目可知，狼没有找到兔子，因此该算法会一直持续下去。除此之外，还需要注意的是，在 10 个洞之后，比如狼去找第十五个洞，但第十五个洞是不存在的，因此我们用 15 对 10 求余，得到的数字才是洞的标示。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i;
+    bool pos[10] = {0};
+    int lang = 0;
+    for (i = 0; i &lt; 100; ++i) {
+        pos[lang] = true;
+        lang++;
+        lang += i;
+        lang = lang % 10;
+    }
+    for (i = 0; i &lt; 10; ++i) {
+        if (!pos[i])
+            printf(&quot;兔子可能在第%d洞中\n&quot;, i + 1);
+    }
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>兔子可能在第3洞中
+兔子可能在第5洞中
+兔子可能在第8洞中
+兔子可能在第10洞中
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>(1) 一维数组定义时需要注意的规则：<br>
+① 数组名的命名规则遵守标识符的命名规则。<br>
+② 常量表达式指出数组的长度，当长度为 n 时，即数组为 n 个元素，数组元素下标范围只能是 0~（n—1），即数组中第一个元素的下标为 0，数组中最后一个元素的下标应该是（n—1）。<br>
+③ 常量表达式可以包含常量和符号常量，但是不能包含变量。<br>
+④ 在定义数组的说明中，可以有多个数组说明符，用逗号隔开即可。</p>
+<p>(2) 一维数组的引用说明：<br>
+① 数组下标可以是整型常量、整型变量或者整型表达式，初始值为 0。<br>
+② 一个数组元素引用的实质就是一个变量名的引用，每一个数组元素代表内存中的一个存储单元，具有与相同类型单个变量一样的属性，可以对它进行赋值且参与各种运算，一个数组占有一段连续的存储单元。<br>
+③ 在 C 语言中，数组不能作为一个整体参加数据运算，只能对单个元素进行计算。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：21、斐波那契、兔子生兔子]]></title>
+        <id>https://acoldfront.github.io/post/c-example21/</id>
+        <link href="https://acoldfront.github.io/post/c-example21/">
+        </link>
+        <updated>2020-05-08T04:15:22.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。<br>
+假设一对兔子的成熟期是一个月，即一个月可长成成兔，那么，如果每对成兔每个月都生一对小兔，一对新生的小兔从第二个月起就开始生兔子，试问从一对兔子开始繁殖，以后每个月会有多少对兔子？</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。<br>
+假设一对兔子的成熟期是一个月，即一个月可长成成兔，那么，如果每对成兔每个月都生一对小兔，一对新生的小兔从第二个月起就开始生兔子，试问从一对兔子开始繁殖，以后每个月会有多少对兔子？</p>
+</blockquote>
+<!-- more -->
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//斐波那契数列 这个数列从第3项开始，每一项都等于前两项之和。
+
+int main(void) {
+    int n = 0;
+    printf(&quot;请输入一个数：&quot;);
+    scanf(&quot;%d&quot;, &amp;n);
+
+    //若要打印 斐波那契数列
+    int f1 = 1, f2 = 1, f3, i;
+    printf(&quot;%8d%8d&quot;, f1, f2);
+    for (i = 3; i &lt;= n; i++) {
+        f3 = f1 + f2;
+        printf(&quot;%8d&quot;, f3);
+        f1 = f2;
+        f2 = f3;
+    }
+    return 0;
+}
+
+
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入一个数：5
+       1       1       2       3       5
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>(1) 实例分析<br>
+循环的嵌套是指在一个循环体内又包含了另一个完整的循环。循环的嵌套执行过程是外循环执行一次，内循环执行一次，在内循环结束后，再执行下一次外循环，如此反复，直到外循环结束。</p>
+<p>(2) 循环的嵌套注意事项：<br>
+① 循环必须完全包含内循环，不能交叉；<br>
+② 在多重循环中，各层循环的循环控制变量不能同名；<br>
+③ 在多重循环中，并列循环的循环控制变量名可以相同，也可以不同。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：20、判断闰年，即判断年份是否为闰年]]></title>
+        <id>https://acoldfront.github.io/post/c-example20/</id>
+        <link href="https://acoldfront.github.io/post/c-example20/">
+        </link>
+        <updated>2020-05-06T09:49:00.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>实例要求从键盘输入任意年份的整数 N，通过程序运行判断该年份是否为闰年。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>实例要求从键盘输入任意年份的整数 N，通过程序运行判断该年份是否为闰年。</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+判断任意年份是否为闰年，需要满足以下条件中的任意一个：<br>
+① 该年份能被 4 整除同时不能被 100 整除；<br>
+② 该年份能被400整除。</p>
+<p>本实例中使用嵌入式 if-else 语句。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int year, a;
+    printf(&quot;请输人年份：&quot;);
+    scanf(&quot;%d&quot;, &amp;year);
+    if (((year % 4 == 0 )&amp;&amp; (year % 100 != 0)) || (year % 400 == 0))
+        printf(&quot;%d 此年是闰年\n&quot;, year);
+    else
+        printf(&quot;%d 此年非闰年\n&quot;,year);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输人年份：1995
+1995 此年非闰年
+
+请输人年份：1996
+1996 此年是闰年
 </code></pre>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Windows10 20H1(v2004 Build19041.508) MSDN原版ISO镜像+累计更新]]></title>
-        <id>https://acoldfront.github.io/post/windows10-20h1v2004/</id>
-        <link href="https://acoldfront.github.io/post/windows10-20h1v2004/">
+        <title type="html"><![CDATA[C语言编程实例：19、求回文数、回文素数]]></title>
+        <id>https://acoldfront.github.io/post/c-example19/</id>
+        <link href="https://acoldfront.github.io/post/c-example19/">
         </link>
-        <updated>2020-09-19T10:10:13.000Z</updated>
-        <summary type="html"><![CDATA[<p>5月12日，Windows 10今年的首个正式版v2004（五月更新）抵达MSDN，供开发者率先体验。</p>
+        <updated>2020-05-06T08:58:30.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>任意的整数，当从左向右读与从右向左读是相同的，且为素数时，称为回文素数。<br>
+输入一个整数判断是否是回文数</p>
+</blockquote>
 ]]></summary>
-        <content type="html"><![CDATA[<p>5月12日，Windows 10今年的首个正式版v2004（五月更新）抵达MSDN，供开发者率先体验。</p>
+        <content type="html"><![CDATA[<blockquote>
+<p>任意的整数，当从左向右读与从右向左读是相同的，且为素数时，称为回文素数。<br>
+输入一个整数判断是否是回文数</p>
+</blockquote>
 <!-- more -->
-<p>经查，国内网友熟悉的MSDNITELLYOU也同步公开了四大原版ISO镜像文件（简体中文版）的下载，如果你有纯净安装的需求或者迫不及待想要尝鲜，可下载使用。</p>
-<p>对于新老系统，个人比较推荐的是WinPE安装，维护较为方便，工具可选微PE、优启通等制作U启工具。直接制作启动盘、校验SHA等，可参考快科技之前的文章。</p>
-<p>据悉，Windows 10 v2004带来了新的全局/资源管理器搜索、蓝牙设备智能配对、新的Cortana、新的虚拟桌面、基于Chromium的Edge浏览器、任务管理器支持查看GPU温度、新的设置页面等。</p>
-<h3 id="累计更新">累计更新</h3>
-<hr>
-<p>Windows 10 v2004 Update 19041.508 官方累积更新补丁 [2020/09/08]<br>
-Windows 10 Version 2004 版本的 2020年9月累积更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756</a></p>
-<p>Windows 10 Version 2004 版本的 2020年9月服务堆栈更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4577266</a></p>
-<p>Windows 10 Version 2004 的 .NET Framework 3.5和4.8的2020年9月累积更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4569745</a></p>
-<p>Windows 10 v2004 Update 19041.388 官方累积更新补丁【2020/07/14】<br>
-适用于 Windows Version 2004 版本的 2020年7月累积更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4565503</a></p>
-<p>适用于 Windows 10 Version 2004 的 2020年7月服务堆栈更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566785</a></p>
-<p>适用于 Adobe Flash Player for Windows 10 所有版本的2020年6月安全更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4561600</a></p>
-<p>适用于 Windows 10 Version 2004 的 .NET Framework 3.5和4.8的累积更新<br>
-<a href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB4571756">https://www.catalog.update.microsoft.com/Search.aspx?q=KB4565627</a></p>
-<h3 id="官方原版镜像">官方原版镜像</h3>
+<p><strong>算法思想：</strong><br>
+① 获取一个数，例如123<br>
+② 求出321与123相比<br>
+③ 求123中的个位数：3 -&gt; 123%10/1<br>
+十位数：2 -&gt; 123%100/10<br>
+百位数：1 -&gt; 123%1000/100<br>
+通式：num  %(10*i)/i<br>
+④将321 = 3 * 100 +2  * 10 + 1<br>
+⑤定义一个snum用来存储倒置的数，即：snum = 321，snum = num % (10 * i) / i + 10 * snum;<br>
+第一次循环：s = 3 + 0<br>
+第二次循环：s = 2 + 30<br>
+第三次循环：s = 1 + 320<br>
+⑥对比num 和 snum的值。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    int i, num;
+    int snum = 0;   //用来存放倒置的数
+    printf(&quot;请输入一个整数：&quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    for (i = 1; i &lt; num; i *= 10) {   //i每次增加10倍，实现个位，十位，百位。。。的转化换
+        snum = num % (10 * i) / i + 10*snum;
+        //s = 3 + 0
+        //s = 2 + 30
+        //s = 1 + 320
+    }
+    if (num == snum)
+        printf(&quot;这个数是一个回文数\n&quot;);
+    else
+        printf(&quot;这个数不是一个回文数\n&quot;);if (num == snum)
+        printf(&quot;这个数是一个回文数\n&quot;);
+    else
+        printf(&quot;这个数不是一个回文数\n&quot;);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入一个整数：121
+这个数是一个回文数
+</code></pre>
 <hr>
 <blockquote>
-<p>消费者版（家庭版、家庭单语言版、教育版、专业版、专业教育版、专业工作站版）</p>
+<p>求 1000 以内的所有回文素数。</p>
 </blockquote>
-<p>cn_windows_10_consumer_editions_version_2004_updated_aug_2020_x64_dvd_0db4f0fa.iso<br>
-SHA-1:0093D88CCD2EBABAB54FDC217A942F5D83E3DDF3<br>
-架构：x64，文件大小：5.01GB</p>
-<pre><code>ed2k://|file|cn_windows_10_consumer_editions_version_2004_updated_aug_2020_x64_dvd_0db4f0fa.iso|5381101568|3AEEAEFEA750F57B58BC101B3CF895EC|/
+<p><strong>算法思想：</strong><br>
+实例的重点是判断一个数是否是回文素数。要输出 1000 以内的所有回文素数，首先应判断这个数是否是素数；如果是，再进一步判断这个数是两位数还是三位数，若是两位数，则需判断个位数和十位数是否相同；若是三位数，则需判断个位数和百位数是否相同。若相同，则判断为回文素数，否则继续下次判断。</p>
+<p>① 定义一个函数 sushu，其作用是判断一个数是否是素数。<br>
+② 对判断为素数的数，再判断其是否是两位数。<br>
+若是两位数，再判断其个位数和十位数是否相同，若相同则打印输出；若不相同，则执行④；若不是两位数，则执行③。<br>
+③ 若是三位数，则判断其个位数和百位数是否相同。若相同，则打印输出；若不相同，则执行 ④。<br>
+④ 循环控制变量 i 自增 1。<br>
+⑤ 直到 i 自增至 1000 结束。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+#include &lt;stdio.h&gt;
+
+/*判断参数n是否为素数*/
+int fun(int n) {
+    int i;
+    for (i = 2; i &lt; (n - 1) / 2; ++i) {
+        if (n % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+int main(void) {
+    int i;
+    for (i = 10; i &lt; 1000; ++i) {   //10以内没有回文素数
+        if (fun(i) == 1) {      //素数
+            if (i / 100 == 0) {     //100以内的
+                if (i / 10 == i % 10)   //对比十位和个位
+                    printf(&quot;%5d&quot;, i);
+                if (i % 5 == 0)
+                    printf(&quot;\n&quot;);
+            } else {
+                if (i / 100 == i % 10)  //对比百位和个位
+                    printf(&quot;%5d&quot;, i);
+                if (i % 5 == 0)
+                    printf(&quot;\n&quot;);
+
+            }
+        }
+    }
+    return 0;
+}
 </code></pre>
-<p>cn_windows_10_consumer_editions_version_2004_updated_aug_2020_x86_dvd_802b0678.iso<br>
-SHA-1: B242F836FE9182C83CE6A4BD819296B9C3F39563<br>
-架构：x86，文件大小：3.6GB</p>
-<pre><code>ed2k://|file|cn_windows_10_consumer_editions_version_2004_updated_aug_2020_x86_dvd_802b0678.iso|3863203840|37ED408A8836B38067787564FCC7D988|/
+<p>输出结果：</p>
+<pre><code>   11  101  131  151  181  191  313  353  373  383  727  757  787  797  919  929
 </code></pre>
-<blockquote>
-<p>商业版（教育版、企业版、专业版、专业教育版、专业工作站版等）</p>
+<h3 id="技术要点">技术要点：</h3>
+<p>① 程序由 main() 函数和 sushu() 函数组成，main() 函数调用 sushu() 函数，整型变量 i 为函数参数。当 sushu () 执行完后，返回到主函数中继续执行被调函数后面的语句。</p>
+<p>② 函数调用语句由函数名、实际参数加上分号“;”组成。其一般形式为“函数名(实际参数表);”。执行函数语句就是调用函数体并把实际参数赋予函数定义中的形式参数，然后执行被调函数体中的语句，求取函数值。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：18、小写字母转换成大写字母]]></title>
+        <id>https://acoldfront.github.io/post/c-example18/</id>
+        <link href="https://acoldfront.github.io/post/c-example18/">
+        </link>
+        <updated>2020-05-06T08:56:37.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>在 C 语言中区分字母的大小写，利用 ASCII 码中大写字母和小写字母之间的转换关系（差值为 32），可以将小写字母转换为大写字母。编写程序实现，从键盘上输入一个小写字母，按回车键，程序将该小写字母转换为大写字母，并输出其 ASCII 值。</p>
 </blockquote>
-<p>cn_windows_10_business_editions_version_2004_updated_aug_2020_x64_dvd_4077da77.iso<br>
-SHA-1: 6C3A19335CB30116DA517FE7F4C6A169A70109D<br>
-架构：x64，文件大小：4.91GB</p>
-<pre><code>ed2k://|file|cn_windows_10_business_editions_version_2004_updated_aug_2020_x64_dvd_4077da77.iso|5275471872|DE5F8B777F1B5258EF93E7C9990F2715|/
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>在 C 语言中区分字母的大小写，利用 ASCII 码中大写字母和小写字母之间的转换关系（差值为 32），可以将小写字母转换为大写字母。编写程序实现，从键盘上输入一个小写字母，按回车键，程序将该小写字母转换为大写字母，并输出其 ASCII 值。</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+由于大写字母与小写字母之间的差值为 32，因此小写字母转换为大写字母的方法就是将小写字母的 ASCII 码值减去 32，便可得到与之对应的大写字母。</p>
+<p>利用 getchar 函数从键盘上输入一个小写字母，并将其赋给一个字符变量 a；然后将 a—32 的值赋给字符变量 b；最后进行输出，输出时先输出字母，再将字母以整数形式输出。其具体步骤如下：</p>
+<p>① 定义两个字符变量 a、b；<br>
+② a=get char()；<br>
+③ b=a—32；<br>
+④ 打印输出。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    char a, b;
+    printf(&quot;输入一个小写字母:\n&quot;);
+    a = getchar();
+    b = a - 32;
+    printf(&quot;转换后的字母为：%c，%d\n&quot;, b, b);
+    return 0;
+}
+
 </code></pre>
-<p>cn_windows_10_business_editions_version_2004_updated_aug_2020_x86_dvd_4e6a121d.iso<br>
-SHA-1: 9C58E678A92A52D6AB6B9AE2AC039858FF7FE352<br>
-架构：x86，文件大小：3.52GB</p>
-<pre><code>ed2k://|file|cn_windows_10_business_editions_version_2004_updated_aug_2020_x86_dvd_4e6a121d.iso|3784398848|FCF58EA6C0C3F86B4FAC07EAB8A29D46|/
+<p>输出结果：</p>
+<pre><code>输入一个小写字母:
+c
+转换后的字母为：C，67
 </code></pre>
-<h3 id="第三方整合版本">第三方整合版本</h3>
-<hr>
-<p>@远景Win10版主ananhaid</p>
-<p>by ananhaidの远景Win10版主<br>
-– 这里的是官方前面8个加转换后面4个总共12个集成发布。<br>
-– 源基准为官方镜像，没有添加任何三方数据，母本选用VB-2004官方ISO制作,。<br>
-– 使用工具只有 DISM，没有删减任何内容，完全原版。系统镜像为 ESD 格式生成的 ISO。<br>
-12合1：直接选取所需版本即可安装，也支持安装之后使用其他密钥转换版本，包含版本为：<br>
-家庭版、专业版、企业版、教育版、专业工作站版、专业教育版、家庭单语言版、家庭中文版、适用于虚拟桌面的 Windows 10 企业版、IoT 企业版、专业仅中文版、专业单语言版。</p>
-<p>启用系统功能：<br>
-.NET Framework 3.5<br>
-集成更新补丁：<br>
-KB4577266（20年9月服务堆栈更新）（9月9日）<br>
-KB4571756（20年9月累积更新 19041.508）（9月9日）<br>
-KB4576478（20年9月 .net 4.8更新）（9月9日）<br>
-KB4561600（20年6月 Adobe Flash Player 安全更新）（7月15日）</p>
-<p>Windows 10 v2004 原版集成2020年7月累积更新ISO镜像12合1<br>
-Windows 10 version 2004 (OS build 19041.388) x86/x64 AIO 12in1 Jule 2020</p>
-<p><a href="https://cloud.189.cn/t/rmYN7zEbqq6z">https://cloud.189.cn/t/rmYN7zEbqq6z</a> 访问码c4ra</p>
-<h3 id="关于激活">关于激活</h3>
-<hr>
+<h3 id="技术要点">技术要点：</h3>
+<p>① 实例内容要求对 ASCII 码有所了解。知道小写字母和大写字母之间的差值为 32。</p>
+<p>② getchar 函数的功能是从键盘上输入一个字符。其一般形式为“getchar()”。通常把输入的字符赋予一个字符变量，构成赋值语句，如：char c;或c=getchar();</p>
+<p>③ 使用 getchar 函数还应注意几个问题：<br>
+getchar 函数只能接收单个字符，输入数字也按字符处理。输入多于一个字符时，只接收第一个字符。<br>
+使用 getchar 函数前必须包含文件“stdio.h”。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[数据库管理工具 PremiumSoft Navicat Premium v15.0.18 中文特别版]]></title>
-        <id>https://acoldfront.github.io/post/navicat-premium/</id>
-        <link href="https://acoldfront.github.io/post/navicat-premium/">
+        <title type="html"><![CDATA[C语言编程实例：17、求自然底数e]]></title>
+        <id>https://acoldfront.github.io/post/c-example17/</id>
+        <link href="https://acoldfront.github.io/post/c-example17/">
         </link>
-        <updated>2020-09-18T04:55:18.000Z</updated>
-        <summary type="html"><![CDATA[<p>Navicat premium是一款数据库管理工具。将此工具连接数据库，你可以从中看到各种数据库的详细信息。包括报错，等等。当然，你也可以通过他，登陆数据库，进行各种操作。Navicat Premium是一个可多重连线资料库的管理工具，它可以让你以单一程式同时连线到 MySQL、SQLite、Oracle 及 PostgreSQL 资料库，让管理不同类型的资料库更加的方便。</p>
+        <updated>2020-05-06T04:16:12.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>自然底数 e=2.718281828…，e 的计算公式如下：<br>
+e=1+1/1!+1/2!+1/3!+…<br>
+要求当最后一项的值小于 10-10 时结束。</p>
+</blockquote>
 ]]></summary>
-        <content type="html"><![CDATA[<p>Navicat premium是一款数据库管理工具。将此工具连接数据库，你可以从中看到各种数据库的详细信息。包括报错，等等。当然，你也可以通过他，登陆数据库，进行各种操作。Navicat Premium是一个可多重连线资料库的管理工具，它可以让你以单一程式同时连线到 MySQL、SQLite、Oracle 及 PostgreSQL 资料库，让管理不同类型的资料库更加的方便。</p>
+        <content type="html"><![CDATA[<blockquote>
+<p>自然底数 e=2.718281828…，e 的计算公式如下：<br>
+e=1+1/1!+1/2!+1/3!+…<br>
+要求当最后一项的值小于 10-10 时结束。</p>
+</blockquote>
 <!-- more -->
-<p>Navicat Premium结合了其他Navicat成员的功能。有了这种连线到不同资料库类型的能力，Navicat Premium支持在 MySQL、SQLite、Oracle 及 PostgreSQL 之间传输资料。它支持大部分的 MySQL、SQLite、Oracle 及 PostgreSQL 功能，包括预存程序、事件、触发器、函式、检视等。<br>
-Navicat Premium可以让你简单并快速的在多种资料库系统间传输资料，或传输一份以SQL格式及编码设计的纯文字档。<br>
-不同的资料库的批次处理任务也可以设定排程并在指定的时间执行。其他功能包括汇入/汇出精灵、查询建立工具、报表产生器、资料同步、备份、工作排程及更多。</p>
-<p>Navicat的的功能足以提供专业开发人员的所有需求，但是对资料库伺服器的新手来说又相当容易学习。<br>
-Navicat Premium [2] 有三种平台版本- Microsoft Windows、Mac OS X及Linux。它可以让使用者连接本地/远端伺服器、提供一些实用的工具如资料/结构同步、汇入/汇出、备份/回复及报表以协助管理资料的流程。</p>
-<p>Navicat Premium(导航猫数据库管理)是一个可多重连线资料库的管理工具，Navicat Premium(导航猫数据库管理)可以让你以单一程式同时连线到MySQL、SQLite、Oracle 及 PostgreSQL资料库，让管理不同类型的资料库更加的方便。 　Navicat Premium可以让你简单并快速的在多种资料库系统间传输资料，或传输一份以SQL格式及编码设计的纯文字档。</p>
-<p>不同的资料库的批次处理任务也可以设定排程并在指定的时间执行。其他功能包括汇入/汇出精灵、查询建立工具、报表产生器、资料同步、备份、工作排程及更多。</p>
-<p>Navicat的的功能足以提供专业开发人员的所有需求，但是对资料库伺服器的新手来说又相当容易学习。<br>
-<img src="https://acoldfront.github.io//post-images/1580014704119.png" alt="" loading="lazy"></p>
-<p>Navicat Cloud<br>
-Navicat 提供 Navicat Cloud 服务给用户。同步你的连接设置、模型、查询和虚拟组到云。这样你就能随时随地实时访问他们。有了 Navicat Cloud，你可以善用一天中的每分每秒，以最大限度提高你的工作效率。了解更多›</p>
-<p>安全连接<br>
-Navicat 可以让你通过 SSH 通道创建安全的 SSH 阶段作业，确保两台主机之间的连接受到强大验证和安全加密的保护。验证方式可使用密码或公钥和私钥对。Navicat 亦支持 HTTP 通道，让你灵活地绕过限制直接数据库服务器连接的互联网服务供应商。</p>
-<p>对象设计器<br>
-使用专业的对象设计器创建、修改和设计所有数据库对象，例如：表、视图、函数、过程、索引、触发器和序列。无需编写复杂的 SQL 来创建和编辑对象，你会知道你正使用什么选项。</p>
-<p>表查看器<br>
-网格或表单查看<br>
-使用网格查看添加、修改和删除记录。用类似数据表的功能浏览网格查看，例如排序和隐藏数据组，使用我们的助理编辑器：备注、十六进制、图像或更多</p>
-<p>你也可以用表单查看操作记录。清楚显示记录的字段名和其值，不必担心误解数据。</p>
-<p>外键数据选择<br>
-在你的数据库使用外键关系锚定参考的查找表，并自动建立下拉列表。无需持续对照参考主表，你可以简化你的工作流程和提升效率。<br>
-SQL 创建工具或编辑器</p>
-<p>SQL 创建工具<br>
-视觉化 SQL 创建工具让你创建和编辑查询或视图，而不必担心语法和正确命令的用法。选择你想在表中执行的操作，它会为你编写 SQL 语句。</p>
-<p>自动完成代码<br>
-使用我们的自动完成代码功能，能快速地在 SQL 编辑器中创建 SQL 语句。无论你想选择的是数据库对象的属性或 SQL关键字，你只需从下拉列表中选择。</p>
-<p>数据库设计器<br>
-逆向工程<br>
-使用 Navicat 的逆向工程，你可以从一个现有的数据库创建数据库模型，可视化地显现和编辑你的数据库结构或创建一个图形模型，并由模型生成一个数据库。</p>
-<p>正向工程和脚本生成<br>
-同步到数据库功能给你充分了解所有数据库的差异。生成必要的同步脚本来更新目标数据库，并使其与模型相同。</p>
-<p>导出 SQL 让你有机会全面控制最终的 SQL 脚本，生成参照完整性规则，生成模型的独立部份、注释、字符集等。它可以节省你的工作时间。</p>
-<p>PL/SQL 代码调试器<br>
-PL/SQLPL/PGSQL<br>
-PL/SQL 调试器提供的功能，如设置断点，步进通过程序，查看和修改变量值，及查看调用堆栈。你可以直接从 Navicat 的工作区中调试 PL/SQL 代码如过程和函数、对象方法和触发器。</p>
-<p>数据处理工具<br>
-导入或导出向导<br>
-从不同格式的文件导入数据到表，例如 Access、Excel、XML、TXT、CSV、JSON 及更多。而且，在设置数据源连接后，你可以从 ODBC 导入数据。只需简单地选择你要导入的表，或使用添加查询按钮指定查询。同样，你可以将数据导出到各种格式，如 Excel、TXT、CSV、DBF、XML 等。</p>
-<p>数据传输<br>
-在多个不同的数据库系统间轻松地传输数据 – MySQL、MariaDB、SQL Server、Oracle、PostgreSQL 和 SQLite 数据库。你可以选择以指定的 SQL 格式和编码导出数据为 SQL 文件。这个功能可大大的简化迁移数据的进程。</p>
-<p>数据或结构同步<br>
-从一个数据库中以详细的分析进程传输数据到另外一个数据库。同样，你可以比对并修改表的结构。在数据和结构同步中，目标数据库可以在源服务器，也可以在其他的服务器。</p>
-<p>备份或还原<br>
-定期备份数据库对用户是相当重要的。备份或还原全部表、记录、视图等。如果数据损坏，不用再重做，让你能高枕无忧。</p>
-<p>计划<br>
-不同数据库的设置文件可以创建在单一批处理作业，这样你就可以设置计划并在指定的时间运行。批处理作业可以创建的对象包括打印报表、数据库备份、查询、数据传输、数据同步、导入和导出。当任务完成后，Navicat 可自动传送电子邮件通知给你指定的收件人。此外，导出的文件或打印的报表可以添加到批处理作业作为电子邮件附件，让你可以轻易与其他人共享你的数据。<br>
-报表创建工具或查看器 *只限于 Windows 版本</p>
-<p>使用我们的用户友好 GUI 报表创建工具创建各种不同类型的报表。设计发票、统计、邮寄标签及更多其他报表。输出报表到多种格式 – text、PDF、Lotus、Excel、Graphic、Html 及更多。</p>
-<p>Navicat Report Viewer 可让你浏览由报表创建工具设计的报表。最酷的是你可以与计算机沒有安装 Navicat，但安装了 Navicat Report Viewer 的人共享报表。</p>
-<p>实用工具<br>
-ER 图表<br>
-ER 图表查看能通过以图形格式显示数据库结构来帮助你了解你的数据库，让你可以看到数据库中表之间的关联。</p>
-<p>连接颜色或虚拟组<br>
-连接颜色功能可以让你立刻知道你连接到哪个服务器。显示在子窗口工具栏的颜色指示，用于识别连接和它们的数据库对象。虚拟组功能分类对象到不用的组，令对象和连接有一个更好的组织。</p>
-<p>树或对象筛选<br>
-使用树或对象筛选功能收窄显示数据对象的列表。简单地需输入文本，然后只会显示符合指定字符串开始的数据库对象。</p>
-<p>收藏夹<br>
-Navicat 让你更容易地回到你常访问的数据库对象。通过添加路径到收藏夹列表，你只需一次点击就可以打开这些数据库对象。</p>
-<p>系统需求<br>
-Windows<br>
-Microsoft Windows XP SP3、Vista、Windows 7、Windows 8、Windows 8.1、Windows 10、Server 2003、Server 2008、Server 2012</p>
-<p>Mac<br>
-Mac OS X 10.7 或以上版本<br>
-Intel 处理器</p>
-<p>Linux<br>
-Ubuntu 12.04、Ubuntu 14.04、CentOS 6.7、CentOS 7、Fedora 22、Fedora 23、Linux Mint 13、Linux Mint 17.3、openSUSE 13.2、openSUSE 42.1</p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>基于DeltaFox大神Navicat_Keygen_Patch_v5.6  Crazer汉化</p>
-<h3 id="使用提示">使用提示</h3>
-<hr>
-<p>使用前查看“使用说明&quot;文档<br>
-或者<br>
-<a href="https://acoldfront.github.io/post/navicat-keygen-patch/">查看Navicat产品_补丁_注册机 使用教程</a></p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg">链接: https://pan.baidu.com/s/1N32CbhM_-hIUdH_8zVzOPg 提取码: 4vgd</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[优秀代码编辑器 Sublime Text 4.0.4085]]></title>
-        <id>https://acoldfront.github.io/post/SublimeText/</id>
-        <link href="https://acoldfront.github.io/post/SublimeText/">
-        </link>
-        <updated>2020-09-09T16:43:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>SublimeText是编辑器中的一款神级IDE，非常有名，虽然比较轻量，但是呢软件拓展性非常强大，适用于多种编程语言，当然，当一个编辑器，也是非常不错的。</p>
-<!-- more -->
-<p>Sublime Text 是一个轻量、简洁、高效、跨平台的编辑器，方便的配色以及兼容vim快捷键等各种优点博得了很多前端开发人员的喜爱!Sublime Text 这款程序员必备代码编辑器，几乎每位程序员提到Sublime Text 2都是赞不绝口！它体积小巧，无需安装，绿色便携；它可跨平台支持Windows/Mac/Linux；支持32与64位操作系统，它在支持语法高亮、代 码补全、代码片段（Snippet）、代码折叠、行号显示、自定义皮肤、配色方案等所有其它代码编辑器所拥有的功能的同时，又保证了其飞快的速度！还有着 自身独特的功能，比如代码地图、多种界面布局以及全屏免打扰模式等，这些优秀特性让Sublime Text 2成了所有程序员眼中的神！</p>
-<p>SublimeText支持但不限于 C, C++, C#, CSS, D, Erlang, HTML, Groovy, Haskell, HTML, Java, JavaScript, LaTeX, Lisp, Lua, Markdown, Matlab, OCaml, Perl, PHP, Python, R, Ruby, SQL, TCL, Textile and XML 等主流编程语言的语法高亮。ST 拥有优秀的代码自动完成功能 (自动补齐括号，大括号等配对符号；自动补全已经出现的单词；自动补全函数名)，非常智能；</p>
-<h3 id="更新日志">更新日志</h3>
-<hr>
-<p>*定义悬停弹出式菜单显示有关符号的详细信息</p>
-<p>*“转到符号”显示有关符号的详细信息</p>
-<p>*现在可以将trim_training_white_space_on_save设置为“not_unu caret”</p>
-<p>*在鼠标选择的同时，改进了滚动上下文线的行为</p>
-<p>*修复了大型连字符号的呈现</p>
-<p>*minihtml：添加了对显示的支持：内联块和文本对齐</p>
-<p>*minihtml：添加了对标题属性工具提示的支持</p>
-<p>*API:已添加崇高符号区以及升华符号在视图和窗口上有相应的方法</p>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>基于最新版本绿色便携制作</p>
-<p>增强侧边栏</p>
-<p>集成破解补丁，集成汉化，允许切换语言</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://wws.lanzous.com/iiCkQgifqje">链接: https://wws.lanzous.com/iiCkQgifqje</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Bandizip(跨平台解压缩软件) v7.10 企业激活版]]></title>
-        <id>https://acoldfront.github.io/post/bandizip/</id>
-        <link href="https://acoldfront.github.io/post/bandizip/">
-        </link>
-        <updated>2020-09-08T08:53:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>虽然 7-Zip 是开源免费压缩工具中的佼佼者，但用得不是很顺手，今天试了下推荐的 Bandizip 却出人意料的好用！Bandizip 是一款来自韩国的免费优秀的文件压缩/解压缩软件，支持 Win 与 Mac，操作方式与 WinRAR 相似，支持压缩和解压 rar、zip、7z 等众多主流格式…</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>虽然 7-Zip 是开源免费压缩工具中的佼佼者，但用得不是很顺手，今天试了下推荐的 Bandizip 却出人意料的好用！Bandizip 是一款来自韩国的免费优秀的文件压缩/解压缩软件，支持 Win 与 Mac，操作方式与 WinRAR 相似，支持压缩和解压 rar、zip、7z 等众多主流格式…</p>
-<!-- more -->
-<h3 id="主要功能">主要功能</h3>
-<hr>
-<p>支持操作系统: Windows Vista/7/8/10 (x86/x64/ARM64)<br>
-许可类型：免费软件(EULA)<br>
-全能的压缩/解压/浏览/编辑软件<br>
-可提取30多种格式，包括RAR/RAR5/7Z/ZIP等<br>
-包含密码压缩和分卷压缩功能<br>
-支持多核高速压缩</p>
-<h3 id="压缩">压缩</h3>
-<hr>
-<p>支持的格式: ZIP, 7Z(lzma2), ZIPX(xz), EXE(sfx), TAR, TGZ, LZH(lh7), ISO(joliet), GZ, XZ<br>
-ZIP文件修改（添加/删除/重命名）<br>
-支持多核并行，压缩速度可提升至多达6倍<br>
-加密压缩<br>
-支持AES256加密算法<br>
-支持4GB 以上大小的文件压缩<br>
-对ZIP格式支持Unicode或MBCS文件名<br>
-对ZIP/7z格式可进行分卷压缩</p>
-<h3 id="解压">解压</h3>
-<hr>
-<p>支持的格式: 7Z, ACE, AES, ALZ, ARJ, BH, BIN, BZ, BZ2, CAB, Compound(MSI), EGG, GZ, IMG, ISO, ISZ, LHA, LZ, LZH, LZMA, PMA, RAR, RAR5, SFX(EXE), TAR, TBZ, TBZ2, TGZ, TLZ, TXZ, UDF, WIM, XPI, XZ, Z, ZIP, ZIPX, ZPAQ<br>
-轻松查看压缩包内文件<br>
-可只解压选定文件，支持拖拽解压<br>
-可对ZIP和RAR格式添加注释<br>
-一步解压TGZ/TBZ格式的文件</p>
-<h3 id="功能多样">功能多样</h3>
-<hr>
-<p>测试文件完整性以确定压缩包是否损坏<br>
-支持修改代码页改<br>
-可集成至资源管理器右键菜单<br>
-<img src="https://acoldfront.github.io//post-images/1587459441655.png" alt="" loading="lazy"></p>
-<h3 id="更新日志">更新日志</h3>
-<hr>
-<p><a href="https://www.bandisoft.com/bandizip/history/">https://www.bandisoft.com/bandizip/history/</a></p>
-<h3 id="破解教程">破解教程</h3>
-<hr>
-<p>7系列版本，安装后，下载破解补丁，破解后，使用激活码如下激活码</p>
-<p>20380808-ENT000002-0E34A52561-166371E0</p>
-<p>20380808-PRO0BFAEBFDAE23C425E-173E2DF1</p>
-<p>邮箱地址：可任意填写，即随意填个假冒邮箱格式</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p>Bandizip各版本功能比较（自v7.0开始分为标准版/专业版/企业版）<br>
-<a href="https://www.bandisoft.com/bandizip/help/edition-comparison">https://www.bandisoft.com/bandizip/help/edition-comparison</a></p>
-<p>官网下载<br>
-6系列版本：【原生无广告】<br>
-<a href="https://dl.bandisoft.com/bandizip/BANDIZIP-SETUP.EXE">安装版：https://dl.bandisoft.com/bandizip/BANDIZIP-SETUP.EXE</a></p>
-<p><a href="https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-32BIT.ZIP">32位便携版：https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-32BIT.ZIP</a></p>
-<p><a href="https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-64BIT.ZIP">64位便携版：https://dl.bandisoft.com/bandizip/BANDIZIP-PORTABLE-GL-64BIT.ZIP</a></p>
-<p>7系列版本：<br>
-<a href="http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE">安装版：http://dl.bandisoft.com/bandizip.std/BANDIZIP-SETUP-STD-ALL.EXE</a></p>
-<p>下载链接：<br>
-<a href="https://wws.lanzous.com/ilEJagifxvi">链接: https://wws.lanzous.com/ilEJagifxvi</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[思维导图软件 XMind ZEN 2020 v10.2.1 全平台 完美破解版]]></title>
-        <id>https://acoldfront.github.io/post/xmind-zen-2020/</id>
-        <link href="https://acoldfront.github.io/post/xmind-zen-2020/">
-        </link>
-        <updated>2020-07-31T22:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>XMind ZEN是一款有颜值的思维导图软件，新版本的软件界面比起老版本好看多了，作为一款electron开发出来的软件，自然支持几个端了，支持Windows和Mac版本。</p>
-<!-- more -->
-<p>XMind 是一个全功能的思维导图和头脑风暴软件，为激发灵感和创意而生。作为一款有效提升工作和生活效率的生产力工具，受到全球百千万用户的青睐。</p>
-<p>这两年思维导图突然就火起来了，各种思维导图软件也是雨后春笋般冒出来了，自 Xmind 发布以来就受到全球多个国家的办公一族喜爱。而 XMind 开发团队成员也在不断的去改进产品以提供优秀的生产力工具和服务，帮助人们节省时间并提升效率为目标。<br>
-<img src="https://acoldfront.github.io//post-images/1579860380835.png" alt="" loading="lazy"></p>
-<p>全新内核，经典 XMind 体验。<br>
-我们努力了3年，100% 重写了思维导图引擎的每一个细节，XMind: ZEN 对 XMind 8 做到了完全兼容，让你有一种全新却不失经典的体验。</p>
-<p>无人可超越，只有超越自己。<br>
-对所有主题进行了重新设计，为您的每一张导图都注入新的活力。字体渲染也得到了极大的改进，让每一张思维导图既美观又专业。</p>
-<p>我们专注，为了让您更专注。<br>
-ZEN 模式，寓意为禅。让专注变成一种习惯。</p>
-<p>全新 Snowbrush 引擎<br>
-我们努力了3年，100% 重写了思维导图的引擎，着眼在未来的黑科技上，提升了思维导图的展示效果，丰富了绘图的元素。</p>
-<p>充满惊喜的主题<br>
-XMind: ZEN 对所有主题进行了重新设计，为您的每一张导图都注入新的活力，专业的同时又不失丰富元素，好看到让人羡慕。</p>
-<p>Font Rendering<br>
-由于极大地改进了字体的渲染技术，无论你用 Mac 还是 Windows 创建思维导图，所有文字都以同一样式清晰呈现。XMind: ZEN 精选多款优质字体，爱上编辑导图，从未如此简单。</p>
-<p>Markdown<br>
-我们相信 Markdown 会为你带来更好的使用体验，将做好的图导出为 Markdown 格式后，会让你更易于阅读。</p>
-<p>集专注于 ZEN 模式<br>
-ZEN 模式，寓意为禅，让专注变成一种习惯。进入 ZEN 模式，隐藏页面内多余的元素，帮助你全神贯注地绘制每一个主题，心无旁骛地完成工作。</p>
-<p>贴纸，原创的更好<br>
-设计师原创的贴纸，每一个都精心绘制，更准确地满足你的需求，精彩无处不在。</p>
-<p>100% 对 XMind 8 兼容<br>
-XMind: ZEN 对 XMind 8 做到了完全兼容，所有 XMind 8 拥有的图形结构，在 XMind: ZEN 中都能完美展现。</p>
-<p>导出PDF和印象笔记<br>
-将思维导图导出为矢量的 PDF 文件，方便您将导图随意放大和清晰地打印。印象笔记的粉丝们还会惊喜地发现只需简单地点击，便可将导图分享到印象笔记中。</p>
-<h3 id="更新日志">更新日志</h3>
-<hr>
-<p>10.2.1</p>
-<p>重大更新</p>
-<ol>
-<li>整体流畅度和打开大图的速度大幅提升；</li>
-<li>括号图——一种描述整体和局部关系的新结构；</li>
-<li>创建风格——直接基于当前导图的风格来创建自定义风格；</li>
-<li>快捷键增强——更丰富的快捷键设置，包括大纲模式的快捷键；</li>
-<li>合并 XMind 文件——将所有的点子聚合到一个文件里。<br>
-优化与提升</li>
-<li>新增了一批有趣实用的贴纸；</li>
-<li>工具栏新增“插入”按钮，插入元素更加直观便捷；</li>
-<li>支持在导出的 PDF/SVG 中点击插入的网页链接；</li>
-<li>增大了笔记的编辑框；</li>
-<li>笔记和链接的编辑框支持弹出右键菜单；</li>
-<li>新增了跳转到搜索结果时的高亮动画；</li>
-<li>全面优化了法语和繁体中文的文案；</li>
-<li>优化了非英语字体名称的显示效果；</li>
-<li>优化了快速样式列表的预览效果；</li>
-<li>优化了在画布空白处点击右键的菜单内容；</li>
-<li>优化了一些 UI 细节；</li>
-<li>修复了大纲模式下可能会将元素插入到错误的主题上的问题；</li>
-<li>修复了导出 PNG/SVG 时，联系线箭头方向可能错误的问题；</li>
-<li>修复了由于特殊字符，分享到 Evernote 失败的问题；</li>
-<li>修复了 Windows 下按 CAPS LOCK 可能会清空主题文字的问题；</li>
-<li>修复了在笔记里撤销后，内容可能会变成另一条笔记的问题；</li>
-<li>修复了点击联系和外框的搜索结果无法跳转到对应元素的问题；</li>
-<li>修复了大纲模式下会显示联系和外框的搜索结果的问题；</li>
-<li>修复了风格编辑器中调整外框的边框颜色失效的问题；</li>
-<li>修复了 ZEN 模式下重命名画布时，画布栏消失的问题；</li>
-<li>修复了树形图结构下，导出 PDF 的画面不完整的问题；</li>
-<li>修复了特殊情况下，导出 PNG 的画面不完整的问题；</li>
-<li>修复了部分其他已知问题。</li>
-</ol>
-<h3 id="修改说明">修改说明</h3>
-<hr>
-<p>基于官网最新版本破解</p>
-<p>破解授权，移除验证，去除试用提示</p>
-<p>能正常导出图片无水印，PDF无水印，导出word，粘贴图片等高级功能</p>
-<p>v2版本导出PNG缩放大小已修复</p>
-<h3 id="使用提示">使用提示</h3>
-<hr>
-<p>将app.asar放入XMind-ZEN安装目录的resources文件夹下替换</p>
-<h3 id="下载地址">下载地址</h3>
-<hr>
-<p><a href="https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w">链接: https://pan.baidu.com/s/1Z6vMyM1__RwFOFALs0_s4w 提取码: b4nd</a></p>
+<p><strong>算法思想：</strong><br>
+使用循环实现累加求和，并在求和后计算下一项所对应的阶乘。</p>
+<p>① 用循环语句 while 进行循环控制。判断条件为 1/n&gt;10-10；条件成立则执行 ②，条件不成立执行 ⑤；<br>
+② 计算求和 e+=1/n；<br>
+③ i 自增 1；<br>
+④ 计算下一项所对应的阶乘：n=i*n；<br>
+⑤ 结束循环，打印输出结果。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void) {
+    float e = 1.0, n = 1.0;
+    int i = 1;
+    while (1 / n &gt; 1e-10) {
+        e += 1 / n;
+        i++;
+        n = i * n;
+    }
+    printf(&quot;e的值是：%f\n&quot;,e);
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>e的值是：2.718282
+</code></pre>
 ]]></content>
     </entry>
 </feed>
