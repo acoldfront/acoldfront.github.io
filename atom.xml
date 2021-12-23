@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://acoldfront.github.io/</id>
     <title>Crazer的自留地</title>
-    <updated>2021-10-19T01:53:39.545Z</updated>
+    <updated>2021-12-23T14:28:31.518Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://acoldfront.github.io/"/>
     <link rel="self" href="https://acoldfront.github.io/atom.xml"/>
@@ -10,39 +10,6 @@
     <logo>https://acoldfront.github.io/images/avatar.png</logo>
     <icon>https://acoldfront.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Crazer的自留地</rights>
-    <entry>
-        <title type="html"><![CDATA[2021随笔 CS]]></title>
-        <id>https://acoldfront.github.io/post/2021-sui-bi-cs/</id>
-        <link href="https://acoldfront.github.io/post/2021-sui-bi-cs/">
-        </link>
-        <updated>2021-04-07T05:53:16.000Z</updated>
-        <summary type="html"><![CDATA[<p>4月小雨，午睡，初醒，欲与研友结伴图书馆，未果，兴起，写此。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>4月小雨，午睡，初醒，欲与研友结伴图书馆，未果，兴起，写此。</p>
-<!-- more -->
-<h2 id="引言">引言</h2>
-<blockquote>
-<p>不知不觉 ，2021已经进入4月份，距上次奋力一搏(专升本)已经过去253天。。。然而我仍需拼搏。。。</p>
-</blockquote>
-<h2 id="又遇小雨">又遇小雨</h2>
-<blockquote>
-<p>4月是一个多雨的季节，4月还是一个充满生机和希望的季节。那么四月到底是一个怎样的季节呢？</p>
-</blockquote>
-<p>正所谓不同高度看风景又不同境遇，彼时想着专升本，此时想着考研。或许人口中所谓的“高度”吧。四月恰是当初专升本转折时间点，而今又准备考研CS，又到了四月这个季节，似乎一入四月雨就来的多了一些，路上、图书馆到处都是踏雨结伴而行的人。。。<br>
-<img src="https://acoldfront.github.io//post-images/1617775842626.png" alt="" loading="lazy"></p>
-<h2 id="疫情与机遇">疫情与机遇</h2>
-<p>2019年12月疫情爆发，新冠肺炎席卷武汉，身为在武汉上学的我，因此被迫无法返校半年，这半年经历太多，疫情爆发---可控、专升本英语统考、线上实习。考2月初准备专升本，3月开始正式准备，7月专升本结束，8月出结果---录取，9月新学校开学，看似因为疫情缺少了半年的专科校园时光，又因引起扩招上岸专升本，一切似乎都是那么合情合理。现在看着窗外的小雨，我渐入沉思。。。</p>
-<p>2021年4月窗外小雨还在下，小雨滴滴答答地打在上课人的雨伞上、奔跑人的脸上。。。看完这场小雨、撸完小柒（室友的猫），要开始努力了。<br>
-换了新的学校，有了新的目标，买了新的书，就要迎接新的挑战了！<strong>高数、英语、数据结构/操作系统</strong></p>
-<h2 id="cs不只是一场挑战">CS不只是一场挑战</h2>
-<p>今年是考研内卷的一年，435分跨考复旦的大佬没有考上，380分材料哥科软无书可读，复试线399的浙大，388的科软。。。内卷年年有，今年高出新高度！只希望自己够努力吧！<br>
-<img src="https://acoldfront.github.io//post-images/1617777611740.png" alt="" loading="lazy"><br>
-这次随笔写到这里，该结束了，看雨、撸猫、该看书、做题了。</p>
-<blockquote>
-<p>四月，初雨，写此。</p>
-</blockquote>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[C语言编程实例：25、矩阵转置]]></title>
         <id>https://acoldfront.github.io/post/c-example25/</id>
@@ -582,6 +549,66 @@ int main(void) {
 <p>输出结果：</p>
 <pre><code>e的值是：2.718282
 </code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言编程实例：16、最大公约数和最小公倍数]]></title>
+        <id>https://acoldfront.github.io/post/c-example16/</id>
+        <link href="https://acoldfront.github.io/post/c-example16/">
+        </link>
+        <updated>2020-05-06T03:57:09.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>从键盘输入两个正整数 a 和 b，求其最大公约数和最小公倍数。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>从键盘输入两个正整数 a 和 b，求其最大公约数和最小公倍数。</p>
+</blockquote>
+<!-- more -->
+<p><strong>算法思想：</strong><br>
+利用格式输入语句将输入的两个数分别赋给 a 和 b，然后判断 a 和 b 的关系，如果 a 小于 b，则利用中间变量 t 将其互换。再利用辗转相除法求出最大公约数，进而求出最小公倍数。最后用格式输出语句将其输出。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+//求最小公倍数
+int _lcm(int a, int b) {
+    int lcm;
+    if (a &gt; b)
+        lcm = a;
+    else
+        lcm = b;
+    while (lcm % a || lcm % b)
+        lcm++;
+    return lcm;
+}
+
+//求最大公约数
+int _gcd(int a, int b) {
+    int gcd;
+    if (a &gt; b)
+        gcd = b;
+    else
+        gcd = a;
+    while (a % gcd || b % gcd)
+        gcd--;
+    return gcd;
+}
+
+int main(void) {
+    int x, y;
+    printf(&quot;请输入两个数：&quot;);
+    scanf(&quot;%d%d&quot;, &amp;x, &amp;y);
+    printf(&quot;最小公倍数：%d\n&quot;, _lcm(x, y));
+    printf(&quot;最大公约数：%d\n&quot;, _gcd(x, y));
+    return 0;
+}
+</code></pre>
+<p>输出结果：</p>
+<pre><code>请输入两个数：16 72
+最小公倍数：144
+最大公约数：8
+</code></pre>
+<h3 id="技术要点">技术要点：</h3>
+<p>实例中用到了辗转相除法来求最大公约数。在求最小公倍数时要清楚最大公约数和最小公倍数的关系，即两数相乘的积除以这两个数的最大公约数就是最小公倍数。</p>
 ]]></content>
     </entry>
 </feed>
